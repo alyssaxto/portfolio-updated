@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "./index.css";
-import heroImage from "../assets/hero.png";
+import "./hero.css";
+import heroImage from "../src/assets/hero.png";
 
 const Hero = () => {
   const [offset, setOffset] = useState(0);
@@ -22,16 +22,17 @@ const Hero = () => {
           playful and purposeful products. After hours, I like to create
           <span className="highlight"> youtube </span> videos!
         </p>
-        <p>Incoming UX designer @ <span className="company">bp</span></p>
+        <p>Incoming ux designer @ <span className="greenhighlight">bp</span></p>
       </div>
       <img
         src={heroImage}
         alt="Alyssa on a bike"
         className="hero__image"
-        style={{ transform: `translateX(${Math.max(0, 300 - offset)}px)` }}
+        style={{
+          transform: `translateX(${Math.min(0, -offset * 0.1)}px)`, // Moves the image left as you scroll
+        }}
       />
     </section>
   );
-};
-
+}
 export default Hero;

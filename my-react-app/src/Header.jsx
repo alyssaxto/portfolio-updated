@@ -1,39 +1,43 @@
 import { useState } from "react";
 import "./index.css"; // Ensure your CSS file is correctly linked
 
-function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Toggle the menu visibility on hamburger click
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <header className="navbar">
-      <nav className="navbar__container">
-        <ul className="navbar__menu">
+    <nav className="navbar">
+      <div className="navbar__container">
+        {/* Hamburger icon */}
+        <div className="navbar__hamburger" onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        {/* Menu items */}
+        <ul className={`navbar__menu ${menuOpen ? "active" : ""}`}>
           <li className="navbar__item">
-            <a href="#" className="navbar__links">WORK</a>
+            <a href="#home" className="navbar__links">HOME</a>
           </li>
           <li className="navbar__item">
-            <a href="#" className="navbar__links">PLAY</a>
+            <a href="#about" className="navbar__links">PLAY</a>
           </li>
           <li className="navbar__item">
-            <a href="#" className="navbar__links">ABOUT</a>
+            <a href="#services" className="navbar__links">ABOUT</a>
           </li>
           <li className="navbar__item">
-            <a href="#" className="navbar__links">RESUME</a>
+            <a href="#contact" className="navbar__links">RESUME</a>
           </li>
         </ul>
-
-        {/* Hamburger Icon for Mobile */}
-        <div
-          className={`navbar__toggle ${isMenuOpen ? "active" : ""}`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
-}
+};
 
-export default Header;
+export default Navbar;
+

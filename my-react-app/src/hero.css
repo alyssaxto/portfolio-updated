@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+/* Section container */
+.hero {
+    display: flex;             /* Use flexbox for layout */
+    flex-direction: column;    /* Stack children vertically */
+    justify-content: center;   /* Center elements horizontally */
+    align-items: center;       /* Center elements vertically */
+    padding: 20px;
+    text-align: center;        /* Center the text */
+    height: 100vh;             /* Make sure it takes full viewport height */
+  }
+  
+  /* Content section */
+  .hero__content {
+    max-width: 600px;
+    max-height: 100px;
+  }
+  
+  .hero__content h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    color: #FF4F4F; 
+    margin-bottom: 1rem;
+  }
+  
+  .hero__content p {
+    font-size: 1.25rem;
+    font-family: poppins;
+  }
+  
+  .highlight {
+    color: #FF4F4F; 
+  }
+
+  .greenhighlight {
+    color: #64A14E; 
+  }
+  
+  .company {
+    font-weight: bold;
+    color: #333;
+  }
+  
+/* Image styling */
+.hero__image {
+    width: 100%;
+    height: auto;
+    max-width: 100vh;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Animation for scroll effect */
+  .hero__image.scroll-effect {
+    transform: translateX(calc(300px - var(--scroll-offset)));
+  }

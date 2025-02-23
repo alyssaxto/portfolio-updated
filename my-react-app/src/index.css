@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
+/* Navbar Styling */
+/* Navbar Styling */
 .navbar {
   background: #fff;
   height: 60px;
@@ -18,41 +19,39 @@
   width: auto;
 }
 
-.navbar__item {
-  padding: 10px 20px;
-}
-
+/* Navbar container (for layout) */
 .navbar__container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
+/* Navbar menu (on desktop) */
 .navbar__menu {
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
   font-size: 1.2rem;
-  width: 100%;
   gap: 30px;
 }
 
+/* Navbar links styling */
 .navbar__links {
   font-family: 'Poppins', sans-serif;
-  font-weight: 400; /* Default weight */
+  font-weight: 400;
   color: #ff6b6b;
   text-decoration: none;
-  padding: 10px 20px; /* Default padding */
+  padding: 10px 20px;
   position: relative;
   transition: 
     color 0.3s ease, 
     font-weight 0.3s ease, 
-    padding 0.3s ease; /* Add padding transition */
+    padding 0.3s ease;
 }
 
-/* Underline effect on hover */
+/* Hover effect on links */
 .navbar__links::after {
   content: "";
   position: absolute;
@@ -65,14 +64,54 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Hover Effects */
 .navbar__links:hover {
   color: #fe4e4e;
-  font-weight: 600; /* Increase font weight */
-  padding-left: 25px; /* Increase left padding */
-  padding-right: 25px; /* Increase right padding */
+  font-weight: 600;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .navbar__links:hover::after {
   transform: scaleX(1);
+}
+
+/* Hamburger menu (mobile) */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 21px;  /* Adjust height */
+  cursor: pointer;
+  position: absolute;
+  top: 15px;  /* Align to the top */
+  right: 20px; /* Position to the right */
+}
+
+.navbar__hamburger div {
+  width: 100%;
+  height: 4px;
+  background-color: #ff6b6b;  /* Ensure visibility */
+  transition: all 0.3s ease;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: none; /* Hide the menu on mobile */
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    margin-top: 80px; /* Add space below the hamburger icon */
+  }
+
+  .navbar__hamburger {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+
+  .navbar__menu.active {
+    display: flex; /* Show menu when active class is added */
+  }
 }
