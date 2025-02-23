@@ -25,13 +25,13 @@ const Navbar = () => {
             <a href="#home" className="navbar__links">HOME</a>
           </li>
           <li className="navbar__item">
-            <a href="#about" className="navbar__links">PLAY</a>
+            <a href="#play" className="navbar__links">PLAY</a>
           </li>
           <li className="navbar__item">
-            <a href="#services" className="navbar__links">ABOUT</a>
+            <a href="#about" className="navbar__links">ABOUT</a>
           </li>
           <li className="navbar__item">
-            <a href="#contact" className="navbar__links">RESUME</a>
+            <a href="#resume" className="navbar__links">RESUME</a>
           </li>
         </ul>
       </div>

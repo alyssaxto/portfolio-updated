@@ -11,7 +11,17 @@
     padding: 20px;
     text-align: center;        /* Center the text */
     height: 100vh;             /* Make sure it takes full viewport height */
-  }
+}
+
+/* Image styling */
+.hero__image {
+    width: 100%;
+    height: auto;
+    max-width: 100vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+
   
   /* Content section */
   .hero__content {
@@ -39,11 +49,6 @@
     color: #64A14E; 
   }
   
-  .company {
-    font-weight: bold;
-    color: #333;
-  }
-  
 /* Image styling */
 .hero__image {
     width: 100%;
@@ -55,4 +60,18 @@
   /* Animation for scroll effect */
   .hero__image.scroll-effect {
     transform: translateX(calc(300px - var(--scroll-offset)));
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 0; /* Remove any extra padding on top */
+      text-align: left; /* Adjust text alignment for better readability */
+    }
+    
+    .hero__content {
+      margin-bottom: 20px; /* Add some space below the text on mobile */
+    }
+
+    .hero__image {
+    }
   }
