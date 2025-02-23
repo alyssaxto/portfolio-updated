@@ -21,7 +21,6 @@
     transition: transform 0.3s ease-in-out;
 }
 
-
   
   /* Content section */
   .hero__content {
@@ -73,5 +72,6 @@
     }
 
     .hero__image {
+        margin-top: 300px
     }
   }
