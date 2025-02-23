@@ -1,7 +1,8 @@
 function Footer(){
 return(
     <footer>
-    <p>Copyrighted hehe</p>
+    <p>&copy; Alyssa To {new Date().getFullYear()}</p>
+    <p>Made with ♡ and 🍵</p>
     </footer>
 );
 }

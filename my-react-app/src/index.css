@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.navbar {
+  background: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+  padding: 0 20px;
+  width: auto;
+}
+
+.navbar__item {
+  padding: 10px 20px;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-size: 1.2rem;
+  width: 100%;
+  gap: 30px;
+}
+
+.navbar__links {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; /* Default weight */
+  color: #ff6b6b;
+  text-decoration: none;
+  padding: 10px 20px; /* Default padding */
+  position: relative;
+  transition: 
+    color 0.3s ease, 
+    font-weight 0.3s ease, 
+    padding 0.3s ease; /* Add padding transition */
+}
+
+/* Underline effect on hover */
+.navbar__links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6b6b;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.navbar__links:hover {
+  color: #fe4e4e;
+  font-weight: 600; /* Increase font weight */
+  padding-left: 25px; /* Increase left padding */
+  padding-right: 25px; /* Increase right padding */
+}
+
+.navbar__links:hover::after {
+  transform: scaleX(1);
+}
