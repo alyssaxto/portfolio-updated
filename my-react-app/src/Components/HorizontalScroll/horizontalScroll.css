@@ -3,7 +3,7 @@
 
 .carousel{
     color:rgb(255, 255, 255);
-    height: 300vh;
+    height: 450vh;
 }
 
 .contentContainer{
@@ -20,15 +20,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-gap: 2vw;
+    grid-gap: 1vw;
     padding: 0 4rem 0 4rem;
 }
-.ImageItem{
-    font-family: poppins;
+.ImageItem {
+    font-family: Poppins;
     color: black;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Default shadow */
 }
 
-.imageDescription{
-    color: blue;
+/* Hover effect */
+.ImageItem:hover {
+    transform: translateY(-10px) scale(1.05); /* Expands and lifts the image */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25); /* Adds a shadow */
 }
-

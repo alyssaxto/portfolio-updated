@@ -73,9 +73,7 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 10px 0;
-  padding: 0 20px; /* Adds space at the edges */
-  max-width: 95%; /* Limits the width to 80% of the page */
+  margin: 5px 0;
   margin-left: auto;
   margin-right: auto;
 }

@@ -10,62 +10,75 @@ import ImageContainer from './Components/ImageContainer/ImageContainer';
 
 const HorizontalScroll = () => {
   const targetRef = useRef(null);
-  const {scrollYProgress} = useScroll({target: targetRef});
-  const x = useTransform(scrollYProgress, [0, 1],["0%" , "-55%"]);
+  const { scrollYProgress } = useScroll({ target: targetRef });
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
+
   return (
     <div className="carousel" ref={targetRef}>
+      {/* Add the Featured Projects heading above the carousel */}
+      <h1 className="featuredTitle">Featured Projects</h1>
+
       <div className="contentContainer">
         <motion.div className="images" style={{ x }}>
-          
-          {/* Image 1 */}
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            whileHover={{ y: -15 }}  
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
-            <ImageContainer imageSource={bpImage}
-            description={"AI Image Generator"} 
+            <ImageContainer
+              imageSource={bpImage}
+              title={"AI Image Generator"}
+              description={"Designing an accessible way for bp employees to quickly create the images they need."}
             />
           </motion.div>
 
-          {/* Image 2 */}
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            whileHover={{ y: -15 }}  
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
-            <ImageContainer imageSource={rippleImage}
-            description={"AI Image Generator"} />
+            <ImageContainer
+              imageSource={rippleImage}
+              title={"HackUTD Website"}
+              description={"Developing and designing the website for the biggest 24-hour hackathon in Texas hosted by HackUTD."}
+            />
           </motion.div>
 
-          {/* Image 3 */}
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            whileHover={{ y: -15 }}  
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
-            <ImageContainer imageSource={manageImage}
-            description={"AI Image Generator"} />
+            <ImageContainer
+              imageSource={manageImage}
+              title={"I Can Manage Cancer"}
+              description={"An educational platform designed to assist head and neck cancer patients through treatment."}
+            />
           </motion.div>
 
-          {/* Image 4 */}
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            whileHover={{ y: -15 }}  
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
-            <ImageContainer imageSource={stemuliImage}
-            description={"AI Image Generator"} />
+            <ImageContainer
+              imageSource={stemuliImage}
+              title={"Stemuli"}
+              description={"A desktop and mobile app for students interested in product design to explore more about the career through VR."}
+            />
           </motion.div>
-
         </motion.div>
       </div>
     </div>
   );
 };
 
-export default HorizontalScroll; 
+export default HorizontalScroll;
