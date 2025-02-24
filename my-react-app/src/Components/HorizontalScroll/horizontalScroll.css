@@ -17,20 +17,24 @@
 }
 
 .images {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 1vw;
-    padding: 0 4rem 0 4rem;
+    display: flex; /* Use flexbox instead of grid for easier control */
+    gap: -3vw; /* Negative gap to overlap images */
+    padding: 0 4rem;
 }
+
 .ImageItem {
     font-family: Poppins;
     color: black;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Default shadow */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-left: -20px; /* Adjust overlap */
+    background-color: white;
+    opacity: 70%;
 }
+
+
 
 /* Hover effect */
 .ImageItem:hover {
