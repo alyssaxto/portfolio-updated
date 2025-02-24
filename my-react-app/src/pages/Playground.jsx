@@ -1,15 +1,17 @@
-import Header from '../Navbar.jsx'
-import Play from '../play.jsx'
-import Footer from '../Footer.jsx'
-function Playground() {
+import Header from '../Navbar.jsx';
+import Play from '../play.jsx';
+import Footer from '../Footer.jsx';
+import Artwork from '../Artwork.jsx';
 
-    return(
-        <>
-        <Header/>
-        <Play/>
-        <Footer/>
-        </>
-    );
+function Playground() {
+  return (
+    <>
+      <Header />
+      <Play />
+      <Artwork />
+      <Footer />
+    </>
+  );
 }
 
-export default Playground
+export default Playground;

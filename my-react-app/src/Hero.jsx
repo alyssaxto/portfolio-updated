@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./hero.css";
 import heroImage from "../src/assets/hero.png";
+import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
 
 const Hero = () => {
   const [offset, setOffset] = useState(0);
@@ -15,7 +16,7 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="hero__content">
+      <TextFade direction="up" className="hero__content">
         <h1>Hey, I’m Alyssa!</h1>
         <p>
           I’m a <span className="highlight">designer</span> and <span className="highlight">artist</span> making
@@ -23,7 +24,8 @@ const Hero = () => {
           <span className="highlight"> youtube </span> videos!
         </p>
         <p>Incoming ux designer @ <span className="greenhighlight">bp</span></p>
-      </div>
+      </TextFade>
+
       <img
         src={heroImage}
         alt="Alyssa on a bike"

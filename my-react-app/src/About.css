@@ -1,3 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+.playgroundTitleContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem; /* Adjust this value as needed */
+}
+
+.Playground {
+  font-size: 10rem; /* Adjust the font size */
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 3rem; /* Space between title and carousel */
+  
+  /* Ensure the text stays horizontal */
+  display: inline-block;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  white-space: nowrap;
+}
+
+.carousel-image {
+  width: auto; /* Square size */
+  height: 30vh; /* Square size */
+  object-fit: cover; 
+  border-radius: 10px; /* Optional: Rounded corners */
+  margin-right: 10px; /* Space between images */
+}
+
+.about-heading {
+  font-size: 3rem; /* Adjust size as needed */
+  color: #ff4f4f;
+  font-family: poppins;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
 .about {
     background-color: #ffffff;
     padding: 4rem 0;
@@ -17,10 +67,6 @@
     padding: 0px 50px;
   }
   
-  .about__content {
-    color: #fff;
-    width: 100%;
-  }
   
   .about__content h1 {
     font-size: 2rem;
@@ -33,14 +79,35 @@
     -moz-text-fill-color: transparent;
   }
   
-  .about__content h2 {
-    font-size: 4rem;
-    background: #ff4f4f;
-    background-size: 100%;
-  }
+  /* Pink Link */
+.pink-link {
+  color: #ff4f4f; /* Black text color */
+  font-weight: bold;
+  text-decoration: none; /* Remove default underline */
+  position: relative; /* Position relative for pseudo-element */
+  transition: color 0.2s ease-in-out; /* Faster transition for text color */
+}
+
+.pink-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* Adjust space between text and underline */
+  width: 100%;
+  height: 1px;
+  background-color: #ff4f4f; /* Pink underline color */
+  transform: scaleX(1); /* Full width initially */
+  transform-origin: bottom right; /* Align underline to bottom right */
+  transition: transform 0.2s ease-in-out; /* Faster transition for underline */
+}
+
+.pink-link:hover {
+  color: #ff4f4f; /* Pink text color on hover */
+}
   
   .about__content p {
     margin-top: 1rem;
+    font-family: poppins;
     font-size: 1.3rem;
     font-weight: 500;
     color:#000

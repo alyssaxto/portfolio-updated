@@ -9,7 +9,15 @@ img.image {
 
   
 }
-
+.Playground {
+  font-family: Poppins;
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10rem;
+  color: #333;
+  margin-bottom: -3rem;
+}
 .featuredTitle {
     font-family: Poppins;
     font-size: 3rem;

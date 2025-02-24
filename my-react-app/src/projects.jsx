@@ -6,6 +6,8 @@ import stemuliImage from "../src/assets/stemuli/s17.png";
 import "./Components/HorizontalScroll/horizontalScroll.css";
 import {motion, useScroll, useTransform} from 'framer-motion';
 import ImageContainer from './Components/ImageContainer/ImageContainer';
+import peekaboo from '../src/assets/peekaboo.png';
+import { LettersPullUp } from "./Components/letters-pull-up"; 
 
 
 const HorizontalScroll = () => {
@@ -15,9 +17,9 @@ const HorizontalScroll = () => {
 
   return (
     <div className="carousel" ref={targetRef}>
-      {/* Add the Featured Projects heading above the carousel */}
-      <h1 className="featuredTitle">Featured Projects</h1>
-
+        <div className="playgroundTitleContainer">
+          <LettersPullUp text="Projects" className="Playground" />
+        </div>
       <div className="contentContainer">
         <motion.div className="images" style={{ x }}>
           <motion.div
@@ -76,6 +78,8 @@ const HorizontalScroll = () => {
             />
           </motion.div>
         </motion.div>
+
+
       </div>
     </div>
   );

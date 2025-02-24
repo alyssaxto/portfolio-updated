@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
 
 .carousel{
-    color:rgb(255, 255, 255);
-    height: 450vh;
+    color:rgb(0, 0, 0);
+    height: 400vh;
+    
 }
 
 .contentContainer{
@@ -14,12 +15,14 @@
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
+    
 }
 
 .images {
-    display: flex; /* Use flexbox instead of grid for easier control */
-    gap: -3vw; /* Negative gap to overlap images */
+    display: flex;
+    gap: -5vw; /* Increase overlap */
     padding: 0 4rem;
+    perspective: 1000px; /* Adds depth effect */
 }
 
 .ImageItem {
@@ -28,16 +31,19 @@
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     margin-left: -20px; /* Adjust overlap */
     background-color: white;
     opacity: 70%;
+    transform-style: preserve-3d;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    transform: rotate(-5deg) translateZ(10px);
+
 }
 
 
 
 /* Hover effect */
 .ImageItem:hover {
-    transform: translateY(-10px) scale(1.05); /* Expands and lifts the image */
+    transform: translateY(-200px) scale(1.3);  /* Expands and lifts the image */
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25); /* Adds a shadow */
 }

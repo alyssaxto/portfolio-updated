@@ -4,20 +4,23 @@ import Gravebound from "../src/assets/gb/15.png";
 import BpxGA from "../src/assets/GA/7.png";
 import MVP from "../src/assets/mvp/5.png";
 import BB from "../src/assets/budgetbuddy.png";
+import pink from "../src/assets/thinkpink/tp10.png";
 import "./Components/HorizontalScroll/horizontalScroll.css";
-import {motion, useScroll, useTransform} from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import ImageContainer from './Components/ImageContainer/ImageContainer';
-import "./play.css";
-
+import { LettersPullUp } from "./Components/letters-pull-up"; 
 
 const HorizontalScroll = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
+
   return (
     <div className="carousel" ref={targetRef}>
-      {/* Add the Featured Projects heading above the carousel */}
-      <h1 className="Playground">Playground</h1>
+      {/* Playground title outside of the carousel */}
+      <div className="playgroundTitleContainer">
+        <LettersPullUp text="Playground" className="Playground" />
+      </div>
 
       <div className="contentContainer">
         <motion.div className="images" style={{ x }}>
@@ -74,6 +77,34 @@ const HorizontalScroll = () => {
               imageSource={MVP}
               title={"MVP Badges"}
               description={"Creating badges to recognize new grad designers for their efforts within a 12-week bootcamp."}
+            />
+          </motion.div>
+
+          <motion.div
+            className="ImageItem"
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -15 }}  
+            transition={{ duration: 0.2, ease: "easeOut" }}
+          >
+            <ImageContainer
+              imageSource={BB}
+              title={"Budget Buddy"}
+              description={"A mobile app case study that enhances financial decision-making skills among college students."}
+            />
+          </motion.div>
+
+          <motion.div
+            className="ImageItem"
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -15 }}  
+            transition={{ duration: 0.2, ease: "easeOut" }}
+          >
+            <ImageContainer
+              imageSource={pink}
+              title={"ThinkPink"}
+              description={"A mobile app case study to help women track their menstrual cycles and making more informed decisions."}
             />
           </motion.div>
         </motion.div>
