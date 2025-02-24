@@ -1,17 +1,18 @@
-import Header from './Header.jsx'
-import Hero from './Hero.jsx'
-import Footer from './Footer.jsx'
-import Projects from './projects.jsx'
-function App() {
+import { Routes, Route } from "react-router-dom";
+import Header from "./Navbar.jsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
 
-    return(
-        <>
-        <Header/>
-        <Hero/>
-        <Projects/>
-        <Footer/>
-        </>
-    );
+function App() {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;

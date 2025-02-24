@@ -95,7 +95,7 @@
 }
 
 /* Media query for mobile */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .navbar__menu {
     display: none; /* Hide the menu by default on mobile */
     flex-direction: column;

@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import "./index.css"; // Ensure your CSS file is correctly linked
+import Resume from "../src/assets/AlyssaTo_Resume.pdf";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,16 +24,16 @@ const Navbar = () => {
         {/* Menu items */}
         <ul className={`navbar__menu ${menuOpen ? "active" : ""}`}>
           <li className="navbar__item">
-            <a href="#home" className="navbar__links">HOME</a>
+            <Link to="/" className="navbar__links">HOME</Link>
           </li>
           <li className="navbar__item">
-            <a href="#play" className="navbar__links">PLAY</a>
+            <Link to="/play" className="navbar__links">PLAY</Link> {/* Link to play.jsx */}
           </li>
           <li className="navbar__item">
-            <a href="#about" className="navbar__links">ABOUT</a>
+            <Link to="/about" className="navbar__links">ABOUT</Link> {/* Link to about.jsx */}
           </li>
           <li className="navbar__item">
-            <a href="#resume" className="navbar__links">RESUME</a>
+            <a href={Resume} className="navbar__links" target="_blank" rel="noopener noreferrer">RESUME</a> {/* Link to resume file */}
           </li>
         </ul>
       </div>
@@ -40,4 +42,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

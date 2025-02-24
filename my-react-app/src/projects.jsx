@@ -1,57 +1,71 @@
-import React from "react";
-import "./Projects.css"; 
+import React, { useRef } from "react";
 import bpImage from "../src/assets/bp/6.png"; 
-import rippleImage from "..src/assets/ripple.png";
-import manageImage from "../assets/icanmanage/c3.png";
-import stemuliImage from "../assets/stemuli/s17.png";
+import rippleImage from "../src/assets/ripple.png";
+import manageImage from "../src/assets/icanmanage/c3.png";
+import stemuliImage from "../src/assets/stemuli/s17.png";
+import "./Components/HorizontalScroll/horizontalScroll.css";
+import {motion, useScroll, useTransform} from 'framer-motion';
+import ImageContainer from './Components/ImageContainer/ImageContainer';
 
-const projectsData = [
-  {
-    link: "hackUTDpassword.html",
-    image: bpImage,
-    alt: "AI Image Generator",
-    title: "AI Image Generator",
-    description: "Designing an accessible way for bp employees to quickly create the images they need.",
-  },
-  {
-    link: "hackUTDwebsite.html",
-    image: rippleImage,
-    alt: "HackUTD Website",
-    title: "HackUTD Website",
-    description: "Developing and designing the website for the biggest 24-hour hackathon in Texas hosted by HackUTD.",
-  },
-  {
-    link: "utswpassword.html",
-    image: manageImage,
-    alt: "I Can Manage Cancer",
-    title: "I Can Manage Cancer",
-    description: "An educational platform designed to assist head and neck cancer patients through treatment.",
-  },
-  {
-    link: "Stemuli.html",
-    image: stemuliImage,
-    alt: "Stemuli",
-    title: "Stemuli",
-    description: "A desktop and mobile app for students interested in product design to explore more about the career through VR.",
-  },
-];
 
-const Projects = () => {
+const HorizontalScroll = () => {
+  const targetRef = useRef(null);
+  const {scrollYProgress} = useScroll({target: targetRef});
+  const x = useTransform(scrollYProgress, [0, 1],["0%" , "-55%"]);
   return (
-    <section className="projects" id="Projects">
+    <div className="carousel" ref={targetRef}>
+      <div className="contentContainer">
+        <motion.div className="images" style={{ x }}>
+          
+          {/* Image 1 */}
+          <motion.div
+            className="ImageItem"
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+          >
+            <ImageContainer imageSource={bpImage}
+            description={"AI Image Generator"} 
+            />
+          </motion.div>
 
-      <div className="projects__wrapper">
-        {projectsData.map((project, index) => (
-          <a key={index} href={project.link} className="projects__card">
-            <img src={project.image} alt={project.alt} />
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
-          </a>
-        ))}
+          {/* Image 2 */}
+          <motion.div
+            className="ImageItem"
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+          >
+            <ImageContainer imageSource={rippleImage}
+            description={"AI Image Generator"} />
+          </motion.div>
+
+          {/* Image 3 */}
+          <motion.div
+            className="ImageItem"
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+          >
+            <ImageContainer imageSource={manageImage}
+            description={"AI Image Generator"} />
+          </motion.div>
+
+          {/* Image 4 */}
+          <motion.div
+            className="ImageItem"
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+          >
+            <ImageContainer imageSource={stemuliImage}
+            description={"AI Image Generator"} />
+          </motion.div>
+
+        </motion.div>
       </div>
-
-    </section>
+    </div>
   );
 };
 
-export default Projects;
+export default HorizontalScroll; 

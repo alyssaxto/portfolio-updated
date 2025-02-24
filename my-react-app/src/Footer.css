@@ -18,7 +18,7 @@ footer {
 
 .footer__left h2 {
     font-size: 3rem;
-    color: #333;
+    color: #292929;
     margin-bottom: 20px;
 }
 
@@ -85,7 +85,7 @@ footer {
   content: "";
   flex: 1;
   height: 1px;
-  background-color: black;
+  background-color: #292929;
   margin: 0 10px;
 }
 
