@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
-import bpImage from "../src/assets/bp/6.png"; 
-import rippleImage from "../src/assets/ripple.png";
-import manageImage from "../src/assets/icanmanage/c3.png";
-import stemuliImage from "../src/assets/stemuli/s17.png";
+import Hackportal from "../src/assets/hackportal.png";
+import Gravebound from "../src/assets/gb/15.png";
+import BpxGA from "../src/assets/GA/7.png";
+import MVP from "../src/assets/mvp/5.png";
+import BB from "../src/assets/budgetbuddy.png";
 import "./Components/HorizontalScroll/horizontalScroll.css";
 import {motion, useScroll, useTransform} from 'framer-motion';
 import ImageContainer from './Components/ImageContainer/ImageContainer';
@@ -13,7 +14,6 @@ const HorizontalScroll = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
-
   return (
     <div className="carousel" ref={targetRef}>
       {/* Add the Featured Projects heading above the carousel */}
@@ -29,9 +29,9 @@ const HorizontalScroll = () => {
             transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <ImageContainer
-              imageSource={bpImage}
-              title={"AI Image Generator"}
-              description={"Designing an accessible way for bp employees to quickly create the images they need."}
+              imageSource={Hackportal}
+              title={"Hackportal"}
+              description={"Designing an accessible website template for other hackathons to use to promote their event."}
             />
           </motion.div>
 
@@ -43,9 +43,9 @@ const HorizontalScroll = () => {
             transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <ImageContainer
-              imageSource={rippleImage}
-              title={"HackUTD Website"}
-              description={"Developing and designing the website for the biggest 24-hour hackathon in Texas hosted by HackUTD."}
+              imageSource={Gravebound}
+              title={"Gravebound"}
+              description={"Creating and developing UI for a first-person shooter developed entirely by students."}
             />
           </motion.div>
 
@@ -57,9 +57,9 @@ const HorizontalScroll = () => {
             transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <ImageContainer
-              imageSource={manageImage}
-              title={"I Can Manage Cancer"}
-              description={"An educational platform designed to assist head and neck cancer patients through treatment."}
+              imageSource={BpxGA}
+              title={"bp x GA Bootcamp"}
+              description={"Designing badges for new grad designers to display on their profiles after completing a 12-week bootcamp."}
             />
           </motion.div>
 
@@ -71,9 +71,9 @@ const HorizontalScroll = () => {
             transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <ImageContainer
-              imageSource={stemuliImage}
-              title={"Stemuli"}
-              description={"A desktop and mobile app for students interested in product design to explore more about the career through VR."}
+              imageSource={MVP}
+              title={"MVP Badges"}
+              description={"Creating badges to recognize new grad designers for their efforts within a 12-week bootcamp."}
             />
           </motion.div>
         </motion.div>

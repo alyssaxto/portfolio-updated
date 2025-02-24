@@ -27,7 +27,7 @@ const Navbar = () => {
             <Link to="/" className="navbar__links">HOME</Link>
           </li>
           <li className="navbar__item">
-            <Link to="/play" className="navbar__links">PLAY</Link> {/* Link to play.jsx */}
+            <Link to="/playground" className="navbar__links">PLAY</Link> {/* Link to play.jsx */}
           </li>
           <li className="navbar__item">
             <Link to="/about" className="navbar__links">ABOUT</Link> {/* Link to about.jsx */}
