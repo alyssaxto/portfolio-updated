@@ -129,8 +129,76 @@ const Value = () => (
         <p className="quote-text">AI image generators will enhance bp's efficiency and improve the company's leadership within the energy sector</p>
       </div>
     </div>
+    <div className="section-divider"></div>
+    <div className="image-box">
+      <img src="./src/assets/bp/9.png" alt="Features" className="image-box" />
+    </div>
   </div>
 );
+
+// New Section for Empathize
+const Empathize = () => (
+  <div className="container">
+    <h2>Empathize</h2>
+    <h1>I developed a research plan</h1>
+    <h2>Research Objectives​</h2>
+    <br />
+    <div className="number-box">
+      <div className="number">1.</div>
+      <div className="text">Why do users need this product?​</div>
+    </div>
+
+    <div className="number-box">
+      <div className="number">2.</div>
+      <div className="text">What barriers are there?</div>
+    </div>
+
+    <div className="number-box">
+      <div className="number">3.</div>
+      <div className="text">How can this product add value to bp?​</div>
+    </div>
+  </div>
+);
+// Quantitative Data Component
+const QuantitativeData = () => (
+  <div className="container">
+    <h2>Quantitative data</h2>
+    <h1>Sending out a survey to bphxd</h1>
+    <h2>After 2 weeks, here are the key findings of my survey</h2>
+    <br />
+    <h4><span className="lime-highlight">19</span> participants</h4>
+    <br />
+    <div className="bullets">
+      <p><span className="lime-highlight">42% </span>of participants have no experience with AI image generators</p>
+      <p><span className="grey-highlight">This indicates that a significant portion of bp employees currently lack experience with AI image generators.</span></p>
+      <br />
+      <p><span className="lime-highlight">100% </span>of participants use images within their work</p>
+      <p><span className="grey-highlight">This number shows that every single participant would have a use case for an AI image generator.</span></p>
+      <br />
+      <p><span className="lime-highlight">36% </span> of participants already integrate AI image generators into their work at bp</p>
+      <p><span className="grey-highlight">Since bp doesn't have an approved internal tool, some employees might unintentionally be using bp's data to train AI models without realizing it.</span></p>
+      <br />
+      <p>The <span className="lime-highlight">top 3 purposes of images </span> are for presentations, infographics, and design</p>
+      <p>The <span className="lime-highlight">top 2 style of images </span> are stock images (primarily photography) and illustrations</p>
+    </div>
+  </div>
+);
+
+// Qualitative Data Component
+const QualitativeData = () => (
+  <div className="container">
+    <h2>Qualitative Data</h2>
+    <h1>I organized 6 user interviews with designers at bp</h1>
+    <h2>I conducted these interviews 1 on 1, recording each of them so I would be able to reference them later</h2>
+    <br />
+    <div className="image-container">
+      <div className="bullet-image">
+        <img src="./src/assets/bp/1.png" alt="User Journey" />
+      </div>
+    </div>
+  </div>
+);
+
 // Affinity Mapping Section
 const AffinityMapping = () => (
   <div className="container">
@@ -180,6 +248,12 @@ const App = () => (
     <ProblemStatement />
     <div className="section-divider"></div>
     <Value />
+    <div className="section-divider"></div>
+    <Empathize />
+    <div className="section-divider"></div>
+    <QuantitativeData />
+    <div className="section-divider"></div>
+    <QualitativeData />
     <div className="section-divider"></div>
     <AffinityMapping />
   </div>

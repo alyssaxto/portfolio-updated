@@ -641,7 +641,7 @@ iframe {
     display: flex;
     flex-direction: column; /* Stack items vertically on mobile */
     align-items: center;
-    background-color: #00A650; /* Green background */
+    background-color: #9bd18a; /* Green background */
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -679,7 +679,7 @@ iframe {
   }
   
   .lime-highlight {
-    color: #00A650;
+    color: #9bd18a;
     font-weight: 700;
     /* Additional styling */
   }
@@ -704,7 +704,7 @@ iframe {
   }
   
   .quote-cell {
-    background-color: #00A650;
+    background-color: #9bd18a;
     padding: 20px;
     text-align: center;
     color: white;
