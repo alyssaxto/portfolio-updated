@@ -4,7 +4,8 @@ import "./Casestudy.css";
 // Header Component
 const Header = () => (
   <header className="header">
-    <h1 className="header__title">AI Image Generator</h1>
+    <h1 className="header__title">Designing an accessible way for bp employees to create the images they need</h1>
+    <h2>bp Product Design Internship ✴ Summer 2024</h2>
     <div className="image-containy">
       <a href="https://www.bp.com/" target="_blank" rel="noopener noreferrer">
         <img src="./src/assets/bp/6.png" alt="Image 2" className="hover-image" />
@@ -13,16 +14,39 @@ const Header = () => (
   </header>
 );
 
+const ImageBox = ({ src, alt }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
+  return (
+    <>
+      <div className="image-box" onClick={openModal}>
+        <img src={src} alt={alt} className="image-box" />
+      </div>
+
+      {isOpen && (
+        <div className="modal" onClick={closeModal}>
+          <button className="close-btn" onClick={closeModal}>X</button>
+          <img src={src} alt={alt} className="modal-content" />
+        </div>
+      )}
+    </>
+  );
+};
+
 // Grid Component for Company, Skills, Timeline, and Tools
 const Grid = () => (
   <div className="grid grid-cols-2 gap-4">
     <div className="grid__item">
       <h2>Company —</h2>
       <p>
-        <a href="https://www.bp.com/" className="text-green-500" target="_blank" rel="noopener noreferrer">
-          bp
-        </a>
-      </p>
+  <a href="https://www.bp.com/" className="green-link" target="_blank" rel="noopener noreferrer">
+    bp
+  </a>
+</p>
+
     </div>
     <div className="grid__item">
       <h2>Skills —</h2>
@@ -60,11 +84,13 @@ const ExecutiveSummary = () => (
       the idea of developing a tool that would empower users to easily create or discover images.
     </h2>
     <h3>Current user flow</h3>
-    <div className="image-container">
-      <img src="img/bp/10.png" alt="User Journey" className="bullet-image" />
+    <div className="image-box">
+      <img src="./src/assets/bp/10.png" alt="User Journey" className="image-box" />
     </div>
   </div>
 );
+
+
 
 // Problem Statement Component
 const ProblemStatement = () => (
@@ -78,13 +104,39 @@ const ProblemStatement = () => (
     </div>
   </div>
 );
-
+const Value = () => (
+  <div className="container">
+    <h2>Value</h2>
+    <h1>Why bp needs generative image AI</h1>
+    <h2>
+      How does this product align with &nbsp;
+      <a href="https://www.bp.com/en/global/corporate/who-we-are/our-beliefs-and-code-of-conduct.html" className="green-link" target="_blank" rel="noopener noreferrer">
+         bp's code of conduct?
+      </a>
+    </h2>
+    <br />
+    <div className="quote-grid">
+      <div className="quote-cell">
+        <h2>Live our purpose​</h2>
+        <p className="quote-text">By having an approved image generator, it improves safety by protecting bp's data​</p>
+      </div>
+      <div className="quote-cell">
+        <h2>Care for others​</h2>
+        <p className="quote-text">This use case for this tool is an endless ocean of opportunity</p>
+      </div>
+      <div className="quote-cell">
+        <h2>Play to win​</h2>
+        <p className="quote-text">AI image generators will enhance bp's efficiency and improve the company's leadership within the energy sector</p>
+      </div>
+    </div>
+  </div>
+);
 // Affinity Mapping Section
 const AffinityMapping = () => (
   <div className="container">
     <h2>Affinity Mapping</h2>
     <h1>Using these interviews, I was able to start affinity mapping</h1>
-    <h2>These are the 6 most important themes I gathered from my user interviews</h2>
+    <h3>These are the 6 most important themes I gathered from my user interviews</h3>
     <div className="quote-grid">
       <div className="quote-cell">
         <h2>Current resources are lacking</h2>
@@ -111,8 +163,9 @@ const AffinityMapping = () => (
         <p className="quote-text">"We should have a note to let people know that this is not realistic."</p>
       </div>
     </div>
-    <div className="image-container">
-      <img src="img/bp/2.png" alt="Features" className="bullet-image" />
+    <div className="section-divider"></div>
+    <div className="image-box">
+      <img src="./src/assets/bp/2.png" alt="Features" className="image-box" />
     </div>
   </div>
 );
@@ -123,7 +176,11 @@ const App = () => (
     <Header />
     <Grid />
     <ExecutiveSummary />
+    <div className="section-divider"></div>
     <ProblemStatement />
+    <div className="section-divider"></div>
+    <Value />
+    <div className="section-divider"></div>
     <AffinityMapping />
   </div>
 );
