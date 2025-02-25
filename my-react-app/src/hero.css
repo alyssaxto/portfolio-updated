@@ -15,12 +15,11 @@
 
 /* Image styling */
 .hero__image {
-    width: 100%;
-    height: auto;
-    max-width: 100vh;
-    transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  max-width: 100vh;
+  transition: transform 0.3s ease-in-out;
 }
-
   
   /* Content section */
   .hero__content {
@@ -29,6 +28,7 @@
   }
   
   .hero__content h1 {
+    font-family: playfair display;
     font-size: 5rem;
     font-weight: 500;
     color: #FF4F4F; 
@@ -42,12 +42,40 @@
   
   .highlight {
     color: #FF4F4F; 
-  }
+    text-decoration: underline;
+    position: relative;
+}
+
+
+.highlight {
+  color: #FF4F4F;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: color 0.3s ease-in-out; /* Smooth color change */
+
+}
+
+.hightlight :hover {
+  text-decoration: underline;
+  color: #FF4F4F;
+}
+
 
   .greenhighlight {
-    color: #64A14E; 
-  }
-  
+    color: #64A14E;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.greenhighlight::after {
+    position: absolute;
+    text-decoration: underline;
+    transition: transform 0.3s ease-in-out;
+}
+
+
 /* Image styling */
 .hero__image {
     width: 100%;

@@ -3,8 +3,7 @@
 
 .carousel{
     color:rgb(0, 0, 0);
-    height: 400vh;
-    
+    height: 500vh;
 }
 
 .contentContainer{
@@ -21,8 +20,7 @@
 .images {
     display: flex;
     gap: -5vw; /* Increase overlap */
-    padding: 0 4rem;
-    perspective: 1000px; /* Adds depth effect */
+    padding: 0 4rem 0 4rem;
 }
 
 .ImageItem {

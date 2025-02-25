@@ -6,7 +6,7 @@ import stemuliImage from "../src/assets/stemuli/s17.png";
 import "./Components/HorizontalScroll/horizontalScroll.css";
 import {motion, useScroll, useTransform} from 'framer-motion';
 import ImageContainer from './Components/ImageContainer/ImageContainer';
-import peekaboo from '../src/assets/peekaboo.png';
+import "./play.css";
 import { LettersPullUp } from "./Components/letters-pull-up"; 
 
 
