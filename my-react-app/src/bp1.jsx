@@ -238,6 +238,191 @@ const AffinityMapping = () => (
   </div>
 );
 
+const SixthToEighthSections = () => (
+    <div>
+      <div className="container">
+        <h2>User Personas</h2>
+        <h1>I developed 3 different personas using the research I conducted</h1>
+        <h2>These user personas were meant to identify the different needs and wants of various roles</h2>
+        <br />
+        <div className="bullets">
+          <p>Due to time constraints, I wasn't able to interview any non-designers officially</p>
+          <p>However, I did user interviews with various designers to gain more diverse opinions</p>
+          <p>I focused on which roles would have the highest use cases for my user personas​</p>
+        </div>
+        <div className="image-container">
+          <h3>Regular bp employee</h3>
+          <h2>(Non-designer)</h2>
+          <div className="bullet-image">
+            <img src="./src/assets/bp/Slide14.jpg" alt="User Journey" />
+          </div>
+          <h3>Content designer</h3>
+          <div className="bullet-image">
+            <img src="./src/assets/bp/Slide12.jpg" alt="User Journey" />
+          </div>
+          <h3>Service designer</h3>
+          <div className="bullet-image">
+            <img src="./src/assets/bp/Slide13.jpg" alt="User Journey" />
+          </div>
+        </div>
+      </div>
+
+      {/* Seventh Section */}
+      <div className="container">
+        <h2>Ideate</h2>
+        <h1>Feature prioritization 2x2 matrix</h1>
+        <h2>Recognizing that I can't tackle everything at once, I created this 2x2 matrix to help identify and prioritize the most important tasks.</h2>
+        <div className="image-container">
+          <div className="bullet-image">
+            <img src="./src/assets/bp/3.png" alt="Features" />
+          </div>
+          <h2>Based off of this, I didn't include:</h2>
+          <div className="bullets">
+            <p>Light and dark mode</p>
+            <p>Randomize button for specific purposes</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Eighth Section */}
+      <div className="container">
+        <h2>Mid fidelity wireframes​</h2>
+        <h1>By referencing the most important features, I was able to begin sketching</h1>
+        <h2>Testing out different formats using Sketch</h2>
+        <div className="image-container">
+          <div className="bullet-image">
+            <img src="./src/assets/bp/5.png" alt="User Journey" />
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <h2>User flow diagram​</h2>
+        <h1>Allowing stakeholders to see how the user would interact with this product​</h1>
+        <h2>I created 3 different pathways depending on the user's current skills</h2>
+        <div className="image-container">
+          <div className="bullet-image">
+            <img src="./src/assets/bp/4.png" alt="User Journey" />
+          </div>
+        </div>
+      </div>
+    </div>
+);
+
+const BPPortfolio = () => (
+    <div>
+      <div className="container">
+        <h2>Prototype</h2>
+        <h1>First iteration of high fidelity wireframes</h1>
+        <h2>
+          While the original prototypes were designed in Sketch, I converted them into a clickable Figma file to embed in this portfolio
+        </h2>
+        <br />
+        <div className="figma-embed-container-desktop">
+          <iframe
+            style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+            width="800"
+            height="450"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fmq1WIFQLOCskfwMsxBv9g8%2FAI-Image-Generator-Prototype%3Fnode-id%3D2-3%26t%3DkOCzTyuvzuhXOwfd-1%26scaling%3Dcontain%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D2%253A3"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div className="section-divider"></div>
+        <div className="video-container">
+          <iframe
+            width="1000"
+            height="auto"
+            src="https://www.youtube.com/embed/WFFLXDZYfOo"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+      
+      <div className="container">
+        <h2>Usability testing</h2>
+        <h1>I conducted usability testing with 5 participants</h1>
+        <h2>I interviewed both designers and non-design employees</h2>
+        <br />
+        <div className="image-container">
+          <h3>Assisted image prompter</h3>
+          <div className="bullet-image"><img src="./src/assets/bp/Slide22.jpg" alt="User Journey" /></div>
+          <br />
+          <h3>Side bar</h3>
+          <div className="bullet-image"><img src="./src/assets/bp/Slide23.jpg" alt="User Journey" /></div>
+          <br />
+          <h3>Regenerator tool</h3>
+          <div className="bullet-image"><img src="./src/assets/bp/Slide24.jpg" alt="User Journey" /></div>
+        </div>
+        <br />
+        <h3>Download button</h3>
+        <div className="bullet-image"><img src="./src/assets/bp/Slide26.jpg" alt="User Journey" /></div>
+      </div>
+
+      <div className="container">
+        <h2>Conclusion</h2>
+        <h1>Final Prototype</h1>
+        <h2>The final prototype was created using Sketch</h2>
+        <br />
+        <div className="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/IvIMcV9LiLA?si=lazEPzXBTWd9M0GA"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <br />
+        <div className="portfolio__btn-container">
+          <button className="portfolio__btn">
+            <a href="https://www.sketch.com/s/c9b990dc-07b7-475c-bc85-7f25983cddba/prototype/0BA96799-2455-47F0-B616-F78B30FCBFCE/a/0BA96799-2455-47F0-B616-F78B30FCBFCE" target="_blank">
+              Clickable Sketch Prototype
+            </a>
+          </button>
+        </div>
+      </div>
+
+      <div className="container">
+        <h2>Summary</h2>
+        <h1>A summer at bp</h1>
+        <h2>
+          I am immensely grateful to have had the opportunity to intern at such an incredible company! I want to extend my heartfelt thanks to the entire design and change management team for their mentorship and warm welcome. Everyone's support and guidance have been invaluable.
+        </h2>
+        <br />
+        <h3>A few of my favorite photos</h3>
+        <div className="Gallery__wrapper">
+          <div className="Gallery__item"><img src="./bp/4.jpg" alt="Image 1" /></div>
+          <div className="Gallery__item"><img src="img/bp/2.jpg" alt="Image 2" /></div>
+        </div>
+        <div className="Gallery__wrapper">
+          <div className="Gallery__item"><img src="img/bp/3.jpg" alt="Image 3" /></div>
+          <div className="Gallery__item"><img src="img/bp/1.jpg" alt="Image 4" /></div>
+        </div>
+      </div>
+
+      <div className="container">
+        <h2>Despite only having 12 weeks, I also created other products!</h2>
+        <h1>Check out the other projects I worked on at bp</h1>
+        <div className="Gallery__wrapper">
+          <div className="Gallery__item">
+            <a href="bpxGA.html"><img src="img/GA/7.png" alt="Project 1" /></a>
+          </div>
+          <div className="Gallery__item">
+            <a href="mvp.html"><img src="img/mvp/5.png" alt="Project 2" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  
+
 // App Component to include all sections
 const App = () => (
   <div className="app">
@@ -256,6 +441,10 @@ const App = () => (
     <QualitativeData />
     <div className="section-divider"></div>
     <AffinityMapping />
+    <div className="section-divider"></div>
+    <SixthToEighthSections/>
+    <div className="section-divider"></div>
+    <BPPortfolio/>
   </div>
 );
 
