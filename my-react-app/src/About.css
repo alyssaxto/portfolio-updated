@@ -40,12 +40,14 @@
 }
 
 .about-heading {
-  font-size: 3rem; /* Adjust size as needed */
+  font-size: 5rem; /* Adjust size as needed */
   color: #ff4f4f;
-  font-family: poppins;
+  font-weight: bold;
+  font-family: playfair display;
   text-align: center;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .about {
@@ -82,7 +84,7 @@
   /* Pink Link */
 .pink-link {
   color: #ff4f4f; /* Black text color */
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none; /* Remove default underline */
   position: relative; /* Position relative for pseudo-element */
   transition: color 0.2s ease-in-out; /* Faster transition for text color */
