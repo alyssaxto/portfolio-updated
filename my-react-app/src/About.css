@@ -2,6 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 
+.playgroundTitleContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem; /* Adjust this value as needed */
+}
+
+.Playground {
+  font-size: 10rem; /* Adjust the font size */
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 3rem; /* Space between title and carousel */
+  
+  /* Ensure the text stays horizontal */
+  display: inline-block;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
 
 .carousel-container {
   width: 100%;
@@ -22,8 +40,8 @@
 }
 
 .about-heading {
-  font-size: 6rem; /* Adjust size as needed */
-  color: #292929;
+  font-size: 3rem; /* Adjust size as needed */
+  color: #ff4f4f;
   font-family: poppins;
   text-align: center;
   width: 100%;

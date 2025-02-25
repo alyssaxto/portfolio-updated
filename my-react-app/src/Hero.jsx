@@ -23,8 +23,8 @@ const Hero = () => {
           playful and purposeful products. After hours, I like to create
           <span className="highlight"> youtube </span> videos!
         </p>
-        <p>Previous ux designer @ <a href="https://www.bp.com/" className="greenhighlight" target="_blank" rel="noopener noreferrer">bp</a></p>
-        </TextFade>
+        <p>Incoming ux designer @ <span className="greenhighlight">bp</span></p>
+      </TextFade>
 
       <img
         src={heroImage}
