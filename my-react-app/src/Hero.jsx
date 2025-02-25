@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <TextFade direction="up" className="hero__content">
-        <h1>Hey, I’m Alyssa!</h1>
+        <h11>Hey, I’m Alyssa!</h11>
         <p>
           I’m a <span className="highlight">designer</span> and <span className="highlight">artist</span> making
           playful and purposeful products. After hours, I like to create

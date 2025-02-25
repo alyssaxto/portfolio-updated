@@ -8,7 +8,7 @@ function Footer() {
                 <span className="emoji">✨</span>
             </div>
             <div className="footer__left">
-                <h2>Thanks for stopping by!</h2>
+                <h22>Thanks for stopping by!</h22>
                 <p>&copy; Alyssa To {new Date().getFullYear()}</p>
                 <p>Made with ♡ and 🍵</p>
             </div>

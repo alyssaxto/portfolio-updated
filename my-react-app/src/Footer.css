@@ -16,8 +16,9 @@ footer {
     min-width: 60%; /* Ensures it doesn't get too small */
 }
 
-.footer__left h2 {
+.footer__left h22 {
     font-size: 3rem;
+    font-weight: bold;
     color: #292929;
     margin-bottom: 20px;
 }
@@ -57,6 +58,7 @@ footer {
   color: #292929;
   font-weight: bold;
   text-decoration: none;
+  justify-content: flex-start; /* Aligns left */
   font-size: 1.25rem;
   transition: color 0.3s ease-in-out; /* Smooth color change */
 
@@ -93,7 +95,8 @@ footer {
 
 .resumelink {
   color: #292929; /* Change to your preferred color */
-  align-self: flex-start;
+  align-self: flex-end;
+  text-align: right;
   text-decoration: none; /* Removes underline */
   font-weight: bold; /* Makes the text bold */
   font-size: 1.9em; /* Adjust the size */
@@ -105,7 +108,7 @@ footer {
   text-decoration: underline; /* Underline on hover */
 }
 .resume-container {
-  align-self: flex-start; /* Forces alignment to the left */
+  align-self: flex-end; /* Forces alignment to the left */
   width: 100%;
   margin-bottom: 40px;
 }

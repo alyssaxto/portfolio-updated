@@ -1,14 +1,13 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import bpImage from "../src/assets/bp/6.png"; 
 import rippleImage from "../src/assets/ripple.png";
 import manageImage from "../src/assets/icanmanage/c3.png";
 import stemuliImage from "../src/assets/stemuli/s17.png";
 import "./Components/HorizontalScroll/horizontalScroll.css";
-import {motion, useScroll, useTransform} from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import ImageContainer from './Components/ImageContainer/ImageContainer';
-import peekaboo from '../src/assets/peekaboo.png';
 import { LettersPullUp } from "./Components/letters-pull-up"; 
-
 
 const HorizontalScroll = () => {
   const targetRef = useRef(null);
@@ -17,25 +16,29 @@ const HorizontalScroll = () => {
 
   return (
     <div className="carousel" ref={targetRef}>
-        <div className="playgroundTitleContainer">
-          <LettersPullUp text="Projects" className="Playground" />
-        </div>
+      <div className="playgroundTitleContainer">
+        <LettersPullUp text="Projects" className="Playground" />
+      </div>
       <div className="contentContainer">
         <motion.div className="images" style={{ x }}>
-          <motion.div
-            className="ImageItem"
-            initial={{ opacity: 0, y: 150 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -15 }}  
-            transition={{ duration: 0.2, ease: "easeOut" }}
-          >
-            <ImageContainer
-              imageSource={bpImage}
-              title={"AI Image Generator"}
-              description={"Designing an accessible way for bp employees to quickly create the images they need."}
-            />
-          </motion.div>
+          {/* Link to /bpIntern */}
+          <Link to="/bpIntern">
+            <motion.div
+              className="ImageItem"
+              initial={{ opacity: 0, y: 150 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -15 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+            >
+              <ImageContainer
+                imageSource={bpImage}
+                title={"AI Image Generator"}
+                description={"Designing an accessible way for bp employees to quickly create the images they need."}
+              />
+            </motion.div>
+          </Link>
 
+          {/* Other ImageItems */}
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
@@ -78,8 +81,6 @@ const HorizontalScroll = () => {
             />
           </motion.div>
         </motion.div>
-
-
       </div>
     </div>
   );
