@@ -1,8 +1,11 @@
 import React from 'react';
 import "./Casestudy.css";
+import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
+
 
 // Header Component
 const Header = () => (
+  <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Designing an accessible way for bp employees to create the images they need</h1>
     <h2>bp Product Design Internship ✴ Summer 2024</h2>
@@ -12,6 +15,7 @@ const Header = () => (
       </a>
     </div>
   </header>
+  </TextFade>
 );
 
 const ImageBox = ({ src, alt }) => {
@@ -38,6 +42,7 @@ const ImageBox = ({ src, alt }) => {
 
 // Grid Component for Company, Skills, Timeline, and Tools
 const Grid = () => (
+  <TextFade direction="up">
   <div className="grid grid-cols-2 gap-4">
     <div className="grid__item">
       <h2>Company —</h2>
@@ -72,48 +77,63 @@ const Grid = () => (
       </ul>
     </div>
   </div>
+  </TextFade>
 );
 
-// Executive Summary Component
+
+
 const ExecutiveSummary = () => (
-  <div className="container">
-    <h2>Executive Summary</h2>
-    <h1>How are bp employees currently sourcing images?</h1>
-    <h2>
-      At the beginning of my internship, my mentor and I discussed several potential summer projects. I was particularly drawn to
-      the idea of developing a tool that would empower users to easily create or discover images.
-    </h2>
-    <h3>Current user flow</h3>
-    <div className="image-box">
-      <img src="./src/assets/bp/10.png" alt="User Journey" className="image-box" />
+  <TextFade direction="up">
+  <div className="summary-container">
+    <div className="summary-header">
+      <h2>Executive Summary</h2>
+      <div className="summary-text">
+        <h1>How are bp employees currently sourcing images?</h1>
+        <p>
+          At the beginning of my internship, my mentor and I discussed several potential summer projects. 
+          I was particularly drawn to the idea of developing a tool that would empower users to easily create or discover images.
+        </p>
+      </div>
+    </div>
+    <div className="summary-image">
+      <img src="./src/assets/bp/10.png" alt="User Journey" />
     </div>
   </div>
+  </TextFade>
 );
 
 
 
-// Problem Statement Component
 const ProblemStatement = () => (
-  <div className="container">
-    <h2>Problem Statement</h2>
-    <h1>How might we enable bp employees to create generative AI images?</h1>
-    <div className="bullets">
-      <p>Designers and bp employees alike all use images every day.</p>
-      <p>However, finding these images can be difficult and time-consuming.</p>
-      <p>How can we make it easier for these employees to access images that suit their needs?</p>
+  <div className="summary-container">
+    <div className="summary-header">
+      <h2>Problem Statement</h2>
+      <div className="summary-text">
+        <h1>How might we enable bp employees to create generative AI images?</h1>
+        <ul className="summary-text-bullets">
+          <li>Designers and bp employees alike all use images every day.</li>
+          <li>However, finding these images can be difficult and time-consuming.</li>
+          <li>How can we make it easier for these employees to access images that suit their needs?</li>
+        </ul>
+      </div>
     </div>
   </div>
 );
+
 const Value = () => (
-  <div className="container">
+  <div className="summary-container">
+    <div className="summary-header">
     <h2>Value</h2>
+    <div className="summary-text">
     <h1>Why bp needs generative image AI</h1>
-    <h2>
-      How does this product align with &nbsp;
+    <h3>
+      How does this product align with&nbsp;
       <a href="https://www.bp.com/en/global/corporate/who-we-are/our-beliefs-and-code-of-conduct.html" className="green-link" target="_blank" rel="noopener noreferrer">
          bp's code of conduct?
       </a>
-    </h2>
+    </h3>
+         </div>
+         </div>
     <br />
     <div className="quote-grid">
       <div className="quote-cell">
@@ -129,20 +149,21 @@ const Value = () => (
         <p className="quote-text">AI image generators will enhance bp's efficiency and improve the company's leadership within the energy sector</p>
       </div>
     </div>
-    <div className="section-divider"></div>
-    <div className="image-box">
-      <img src="./src/assets/bp/9.png" alt="Features" className="image-box" />
+    <div className="summary-image">
+      <img src="./src/assets/bp/9.png" alt="User Journey" />
     </div>
   </div>
 );
 
 // New Section for Empathize
 const Empathize = () => (
-  <div className="container">
+  <div className="summary-container">
+    <div className="summary-header">
     <h2>Empathize</h2>
+    <div className="summary-text">
     <h1>I developed a research plan</h1>
-    <h2>Research Objectives​</h2>
-    <br />
+    <h3>The top 3 research objectives I created​</h3>
+    </div>
     <div className="number-box">
       <div className="number">1.</div>
       <div className="text">Why do users need this product?​</div>
@@ -158,53 +179,58 @@ const Empathize = () => (
       <div className="text">How can this product add value to bp?​</div>
     </div>
   </div>
+  </div>
 );
+
+
 // Quantitative Data Component
 const QuantitativeData = () => (
-  <div className="container">
-    <h2>Quantitative data</h2>
-    <h1>Sending out a survey to bphxd</h1>
-    <h2>After 2 weeks, here are the key findings of my survey</h2>
-    <br />
-    <h4><span className="lime-highlight">19</span> participants</h4>
-    <br />
-    <div className="bullets">
-      <p><span className="lime-highlight">42% </span>of participants have no experience with AI image generators</p>
-      <p><span className="grey-highlight">This indicates that a significant portion of bp employees currently lack experience with AI image generators.</span></p>
-      <br />
-      <p><span className="lime-highlight">100% </span>of participants use images within their work</p>
-      <p><span className="grey-highlight">This number shows that every single participant would have a use case for an AI image generator.</span></p>
-      <br />
-      <p><span className="lime-highlight">36% </span> of participants already integrate AI image generators into their work at bp</p>
-      <p><span className="grey-highlight">Since bp doesn't have an approved internal tool, some employees might unintentionally be using bp's data to train AI models without realizing it.</span></p>
-      <br />
-      <p>The <span className="lime-highlight">top 3 purposes of images </span> are for presentations, infographics, and design</p>
-      <p>The <span className="lime-highlight">top 2 style of images </span> are stock images (primarily photography) and illustrations</p>
+  <div className="summary-container">
+    <div className="summary-header">
+      <h2>Quantitative data</h2>
+      <div className="summary-text">
+        <h1>Sending out a survey to bphxd</h1>
+        <h3>After 2 weeks, here are the key findings of my survey</h3>
+        <h4><span className="lime-highlight">19</span> participants</h4>
+        <ul className="summary-text-bullets">
+          <li><span className="lime-highlight">42% </span>of participants have no experience with AI image generators</li>
+          <li><span className="lime-highlight">100% </span>of participants use images within their work</li>
+          <li><span className="lime-highlight">36% </span> of participants already integrate AI image generators into their work at bp</li>
+          <li>The <span className="lime-highlight">top 3 purposes of images </span> are for presentations, infographics, and design</li>
+          <li>The <span className="lime-highlight">top 2 styles of images </span> are stock images (primarily photography) and illustrations</li>
+        </ul>
+      </div>
     </div>
   </div>
 );
 
 // Qualitative Data Component
 const QualitativeData = () => (
-  <div className="container">
+  <div className="summary-container">
+    <div className="summary-header">
     <h2>Qualitative Data</h2>
+    <div className="summary-text">
     <h1>I organized 6 user interviews with designers at bp</h1>
-    <h2>I conducted these interviews 1 on 1, recording each of them so I would be able to reference them later</h2>
-    <br />
-    <div className="image-container">
-      <div className="bullet-image">
-        <img src="./src/assets/bp/1.png" alt="User Journey" />
+    <p>I conducted these interviews 1 on 1, recording each of them so I would be able to reference them later</p>
       </div>
+    </div>
+    <div className="summary-image">
+      <img src="./src/assets/bp/1.png" alt="User Journey" />
     </div>
   </div>
 );
 
 // Affinity Mapping Section
 const AffinityMapping = () => (
-  <div className="container">
+  <div className="summary-container">
+    <div className="summary-header">
     <h2>Affinity Mapping</h2>
+    <div className="summary-text">
     <h1>Using these interviews, I was able to start affinity mapping</h1>
     <h3>These are the 6 most important themes I gathered from my user interviews</h3>
+    <br />
+    </div>
+    </div>
     <div className="quote-grid">
       <div className="quote-cell">
         <h2>Current resources are lacking</h2>
@@ -231,79 +257,93 @@ const AffinityMapping = () => (
         <p className="quote-text">"We should have a note to let people know that this is not realistic."</p>
       </div>
     </div>
-    <div className="section-divider"></div>
-    <div className="image-box">
-      <img src="./src/assets/bp/2.png" alt="Features" className="image-box" />
+    <br />
+    <div className="summary-image">
+      <img src="./src/assets/bp/2.png" alt="User Journey" />
     </div>
   </div>
 );
 
 const SixthToEighthSections = () => (
-    <div>
-      <div className="container">
+  <div className="summary-container">
+    <div className="summary-header">
         <h2>User Personas</h2>
+        <div className="summary-text">
         <h1>I developed 3 different personas using the research I conducted</h1>
-        <h2>These user personas were meant to identify the different needs and wants of various roles</h2>
-        <br />
-        <div className="bullets">
-          <p>Due to time constraints, I wasn't able to interview any non-designers officially</p>
-          <p>However, I did user interviews with various designers to gain more diverse opinions</p>
-          <p>I focused on which roles would have the highest use cases for my user personas​</p>
+        <h3>These user personas were meant to identify the different needs and wants of various roles</h3>
+        <ul className="summary-text-bullets">
+          <li>Due to time constraints, I wasn't able to interview any non-designers officially</li>
+          <li>However, I did user interviews with various designers to gain more diverse opinions</li>
+          <li>I focused on which roles would have the highest use cases for my user personas​</li>
+        </ul>
         </div>
-        <div className="image-container">
+        </div>
+        <br />
           <h3>Regular bp employee</h3>
           <h2>(Non-designer)</h2>
-          <div className="bullet-image">
+          <div className="summary-image">
             <img src="./src/assets/bp/Slide14.jpg" alt="User Journey" />
           </div>
+          <br />
           <h3>Content designer</h3>
-          <div className="bullet-image">
+          <div className="summary-image">
             <img src="./src/assets/bp/Slide12.jpg" alt="User Journey" />
           </div>
+          <br />
           <h3>Service designer</h3>
-          <div className="bullet-image">
+          <div className="summary-image">
             <img src="./src/assets/bp/Slide13.jpg" alt="User Journey" />
+
           </div>
-        </div>
-      </div>
+          
+          <div className="section-divider"></div>
+
 
       {/* Seventh Section */}
-      <div className="container">
+      <div className="summary-container">
+      <div className="summary-header">
         <h2>Ideate</h2>
+        <div className="summary-text">
         <h1>Feature prioritization 2x2 matrix</h1>
-        <h2>Recognizing that I can't tackle everything at once, I created this 2x2 matrix to help identify and prioritize the most important tasks.</h2>
-        <div className="image-container">
-          <div className="bullet-image">
+        <p>Recognizing that I can't tackle everything at once, I created this 2x2 matrix to help identify and prioritize the most important tasks.</p>
+        <h3>Based off of this, I didn't include:</h3>
+        <ul className="summary-text-bullets">
+            <li>Light and dark mode</li>
+            <li>Randomize button for specific purposes</li>
+        </ul>
+        </div>
+        </div>
+        <div className="summary-image">
             <img src="./src/assets/bp/3.png" alt="Features" />
           </div>
-          <h2>Based off of this, I didn't include:</h2>
-          <div className="bullets">
-            <p>Light and dark mode</p>
-            <p>Randomize button for specific purposes</p>
-          </div>
-        </div>
       </div>
-
+      <div className="section-divider"></div>
       {/* Eighth Section */}
-      <div className="container">
+      <div className="summary-container">
+      <div className="summary-header">
         <h2>Mid fidelity wireframes​</h2>
+        <div className="summary-text">
         <h1>By referencing the most important features, I was able to begin sketching</h1>
-        <h2>Testing out different formats using Sketch</h2>
-        <div className="image-container">
-          <div className="bullet-image">
+        <h3>Testing out different formats using Sketch</h3>
+        </div>
+        </div>
+        <br />
+        <div className="summary-image">
             <img src="./src/assets/bp/5.png" alt="User Journey" />
-          </div>
         </div>
       </div>
 
-      <div className="container">
+      <div className="summary-container">
+      <div className="summary-header">
         <h2>User flow diagram​</h2>
+        <div className="summary-text">
         <h1>Allowing stakeholders to see how the user would interact with this product​</h1>
-        <h2>I created 3 different pathways depending on the user's current skills</h2>
-        <div className="image-container">
-          <div className="bullet-image">
+        <h3>I created 3 different pathways depending on the user's current skills</h3>
+        </div>
+        </div>
+        <br />
+        <div className="summary-image">
             <img src="./src/assets/bp/4.png" alt="User Journey" />
-          </div>
         </div>
       </div>
     </div>
@@ -311,12 +351,16 @@ const SixthToEighthSections = () => (
 
 const BPPortfolio = () => (
     <div>
-      <div className="container">
+      <div className="summary-container">
+      <div className="summary-header">
         <h2>Prototype</h2>
+        <div className="summary-text">
         <h1>First iteration of high fidelity wireframes</h1>
-        <h2>
+        <h3>
           While the original prototypes were designed in Sketch, I converted them into a clickable Figma file to embed in this portfolio
-        </h2>
+        </h3>
+        </div>
+        </div>
         <br />
         <div className="figma-embed-container-desktop">
           <iframe
@@ -342,31 +386,40 @@ const BPPortfolio = () => (
         </div>
       </div>
       
-      <div className="container">
+      <div className="summary-container">
+      <div className="summary-header">
         <h2>Usability testing</h2>
+        <div className="summary-text">
         <h1>I conducted usability testing with 5 participants</h1>
-        <h2>I interviewed both designers and non-design employees</h2>
+        <h3>I interviewed both designers and non-design employees</h3>
         <br />
-        <div className="image-container">
+        <br />
+        </div>
+        </div>
+        <div className="summary-image">
           <h3>Assisted image prompter</h3>
-          <div className="bullet-image"><img src="./src/assets/bp/Slide22.jpg" alt="User Journey" /></div>
+          <div className="summary-image"><img src="./src/assets/bp/Slide22.jpg" alt="User Journey" /></div>
           <br />
           <h3>Side bar</h3>
-          <div className="bullet-image"><img src="./src/assets/bp/Slide23.jpg" alt="User Journey" /></div>
+          <div className="summary-image"><img src="./src/assets/bp/Slide23.jpg" alt="User Journey" /></div>
           <br />
           <h3>Regenerator tool</h3>
-          <div className="bullet-image"><img src="./src/assets/bp/Slide24.jpg" alt="User Journey" /></div>
+          <div className="summary-image"><img src="./src/assets/bp/Slide24.jpg" alt="User Journey" /></div>
         </div>
         <br />
         <h3>Download button</h3>
-        <div className="bullet-image"><img src="./src/assets/bp/Slide26.jpg" alt="User Journey" /></div>
+        <div className="summary-image"><img src="./src/assets/bp/Slide26.jpg" alt="User Journey" /></div>
       </div>
 
-      <div className="container">
+      <div className="summary-container">
+      <div className="summary-header">
         <h2>Conclusion</h2>
+        <div className="summary-text">
         <h1>Final Prototype</h1>
-        <h2>The final prototype was created using Sketch</h2>
+        <h3>The final prototype was created using Sketch</h3>
         <br />
+        </div>
+        </div>
         <div className="video-container">
           <iframe
             width="560"
@@ -388,23 +441,38 @@ const BPPortfolio = () => (
         </div>
       </div>
 
-      <div className="container">
+      
+      <div className="summary-container">
+      <div className="summary-header">
         <h2>Summary</h2>
+        <div className="summary-text">
         <h1>A summer at bp</h1>
-        <h2>
-          I am immensely grateful to have had the opportunity to intern at such an incredible company! I want to extend my heartfelt thanks to the entire design and change management team for their mentorship and warm welcome. Everyone's support and guidance have been invaluable.
-        </h2>
+        <p>
+          I am grateful to have had the opportunity to intern at such an incredible company! I want to extend my heartfelt thanks to the entire design and change management team for their mentorship and warm welcome. Everyone's support and guidance have been invaluable.
+        </p>
+        </div>
+        </div>
+        </div>
         <br />
-        <h3>A few of my favorite photos</h3>
-        <div className="Gallery__wrapper">
-          <div className="Gallery__item"><img src="./bp/4.jpg" alt="Image 1" /></div>
-          <div className="Gallery__item"><img src="img/bp/2.jpg" alt="Image 2" /></div>
-        </div>
-        <div className="Gallery__wrapper">
-          <div className="Gallery__item"><img src="img/bp/3.jpg" alt="Image 3" /></div>
-          <div className="Gallery__item"><img src="img/bp/1.jpg" alt="Image 4" /></div>
-        </div>
-      </div>
+
+        <div className="BentoBox">
+  <div className="BentoBox__wrapper">
+    <div className="BentoBox__item">
+      <img src="./src/assets/bp/4.jpg" alt="Image 1" />
+    </div>
+    <div className="BentoBox__item">
+      <img src="./src/assets/bp/2.jpg" alt="Image 2" />
+    </div>
+  </div>
+  <div className="BentoBox__wrapper">
+    <div className="BentoBox__item">
+      <img src="./src/assets/bp/3.jpg" alt="Image 3" />
+    </div>
+    <div className="BentoBox__item">
+      <img src="./src/assets/bp/1.jpg" alt="Image 4" />
+    </div>
+  </div>
+</div>
 
       <div className="container">
         <h2>Despite only having 12 weeks, I also created other products!</h2>
@@ -428,10 +496,14 @@ const App = () => (
   <div className="app">
     <Header />
     <Grid />
+    <div class="divider"></div>
+
     <ExecutiveSummary />
+    
     <div className="section-divider"></div>
+    
     <ProblemStatement />
-    <div className="section-divider"></div>
+
     <Value />
     <div className="section-divider"></div>
     <Empathize />

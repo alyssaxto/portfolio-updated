@@ -27,6 +27,13 @@
 .green-link:hover {
   color: #0bc20b; /* Green text color on hover */
 }
+.divider {
+  width: 100%; /* Take up full width of parent container */
+  max-width: 1000px; /* Limit width to 1000px */
+  height: 1px; /* Line thickness */
+  background-color: #d3d3d3; /* Gray color for the line */
+  margin: 20px auto; /* Center the divider horizontally and add some spacing above and below */
+}
 
 
 h1 {
@@ -56,6 +63,39 @@ h3 {
   margin: 0;
 }
 
+.BentoBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between each box */
+  justify-content: center; /* Centers the items inside BentoBox */
+  max-width: 1000px; /* Ensure the BentoBox does not exceed 1000px width */
+  margin: 0 auto; /* Centers the BentoBox within the parent container */
+}
+
+.BentoBox__wrapper {
+  display: flex;
+  width: 90%; /* Ensures two items per row */
+  gap: 20px; /* Space between items */
+}
+
+.BentoBox__item {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.BentoBox__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the box without distortion */
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .BentoBox__wrapper {
+    width: 100%; /* Make each item take full width on smaller screens */
+  }
+}
+
 .container {
   font-family: Poppins;
   max-width: 1000px;
@@ -63,30 +103,96 @@ h3 {
   padding: 20px 20px 0px 30px;
 }
 
-.container h1{
-  font-family: Playfair display;
-  font-weight: 600;
+.summary-container {
+  font-family: Poppins, sans-serif;
   max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.summary-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* Ensures content wraps instead of overflowing */
+}
+
+
+.summary-header h4 {
+  flex-shrink: 0;
+  padding-top: 10px;
+  color: #000000;
+  font-size: 1.7em;
+  white-space: nowrap;
+}
+.summary-header h3 {
+  flex-shrink: 0;
+  font-weight: 400;
+  color: #8b8b8b;
+  font-size: 1.5em;
+  white-space: normal;
+}
+
+
+.summary-header h2 {
+  flex-shrink: 0;
+  padding-top: 10px;
+  font-weight: 400;
+  color: #8b8b8b;
+  font-size: 1.5em;
+  white-space: normal;
+  width: 250px;
+}
+
+.summary-text {
+  flex: 1;
+  min-width: 0; /* Prevents flexbox issues */
+  max-width: 100%; /* Allows it to stay in the container */
+  word-wrap: break-word; /* Ensures long words wrap */
+}
+
+
+.summary-image {
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.summary-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 3px solid #9bd18a;
+}
+
+.summary-text-bullets {
+  list-style-type: disc; /* Standard bullet points */
+  padding-left: 20px; /* Indent bullets */
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+.summary-text-bullets li {
+  margin-bottom: 30px; /* Space between bullet points */
+  font-size: 1em;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
   font-size: 2.3em;
-  margin-top: 0.2rem;
-  margin-bottom: 1.3rem;
-
+  margin-bottom: 1rem;
+  color: #000;
 }
 
-.container h2 {
-  font-weight: 400; /* Adjust font weight if necessary */
-  color: #787878;
-  font-family: Poppins;
-  font-size: 1.6em; /* Adjust the font size as needed */
-}
-.container h3{
-    font-weight: 350; /* Adjust font weight if necessary */
-    color: #787878;
-    font-family: Poppins;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 1.5em; /* Adjust the font size as needed */
-    margin: 0;
+p {
+  font-weight: 400;
+  color: #555;
+  font-size: 1.2em;
+  line-height: 1.6;
 }
 
 .grid {
@@ -148,8 +254,8 @@ h3 {
 
 .bullets p {
   max-width: 1000px;
-  font-size: 1.3em;
-  line-height: 1.4;
+  font-size: 1.7em;
+  line-height: 1.3;
 }
 .bullets p2 {
   color: #000000;
@@ -578,33 +684,7 @@ iframe {
   .purple-link:hover {
     color: #742CFF; /* Purple text color on hover */
   }
-  
-  /* Green Link */
-  .green-link {
-    color: #000; /* Black text color */
-    text-decoration: none; /* Remove default underline */
-    position: relative; /* Position relative for pseudo-element */
-    transition: color 0.2s ease-in-out; /* Faster transition for text color */
-  }
-  
-  .green-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px; /* Adjust space between text and underline */
-    width: 100%;
-    height: 1px;
-    background-color: #0bc20b; /* Green underline color */
-    transform: scaleX(1); /* Full width initially */
-    transform-origin: bottom right; /* Align underline to bottom right */
-    transition: transform 0.2s ease-in-out; /* Faster transition for underline */
-  }
-  
-  .green-link:hover {
-    color: #0bc20b; /* Green text color on hover */
-  }
-  
-  
+
  
   
   .close {
@@ -679,13 +759,14 @@ iframe {
   }
   
   .lime-highlight {
-    color: #9bd18a;
+    color: #68b94f;
     font-weight: 700;
     /* Additional styling */
   }
   .grey-highlight {
     color: #787878;
     font-weight: 400;
+    font-size: 1.7rem;
     /* Additional styling */
   }
   h4 {
