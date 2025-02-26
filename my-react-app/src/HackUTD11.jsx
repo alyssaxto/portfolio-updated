@@ -2,7 +2,7 @@ import Nav from "./Navbar.jsx";
 import Footer from './Footer.jsx'
 import "./Casestudy.css";
 import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
-
+import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 
 // Header Component
 const Header = () => (
@@ -287,14 +287,6 @@ const BPPortfolio = () => (
 
       <div className="container">
       <h3>If you'd like to sponsor the next HackUTD, feel free to contact the team at <a href="mailto:Hello@hackutd.co" class="blue-link" target="_blank">hello@hackutd.co</a></h3>
-        <div className="Gallery__wrapper">
-          <div className="Gallery__item">
-            <a href="bpxGA.html"><img src="./src/assets/GA/7.png" alt="Project 1" /></a>
-          </div>
-          <div className="Gallery__item">
-            <a href="mvp.html"><img src="./src/assets/mvp/5.png" alt="Project 2" /></a>
-          </div>
-        </div>
       </div>
     </div>
   );
@@ -304,21 +296,37 @@ const BPPortfolio = () => (
 // App Component to include all sections
 const App = () => (
   <div className="app">
+        <ProgressBar />
     <Header />
     <Grid />
     <div class="divider"></div>
     <Top />
+    <div className="section-divider"></div>
+    <div class="divider"></div>
     <Summary />
     
     <div className="section-divider"></div>
-    
+    <div class="divider"></div>
     <Assets />
     <div className="section-divider"></div>
+    <div className="section-divider"></div>
+    <div class="divider"></div>
     <Hero />
+    <div className="section-divider"></div>
+    <div class="divider"></div>
     <Soon />
+    <div className="section-divider"></div>
+    <div class="divider"></div>
     <div className="section-divider"></div>
     <div className="section-divider"></div>
     <BPPortfolio/>
+    <div class="portfolio__btn-container">
+  <button class="portfolio__btn"><a href="https://github.com/hackutd/hackutd-24-site" target="_blank">View source code</a></button>
+</div>
+<br/>
+<div class="portfolio__btn-container">
+<button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
+</div>
     <Footer/>
   </div>
 );

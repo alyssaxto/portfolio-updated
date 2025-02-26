@@ -12,6 +12,7 @@ function Playground() {
       <Play />
       <Artwork />
       <Footer />
+      
     </>
   );
 }

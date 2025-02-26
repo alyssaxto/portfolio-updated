@@ -5,13 +5,14 @@ import About from "./pages/About.jsx";
 import Play from "./pages/Playground.jsx";
 import BPIntern from "./pages/bpIntern.jsx";  // Import the new BPIntern component
 import HackUTD from "../src/HackUTD11.jsx";
-
+import ScrollToTop from './ScrollToTop';
 
 
 function App() {
   return (
     <>
       <Header />
+      <ScrollToTop /> {/* Add this here so it will run on every route change */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Playground" element={<Play />} />

@@ -108,6 +108,7 @@ const HorizontalScroll = () => {
             />
           </motion.div>
         </motion.div>
+        
       </div>
     </div>
   );

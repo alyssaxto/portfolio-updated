@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Casestudy.css";
 import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
-
+import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 
 // Header Component
 const Header = () => (
@@ -17,28 +17,6 @@ const Header = () => (
   </header>
   </TextFade>
 );
-
-const ImageBox = ({ src, alt }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
-
-  return (
-    <>
-      <div className="image-box" onClick={openModal}>
-        <img src={src} alt={alt} className="image-box" />
-      </div>
-
-      {isOpen && (
-        <div className="modal" onClick={closeModal}>
-          <button className="close-btn" onClick={closeModal}>X</button>
-          <img src={src} alt={alt} className="modal-content" />
-        </div>
-      )}
-    </>
-  );
-};
 
 // Grid Component for Company, Skills, Timeline, and Tools
 const Grid = () => (
@@ -412,6 +390,7 @@ const BPPortfolio = () => (
         </div>
       </div>
       </TextFade>
+      <div class="divider"></div>
       <TextFade direction="up">
       <div className="summary-container">
       <div className="summary-header">
@@ -438,6 +417,7 @@ const BPPortfolio = () => (
         <div className="summary-image"><img src="./src/assets/bp/Slide26.jpg" alt="User Journey" /></div>
       </div>
       </TextFade>
+      <div class="divider"></div>
       <TextFade direction="up">
       <div className="summary-container">
       <div className="summary-header">
@@ -470,7 +450,7 @@ const BPPortfolio = () => (
       </div>
       </TextFade>
 
-      
+      <div class="divider"></div>
       <div className="summary-container">
       <div className="summary-header">
         <h2>Summary</h2>
@@ -523,6 +503,7 @@ const BPPortfolio = () => (
 // App Component to include all sections
 const App = () => (
   <div className="app">
+    <ProgressBar/>
     <Header />
     <Grid />
     <div class="divider"></div>
@@ -530,25 +511,38 @@ const App = () => (
     <ExecutiveSummary />
     
     <div className="section-divider"></div>
-    
+    <div class="divider"></div>
     <ProblemStatement />
-
+    <div class="divider"></div>
     <Value />
+    
     <div className="section-divider"></div>
+    <div class="divider"></div>
     <Empathize />
     <div className="section-divider"></div>
+        <div class="divider"></div>
     <QuantitativeData />
     <div className="section-divider"></div>
+    <div class="divider"></div>
     <QualitativeData />
     <div className="section-divider"></div>
+    <div class="divider"></div>
     <AffinityMapping />
     <div className="section-divider"></div>
+    <div class="divider"></div>
     <Personas/>
+    <div class="divider"></div>
     <Ideate />
+    <div class="divider"></div>
     <Mid />
+    <div class="divider"></div>
     <Flow />
+    <div class="divider"></div>
     <div className="section-divider"></div>
     <BPPortfolio/>
+    <div class="portfolio__btn-container">
+<button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
+</div>
   </div>
 );
 

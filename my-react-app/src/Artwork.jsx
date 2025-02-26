@@ -1,6 +1,7 @@
 import React from 'react';
 import "./About.css";
 import { motion } from 'framer-motion';
+import { LettersPullUp } from "./Components/letters-pull-up"; 
 
 const images = [
   "../src/assets/gal/1.png",
@@ -19,7 +20,11 @@ const images = [
 
 const Carousel = () => {
   return (
+    
     <div className="carousel-container overflow-hidden py-10">
+            <div className="playgroundTitleContainer">
+              <LettersPullUp text="Artwork" className="Playground" />
+            </div>
       <motion.div
         className="carousel-content flex whitespace-nowrap"
         animate={{ x: ["0%", "-50%"] }}
