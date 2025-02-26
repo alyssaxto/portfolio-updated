@@ -117,7 +117,7 @@ h3 {
   flex-wrap: wrap; /* Ensures content wraps instead of overflowing */
 }
 
-
+/* Default styles for larger screens */
 .summary-header h4 {
   flex-shrink: 0;
   padding-top: 10px;
@@ -125,6 +125,7 @@ h3 {
   font-size: 1.7em;
   white-space: nowrap;
 }
+
 .summary-header h3 {
   flex-shrink: 0;
   font-weight: 400;
@@ -132,7 +133,6 @@ h3 {
   font-size: 1.5em;
   white-space: normal;
 }
-
 
 .summary-header h2 {
   flex-shrink: 0;
@@ -146,17 +146,65 @@ h3 {
 
 .summary-text {
   flex: 1;
-  min-width: 0; /* Prevents flexbox issues */
-  max-width: 100%; /* Allows it to stay in the container */
-  word-wrap: break-word; /* Ensures long words wrap */
+  min-width: 0;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+  .summary-header {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px;
+  }
+
+  .summary-header h4 {
+    font-size: 1.4em; /* Reduce size */
+  }
+
+  .summary-header h3, 
+  .summary-header h2 {
+    font-size: 1.2em; /* Reduce size */
+  }
+
+  .summary-text {
+    font-size: 1em; /* Reduce text size */
+  }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+  .summary-header h4 {
+    font-size: 1.2em;
+  }
+
+  .summary-header h3, 
+  .summary-header h2 {
+    font-size: 1em;
+  }
+
+  .summary-text {
+    font-size: 0.9em;
+  }
+}
 
 .summary-image {
   border-radius: 20px;
   margin-top: 20px;
 }
+.hack-summary-image {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically (if the container has a height) */
+  text-align: center; /* Ensures inline elements inside are centered */
+}
 
+.hack-summary-image img {
+  width: 80%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
 .summary-image img {
   width: 100%;
   height: auto;
@@ -349,8 +397,8 @@ p {
 
 .figma-embed-container {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  width: 800px;
-  height: 450px;
+  width: 1000px;
+  height: 400px;
   margin: 0 auto; /* Center the iframe horizontally */
   
 }
@@ -685,7 +733,39 @@ iframe {
     color: #742CFF; /* Purple text color on hover */
   }
 
+  .Gallery__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 1x2 grid: two equal columns */
+    gap: 20px; /* Adjusted gap between items */
+    width: 100%; /* Full width */
+    max-width: 1000px; /* Max width of the container */
  
+  }
+  
+  .Gallery__item {
+    border-radius: 4px; /* Rounded corners */
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  .Gallery__item:hover img {
+    transform: scale(1.1); /* Slightly increase size on hover */
+  }
+  
+
+  
   
   .close {
     color: white;

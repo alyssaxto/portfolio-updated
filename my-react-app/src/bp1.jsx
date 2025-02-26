@@ -105,6 +105,7 @@ const ExecutiveSummary = () => (
 
 
 const ProblemStatement = () => (
+  <TextFade direction="up">
   <div className="summary-container">
     <div className="summary-header">
       <h2>Problem Statement</h2>
@@ -118,9 +119,11 @@ const ProblemStatement = () => (
       </div>
     </div>
   </div>
+  </TextFade>
 );
 
 const Value = () => (
+  <TextFade direction="up">
   <div className="summary-container">
     <div className="summary-header">
     <h2>Value</h2>
@@ -153,10 +156,12 @@ const Value = () => (
       <img src="./src/assets/bp/9.png" alt="User Journey" />
     </div>
   </div>
+  </TextFade>
 );
 
 // New Section for Empathize
 const Empathize = () => (
+  <TextFade direction="up">
   <div className="summary-container">
     <div className="summary-header">
     <h2>Empathize</h2>
@@ -180,11 +185,13 @@ const Empathize = () => (
     </div>
   </div>
   </div>
+    </TextFade>
 );
 
 
 // Quantitative Data Component
 const QuantitativeData = () => (
+  <TextFade direction="up">
   <div className="summary-container">
     <div className="summary-header">
       <h2>Quantitative data</h2>
@@ -202,10 +209,12 @@ const QuantitativeData = () => (
       </div>
     </div>
   </div>
+  </TextFade>
 );
 
 // Qualitative Data Component
 const QualitativeData = () => (
+  <TextFade direction="up">
   <div className="summary-container">
     <div className="summary-header">
     <h2>Qualitative Data</h2>
@@ -218,10 +227,12 @@ const QualitativeData = () => (
       <img src="./src/assets/bp/1.png" alt="User Journey" />
     </div>
   </div>
+  </TextFade>
 );
 
 // Affinity Mapping Section
 const AffinityMapping = () => (
+  <TextFade direction="up">
   <div className="summary-container">
     <div className="summary-header">
     <h2>Affinity Mapping</h2>
@@ -262,9 +273,11 @@ const AffinityMapping = () => (
       <img src="./src/assets/bp/2.png" alt="User Journey" />
     </div>
   </div>
+  </TextFade>
 );
 
-const SixthToEighthSections = () => (
+const Personas = () => (
+  <TextFade direction="up">
   <div className="summary-container">
     <div className="summary-header">
         <h2>User Personas</h2>
@@ -297,60 +310,73 @@ const SixthToEighthSections = () => (
           </div>
           
           <div className="section-divider"></div>
-
-
-      {/* Seventh Section */}
-      <div className="summary-container">
-      <div className="summary-header">
-        <h2>Ideate</h2>
-        <div className="summary-text">
-        <h1>Feature prioritization 2x2 matrix</h1>
-        <p>Recognizing that I can't tackle everything at once, I created this 2x2 matrix to help identify and prioritize the most important tasks.</p>
-        <h3>Based off of this, I didn't include:</h3>
-        <ul className="summary-text-bullets">
-            <li>Light and dark mode</li>
-            <li>Randomize button for specific purposes</li>
-        </ul>
-        </div>
-        </div>
-        <div className="summary-image">
-            <img src="./src/assets/bp/3.png" alt="Features" />
           </div>
-      </div>
-      <div className="section-divider"></div>
-      {/* Eighth Section */}
-      <div className="summary-container">
-      <div className="summary-header">
-        <h2>Mid fidelity wireframes​</h2>
-        <div className="summary-text">
-        <h1>By referencing the most important features, I was able to begin sketching</h1>
-        <h3>Testing out different formats using Sketch</h3>
-        </div>
-        </div>
-        <br />
-        <div className="summary-image">
-            <img src="./src/assets/bp/5.png" alt="User Journey" />
-        </div>
-      </div>
+          </TextFade>
+        );
 
-      <div className="summary-container">
-      <div className="summary-header">
-        <h2>User flow diagram​</h2>
-        <div className="summary-text">
-        <h1>Allowing stakeholders to see how the user would interact with this product​</h1>
-        <h3>I created 3 different pathways depending on the user's current skills</h3>
-        </div>
-        </div>
-        <br />
-        <div className="summary-image">
-            <img src="./src/assets/bp/4.png" alt="User Journey" />
-        </div>
-      </div>
-    </div>
-);
+        const Ideate = () => (
+          <TextFade direction="up">
+          <div className="summary-container">
+            <div className="summary-header">
+              <h2>Ideate</h2>
+              <div className="summary-text">
+                <h1>Feature prioritization 2x2 matrix</h1>
+                <p>Recognizing that I can't tackle everything at once, I created this 2x2 matrix to help identify and prioritize the most important tasks.</p>
+                <h3>Based off of this, I didn't include:</h3>
+                <ul className="summary-text-bullets">
+                  <li>Light and dark mode</li>
+                  <li>Randomize button for specific purposes</li>
+                </ul>
+              </div>
+            </div>
+            <div className="summary-image">
+              <img src="./src/assets/bp/3.png" alt="Features" />
+            </div>
+            <div className="section-divider"></div>
+          </div>
+          </TextFade>
+        );
+        
+        const Mid = () => (
+          <TextFade direction="up">
+          <div className="summary-container">
+            <div className="summary-header">
+              <h2>Mid fidelity wireframes​</h2>
+              <div className="summary-text">
+                <h1>By referencing the most important features, I was able to begin sketching</h1>
+                <h3>Testing out different formats using Sketch</h3>
+              </div>
+            </div>
+            <div className="summary-image">
+              <img src="./src/assets/bp/5.png" alt="User Journey" />
+            </div>
+            <div className="section-divider"></div>
+          </div>
+          </TextFade>
+        );
+        
+        const Flow = () => (
+          <TextFade direction="up">
+          <div className="summary-container">
+            <div className="summary-header">
+              <h2>User flow diagram​</h2>
+              <div className="summary-text">
+                <h1>Allowing stakeholders to see how the user would interact with this product​</h1>
+                <h3>I created 3 different pathways depending on the user's current skills</h3>
+              </div>
+            </div>
+            <div className="summary-image">
+              <img src="./src/assets/bp/4.png" alt="User Journey" />
+            </div>
+            <div className="section-divider"></div>
+          </div>
+          </TextFade>
+        );
+        
 
 const BPPortfolio = () => (
     <div>
+                <TextFade direction="up">
       <div className="summary-container">
       <div className="summary-header">
         <h2>Prototype</h2>
@@ -385,7 +411,8 @@ const BPPortfolio = () => (
           ></iframe>
         </div>
       </div>
-      
+      </TextFade>
+      <TextFade direction="up">
       <div className="summary-container">
       <div className="summary-header">
         <h2>Usability testing</h2>
@@ -410,7 +437,8 @@ const BPPortfolio = () => (
         <h3>Download button</h3>
         <div className="summary-image"><img src="./src/assets/bp/Slide26.jpg" alt="User Journey" /></div>
       </div>
-
+      </TextFade>
+      <TextFade direction="up">
       <div className="summary-container">
       <div className="summary-header">
         <h2>Conclusion</h2>
@@ -440,6 +468,7 @@ const BPPortfolio = () => (
           </button>
         </div>
       </div>
+      </TextFade>
 
       
       <div className="summary-container">
@@ -479,10 +508,10 @@ const BPPortfolio = () => (
         <h1>Check out the other projects I worked on at bp</h1>
         <div className="Gallery__wrapper">
           <div className="Gallery__item">
-            <a href="bpxGA.html"><img src="img/GA/7.png" alt="Project 1" /></a>
+            <a href="bpxGA.html"><img src="./src/assets/GA/7.png" alt="Project 1" /></a>
           </div>
           <div className="Gallery__item">
-            <a href="mvp.html"><img src="img/mvp/5.png" alt="Project 2" /></a>
+            <a href="mvp.html"><img src="./src/assets/mvp/5.png" alt="Project 2" /></a>
           </div>
         </div>
       </div>
@@ -514,7 +543,10 @@ const App = () => (
     <div className="section-divider"></div>
     <AffinityMapping />
     <div className="section-divider"></div>
-    <SixthToEighthSections/>
+    <Personas/>
+    <Ideate />
+    <Mid />
+    <Flow />
     <div className="section-divider"></div>
     <BPPortfolio/>
   </div>

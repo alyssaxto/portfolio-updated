@@ -39,19 +39,22 @@ const HorizontalScroll = () => {
           </Link>
 
           {/* Other ImageItems */}
-          <motion.div
-            className="ImageItem"
-            initial={{ opacity: 0, y: 150 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -15 }}  
-            transition={{ duration: 0.2, ease: "easeOut" }}
-          >
-            <ImageContainer
-              imageSource={rippleImage}
-              title={"HackUTD Website"}
-              description={"Developing and designing the website for the biggest 24-hour hackathon in Texas hosted by HackUTD."}
-            />
-          </motion.div>
+          <Link to="/HackUTD11">
+  <motion.div
+    className="ImageItem"
+    initial={{ opacity: 0, y: 150 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    whileHover={{ y: -15 }}  
+    transition={{ duration: 0.2, ease: "easeOut" }}
+  >
+    <ImageContainer
+      imageSource={rippleImage}
+      title={"HackUTD Website"}
+      description={"Developing and designing the website for the biggest 24-hour hackathon in Texas hosted by HackUTD."}
+    />
+  </motion.div>
+</Link>
+
 
           <motion.div
             className="ImageItem"

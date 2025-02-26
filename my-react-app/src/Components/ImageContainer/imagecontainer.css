@@ -9,6 +9,15 @@ img.image {
 
   
 }
+
+a {
+  text-decoration: none; /* Removes underline from all links */
+}
+
+.ImageItem a {
+  text-decoration: none; /* Ensures specific links inside .ImageItem have no underline */
+}
+
 .Playground {
   font-family: Poppins;
   font-size: 5rem;
