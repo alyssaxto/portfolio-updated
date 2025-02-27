@@ -3,6 +3,7 @@ import "./Casestudy.css";
 import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
 import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 import ExpandableImage from './Components/ExpandImage.jsx';
+import { Link } from "react-router-dom";
 
 
 
@@ -486,19 +487,23 @@ const BPPortfolio = () => (
   </div>
 </div>
 
-      <div className="container">
-        <h2>Despite only having 12 weeks, I also created other products!</h2>
-        <h1>Check out the other projects I worked on at bp</h1>
-        <div className="Gallery__wrapper">
-          <div className="Gallery__item">
-            <a href="bpxGA.html"><img src="./src/assets/GA/7.png" alt="Project 1" /></a>
-          </div>
-          <div className="Gallery__item">
-            <a href="mvp.html"><img src="./src/assets/mvp/5.png" alt="Project 2" /></a>
-          </div>
-        </div>
+<div className="container">
+    <h2>Despite only having 12 weeks, I also created other products!</h2>
+    <h1>Check out the other projects I worked on at bp</h1>
+    <div className="Gallery__wrapper">
+      <div className="Gallery__item">
+        <Link to="/bpxGA">
+          <img src="./src/assets/GA/7.png" alt="Project 1" />
+        </Link>
+      </div>
+      <div className="Gallery__item">
+        <Link to="/mvp">
+          <img src="./src/assets/mvp/5.png" alt="Project 2" />
+        </Link>
       </div>
     </div>
+  </div>
+  </div>
   );
 
   
