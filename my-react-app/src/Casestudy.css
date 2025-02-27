@@ -249,6 +249,14 @@ h3 {
   border-radius: 10px;
   border: 3px solid #3FAEFC;
 }
+
+.yellow-summary-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 3px solid #FFAF48;
+}
 .summary-image {
   border-radius: 20px;
   margin-top: 20px;
@@ -474,7 +482,7 @@ p {
 .video-container {
   position: relative;
   width: 1000px; /* Full width of the viewport */
-  height: 609px; /* Full height of the viewport */
+  height: 60px; /* Full height of the viewport */
   margin: 0 auto; /* Center the iframe horizontally */
 }
 

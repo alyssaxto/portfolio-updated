@@ -7,6 +7,7 @@ import BPIntern from "./pages/bpIntern.jsx";  // Import the new BPIntern compone
 import HackUTD from "../src/HackUTD11.jsx";
 import ScrollToTop from './ScrollToTop';
 import ICanManage from './ICanManage.jsx';
+import Stemuli from './Stemuli.jsx';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/HackUTD11" element={<HackUTD />} />
         <Route path="/ICanManage" element={<ICanManage />} />
+        <Route path="/Stemuli" element={<Stemuli />} />
         <Route path="/bpIntern" element={<BPIntern />} />  {/* Add the new route */}
       </Routes>
     </>
