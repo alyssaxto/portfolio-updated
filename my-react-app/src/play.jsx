@@ -57,7 +57,7 @@ const HorizontalScroll = () => {
           </motion.div>
           </Link>
 
-
+          <Link to="/bp2">
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
@@ -71,7 +71,9 @@ const HorizontalScroll = () => {
               description={"Designing badges for new grad designers to display on their profiles after completing a 12-week bootcamp."}
             />
           </motion.div>
+          </Link>
 
+          <Link to="/MVP">
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
@@ -85,7 +87,9 @@ const HorizontalScroll = () => {
               description={"Creating badges to recognize new grad designers for their efforts within a 12-week bootcamp."}
             />
           </motion.div>
+          </Link>
 
+          <Link to="/BudgetBuddy">
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
@@ -99,7 +103,9 @@ const HorizontalScroll = () => {
               description={"A mobile app case study that enhances financial decision-making skills among college students."}
             />
           </motion.div>
+          </Link>
 
+          <Link to="/ThinkPink">
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
@@ -113,6 +119,7 @@ const HorizontalScroll = () => {
               description={"A mobile app case study to help women track their menstrual cycles and making more informed decisions."}
             />
           </motion.div>
+          </Link>
         </motion.div>
         
       </div>
