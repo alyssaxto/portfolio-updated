@@ -9,6 +9,7 @@ import ScrollToTop from './ScrollToTop';
 import ICanManage from './ICanManage.jsx';
 import Stemuli from './Stemuli.jsx';
 import Hackportal from './Hackportal.jsx';
+import Gravebound from './Gravebound.jsx';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Hackportal" element={<Hackportal />} />
         <Route path="/ICanManage" element={<ICanManage />} />
         <Route path="/Stemuli" element={<Stemuli />} />
+        <Route path="/Gravebound" element={<Gravebound />} />
         <Route path="/bpIntern" element={<BPIntern />} />  {/* Add the new route */}
       </Routes>
     </>

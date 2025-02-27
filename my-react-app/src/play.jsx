@@ -41,7 +41,7 @@ const HorizontalScroll = () => {
     />
   </motion.div>
 </Link>
-
+<Link to="/Gravebound">
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
@@ -55,6 +55,7 @@ const HorizontalScroll = () => {
               description={"Creating and developing UI for a first-person shooter developed entirely by students."}
             />
           </motion.div>
+          </Link>
 
           <motion.div
             className="ImageItem"
