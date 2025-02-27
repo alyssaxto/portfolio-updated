@@ -55,7 +55,7 @@ const HorizontalScroll = () => {
   </motion.div>
 </Link>
 
-
+<Link to="/ICanManage">
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
@@ -69,7 +69,8 @@ const HorizontalScroll = () => {
               description={"An educational platform designed to assist head and neck cancer patients through treatment."}
             />
           </motion.div>
-
+          </Link>
+          <Link to="/Stemuli">
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}
@@ -83,6 +84,7 @@ const HorizontalScroll = () => {
               description={"A desktop and mobile app for students interested in product design to explore more about the career through VR."}
             />
           </motion.div>
+          </Link>
         </motion.div>
       </div>
     </div>

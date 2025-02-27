@@ -60,7 +60,7 @@
   font-size: 5rem; /* Adjust size as needed */
   color: #ff4f4f;
   font-weight: bold;
-  font-family: playfair display;
+  font-family: poppins;
   text-align: center;
   width: 100%;
   margin-top: 3rem;
@@ -124,13 +124,28 @@
   color: #ff4f4f; /* Pink text color on hover */
 }
   
+.about__content p {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
   .about__content p {
-    margin-top: 1rem;
-    font-family: poppins;
-    font-size: 1.3rem;
-    font-weight: 500;
-    color:#000
+    font-size: 1.1rem; /* Slightly smaller font for tablets */
   }
+}
+
+@media (max-width: 480px) {
+  .about__content p {
+    font-size: 1rem; /* Further reduce font size for smaller screens */
+    margin-top: 0.8rem; /* Adjust margin for better spacing */
+  }
+}
+
   .about__img--card img {
     border-radius: 50px !important; /* or border-radius: 50% !important; */
   }

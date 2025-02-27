@@ -6,6 +6,7 @@ import Play from "./pages/Playground.jsx";
 import BPIntern from "./pages/bpIntern.jsx";  // Import the new BPIntern component
 import HackUTD from "../src/HackUTD11.jsx";
 import ScrollToTop from './ScrollToTop';
+import ICanManage from './ICanManage.jsx';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Playground" element={<Play />} />
         <Route path="/about" element={<About />} />
         <Route path="/HackUTD11" element={<HackUTD />} />
+        <Route path="/ICanManage" element={<ICanManage />} />
         <Route path="/bpIntern" element={<BPIntern />} />  {/* Add the new route */}
       </Routes>
     </>
