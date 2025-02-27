@@ -10,7 +10,9 @@ import ICanManage from './ICanManage.jsx';
 import Stemuli from './Stemuli.jsx';
 import Hackportal from './Hackportal.jsx';
 import Gravebound from './Gravebound.jsx';
-
+import Bp2 from './bp2.jsx';
+import MVP from './MVP.jsx';
+import Budgetbuddy from './Budgetbuddy.jsx';
 
 
 
@@ -25,6 +27,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/HackUTD11" element={<HackUTD />} />
         <Route path="/Hackportal" element={<Hackportal />} />
+        <Route path="/bp2" element={<Bp2 />} />
+        <Route path="/MVP" element={<MVP />} />
+        <Route path="/Budgetbuddy" element={<Budgetbuddy />} />
         <Route path="/ICanManage" element={<ICanManage />} />
         <Route path="/Stemuli" element={<Stemuli />} />
         <Route path="/Gravebound" element={<Gravebound />} />

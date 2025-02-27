@@ -45,48 +45,44 @@ const ImageBox = ({ src, alt }) => {
 // Grid Component for Company, Skills, Timeline, and Tools
 const Grid = () => (
   <TextFade direction="up">
-  <div className="grid grid-cols-2 gap-4">
-    <div className="grid__item">
-      <h2>Company —</h2>
-      <p>
-      <div>
-  <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="blue-link" target="_blank" rel="noopener noreferrer">
-  UT Dallas
-  </a>
-</div>
-<div>
-  <a href="https://www.atec-animgames.com/game-lab" className="blue-link" target="_blank" rel="noopener noreferrer">
-    Game Production Lab
-  </a>
-</div>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="grid__item">
+        <h2>Company —</h2>
+        <div>
+          <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="blue-link" target="_blank" rel="noopener noreferrer">
+            UT Dallas
+          </a>
+        </div>
+        <div>
+          <a href="https://www.atec-animgames.com/game-lab" className="blue-link" target="_blank" rel="noopener noreferrer">
+            Game Production Lab
+          </a>
+        </div>
+      </div>
 
-</p>
+      <div className="grid__item">
+        <h2>Skills —</h2>
+        <div>UI Design</div>
+        <div>Sketching</div>
+        <div>Illustration</div>
+      </div>
 
+      <div className="grid__item">
+        <h2>Timeline —</h2>
+        <div>Aug - Dec 2024</div>
+      </div>
+
+      <div className="grid__item">
+        <h2>Tools —</h2>
+        <div>Unreal Engine</div>
+        <div>Perforce</div>
+        <div>Adobe Illustrator</div>
+        <div>Figma</div>
+      </div>
     </div>
-    <div className="grid__item">
-      <h2>Skills —</h2>
-      <ul>
-        <li>UI Design</li>
-        <li>Sketching</li>
-        <li>Illustration</li>
-      </ul>
-    </div>
-    <div className="grid__item">
-      <h2>Timeline —</h2>
-      <p>Aug - Dec 2024</p>
-    </div>
-    <div className="grid__item">
-      <h2>Tools —</h2>
-      <ul>
-        <li>Unreal Engine</li>
-        <li>Perforce</li>
-        <li>Adobe Illustrator</li>
-        <li>Figma</li>
-      </ul>
-    </div>
-  </div>
   </TextFade>
 );
+
 
 const Top = () => (
     <TextFade direction="up">

@@ -45,41 +45,40 @@ const ImageBox = ({ src, alt }) => {
 // Grid Component for Company, Skills, Timeline, and Tools
 const Grid = () => (
   <TextFade direction="up">
-  <div className="grid grid-cols-2 gap-4">
-    <div className="grid__item">
-      <h2>Company —</h2>
-      <p>
-<div>
-<a href="https://stemuli.net/" class="yellow-link" target="_blank">Stemuli</a>
-</div>
-</p>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="grid__item">
+        <h2>Company —</h2>
+        <div>
+          <a href="https://stemuli.net/" className="yellow-link" target="_blank" rel="noopener noreferrer">
+            Stemuli
+          </a>
+        </div>
+      </div>
 
+      <div className="grid__item">
+        <h2>Skills —</h2>
+        <div>Design Engineering</div>
+        <div>Prototyping</div>
+        <div>Figma</div>
+        <div>Prototyping</div>
+        <div>UI/UX Design</div>
+        <div>Illustration</div>
+      </div>
+
+      <div className="grid__item">
+        <h2>Timeline —</h2>
+        <div>June - Nov 2024</div>
+      </div>
+
+      <div className="grid__item">
+        <h2>Tools —</h2>
+        <div>Figma</div>
+        <div>Clip Studio Paint</div>
+      </div>
     </div>
-    <div className="grid__item">
-      <h2>Skills —</h2>
-      <ul>
-        <li>Design Engineering</li>
-        <li>Prototyping</li>
-        <li>Figma</li>
-        <li>Prototyping</li>
-        <li>UI/UX Design</li>
-        <li>Illustration</li>
-      </ul>
-    </div>
-    <div className="grid__item">
-      <h2>Timeline —</h2>
-      <p>June - Nov 2024</p>
-    </div>
-    <div className="grid__item">
-      <h2>Tools —</h2>
-      <ul>
-        <li>Figma</li>
-        <li>Clip Studio Paint</li>
-      </ul>
-    </div>
-  </div>
   </TextFade>
 );
+
 
 const Top = () => (
     <TextFade direction="up">

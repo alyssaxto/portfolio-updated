@@ -290,7 +290,7 @@ h3 {
 }
 
 .summary-text-bullets li {
-  margin-bottom: 30px; /* Space between bullet points */
+  margin-bottom: 20px; /* Space between bullet points */
   font-size: 1em;
   color: #4a4a4a;
   line-height: 1.5;

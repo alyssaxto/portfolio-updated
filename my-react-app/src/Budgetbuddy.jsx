@@ -9,11 +9,11 @@ import ExpandableImage from './Components/ExpandImage.jsx';
 const Header = () => (
   <TextFade direction="up">
   <header className="header">
-    <h1 className="header__title">Designing a solution to help cancer patients complete their treatment</h1>
-    <h2>ArtSciLab Product Designer ✴ Spring 2024 - Summer 2025</h2>
+    <h1 className="header__title">Helping college kids with their financial literacy</h1>
+    <h2>Class Project ✴ Spring 2023</h2>
     <div className="image-containy">
       <a href="https://www.utsouthwestern.edu/" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/icanmanage/c3.png" alt="Image 2" className="hover-image" />
+        <img src="./src/assets/budgetbuddy.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -47,30 +47,24 @@ const Grid = () => (
   <TextFade direction="up">
     <div className="grid grid-cols-2 gap-4">
       <div className="grid__item">
-        <h2>Company —</h2>
+        <h2>Class Name —</h2>
         <div>
-          <a href="https://www.utsouthwestern.edu/" className="blue-link" target="_blank" rel="noopener noreferrer">
-            UTSouthWestern
-          </a>
-        </div>
-        <div>
-          <a href="https://www.acmutd.co/" className="blue-link" target="_blank" rel="noopener noreferrer">
-            ArtSciLab
-          </a>
+            Design Research Methods
         </div>
       </div>
 
       <div className="grid__item">
         <h2>Skills —</h2>
-        <div>Figma</div>
+        <div>Research</div>
+        <div>User Personas</div>
+        <div>Usability Testing</div>
         <div>Prototyping</div>
         <div>UI/UX Design</div>
-        <div>Visual Design</div>
       </div>
 
       <div className="grid__item">
         <h2>Timeline —</h2>
-        <div>Jan 2024 - June 2025</div>
+        <div>Jan 2023 - May 2023</div>
       </div>
 
       <div className="grid__item">
@@ -87,15 +81,15 @@ const Top = () => (
     <TextFade direction="up">
     <div className="summary-container">
       <div className="summary-header">
-        <h2>Introduction</h2>
+        <h2>Problem</h2>
         <div className="summary-text">
-          <h1>Summary</h1>
-          <h3>A short description of why I began to work on this project</h3>
-          <p>In spring 2024, I had the opportunity to work at a research lab, <a href="https://artscilab.utdallas.edu/" class="blue-link" target="_blank">ArtSciLab</a>, as a UX Designer. My main project was to redesign an existing program known as <a href="https://icanmanage.ca/login/index.php" class="blue-link" target="_blank">ICanManage.ca</a> to be easier for cancer patients to access.</p>
-
-          <p>This is a case study about designing an educational program meant to provide head and neck cancer patients at UT Southwestern with effective strategies for optimizing their treatment process
-          </p>
-        </div>
+          <h1>College students are barely financially literate          </h1>
+          <h3>Through a survey sent out to UTD students, we learned that          </h3>
+        <ul className="summary-text-bullets">
+            <li>The majority of these students rated themselves between 5 to 6 on a scale of 10.</li>
+          <li>We discovered students at UTD are just barely above average when it comes to financial literacy.</li>
+          </ul>
+          </div>
       </div>
         </div>
         </TextFade>
@@ -105,10 +99,11 @@ const Summary = () => (
   <TextFade direction="up">
   <div className="summary-container">
     <div className="summary-header">
-      <h2>Problem</h2>
+      <h2>Research</h2>
       <div className="summary-text">
-        <h1>The existing program had a 37% completion rate</h1>
-        <p>Before I began designing, multiple student researchers conducted a list of what needed to be changed about this program</p>
+        <h1>We found out how financially literate UTD students are        </h1>
+        <h3>Our team conducted a focus group utilizing 10 participants to rate their overall financial literacy as college students
+        </h3>
         <ul className="summary-text-bullets">
             <li>Although the content was great, the designs needed tons of work</li>
           <li>The student researchers believed that the clip art was ineffective and suggested using stock images.</li>
@@ -116,8 +111,8 @@ const Summary = () => (
           </ul>
       </div>
     </div>
-    <div className="blue-summary-image">
-      <ExpandableImage src="./src/assets/icanmanage/c1.png" alt="User Journey" />
+    <div className="summary-image">
+      <ExpandableImage src="./src/assets/bb1.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -129,27 +124,88 @@ const Assets = () => (
   <TextFade direction="up">
       <div className="summary-container">
       <div className="summary-header">
-        <h2>Style Guide</h2>
+        <h2>User Persona        </h2>
         <div className="summary-text">
-        <h1>I began to brainstorm some ideas</h1>
-        <p>
-        I drew the assets using clip studio paint. The corgi, duck, and frog are some of the mascots we created for this year's hackathon.
-        </p>
+        <h1>Then designed a typical user for our app        </h1>
+        <h3>
+        After interviewing various UTD students, I developed a persona based off of their goals and pain points
+        </h3>
         <ul className="summary-text-bullets">
-            <li>One of the compliants from the previous designs was how many colors there were.</li>
-          <li>I decided to create a calming blue color palette that consisted of only four colors.</li>
-          <li>From there, I was able to go into the program and begin redesigning every single screen.</li>
+            <li>A lot of the students I interviewed spent majority of their budget eating out.</li>
+          <li>They were also full time students who believed they didn't have time to budget.</li>
           </ul>
       </div>
     </div>
-    <div className="blue-summary-image">
-      <ExpandableImage src="./src/assets/icanmanage/c2.png" alt="User Journey" />
+    <div className="summary-image">
+      <ExpandableImage src="./src/assets/bb2.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
 );
 
-
+const Journey = () => (
+    <TextFade direction="up">
+        <div className="summary-container">
+        <div className="summary-header">
+          <h2>User Journey          </h2>
+          <div className="summary-text">
+          <h1>We mapped out how users might interact with our app          </h1>
+          <ul className="summary-text-bullets">
+              <li>By mapping out these user journeys, we were able to identify pain points, opportunities for improvement, and moments where the app could deliver exceptional value
+.</li>
+            <li>From there, the team collaborated on a features list that would address the pain points we found through research.</li>
+            </ul>
+        </div>
+      </div>
+      <div className="summary-image">
+        <ExpandableImage src="./src/assets/bb3.png" alt="User Journey" />
+      </div>
+    </div>
+    </TextFade>
+  );
+  
+  const Features = () => (
+    <TextFade direction="up">
+        <div className="summary-container">
+        <div className="summary-header">
+          <h2>Features</h2>
+          <div className="summary-text">
+            <h1>We tested our features using a survey  </h1>
+          <ul className="summary-text-bullets">
+              <li>Our team compiled a roster of potential features for our app and presented them to a diverse group of UTD students for evaluation.</li>
+            <li>We discovered the most beneficial functions based on their preferences and integrated the top three selected features into our app.</li>
+            <li>These features included income index, credit card comparison, and spendings tracker of individual utilities.</li>
+            </ul>
+        </div>
+      </div>
+      <div className="summary-image">
+        <ExpandableImage src="./src/assets/bb4.png" alt="User Journey" />
+      </div>
+    </div>
+    </TextFade>
+  );
+  
+  const Low = () => (
+    <TextFade direction="up">
+        <div className="summary-container">
+        <div className="summary-header">
+          <h2>Low Fidelity Wireframes          </h2>
+          <div className="summary-text">
+            <h1>We mapped out how users might interact with our app            </h1>
+            <h3>Our team created a paper-based prototype for initial app testing purposes
+            </h3>
+          <ul className="summary-text-bullets">
+              <li>We formulated a list of 5 actions to evaluate the user's ability in accomplish basic functions within this design framework.</li>
+            <li>This low-fidelity prototype had seven distinct pages and utilized cutouts, which we strategically substituted when the tester engaged with specific buttons, emulating interactive responses.</li>
+            </ul>
+        </div>
+      </div>
+      <div className="summary-image">
+        <ExpandableImage src="./src/assets/bb5.jpg" alt="User Journey" />
+      </div>
+    </div>
+    </TextFade>
+  );
 const BPPortfolio = () => (
     <div>
                 <TextFade direction="up">
@@ -216,6 +272,15 @@ const App = () => (
     <div className="section-divider"></div>
     <div class="divider"></div>
     <Assets />
+    <div className="section-divider"></div>
+    <div class="divider"></div>
+    <Journey />
+    <div className="section-divider"></div>
+    <div class="divider"></div>
+    <Features />
+    <div className="section-divider"></div>
+    <div class="divider"></div>
+    <Low />
     <div className="section-divider"></div>
     <div class="divider"></div>
     <BPPortfolio/>

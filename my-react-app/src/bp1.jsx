@@ -25,42 +25,41 @@ const Header = () => (
 // Grid Component for Company, Skills, Timeline, and Tools
 const Grid = () => (
   <TextFade direction="up">
-  <div className="grid grid-cols-2 gap-4">
-    <div className="grid__item">
-      <h2>Company —</h2>
-      <p>
-  <a href="https://www.bp.com/" className="green-link" target="_blank" rel="noopener noreferrer">
-    bp
-  </a>
-</p>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="grid__item">
+        <h2>Company —</h2>
+        <div>
+          <a href="https://www.bp.com/" className="green-link" target="_blank" rel="noopener noreferrer">
+            bp
+          </a>
+        </div>
+      </div>
 
+      <div className="grid__item">
+        <h2>Skills —</h2>
+        <div>User Research</div>
+        <div>User Personas</div>
+        <div>Usability Testing</div>
+        <div>Prototyping</div>
+        <div>UI/UX Design</div>
+        <div>Design Thinking</div>
+        <div>AI Tool Usage</div>
+      </div>
+
+      <div className="grid__item">
+        <h2>Timeline —</h2>
+        <div>May - August 2024</div>
+      </div>
+
+      <div className="grid__item">
+        <h2>Tools —</h2>
+        <div>Sketch</div>
+        <div>Mural</div>
+      </div>
     </div>
-    <div className="grid__item">
-      <h2>Skills —</h2>
-      <ul>
-        <li>User Research</li>
-        <li>User Personas</li>
-        <li>Usability Testing</li>
-        <li>Prototyping</li>
-        <li>UI/UX Design</li>
-        <li>Design Thinking</li>
-        <li>AI Tool Usage</li>
-      </ul>
-    </div>
-    <div className="grid__item">
-      <h2>Timeline —</h2>
-      <p>May - August 2024</p>
-    </div>
-    <div className="grid__item">
-      <h2>Tools —</h2>
-      <ul>
-        <li>Sketch</li>
-        <li>Mural</li>
-      </ul>
-    </div>
-  </div>
   </TextFade>
 );
+
 
 
 
