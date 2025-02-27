@@ -9,6 +9,8 @@ import "./Components/HorizontalScroll/horizontalScroll.css";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ImageContainer from './Components/ImageContainer/ImageContainer';
 import { LettersPullUp } from "./Components/letters-pull-up"; 
+import { Link } from "react-router-dom";
+
 
 const HorizontalScroll = () => {
   const targetRef = useRef(null);
@@ -24,19 +26,21 @@ const HorizontalScroll = () => {
 
       <div className="contentContainer">
         <motion.div className="images" style={{ x }}>
-          <motion.div
-            className="ImageItem"
-            initial={{ opacity: 0, y: 150 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -15 }}  
-            transition={{ duration: 0.2, ease: "easeOut" }}
-          >
-            <ImageContainer
-              imageSource={Hackportal}
-              title={"Hackportal"}
-              description={"Designing an accessible website template for other hackathons to use to promote their event."}
-            />
-          </motion.div>
+<Link to="/Hackportal">
+  <motion.div
+    className="ImageItem"
+    initial={{ opacity: 0, y: 150 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    whileHover={{ y: -15 }}
+    transition={{ duration: 0.2, ease: "easeOut" }}
+  >
+    <ImageContainer
+      imageSource={Hackportal}
+      title={"Hackportal"}
+      description={"Designing an accessible website template for other hackathons to use to promote their event."}
+    />
+  </motion.div>
+</Link>
 
           <motion.div
             className="ImageItem"

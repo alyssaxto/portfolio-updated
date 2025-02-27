@@ -294,6 +294,21 @@ const BPPortfolio = () => (
 
   
 
+// Header Component
+const HackUTD = () => (
+  <TextFade direction="up">
+  <header className="header">
+    <h1 className="header__title">Check out the final product!</h1>
+    <h2>HackUTD Product Designer ✴ Spring - Fall 2024</h2>
+    <div className="image-containy">
+      <a href="https://ripple.hackutd.co/" target="_blank" rel="noopener noreferrer">
+        <img src="./src/assets/ripple.png" alt="Image 2" className="hover-image" />
+      </a>
+    </div>
+  </header>
+  </TextFade>
+);
+
 // App Component to include all sections
 const App = () => (
   <div className="app">
@@ -321,6 +336,10 @@ const App = () => (
     <div className="section-divider"></div>
     <div className="section-divider"></div>
     <BPPortfolio/>
+    <div className="section-divider"></div>
+    <div class="divider"></div>
+    <HackUTD/>
+    <div className="section-divider"></div>
     <div class="portfolio__btn-container">
   <button class="portfolio__btn"><a href="https://github.com/hackutd/hackutd-24-site" target="_blank">View source code</a></button>
 </div>

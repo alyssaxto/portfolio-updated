@@ -8,6 +8,8 @@ import HackUTD from "../src/HackUTD11.jsx";
 import ScrollToTop from './ScrollToTop';
 import ICanManage from './ICanManage.jsx';
 import Stemuli from './Stemuli.jsx';
+import Hackportal from './Hackportal.jsx';
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
         <Route path="/Playground" element={<Play />} />
         <Route path="/about" element={<About />} />
         <Route path="/HackUTD11" element={<HackUTD />} />
+        <Route path="/Hackportal" element={<Hackportal />} />
         <Route path="/ICanManage" element={<ICanManage />} />
         <Route path="/Stemuli" element={<Stemuli />} />
         <Route path="/bpIntern" element={<BPIntern />} />  {/* Add the new route */}
