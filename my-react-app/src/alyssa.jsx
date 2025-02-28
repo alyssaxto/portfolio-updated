@@ -7,28 +7,45 @@ import { TextFade } from "./Components/TextFade";
 const AboutAndGallery = () => {
   return (
     <div>
-<div className="about" id="about">
-  <StaggeredFade text="A bit about me ✨" className="about-heading" />
-  <div className="about__container">
-    <div className="about__img--card">
-      <img src={Profile} alt="Image of Alyssa" />
+      <div className="about" id="about">
+        <StaggeredFade text="A bit about me ♡‧₊˚" className="about-heading" />
+        <div className="about__container">
+          <div className="about__img--card">
+            <img src={Profile} alt="Image of Alyssa" />
+          </div>
+          <div className="about__content">
+            <TextFade direction="up">
+              <p>
+                Nice to meet you, <a href="https://www.linkedin.com/in/alyssaxto/" className="pink-link" target="_blank" rel="noopener noreferrer">I'm Alyssa!</a> I’m a recent graduate from <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="pink-link" target="_blank" rel="noopener noreferrer">the University of Texas @ Dallas</a> with a Bachelors of Arts, Technology, and Emerging Communications and a concentration on <a href="index.html#Projects" className="pink-link">UX Design.</a><br /><br />
+              </p>
+              <p>
+                I come from a background of fine art but fell in love with UI/UX after discovering it in college. Unlike traditional art, it was goal-driven and functional, which deeply resonated with me.
+              </p>
+            </TextFade>
+          </div>
+        </div>
+
+        <StaggeredFade text="Outside of design..." className="about-heading" />
+
+        <div className="gallery-container">
+  <div className="gallery-wrapper">
+    <div className="gallery-item">
+      <img src="./src/assets/me.png" alt="Making YouTube videos" className="gallery-image" />
+      <h2 className="gallery-caption">Making YouTube Videos</h2>
     </div>
-    <div className="about__content">
-    <TextFade direction="up">
-      <p>
-        Nice to meet you, <a href="https://www.linkedin.com/in/alyssaxto/" className="pink-link" target="_blank" rel="noopener noreferrer">I'm Alyssa!</a> I’m a recent graduate from <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="pink-link" target="_blank" rel="noopener noreferrer">the University of Texas @ Dallas</a> with a Bachelors of Arts, Technology, and Emerging Communications and a concentration on <a href="index.html#Projects" className="pink-link">UX Design.</a><br /><br />
-        When I'm not designing... <br /><br />
-        I'm constantly expanding my <a href="/projects" className="pink-link">playground</a> with new illustrations, animations, and games. I also love playing new games whether it's PC games, Switch games, or phone games... I'm addicted to games.
-      </p>
-      </TextFade>
-      <button className="about__btn">
-        <a href="img/AlyssaTo_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      </button>
+    <div className="gallery-item">
+      <img src="./src/assets/pc.png" alt="Building computers" className="gallery-image" />
+      <h2 className="gallery-caption">Building Computers</h2>
+    </div>
+    <div className="gallery-item">
+      <img src="./src/assets/hack.png" alt="Attending hackathons" className="gallery-image" />
+      <h2 className="gallery-caption">Attending Hackathons</h2>
     </div>
   </div>
-  
-  </div>
-  </div>
+</div>
+
+      </div>
+    </div>
   );
 };
 

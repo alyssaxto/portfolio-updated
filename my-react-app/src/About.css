@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Reenie+Beanie&display=swap');
 
 
 .playgroundTitleContainer {
@@ -37,6 +38,47 @@
   }
 }
 
+.gallery-container {
+  max-width: 1200px; /* Increase width of the container */
+  margin: auto;
+  text-align: center;
+}
+
+.gallery-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.gallery-item {
+  background: rgb(238, 238, 238);
+  padding: 20px; /* Increased padding */
+  border-radius: 9px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  min-height: 400px; /* Ensure enough space for the image */
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
+.gallery-image {
+  width: 100%; /* Increased image width */
+  max-width: 500px; /* Optional: max width */
+  height: auto; /* Keep aspect ratio */
+  border-radius: 10px;
+}
+
+.gallery-caption {
+  font-family: "Reenie Beanie";
+  margin-top: 10px;
+  color:#000;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
 
 .carousel-container {
   width: 100%;

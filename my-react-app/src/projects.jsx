@@ -32,7 +32,7 @@ const HorizontalScroll = () => {
             >
               <ImageContainer
                 imageSource={bpImage}
-                title={"AI Image Generator"}
+                title={"AI Image Generator 🔒"}
                 description={"Designing an accessible way for bp employees to quickly create the images they need."}
               />
             </motion.div>
@@ -65,7 +65,7 @@ const HorizontalScroll = () => {
           >
             <ImageContainer
               imageSource={manageImage}
-              title={"I Can Manage Cancer"}
+              title={"I Can Manage Cancer 🔒"}
               description={"An educational platform designed to assist head and neck cancer patients through treatment."}
             />
           </motion.div>
