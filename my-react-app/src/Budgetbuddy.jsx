@@ -12,7 +12,7 @@ const Header = () => (
     <h1 className="header__title">Helping college kids with their financial literacy</h1>
     <h2>Class Project ✴ Spring 2023</h2>
     <div className="image-containy">
-      <a href="https://www.utsouthwestern.edu/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fiafgf5x8oYTw2NxjMQiReb%2FUntitled%3Ftype%3Ddesign%26t%3DDLiub0o2a3aXTPnW-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26node-id%3D0-3%26starting-point-node-id%3D0%253A3%26mode%3Ddesign" target="_blank" rel="noopener noreferrer">
         <img src="./src/assets/budgetbuddy.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
@@ -206,56 +206,96 @@ const Journey = () => (
     </div>
     </TextFade>
   );
-const BPPortfolio = () => (
-    <div>
-                <TextFade direction="up">
-      <div className="summary-container">
-      <div className="summary-header">
-        <h2>First Prototype
-        </h2>
-        <div className="summary-text">
-        <h1>I spent 5 months redesigning the entire program
-        </h1>
- <h3>This is only the first interation of redesigns</h3>
- <p>After seeing these designs, our team was awarded over $8,000 in grants to continue research and developing the program</p>
-        </div>
-        </div>
-        <br />
-        <h3>Desktop View</h3>
-        <br />
-        <div className="figma-embed-container-desktop">
-          <iframe
-            style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
-            width="800"
-            height="450"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FFMrDVFG9rhMJTsJ4KbgzL1%2FUntitled%3Ftype%3Ddesign%26node-id%3D42-1809%26t%3Dt1NEIv4vhidXoBA9-1%26scaling%3Dcontain%26page-id%3D0%253A1%26starting-point-node-id%3D42%253A1809%26mode%3Ddesign"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </div>
-      </TextFade>
-    </div>
-  );
 
-  const Ending = () => (
+  const Test = () => (
     <TextFade direction="up">
-    <div className="summary-container">
-      <div className="summary-header">
-        <h2>What's next?</h2>
-        <div className="summary-text">
-          <h1>The next steps for "I Can Manage Cancer"</h1>
-          <p>Before I began designing, multiple student researchers conducted a list of what needed to be changed about this program</p>
+        <div className="summary-container">
+        <div className="summary-header">
+          <h2>Testing          </h2>
+          <div className="summary-text">
+            <h1>Next we conducted testing on our prototype            </h1>
+            <h3>"The bottom task bar is kinda confusing. I can't understand what the symbols on the bottom mean based on intuition."            </h3>
           <ul className="summary-text-bullets">
-              <li><a href="https://www.utsouthwestern.edu/" class="blue-link" target="_blank">UT Southwestern</a> will use my prototype and conduct testing on cancer patients during the summer of 2024</li>
-            <li>I'll come back to work at the research lab for fall 2024 and continue to reinterate my designs.</li>
-            <li>I will also start developing the mobile app meant to pair with this program!.</li>
+              <li>We engaged a student from UTD to test the prototype and gained feedback from her.</li>
+            <li>The participant found the overall user experience to be intuitive and easy to comprehend.</li>
+            <li>However, she did encounter some confusion with the toolbar at the bottom of the interface.</li>
+            <li>As a solution, we included descriptive subtitles accompanying the symbols to enhance clarity.</li>
             </ul>
         </div>
       </div>
     </div>
     </TextFade>
   );
-  
+
+  const High = () => (
+    <TextFade direction="up">
+        <div className="summary-container">
+        <div className="summary-header">
+          <h2>High Fidelity Wireframes          </h2>
+          <div className="summary-text">
+            <h1>Creating a better wireframe            </h1>
+        </div>
+      </div>
+      <br/>
+      <br/>
+      <h3>Homepage and Credit Card Infographics     </h3>
+      <div className="summary-image">
+        <ExpandableImage src="./src/assets/bb6.png" alt="User Journey" />
+      </div>
+      <br/>
+      <h3>Making a Monthly Budget      </h3>
+      <div className="summary-image">
+        <ExpandableImage src="./src/assets/bb7.png" alt="User Journey" />
+      </div>
+      <br/>
+      <h3>Creating Savings Goals      </h3>
+      <div className="summary-image">
+        <ExpandableImage src="./src/assets/bb8.png" alt="User Journey" />
+      </div>
+    </div>
+    </TextFade>
+  );
+const BPPortfolio = () => (
+    <div>
+                <TextFade direction="up">
+      <div className="summary-container">
+      <div className="summary-header">
+        <h2>Conclusion
+        </h2>
+        <div className="summary-text">
+        <h1>Final Prototype
+        </h1>
+ <p>Our team used Figma to design our final screens </p>
+        </div>
+        </div>
+        <br />
+        <br />
+        <div className="figma-embed-container">
+          <iframe
+            style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+            width="1000"
+            height="600"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fiafgf5x8oYTw2NxjMQiReb%2FUntitled%3Ftype%3Ddesign%26t%3DDLiub0o2a3aXTPnW-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26node-id%3D0-3%26starting-point-node-id%3D0%253A3%26mode%3Ddesign"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div className="video-container">
+          <iframe
+            width="1000"
+            height="600"
+            src="https://www.youtube.com/embed/cGhMtu95JqI?si=AqxUYtEu4E9dLBqm"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+      </TextFade>
+    </div>
+  );
 
 // App Component to include all sections
 const App = () => (
@@ -283,13 +323,16 @@ const App = () => (
     <Low />
     <div className="section-divider"></div>
     <div class="divider"></div>
-    <BPPortfolio/>
+    <Test />
     <div className="section-divider"></div>
     <div class="divider"></div>
-    <Ending/>
-    <div class="portfolio__btn-container">
-  <button class="portfolio__btn"><a href="https://github.com/hackutd/hackutd-24-site" target="_blank">View source code</a></button>
-</div>
+    <High />
+    <div className="section-divider"></div>
+    <div class="divider"></div>
+    <BPPortfolio/>
+    <br/>
+    <br/>
+
 <br/>
 <div class="portfolio__btn-container">
 <button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>

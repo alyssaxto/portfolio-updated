@@ -16,9 +16,9 @@ const AboutAndGallery = () => {
     <div className="about__content">
     <TextFade direction="up">
       <p>
-        Nice to meet you, <a href="https://www.linkedin.com/in/alyssaxto/" className="pink-link" target="_blank" rel="noopener noreferrer">I'm Alyssa!</a> I’m currently studying at <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="pink-link" target="_blank" rel="noopener noreferrer">the University of Texas @ Dallas</a> with a Bachelors of Arts, Technology, and Emerging Communications and a concentration on <a href="index.html#Projects" className="pink-link">UX Design.</a><br /><br />
+        Nice to meet you, <a href="https://www.linkedin.com/in/alyssaxto/" className="pink-link" target="_blank" rel="noopener noreferrer">I'm Alyssa!</a> I’m a recent graduate from <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="pink-link" target="_blank" rel="noopener noreferrer">the University of Texas @ Dallas</a> with a Bachelors of Arts, Technology, and Emerging Communications and a concentration on <a href="index.html#Projects" className="pink-link">UX Design.</a><br /><br />
         When I'm not designing... <br /><br />
-        I'm constantly expanding my <a href="artwork.html" className="pink-link">playground</a> with new illustrations, animations, and games. I also love playing new games whether it's PC games, Switch games, or phone games... I'm addicted to games.
+        I'm constantly expanding my <a href="/projects" className="pink-link">playground</a> with new illustrations, animations, and games. I also love playing new games whether it's PC games, Switch games, or phone games... I'm addicted to games.
       </p>
       </TextFade>
       <button className="about__btn">

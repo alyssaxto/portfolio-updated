@@ -13,6 +13,7 @@ import Gravebound from './Gravebound.jsx';
 import Bp2 from './bp2.jsx';
 import MVP from './MVP.jsx';
 import Budgetbuddy from './Budgetbuddy.jsx';
+import ThinkPink from './ThinkPink.jsx';
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/HackUTD11" element={<HackUTD />} />
         <Route path="/Hackportal" element={<Hackportal />} />
         <Route path="/bp2" element={<Bp2 />} />
+        <Route path="/ThinkPink" element={<ThinkPink />} />
         <Route path="/MVP" element={<MVP />} />
         <Route path="/Budgetbuddy" element={<Budgetbuddy />} />
         <Route path="/ICanManage" element={<ICanManage />} />
