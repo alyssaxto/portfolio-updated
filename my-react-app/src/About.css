@@ -49,6 +49,7 @@
   gap: 40px;
   justify-content: center;
   flex-wrap: nowrap; /* Prevent wrapping */
+  
 }
 
 .gallery-item {
@@ -78,6 +79,18 @@
   color:#000;
   font-size: 2rem;
   margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 100%; /* Full width on mobile */
+    max-width: 100%;
+  }
+
+  .gallery-wrapper {
+    gap: 20px; /* Reduce gap for better mobile spacing */
+    flex-wrap: wrap; /* Prevent wrapping */
+
+  }
 }
 
 .carousel-container {
@@ -126,11 +139,13 @@
     width: 100%;
     max-width: 1300px;
     padding: 0px 50px;
+    padding-top: 5rem;
   }
   
   
   .about__content h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: poppins;
     background-color: #ff4f4f;
     background-size: 100%;
     font-weight: 600;
@@ -174,87 +189,23 @@
   color: #000;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .about__content p {
-    font-size: 1.1rem; /* Slightly smaller font for tablets */
-  }
+
+.about__img--card img {
+  border-radius: 50px !important; /* or border-radius: 50% !important; */
 }
 
-@media (max-width: 480px) {
-  .about__content p {
-    font-size: 1rem; /* Further reduce font size for smaller screens */
-    margin-top: 0.8rem; /* Adjust margin for better spacing */
-  }
+
+.about__img--card {
+  height: 500px;
+  width: 500px;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-  .about__img--card img {
-    border-radius: 50px !important; /* or border-radius: 50% !important; */
-  }
-  
-  .about__btn {
-    font-size: 1.3rem;
-    font-family: poppins;
-    background: #FFB6C1;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 2rem;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.35s;
-    outline: none;
-  }
-  
-  .about__btn a {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .about__btn:after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #ff4f4f;
-    transition: all 0.35s;
-    border-radius: 10px;
-  }
-  
-  .about__btn:hover {
-    color: #fff;
-  }
-  
-  .about__btn:hover:after {
-    width: 100%;
-  }
-  
-  .about__img--container {
-    text-align: center;
-  }
-  
-  .about__img--card {
-    height: 500px;
-    width: 500px;
-    border-radius: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .fa-layer-group,
-  .fa-users {
-    font-size: 14rem;
-  }
-  
-  #card-2 {
-    background: #ff4f4f;
-  }
-  
+
+
   /* Mobile Responsive */
   @media screen and (max-width: 1100px) {
     .about__container {
@@ -273,9 +224,9 @@
     }
   
     .about__img--card {
-      height: 425px;
-      width: 425px;
-      margin-left: 250px;
+      width: 350px; /* More reasonable size */
+      height: auto;
+      border-radius: 30px; /* Slightly rounded but not extreme */
     }
   
     .about__content {
@@ -295,17 +246,20 @@
   
     .about__content p {
       margin-top: 1rem;
+      width: 80%;
       font-size: 1rem;
     }
   }
   
   @media screen and (max-width: 480px) {
     .about__img--card {
-      width: 250px;
-      height: 250px;
-      margin-left: 0px;
+      width: 80%; /* More flexible size */
+      max-width: 250px; /* Prevents being too small */
+      height: auto; /* Keeps aspect ratio */
+      border-radius: 20px; /* Small border-radius for smooth edges */
+      margin-left: auto;
+      margin-right: auto; /* Centers the image */
     }
-  
     .fa-users,
     .fa-layer-group {
       font-size: 4rem;
