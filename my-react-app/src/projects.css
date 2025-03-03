@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Projects Section */
+
+/* Title and Toggle Button Container */
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .projects-title {
+    font-family: poppins;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px; /* Reduce the space above the title */
+    margin-bottom: 10px; /* Reduce space below the title */
+    text-align: center;
+    letter-spacing: 1px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    padding: 0 3rem;
+    text-align: left;
+  }
+  
+  /* Toggle Button */
+  .toggle-button {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .toggle-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Grid Icon */
+  .icon-grid {
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/grid-icon.svg'); /* Replace with actual grid icon */
+    background-size: cover;
+  }
+  
+  /* Scroll Icon */
+  .icon-scroll {
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/scroll-icon.png'); /* Replace with actual stacked boxes icon */
+    background-size: cover;
+  }
+  
+.Projects {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 4rem 1rem; /* Adjust padding for smaller screens */
+    
+  }
+
+
+  /* Reset padding and margin when switching to vertical */
+.Projects, .carousel {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Specific padding/margin resets for the grid layout */
+  .Projects__wrapper {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Projects__card {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #ff8177; /* Pink color */
+    margin-bottom: 10px; /* Adjust spacing */
+  }
+  
+  h1 a {
+    text-decoration: none; /* Remove underline */
+    color: #ff8177; /* Pink color */
+  }
+  
+  .Projects h1 {
+    background-color: #ff8177;
+    color: #ff8177;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .Projects__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px; /* Limit maximum width */
+  }
+  .Projects2__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px; /* Limit maximum width */
+  }
+  
+  .Projects__card {
+    position: relative; /* Ensure the card is positioned correctly */
+    overflow: hidden; /* Ensure content stays within the card */
+    padding: 10px; /* Add padding inside the card */
+    padding-bottom: 40px; /* Ensure more space at the bottom */
+    background-color: #fff; /* Background color of the card */
+    border-radius: 10px; /* Match card's border radius */
+    transition: box-shadow 0.3s ease-in, transform 0.3s ease-in; /* Smooth transition for shadow and scaling */
+  }
+  
+  .Projects__card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow appears on hover */
+    transform: scale(1.05); /* Slightly scale up the card on hover */
+  }
+  .Projects__card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .Projects__card h2 {
+    font-size: 1.5rem; /* Responsive font size */
+    font-weight: 550;
+    margin: 15px 0 5px 0; /* Margin above and below the heading */
+    text-align: center;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  
+  .Projects__card p {
+    font-size: 1rem; /* Responsive font size */
+    font-weight: 400;
+    margin: 0 10px 15px 10px; /* Margin below the paragraph and padding on the sides */
+    text-align: center;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  
+  .Projects__card:hover h2,
+  .Projects__card:hover p {
+    color: #ff8177; /* Change color on hover */
+  }
+  
+  .Projects__card:hover {
+    transform: scale(1.05); /* Slightly reduce scale on hover for better mobile interaction */
+    cursor: pointer;
+  }
+  
+  .Projects__card p {
+    font-size: 1rem; /* Responsive font size */
+    font-weight: 400;
+    font-family: poppins;
+    margin: 0 10px 15px 10px; /* Margin below the paragraph and padding on the sides */
+    text-align: center;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  
+  /* Media Queries for Mobile */
+  @media (max-width: 768px) {
+    .Projects__wrapper {
+      grid-template-columns: 1fr; /* Stack cards in a single column */
+      grid-template-rows: auto;
+      gap: 20px; /* Reduced gap for smaller screens */
+    }
+  
+    .Projects__card {
+      width: 100%; /* Full width for mobile */
+      max-width: none; /* Remove max-width constraint */
+      padding: 20px; /* Ensure padding is applied on mobile */
+    }
+  
+    h1 {
+      font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+  
+    .Projects__card h2 {
+      font-size: 1.25rem; /* Smaller font size for mobile */
+    }
+  
+    .Projects__card p {
+      font-size: 0.875rem; /* Smaller font size for mobile */
+    }
+  }
+  
+  /* Media Queries for Mobile */
+  @media (max-width: 768px) {
+    .Projects2__wrapper {
+      grid-template-columns: 1fr; /* Stack cards in a single column */
+      grid-template-rows: auto;
+      gap: 20px; /* Reduced gap for smaller screens */
+    }
+  }
+  

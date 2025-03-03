@@ -214,7 +214,6 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      margin: 0 auto;
       height: 100%;
     }
     .about__img--container {
@@ -256,9 +255,6 @@
       width: 80%; /* More flexible size */
       max-width: 250px; /* Prevents being too small */
       height: auto; /* Keeps aspect ratio */
-      border-radius: 20px; /* Small border-radius for smooth edges */
-      margin-left: auto;
-      margin-right: auto; /* Centers the image */
     }
     .fa-users,
     .fa-layer-group {
