@@ -1,59 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Projects Section */
 
-/* Title and Toggle Button Container */
+/* Default styles (for larger screens) */
+.projects-title {
+  font-family: poppins;
+  font-size: 5vw;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block; /* Ensure it's displayed inline */
+  white-space: nowrap; /* Prevent the text from wrapping */
+
+}
+
+/* Default styles (for larger screens) */
 .title-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers horizontally */
+  width: 100%; /* Ensures it takes the full width */
+  padding: 20px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .title-container {
+    flex-direction: column; /* Stack the title and button vertically */
+    align-items: center; /* Ensure center alignment */
+    justify-content: center; /* Centers the content horizontally */
+    width: 100%; /* Ensure it takes up full width */
+    padding: 15px; /* Adjust padding if necessary */
   }
-  
+
   .projects-title {
-    font-family: poppins;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px; /* Reduce the space above the title */
-    margin-bottom: 10px; /* Reduce space below the title */
-    text-align: center;
-    letter-spacing: 1px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    padding: 0 3rem;
-    text-align: left;
+    font-size: 2.5rem; /* Smaller font for mobile */
+    text-align: center; /* Center text */
   }
-  
-  /* Toggle Button */
-  .toggle-button {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-  }
-  
+}
+
+
+.active {
+  opacity: 1;
+  transform: scale(1.2);
+  border-radius: 8px;
+  background-color: #e0e0e0;
+}
+
+/* Toggle Button */
+.toggle-button {
+  display: flex;
+  gap: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid #ccc; /* Grey outline */
+}
+
   .toggle-button:hover {
     background-color: #e0e0e0;
   }
   
   /* Grid Icon */
   .icon-grid {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-image: url('./assets/grid-icon.svg'); /* Replace with actual grid icon */
     background-size: cover;
   }
   
   /* Scroll Icon */
   .icon-scroll {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-image: url('./assets/scroll-icon.png'); /* Replace with actual stacked boxes icon */
     background-size: cover;
   }
@@ -188,39 +211,39 @@
     transition: color 0.3s ease;
   }
   
-  /* Media Queries for Mobile */
-  @media (max-width: 768px) {
-    .Projects__wrapper {
-      grid-template-columns: 1fr; /* Stack cards in a single column */
-      grid-template-rows: auto;
-      gap: 20px; /* Reduced gap for smaller screens */
-    }
-  
-    .Projects__card {
-      width: 100%; /* Full width for mobile */
-      max-width: none; /* Remove max-width constraint */
-      padding: 20px; /* Ensure padding is applied on mobile */
-    }
-  
-    h1 {
-      font-size: 1.5rem; /* Smaller font size for mobile */
-    }
-  
-    .Projects__card h2 {
-      font-size: 1.25rem; /* Smaller font size for mobile */
-    }
-  
-    .Projects__card p {
-      font-size: 0.875rem; /* Smaller font size for mobile */
-    }
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .Projects__wrapper {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+    grid-template-rows: auto;
+    gap: 20px; /* Reduced gap for smaller screens */
   }
-  
-  /* Media Queries for Mobile */
-  @media (max-width: 768px) {
-    .Projects2__wrapper {
-      grid-template-columns: 1fr; /* Stack cards in a single column */
-      grid-template-rows: auto;
-      gap: 20px; /* Reduced gap for smaller screens */
-    }
+
+  .Projects__card {
+    width: 90%; /* Full width for mobile */
+    max-width: none; /* Remove max-width constraint */
+    padding: 20px; /* Ensure padding is applied on mobile */
   }
-  
+
+  h1 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .Projects__card h2 {
+    font-size: 1.25rem; /* Smaller font size for mobile */
+  }
+
+  .Projects__card p {
+    font-size: 0.875rem; /* Smaller font size for mobile */
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .Projects2__wrapper {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+    grid-template-rows: auto;
+    gap: 20px; /* Reduced gap for smaller screens */
+  }
+}

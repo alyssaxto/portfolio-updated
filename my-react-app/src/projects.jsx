@@ -5,7 +5,7 @@ import rippleImage from "../src/assets/ripple.png";
 import manageImage from "../src/assets/icanmanage/c3.png";
 import stemuliImage from "../src/assets/stemuli/s17.png";
 import { motion, useScroll, useTransform } from "framer-motion";
-import ImageContainer from './Components/ImageContainer/ImageContainer';
+import ImageContainer from "./Components/ImageContainer/ImageContainer";
 import { LettersPullUp } from "./Components/letters-pull-up";
 import "./projects.css";
 
@@ -15,57 +15,110 @@ const HorizontalScroll = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
 
   // Toggle State
-  const [showFirstSection, setShowFirstSection] = useState(true);
+  const [isGridActive, setIsGridActive] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false); // Track small screen state
   const carouselRef = useRef(null);
 
-  // Reset Scroll Position whenever the section is toggled
+  // Detect if the screen width is under 1000px
   useEffect(() => {
-    if (carouselRef.current && showFirstSection) {
-      // Reset the scroll position to 0 each time the section is toggled
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 1000); // Adjust the width to 1000px
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Check initially
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Reset Scroll Position whenever switching views
+  useEffect(() => {
+    if (carouselRef.current && !isGridActive) {
       carouselRef.current.scrollLeft = -100;
     }
-  }, [showFirstSection]); // Effect depends on the toggle state
+  }, [isGridActive]);
 
   return (
     <div>
       {/* Title with Toggle Button */}
       <div className="title-container">
-        <h1 className="projects-title">Projects</h1>
-        <button
-          className="toggle-button"
-          onClick={() => setShowFirstSection(!showFirstSection)}
-        >
-          {showFirstSection ? (
-            <span className="icon-grid"></span> // Grid Icon
-          ) : (
-            <span className="icon-scroll"></span> // Scroll Icon
-          )}
-        </button>
+        <LettersPullUp text="Projects  " className="projects-title" />
+        {!isSmallScreen && (  // Only render the toggle button on screens larger than 1000px
+          <div className="toggle-button">
+            <span
+              className={`icon-grid ${isGridActive ? "active" : ""}`}
+              onClick={() => setIsGridActive(true)}
+            ></span>
+            <span
+              className={`icon-scroll ${!isGridActive ? "active" : ""}`}
+              onClick={() => setIsGridActive(false)}
+            ></span>
+          </div>
+        )}
       </div>
 
-      {/* First Projects Section (Horizontal Scroll) */}
-      {showFirstSection && (
+      {/* Horizontal Scroll View */}
+      {!isSmallScreen && !isGridActive && ( // Only enable the horizontal scroll if screen width is larger than 1000px and grid view is inactive
         <div className="carousel" ref={carouselRef}>
           <div className="contentContainer">
             <motion.div className="images" style={{ x }}>
               <Link to="/bpIntern">
-                <motion.div className="ImageItem" initial={{ opacity: 0, y: 150 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -15 }} transition={{ duration: 0.2, ease: "easeOut" }}>
-                  <ImageContainer imageSource={bpImage} title={"AI Image Generator 🔒"} description={"Designing an accessible way for bp employees to quickly create the images they need."} />
+                <motion.div
+                  className="ImageItem"
+                  initial={{ opacity: 0, y: 150 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -15 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                >
+                  <ImageContainer
+                    imageSource={bpImage}
+                    title={"AI Image Generator 🔒"}
+                    description={"Designing an accessible way for bp employees to quickly create the images they need."}
+                  />
                 </motion.div>
               </Link>
               <Link to="/HackUTD11">
-                <motion.div className="ImageItem" initial={{ opacity: 0, y: 150 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -15 }} transition={{ duration: 0.2, ease: "easeOut" }}>
-                  <ImageContainer imageSource={rippleImage} title={"HackUTD Website"} description={"Developing and designing the website for the biggest 24-hour hackathon in Texas hosted by HackUTD."} />
+                <motion.div
+                  className="ImageItem"
+                  initial={{ opacity: 0, y: 150 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -15 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                >
+                  <ImageContainer
+                    imageSource={rippleImage}
+                    title={"HackUTD Website"}
+                    description={"Developing and designing the website for the biggest 24-hour hackathon in Texas hosted by HackUTD."}
+                  />
                 </motion.div>
               </Link>
               <Link to="/ICanManage">
-                <motion.div className="ImageItem" initial={{ opacity: 0, y: 150 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -15 }} transition={{ duration: 0.2, ease: "easeOut" }}>
-                  <ImageContainer imageSource={manageImage} title={"I Can Manage Cancer 🔒"} description={"An educational platform designed to assist head and neck cancer patients through treatment."} />
+                <motion.div
+                  className="ImageItem"
+                  initial={{ opacity: 0, y: 150 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -15 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                >
+                  <ImageContainer
+                    imageSource={manageImage}
+                    title={"I Can Manage Cancer 🔒"}
+                    description={"An educational platform designed to assist head and neck cancer patients through treatment."}
+                  />
                 </motion.div>
               </Link>
               <Link to="/Stemuli">
-                <motion.div className="ImageItem" initial={{ opacity: 0, y: 150 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -15 }} transition={{ duration: 0.2, ease: "easeOut" }}>
-                  <ImageContainer imageSource={stemuliImage} title={"Stemuli"} description={"A desktop and mobile app for students interested in product design to explore more about the career through VR."} />
+                <motion.div
+                  className="ImageItem"
+                  initial={{ opacity: 0, y: 150 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -15 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                >
+                  <ImageContainer
+                    imageSource={stemuliImage}
+                    title={"Stemuli"}
+                    description={"A desktop and mobile app for students interested in product design to explore more about the career through VR."}
+                  />
                 </motion.div>
               </Link>
             </motion.div>
@@ -73,8 +126,8 @@ const HorizontalScroll = () => {
         </div>
       )}
 
-      {/* Second Projects Section (Grid View) */}
-      {!showFirstSection && (
+      {/* Grid View */}
+      {(isGridActive || isSmallScreen) && // Display grid on small screens and when grid view is active
         <div className="Projects">
           <div className="Projects__wrapper index">
             <a href="hackUTDpassword.html" className="Projects__card">
@@ -99,7 +152,7 @@ const HorizontalScroll = () => {
             </a>
           </div>
         </div>
-      )}
+      }
     </div>
   );
 };
