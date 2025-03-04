@@ -47,3 +47,14 @@
     transform: translateY(-200px) scale(1.3);  /* Expands and lifts the image */
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25); /* Adds a shadow */
 }
+
+/* Position the peekaboo image behind the carousel */
+.peekaboo-image {
+    position: absolute;
+    right: -400px; /* Adjust this to the amount you want the peekaboo to show from the end */
+    bottom: 0;
+    z-index: -1; /* Ensure it's behind the carousel items */
+    height: 100%; /* Make it as tall as the container */
+    width: auto; /* Adjust width as needed */
+    object-fit: cover; /* This will ensure the image covers the area without distortion */
+  }

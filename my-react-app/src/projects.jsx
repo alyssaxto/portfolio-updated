@@ -8,6 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import ImageContainer from "./Components/ImageContainer/ImageContainer";
 import { LettersPullUp } from "./Components/letters-pull-up";
 import "./projects.css";
+import peekaboo from "../src/assets/peekaboo.png"
 
 const HorizontalScroll = () => {
   const targetRef = useRef(null);
@@ -126,6 +127,11 @@ const HorizontalScroll = () => {
                   />
                 </motion.div>
               </Link>
+              <img
+    src={peekaboo}
+    alt="Peekaboo"
+    className="peekaboo-image"
+  />
             </motion.div>
           </div>
         </div>
@@ -134,6 +140,8 @@ const HorizontalScroll = () => {
       {/* Grid View */}
       {(isGridActive || isSmallScreen) && (
         <div className="Projects">
+        <br/>
+        <br/>
           <div className="Projects__wrapper index">
             <a href="hackUTDpassword.html" className="Projects__card">
               <img src={bpImage} alt="AI Image Generator" />
