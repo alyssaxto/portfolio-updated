@@ -57,7 +57,7 @@ const HorizontalScroll = () => {
           </motion.div>
           </Link>
 
-          <Link to="/bp2">
+          <Link to="/bpxGA">
           <motion.div
             className="ImageItem"
             initial={{ opacity: 0, y: 150 }}

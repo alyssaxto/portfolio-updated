@@ -67,7 +67,7 @@ const HorizontalScroll = () => {
         <div className="carousel" ref={carouselRef}>
           <div className="contentContainer">
             <motion.div className="images" style={{ x }}>
-              <Link to="/bpIntern">
+              <Link to="/bpProjects">
                 <motion.div
                   className="ImageItem"
                   initial={{ opacity: 0, y: 150 }}

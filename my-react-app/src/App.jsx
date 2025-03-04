@@ -28,14 +28,14 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/HackUTD11" element={<HackUTD />} />
         <Route path="/Hackportal" element={<Hackportal />} />
-        <Route path="/bp2" element={<Bp2 />} />
+        <Route path="/bpxGA" element={<Bp2 />} />
         <Route path="/ThinkPink" element={<ThinkPink />} />
         <Route path="/MVP" element={<MVP />} />
         <Route path="/Budgetbuddy" element={<Budgetbuddy />} />
         <Route path="/ICanManage" element={<ICanManage />} />
         <Route path="/Stemuli" element={<Stemuli />} />
         <Route path="/Gravebound" element={<Gravebound />} />
-        <Route path="/bpIntern" element={<BPIntern />} />  {/* Add the new route */}
+        <Route path="/bpProject" element={<BPIntern />} />  {/* Add the new route */}
       </Routes>
     </>
   );
