@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+.playgroundTitleContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem; /* Adjust this value as needed */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  padding: 0 2rem; /* Add padding to avoid text touching the edges on small screens */
+}
+
+.Playground {
+  font-size: 8vw; /* Use viewport width (vw) for responsive font sizing */
+  font-family: Poppins;
+  font-weight: bold;
+  margin-top: 10rem;
+  color: #333;
+  text-align: center;
+  
+  /* Ensure the text stays on one line */
+  white-space: nowrap; /* Prevent the text from wrapping */
+  display: inline-block;
+}
 
 /* Default styles (for larger screens) */
 .projects-title {
@@ -33,7 +53,7 @@
     flex-direction: column; /* Stack the title and button vertically */
     align-items: center; /* Ensure center alignment */
     justify-content: center; /* Centers the content horizontally */
-    width: 100%; /* Ensure it takes up full width */
+    width: 90%; /* Ensure it takes up full width */
     padding: 15px; /* Adjust padding if necessary */
   }
 
@@ -58,6 +78,7 @@
   background-color: #f5f5f5;
   border-radius: 10px;
   padding: 10px;
+  margin-left: 2rem;
   border: 2px solid #ccc; /* Grey outline */
 }
 

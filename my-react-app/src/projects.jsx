@@ -143,22 +143,22 @@ const HorizontalScroll = () => {
         <br/>
         <br/>
           <div className="Projects__wrapper index">
-            <a href="hackUTDpassword.html" className="Projects__card">
+            <a href="/bpProject" className="Projects__card">
               <img src={bpImage} alt="AI Image Generator" />
               <h2>AI Image Generator</h2>
               <p>Designing an accessible way for bp employees to quickly create the images they need</p>
             </a>
-            <a href="hackUTDwebsite.html" className="Projects__card">
+            <a href="/HackUTD11" className="Projects__card">
               <img src={rippleImage} alt="HackUTD Website" />
               <h2>HackUTD Website</h2>
               <p>Developing and designing the website for the biggest 24-hour hackathon in Texas hosted by HackUTD</p>
             </a>
-            <a href="utswpassword.html" className="Projects__card">
+            <a href="/ICanManage" className="Projects__card">
               <img src={manageImage} alt="I Can Manage Cancer" />
               <h2>I Can Manage Cancer</h2>
               <p>An educational platform designed to assist head and neck cancer patients through treatment.</p>
             </a>
-            <a href="Stemuli.html" className="Projects__card">
+            <a href="/Stemuli" className="Projects__card">
               <img src={stemuliImage} alt="Stemuli" />
               <h2>Stemuli</h2>
               <p>A desktop and mobile app for students interested in product design to explore more about the career through VR.</p>

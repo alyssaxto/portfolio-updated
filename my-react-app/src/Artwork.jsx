@@ -1,5 +1,6 @@
 import React from 'react';
 import "./About.css";
+import "./projects.css";
 import { motion } from 'framer-motion';
 import { LettersPullUp } from "./Components/letters-pull-up"; 
 
@@ -22,8 +23,8 @@ const Carousel = () => {
   return (
     
     <div className="carousel-container overflow-hidden py-10">
-            <div className="playgroundTitleContainer">
-              <LettersPullUp text="Artwork" className="Playground" />
+      <div className="title-container">
+        <LettersPullUp text="Artwork  " className="projects-title" />
             </div>
       <motion.div
         className="carousel-content flex whitespace-nowrap"
