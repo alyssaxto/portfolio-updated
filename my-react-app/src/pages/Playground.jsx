@@ -1,5 +1,5 @@
 import Header from '../Navbar.jsx';
-import Placeholder from '../placeholder.jsx';
+import Play from '../play.jsx';
 import Footer from '../Footer.jsx';
 import Artwork from '../Artwork.jsx';
 
@@ -9,7 +9,7 @@ function Playground() {
   return (
     <>
       <Header />
-      <Placeholder />
+      <Play />
       <Artwork />
       <Footer />
       

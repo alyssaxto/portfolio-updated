@@ -51,10 +51,10 @@
 /* Position the peekaboo image behind the carousel */
 .peekaboo-image {
     position: absolute;
-    right: -250px; /* Adjust this to the amount you want the peekaboo to show from the end */
+    right: -400px; /* Adjust this to the amount you want the peekaboo to show from the end */
     bottom: 0;
     z-index: -1; /* Ensure it's behind the carousel items */
-    height: 70%; /* Make it as tall as the container */
+    height: 100%; /* Make it as tall as the container */
     width: auto; /* Adjust width as needed */
     object-fit: cover; /* This will ensure the image covers the area without distortion */
   }
