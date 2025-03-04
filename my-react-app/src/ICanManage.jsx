@@ -1,5 +1,4 @@
-import Nav from "./Navbar.jsx";
-import Footer from './Footer.jsx'
+
 import "./Casestudy.css";
 import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
 import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
@@ -229,7 +228,6 @@ const App = () => (
 <div class="portfolio__btn-container">
 <button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
 </div>
-    <Footer/>
   </div>
 );
 

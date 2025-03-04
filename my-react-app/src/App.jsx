@@ -14,7 +14,8 @@ import Bp2 from './bp2.jsx';
 import MVP from './MVP.jsx';
 import Budgetbuddy from './Budgetbuddy.jsx';
 import ThinkPink from './ThinkPink.jsx';
-
+import Password from './PasswordProtected.jsx';
+import Footer from "./Footer.jsx";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Playground" element={<Play />} />
         <Route path="/about" element={<About />} />
+        <Route path="/Password" element={<Password />} />
         <Route path="/HackUTD11" element={<HackUTD />} />
         <Route path="/Hackportal" element={<Hackportal />} />
         <Route path="/bpxGA" element={<Bp2 />} />
@@ -37,6 +39,7 @@ function App() {
         <Route path="/Gravebound" element={<Gravebound />} />
         <Route path="/bpProject" element={<BPIntern />} />  {/* Add the new route */}
       </Routes>
+      <Footer />
     </>
   );
 }

@@ -15,6 +15,9 @@ const HorizontalScroll = () => {
   return (
     <>
       {/* Playground title outside of the carousel */}
+      <br/>
+      <br/>
+      <br/>
       <div className="title-container">
         <LettersPullUp text="Playground  " className="projects-title" />
         

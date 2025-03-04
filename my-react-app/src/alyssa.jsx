@@ -27,20 +27,20 @@ const AboutAndGallery = () => {
 
         <StaggeredFade text="Outside of design..." className="about-heading" />
 
-        <div className="gallery-container">
+        <div className="polaroid-container">
         <TextFade direction="up">
-  <div className="gallery-wrapper">
-    <div className="gallery-item">
-      <img src="./src/assets/me.png" alt="Making YouTube videos" className="gallery-image" />
-      <h2 className="gallery-caption">Making YouTube Videos</h2>
+  <div className="polaroid-wrapper">
+    <div className="polaroid-item">
+      <img src="./src/assets/me.png" alt="Making YouTube videos" className="polaroid-image" />
+      <h2 className="polaroid-caption">Making YouTube Videos</h2>
     </div>
-    <div className="gallery-item">
-      <img src="./src/assets/pc.png" alt="Building computers" className="gallery-image" />
-      <h2 className="gallery-caption">Building Computers</h2>
+    <div className="polaroid-item">
+      <img src="./src/assets/pc.png" alt="Building computers" className="polaroid-image" />
+      <h2 className="polaroid-caption">Building Computers</h2>
     </div>
-    <div className="gallery-item">
-      <img src="./src/assets/hack.png" alt="Attending hackathons" className="gallery-image" />
-      <h2 className="gallery-caption">Attending Hackathons</h2>
+    <div className="polaroid-item">
+      <img src="./src/assets/hack.png" alt="Attending hackathons" className="polaroid-image" />
+      <h2 className="polaroid-caption">Attending Hackathons</h2>
     </div>
   </div>
   </TextFade>

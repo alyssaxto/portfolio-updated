@@ -37,13 +37,13 @@
   }
 }
 
-.gallery-container {
+.polaroid-container {
   max-width: 1200px; /* Increase width of the container */
   margin: auto;
   text-align: center;
 }
 
-.gallery-wrapper {
+.polaroid-wrapper {
   display: flex;
   gap: 40px;
   justify-content: center;
@@ -51,7 +51,7 @@
   
 }
 
-.gallery-item {
+.polaroid-item {
   background: rgb(238, 238, 238);
   padding: 20px; /* Increased padding */
   border-radius: 9px;
@@ -61,18 +61,18 @@
   min-height: 400px; /* Ensure enough space for the image */
 }
 
-.gallery-item:hover {
+.polaroid-item:hover {
   transform: scale(1.1);
 }
 
-.gallery-image {
+.polaroid-image {
   width: 100%; /* Increased image width */
   max-width: 500px; /* Optional: max width */
   height: auto; /* Keep aspect ratio */
   border-radius: 10px;
 }
 
-.gallery-caption {
+.polaroid-caption {
   font-family: "Reenie Beanie";
   margin-top: 10px;
   color:#000;
@@ -80,12 +80,12 @@
   margin-bottom: 10px;
 }
 @media (max-width: 768px) {
-  .gallery-item {
+  .polaroid-item {
     width: 100%; /* Full width on mobile */
     max-width: 100%;
   }
 
-  .gallery-wrapper {
+  .polaroid-wrapper {
     gap: 20px; /* Reduce gap for better mobile spacing */
     flex-wrap: wrap; /* Prevent wrapping */
 
@@ -123,7 +123,6 @@
 
 .about {
     background-color: #ffffff;
-    padding: 4rem 0;
     font-weight: 400;
   }
   
@@ -135,9 +134,8 @@
     margin: 0 auto;
     height: auto;
     z-index: 1;
-    width: 100%;
+    width: 90%;
     max-width: 1300px;
-    padding: 0px 50px;
     padding-top: 5rem;
   }
   
@@ -206,14 +204,14 @@
 
 
   /* Mobile Responsive */
-  @media screen and (max-width: 1100px) {
+  /* Mobile Responsive */
+  @media screen and (max-width: 800px) {
     .about__container {
       display: grid;
       grid-template-columns: 1fr;
       align-items: center;
       justify-content: center;
-      width: 80%;
-      height: 100%;
+      height: 90%;
     }
     .about__img--container {
       display: flex;
@@ -222,14 +220,13 @@
     }
   
     .about__img--card {
-      width: 350px; /* More reasonable size */
-      height: auto;
-      border-radius: 30px; /* Slightly rounded but not extreme */
+      width: 90%; /* More fluid size */
+      max-width: 300px; /* Prevent it from being too large */
     }
   
     .about__content {
       text-align: left;
-      margin-bottom: 4rem;
+      width: 100%;
     }
   
     .about__content h1 {
@@ -244,20 +241,15 @@
   
     .about__content p {
       margin-top: 1rem;
-      width: 80%;
+      width: 85%;
       font-size: 1rem;
     }
   }
-  
   @media screen and (max-width: 480px) {
     .about__img--card {
-      width: 80%; /* More flexible size */
+      width: 90%; /* More flexible size */
       max-width: 250px; /* Prevents being too small */
       height: auto; /* Keeps aspect ratio */
-    }
-    .fa-users,
-    .fa-layer-group {
-      font-size: 4rem;
     }
   
     .about__content h1 {
@@ -272,9 +264,5 @@
       margin-top: 2rem;
     }
   
-    .about__btn {
-      padding: 12px 36px;
-      margin: 2.5rem 0;
-    }
   }
   

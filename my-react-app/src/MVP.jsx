@@ -4,7 +4,7 @@ import { TextFade } from "./Components/TextFade"; // Ensure this import is corre
 import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 import ExpandableImage from './Components/ExpandImage.jsx';
 import { Link } from "react-router-dom";
-import Footer from './Footer.jsx'
+
 
 
 // Header Component
@@ -210,7 +210,7 @@ const BPPortfolio = () => (
     <h1>Check out the other projects I worked on at bp</h1>
     <div className="Gallery__wrapper">
       <div className="Gallery__item">
-        <Link to="/bpProjects">
+        <Link to="/Password">
           <img src="./src/assets/bp/6.png" alt="Project 1" />
         </Link>
       </div>
@@ -254,7 +254,6 @@ const App = () => (
     <div class="portfolio__btn-container">
 <button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
 </div>
-<Footer />
   </div>
 );
 

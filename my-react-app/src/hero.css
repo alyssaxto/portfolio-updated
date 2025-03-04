@@ -65,6 +65,8 @@
     .hero {
       padding-top: 0; /* Remove any extra padding on top */
       text-align: left; /* Adjust text alignment for better readability */
+      padding: 10px;
+
     }
     
     .hero__content {
