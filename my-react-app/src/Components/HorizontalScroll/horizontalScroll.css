@@ -15,8 +15,9 @@
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
-    padding-left: 500px;
 }
+
+
 
 .images {
     display: flex;

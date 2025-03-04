@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link } from "react-router-dom";
 import "./index.css"; // Ensure your CSS file is correctly linked
 import Resume from "../src/assets/AlyssaTo_Resume.pdf";
 
@@ -15,7 +15,10 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__container">
         {/* Hamburger icon */}
-        <div className="navbar__hamburger" onClick={toggleMenu}>
+        <div 
+          className={`navbar__hamburger ${menuOpen ? "active" : ""}`} 
+          onClick={toggleMenu}
+        >
           <div></div>
           <div></div>
           <div></div>
@@ -24,16 +27,16 @@ const Navbar = () => {
         {/* Menu items */}
         <ul className={`navbar__menu ${menuOpen ? "active" : ""}`}>
           <li className="navbar__item">
-            <Link to="/" className="navbar__links">HOME</Link>
+            <Link to="/" className="navbar__links" onClick={() => setMenuOpen(false)}>HOME</Link>
           </li>
           <li className="navbar__item">
-            <Link to="/playground" className="navbar__links">PLAY</Link> {/* Link to play.jsx */}
+            <Link to="/playground" className="navbar__links" onClick={() => setMenuOpen(false)}>PLAY</Link>
           </li>
           <li className="navbar__item">
-            <Link to="/about" className="navbar__links">ABOUT</Link> {/* Link to about.jsx */}
+            <Link to="/about" className="navbar__links" onClick={() => setMenuOpen(false)}>ABOUT</Link>
           </li>
           <li className="navbar__item">
-            <a href={Resume} className="navbar__links" target="_blank" rel="noopener noreferrer">RESUME</a> {/* Link to resume file */}
+            <a href={Resume} className="navbar__links" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>RESUME</a>
           </li>
         </ul>
       </div>

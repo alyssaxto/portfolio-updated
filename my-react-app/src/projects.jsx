@@ -12,23 +12,28 @@ import "./projects.css";
 const HorizontalScroll = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
 
-  // Toggle State
-  const [isGridActive, setIsGridActive] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false); // Track small screen state
-  const carouselRef = useRef(null);
+  // Track small screen state
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1350);
 
-  // Detect if the screen width is under 1000px
+  // Detect if screen width is under 1200px
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 1000); // Adjust the width to 1000px
+      setIsSmallScreen(window.innerWidth <= 1200);
     };
 
     window.addEventListener("resize", handleResize);
     handleResize(); // Check initially
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Adjust scroll range based on screen width
+  const x = useTransform(scrollYProgress, [0, 1], ["30%", isSmallScreen ? "-100%" : "-70%"]);
+
+  // Toggle state for grid view
+  const [isGridActive, setIsGridActive] = useState(false);
+  const carouselRef = useRef(null);
 
   // Reset Scroll Position whenever switching views
   useEffect(() => {
@@ -57,7 +62,7 @@ const HorizontalScroll = () => {
       </div>
 
       {/* Horizontal Scroll View */}
-      {!isSmallScreen && !isGridActive && ( // Only enable the horizontal scroll if screen width is larger than 1000px and grid view is inactive
+      {!isSmallScreen && !isGridActive && (
         <div className="carousel" ref={carouselRef}>
           <div className="contentContainer">
             <motion.div className="images" style={{ x }}>
@@ -127,7 +132,7 @@ const HorizontalScroll = () => {
       )}
 
       {/* Grid View */}
-      {(isGridActive || isSmallScreen) && // Display grid on small screens and when grid view is active
+      {(isGridActive || isSmallScreen) && (
         <div className="Projects">
           <div className="Projects__wrapper index">
             <a href="hackUTDpassword.html" className="Projects__card">
@@ -152,7 +157,7 @@ const HorizontalScroll = () => {
             </a>
           </div>
         </div>
-      }
+      )}
     </div>
   );
 };
