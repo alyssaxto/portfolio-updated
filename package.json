@@ -1,5 +1,6 @@
 {
   "name": "my-react-app",
+  "homepage": "https://alyssaxto.github.io/alyssaxto.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +18,5 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-  },
-  "homepage": "https://alyssaxto.github.io/"
+  }
 }
