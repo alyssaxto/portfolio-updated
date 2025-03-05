@@ -1,0 +1,1076 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* projects */
+.Gallery {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+}
+
+.Gallery h1 {
+  background-color: #ff4f4f;
+  color: #ffffff; /* White text color */
+  margin-top: 0;
+  margin-bottom: 20px; /* Increased bottom margin */
+  padding: 10px 20px; /* Added padding for better readability */
+  font-size: 2.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center; /* Center align text */
+}
+
+.Gallery__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+  grid-auto-rows: minmax(auto, auto); /* Automatic row height */
+  gap: 20px; /* Adjusted gap between items */
+  width: 100%; /* Full width */
+  max-width: 1300px; /* Max width of the container */
+  margin-top: 20px; /* Added margin to top */
+  padding: 0 20px; /* Added padding to ensure content doesn't touch edges */
+}
+
+.Gallery__item {
+  border-radius: 4px; /* Rounded corners */
+  position: relative;
+  cursor: pointer;
+  text-align: center; /* Center align text */
+  overflow: hidden; /* Ensure text doesn't overflow */
+}
+
+.Gallery__item h2 {
+  font-size: 1.5rem; /* Adjust size as needed */
+  margin-top: 0.5rem; /* Small margin at the top */
+  margin-bottom: 1.3rem; /* No margin at the bottom */
+  color: #333; /* Text color for the heading */
+}
+
+.Gallery__item img {
+  width: 100%; /* Full width of the image */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.Gallery__item:hover img {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+@media (max-width: 768px) {
+  .Gallery__wrapper {
+    width: 90%; /* Make each item take full width on smaller screens */
+  }
+}
+
+
+/* Green Link */
+.green-link {
+  color: #000; /* Black text color */
+  text-decoration: none; /* Remove default underline */
+  position: relative; /* Position relative for pseudo-element */
+  transition: color 0.2s ease-in-out; /* Faster transition for text color */
+}
+
+.green-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* Adjust space between text and underline */
+  width: 100%;
+  height: 1px;
+  background-color: #0bc20b; /* Green underline color */
+  transform: scaleX(1); /* Full width initially */
+  transform-origin: bottom right; /* Align underline to bottom right */
+  transition: transform 0.2s ease-in-out; /* Faster transition for underline */
+}
+
+.green-link:hover {
+  color: #0bc20b; /* Green text color on hover */
+}
+.divider {
+  width: 100%; /* Take up full width of parent container */
+  max-width: 1000px; /* Limit width to 1000px */
+  height: 1px; /* Line thickness */
+  background-color: #d3d3d3; /* Gray color for the line */
+  margin: 20px auto; /* Center the divider horizontally and add some spacing above and below */
+}
+
+
+h1 {
+  font-size: 2em;
+  font-family: poppins;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: bold; 
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-weight: 400; /* Adjust font weight if necessary */
+  color: #787878;
+  font-family: Poppins;
+  font-size: 1.4em; /* Adjust the font size as needed */
+  margin: 0;
+}
+
+h3 {
+  font-weight: 350; /* Adjust font weight if necessary */
+  color: #787878;
+  font-family: Poppins;
+  font-size: 2em; /* Adjust the font size as needed */
+  margin: 0;
+}
+
+.BentoBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between each box */
+  justify-content: center; /* Centers the items inside BentoBox */
+  max-width: 1000px; /* Ensure the BentoBox does not exceed 1000px width */
+  margin: 0 auto; /* Centers the BentoBox within the parent container */
+}
+
+.BentoBox__wrapper {
+  display: flex;
+  width: 90%; /* Ensures two items per row */
+  gap: 20px; /* Space between items */
+}
+
+.BentoBox__item {
+  border-radius: 8px;
+}
+
+.BentoBox__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the box without distortion */
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .BentoBox__wrapper {
+    width: 90%; /* Make each item take full width on smaller screens */
+  }
+}
+
+.HackArt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between each box */
+  justify-content: center; /* Centers the items inside BentoBox */
+  max-width: 1000px; /* Ensure the BentoBox does not exceed 1000px width */
+  margin: 0 auto; /* Centers the BentoBox within the parent container */
+}
+
+.HackArt__wrapper {
+  display: flex;
+  width: 90%; /* Ensures two items per row */
+  gap: 20px; /* Space between items */
+}
+
+.HackArt__item {
+  border-radius: 8px;
+}
+
+.HackArt__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure images cover the box without distortion */
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .HackArt__wrapper {
+    width: 90%; /* Make each item take full width on smaller screens */
+  }
+}
+.container {
+  font-family: Poppins;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px 20px 0px 30px;
+}
+
+.summary-container {
+  font-family: Poppins, sans-serif;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.summary-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* Ensures content wraps instead of overflowing */
+}
+
+/* Default styles for larger screens */
+.summary-header h4 {
+  flex-shrink: 0;
+  padding-top: 10px;
+  color: #000000;
+  font-size: 1.7em;
+  white-space: nowrap;
+}
+
+.summary-header h3 {
+  flex-shrink: 0;
+  font-weight: 400;
+  color: #8b8b8b;
+  font-size: 1.5em;
+  white-space: normal;
+}
+
+.summary-header h2 {
+  flex-shrink: 0;
+  padding-top: 10px;
+  font-weight: 400;
+  color: #8b8b8b;
+  font-size: 1.5em;
+  white-space: normal;
+  width: 250px;
+}
+
+.summary-text {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .summary-header {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px;
+  }
+
+  .summary-header h4 {
+    font-size: 1.4em; /* Reduce size */
+  }
+
+  .summary-header h3, 
+  .summary-header h2 {
+    font-size: 1.2em; /* Reduce size */
+  }
+
+  .summary-text {
+    font-size: 1em; /* Reduce text size */
+  }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+  .summary-header h4 {
+    font-size: 1.2em;
+  }
+
+  .summary-header h3, 
+  .summary-header h2 {
+    font-size: 1em;
+  }
+
+  .summary-text {
+    font-size: 0.9em;
+  }
+}
+
+/* Overlay: Covers everything EXCEPT the original image */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 5vw; /* Prevents the image from touching edges */
+  
+}
+/* Overlay: Covers the background */
+.expanded-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  padding: 5vh 5vw; /* Prevents touching screen edges */
+  border: none; /* Ensures no border around the image container */
+}
+
+/* Show expanded image when active */
+.expanded-image.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Expanded Image (Maintains Aspect Ratio) */
+.expanded-image img {
+  width: auto;  /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 80vw; /* Adjust based on screen size */
+  max-height: 80vh; /* Adjust based on screen size */
+  border-radius: 10px;  /* Rounded corners */
+  border: none; /* Ensure no border on the image */
+  transition: transform 0.3s ease-in-out;
+  cursor: zoom-out;
+  object-fit: contain; /* Ensures no cropping */
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .expanded-image img {
+    max-width: 85vw;
+    max-height: 75vh;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .expanded-image img {
+    max-width: 90vw;
+    max-height: 70vh;
+    
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .expanded-image img {
+    max-width: 95vw;
+    max-height: 65vh;
+  }
+}
+
+
+/* Ensure borders apply only to images */
+.summary-image img, 
+.hack-summary-image img, 
+.blue-summary-image img, 
+.pink-summary-image img, 
+.yellow-summary-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Apply specific borders to images only */
+.blue-summary-image img {
+  border: 3px solid #3FAEFC;
+}
+
+.pink-summary-image img {
+  border: 3px solid #ff4f4f;
+}
+
+.yellow-summary-image img {
+  border: 3px solid #FFAF48;
+}
+
+.hack-summary-image img {
+  height: auto;
+  border-radius: 10px;
+}
+
+.summary-image img {
+  border: 3px solid #9bd18a;
+}
+
+/* Remove border from the container itself */
+.summary-image {
+  border: none;
+  margin-top: 20px;
+}
+
+
+.summary-text-bullets {
+  list-style-type: disc; /* Standard bullet points */
+  padding-left: 20px; /* Indent bullets */
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+.summary-text-bullets li {
+  margin-bottom: 20px; /* Space between bullet points */
+  font-size: 1em;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 2.3em;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+p {
+  font-weight: 400;
+  color: #555;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.grid {
+  padding-top: 3rem;
+  display: grid;
+  font-family: Poppins, sans-serif;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1000px; /* Adjust the max-width as needed */
+  width: 100%;  /* Full width of the parent container */
+  margin: 0 auto;  /* Centers the grid horizontally */
+}
+
+.grid__item {
+  text-align: left;
+}
+
+.grid__item h2{
+  font-weight: 00;
+  text-align: left;
+}
+
+.header__title {
+  font-family: playfair display;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  max-width: 1000px;
+  margin: 50px auto 0px;
+  font-size: 3em;
+  text-align: center;
+  color: #000;
+  font-weight: 600; 
+}
+.header h2{
+  font-weight: 400; /* Adjust font weight if necessary */
+  color: #787878;
+  font-family: Poppins;
+  text-align: center;
+  font-size: 1.4em; /* Adjust the font size as needed */
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+.summary{
+  font-size: 1.2em;
+  font-weight: 100px;
+  line-height: 1.5;
+  
+}
+
+.header__image {
+  max-width: 580px; /* Adjust the max-width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: -60px;
+  margin-bottom: -60px; /* Adjust the margin-bottom as needed */
+  position: relative; /* or absolute, depending on your layout */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bullets p {
+  max-width: 1000px;
+  font-size: 1.7em;
+  line-height: 1.3;
+}
+.bullets p2 {
+  color: #000000;
+  font-size: 1.4em; /* Adjust the font size as needed */
+  margin: 0 0 50px 0; /* Adds 20px space at the bottom */
+}
+
+
+.bullets p::before {
+  content: '\2022';
+  color: #333;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 10px;
+}
+
+p {
+  max-width: 1000px;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+
+.bullet-item {
+  display: flex;
+  align-items: left;
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+.bullet-image img {
+  max-width: 100%; /* Ensures the image doesn't exceed the container width */
+  height: auto; /* Maintains the aspect ratio of the image */
+}
+
+
+
+/* WebKit (Safari, Chrome) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFB6C1; /* Color of the scrollbar handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4f4f; /* Color of the scrollbar handle on hover */
+}
+
+.figma-embed-container {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  height: 600px;
+  margin: 0 auto; /* Center the iframe horizontally */
+  
+}
+
+.figma-embed-container-desktop{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  height: 600px;
+  margin: 0 auto; /* Center the iframe horizontally */
+}
+
+.video-container {
+  position: relative;
+  width: 1000px; /* Full width of the viewport */
+  height: 600px; /* Full height of the viewport */
+  margin: 0 auto; /* Center the iframe horizontally */
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .video-container {
+    width: 70%; /* Adjust width for smaller screens */
+    height: 300px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+
+  .figma-embed-container{
+    width: 50%; /* Adjust width for smaller screens */
+    height: 600px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+}
+@media screen and (max-width: 768px) {
+  
+  .header__image {
+    max-width: 300px; /* Adjust the max-width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: -30px; /* Adjust the margin-top as needed */
+    margin-bottom: -30px; /* Adjust the margin-bottom as needed */
+    position: relative; /* or absolute, depending on your layout */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header__title {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px 20px 30px;
+    font-size: 2.3em;
+    text-align: left;
+    color: #000;
+    font-weight: 600; 
+  }
+  .summary {
+    margin-top: 30px;
+    font-size: 1em;
+    font-weight: 100px;
+    line-height: 1.5;
+    
+  }
+
+  p {
+    max-width: 1000px;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  h1 {
+    font-size: 1.7em;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 450; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    font-weight: 400; /* Adjust font weight if necessary */
+    color: #787878;
+    font-size: 1.4em; /* Adjust the font size as needed */
+    margin: 0;
+  }
+  
+  h3 {
+    font-weight: 350; /* Adjust font weight if necessary */
+    color: #787878;
+    font-size: 1.7em; /* Adjust the font size as needed */
+    margin: 0;
+  }
+ 
+  
+  .bullet-item {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+  
+  .bullet-content {
+    max-width: 1000px;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  
+  .bullet-image {
+    display: flex;
+    flex-direction: column; /* Arrange images vertically */
+  }
+  
+  .bullet-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .video-container {
+    width: 90%; /* Adjust width for smaller screens */
+    height: 190px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+
+  .figma-embed-container{
+    width: 50%; /* Adjust width for smaller screens */
+    height: 450px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+  }
+  .figma-embed-container-desktop{
+    width: 65%; /* Adjust width for smaller screens */
+    height: 250px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+
+}
+
+
+/* Portfolio Button */
+.portfolio__btn-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .portfolio__btn {
+    font-size: 1.3rem;
+    font-family: poppins;
+    background: #FFB6C1;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+  }
+  
+  .portfolio__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .portfolio__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff4f4f;
+    transition: all 0.35s;
+    border-radius: 10px;
+  }
+  
+  .portfolio__btn:hover {
+    color: #fff;
+  }
+  
+  .portfolio__btn:hover:after {
+    width: 100%;
+  }
+  
+  .logo-text {
+    font-family: 'Silkscreen', sans-serif;
+    font-weight: 400; /* Adjust font weight as needed */
+    /* You can also adjust other styles like font size, color, etc. here */
+  }
+  
+  @keyframes bobbing {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  #arrow {
+    animation: bobbing 1.5s infinite;
+    display: inline-block;
+    transform-origin: center;
+    transition: transform 0.2s ease;
+  }
+  /* password */
+  
+  
+  .login-container {
+    max-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Yellow Link */
+  .yellow-link {
+    color: #000; /* Black text color */
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Position relative for pseudo-element */
+    transition: color 0.2s ease-in-out; /* Faster transition for text color */
+  }
+  
+  .yellow-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Adjust space between text and underline */
+    width: 100%;
+    height: 1px;
+    background-color: #FFAF48; /* Yellow underline color */
+    transform: scaleX(1); /* Full width initially */
+    transform-origin: bottom right; /* Align underline to bottom right */
+    transition: transform 0.2s ease-in-out; /* Faster transition for underline */
+  }
+  
+  .yellow-link:hover {
+    color: #FFAF48; /* Yellow text color on hover */
+  }
+  
+  /* Blue Link */
+  .blue-link {
+    color: #000; /* Black text color */
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Position relative for pseudo-element */
+    transition: color 0.2s ease-in-out; /* Faster transition for text color */
+  }
+  
+  .blue-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Adjust space between text and underline */
+    width: 100%;
+    height: 1px;
+    background-color: #3FAEFC; /* Blue underline color */
+    transform: scaleX(1); /* Full width initially */
+    transform-origin: bottom right; /* Align underline to bottom right */
+    transition: transform 0.2s ease-in-out; /* Faster transition for underline */
+  }
+  
+  .blue-link:hover {
+    color: #3FAEFC; /* Blue text color on hover */
+  }
+  
+/* Navbar links styling */
+.pink-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;  /* Ensure the link is inline-block for width control */
+  transition: 
+    color 0.3s ease;
+}
+
+/* Underline effect using pseudo-element */
+.pink-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust space between the text and the underline */
+  width: 100%; /* Make the underline full width of the link */
+  height: 2px;
+  background-color: #ff6b6b;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1; /* Ensure the pseudo-element is above other content */
+  visibility: visible; /* Ensure the underline is not hidden */
+}
+
+/* Hover effect on links */
+.pink-link:hover {
+  color: #fe4e4e;
+  font-weight: 600;
+}
+
+.pink-link:hover::after {
+  transform: scaleX(1);  /* Make sure it's scaled to full width when hovered */
+}
+
+
+  
+  /* Purple Link */
+  .purple-link {
+    color: #000; /* Black text color */
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Position relative for pseudo-element */
+    transition: color 0.2s ease-in-out; /* Faster transition for text color */
+  }
+  
+  .purple-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Adjust space between text and underline */
+    width: 100%;
+    height: 1px;
+    background-color: #742CFF; /* Purple underline color */
+    transform: scaleX(1); /* Full width initially */
+    transform-origin: bottom right; /* Align underline to bottom right */
+    transition: transform 0.2s ease-in-out; /* Faster transition for underline */
+  }
+  
+  .purple-link:hover {
+    color: #742CFF; /* Purple text color on hover */
+  }
+
+
+
+  /* CSS for Large Green Numbers with Text */
+  
+  .number-box {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+    background-color: #9bd18a; /* Green background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%; /* Take up full width within max-width */
+  }
+  
+  .number {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-right: 0; /* Remove margin on mobile */
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+  
+  .text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center; /* Center align text on mobile */
+    margin-bottom: 0; /* Remove margin bottom on mobile */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .number-box {
+      padding: 15px; /* Reduce padding for smaller screens */
+    }
+  
+    .number {
+      font-size: 3rem; /* Decrease font size for number on smaller screens */
+    }
+  
+    .text {
+      font-size: 1.4rem; /* Decrease font size for text on smaller screens */
+    }
+  }
+  
+  .lime-highlight {
+    color: #68b94f;
+    font-weight: 700;
+    /* Additional styling */
+  }
+  .grey-highlight {
+    color: #787878;
+    font-weight: 400;
+    font-size: 1.7rem;
+    /* Additional styling */
+  }
+  h4 {
+    font-size: 2em;
+    text-align: center;
+    color: #000;
+    font-weight: 450; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  .quote-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 20px;
+  }
+  
+  .quote-cell {
+    background-color: #9bd18a;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .quote-cell h2 {
+    font-size: 1.5rem;
+    font-weight: 600; 
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+  }
+  
+  .quote-text {
+    font-size: 1.2rem;
+    font-weight: 350; 
+    color: white;
+    font-style: italic;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .quote-grid {
+      grid-template-columns: 1fr 1fr; /* 2 columns */
+    }
+  
+    .quote-cell {
+      padding: 15px;
+    }
+  
+    .quote-cell h2 {
+      font-size: 1.3rem;
+    }
+  
+    .quote-text {
+      font-size: 1rem;
+    }
+  }
+  
+
+  /* Mobile specific styles */
+  @media (max-width: 1024px) {
+    .search-text,
+    .scroll-container {
+      display: none; /* Hide both elements on mobile screens */
+    }
+  }
+  
+  /* Flexbox to center the image horizontally */
+  .image-containy {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Vertically center if needed */
+  }
+  
+  /* Styling for the image */
+  .hover-image {
+    max-width: 800px; /* Max width for the image */
+    border-radius: 10px; /* Rounded corners */
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Space between text and image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .hover-image:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }
+
+
+  .image-box {
+    max-width: 1000px;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+
+  .section-divider {
+    height: 1px; /* Gives the divider a height */
+    background-color: #ffffff; /* Light gray color for visibility */
+    margin-top: 5rem; /* Adjust space above the section */
+    margin-bottom: 5rem; /* Adjust space below the section */
+
+   }
+  
+
+/* Exit button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001; /* Above image */
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}

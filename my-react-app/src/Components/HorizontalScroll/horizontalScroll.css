@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
+
+.carousel {
+    color: rgb(0, 0, 0);
+    height: 400vh; /* Default height for larger screens */
+    text-decoration: none;
+  }
+
+.contentContainer{
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+
+
+.images {
+    display: flex;
+    gap: -5vw; /* Increase overlap */
+    padding: 0 8rem;
+}
+
+.ImageItem {
+    font-family: Poppins;
+    color: black;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    margin-left: -20px; /* Adjust overlap */
+    background-color: white;
+    opacity: 70%;
+    transform-style: preserve-3d;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    transform: rotate(-5deg) translateZ(10px);
+
+}
+
+
+
+/* Hover effect */
+.ImageItem:hover {
+    transform: translateY(-200px) scale(1.3);  /* Expands and lifts the image */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25); /* Adds a shadow */
+}
+
+/* Position the peekaboo image behind the carousel */
+.peekaboo-image {
+    position: absolute;
+    right: -400px; /* Adjust this to the amount you want the peekaboo to show from the end */
+    bottom: 0;
+    z-index: -1; /* Ensure it's behind the carousel items */
+    height: 100%; /* Make it as tall as the container */
+    width: auto; /* Adjust width as needed */
+    object-fit: cover; /* This will ensure the image covers the area without distortion */
+  }
