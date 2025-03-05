@@ -105,12 +105,23 @@
       padding: 10px;
 
     }
+    .hero__content h11 {
+      font-size: 3rem;
+    }
     
     .hero__content {
       margin-bottom: 20px; /* Add some space below the text on mobile */
     }
 
     .hero__image {
-        margin-top: 300px
+        margin-top: 4rem;
+    }
+  }
+
+  
+  @media (max-width: 390px) {
+
+    .hero__image {
+        margin-top: 10rem;
     }
   }
