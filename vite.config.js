@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: "/",
+  base: '/', // Ensure this is '/' for personal GitHub Pages
   resolve: {
     alias: {
-      '@': '/src',  // Ensures @ points to the src directory
-    }
-  }
+      '@': path.resolve(__dirname, './src'),  // Resolving relative to the root directory
+    },
+  },
 });
