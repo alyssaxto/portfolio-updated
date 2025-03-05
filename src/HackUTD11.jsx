@@ -291,7 +291,7 @@ const HackUTD = () => (
   <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Check out the final product!</h1>
-    <h2>HackUTD Product Designer<span className="emoji"> ✷ </span>Spring - Fall 2024</h2>
+    <h2>HackUTD Product Designer ✷ Spring - Fall 2024</h2>
     <div className="image-containy">
       <a href="https://ripple.hackutd.co/" target="_blank" rel="noopener noreferrer">
         <img src="/assets/ripple.png" alt="Image 2" className="hover-image" />
