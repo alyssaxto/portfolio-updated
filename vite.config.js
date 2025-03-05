@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/alyssaxto.github.io/',  // This is correct for GitHub Pages
+  base: '/alyssaxto.github.io/',  // Update base to match your GitHub Pages subpath
   resolve: {
     alias: {
       '@': '/src',  // Ensures @ points to the src directory
