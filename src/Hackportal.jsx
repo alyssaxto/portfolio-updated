@@ -9,7 +9,7 @@ const Header = () => (
   <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Empowering other hackathons to streamline their event management</h1>
-    <h2>HackUTD Product Designer ✴ Spring - Fall 2024</h2>
+    <h2>HackUTD Product Designer ✷ Spring - Fall 2024</h2>
     <div className="image-containy">
       <a href="https://hackportal.hackutd.co/" target="_blank" rel="noopener noreferrer">
         <img src="/assets/hackportal.png" alt="Image 2" className="hover-image" />
