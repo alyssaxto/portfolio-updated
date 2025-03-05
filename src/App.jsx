@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
 import Header from "./Navbar.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Play from "./pages/Playground.jsx";
-import BPIntern from "./pages/bpIntern.jsx";  // Import the new BPIntern component
+import BPIntern from "./pages/bpIntern.jsx"; // Import the new BPIntern component
 import HackUTD from "../src/HackUTD11.jsx";
 import ScrollToTop from './ScrollToTop';
 import ICanManage from './ICanManage.jsx';
@@ -17,6 +18,7 @@ import ThinkPink from './ThinkPink.jsx';
 import Password from './PasswordProtected.jsx';
 import Password2 from './PasswordProtected2.jsx';
 import Footer from "./Footer.jsx";
+
 function App() {
   // Emoji replacement logic with Twemoji
   useEffect(() => {
