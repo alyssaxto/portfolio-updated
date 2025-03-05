@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Reenie+Beanie&display=swap');
+
+
+.playgroundTitleContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem; /* Adjust this value as needed */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  padding: 0 2rem; /* Add padding to avoid text touching the edges on small screens */
+}
+
+.Playground {
+  font-size: 8vw; /* Use viewport width (vw) for responsive font sizing */
+  font-family: Poppins;
+  font-weight: bold;
+  margin-top: 10rem;
+  color: #333;
+  text-align: center;
+  
+  /* Ensure the text stays on one line */
+  white-space: nowrap; /* Prevent the text from wrapping */
+  display: inline-block;
+}
+
+/* Optional: Media query for smaller screens to fine-tune */
+@media (max-width: 768px) {
+  .Playground {
+    font-size: 8vw; /* Adjust the font size for smaller screens */
+    margin-bottom: 2rem; /* Adjust space between title and carousel */
+  }
+
+  .playgroundTitleContainer {
+    margin-top: 2rem; /* Reduce margin on top for smaller screens */
+    padding: 0 1rem; /* Reduce padding */
+  }
+}
+
+.polaroid-container {
+  max-width: 1200px; /* Increase width of the container */
+  margin: auto;
+  text-align: center;
+}
+
+.polaroid-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  
+}
+
+.polaroid-item {
+  background: rgb(238, 238, 238);
+  padding: 20px; /* Increased padding */
+  border-radius: 9px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  min-height: 400px; /* Ensure enough space for the image */
+}
+
+.polaroid-item:hover {
+  transform: scale(1.1);
+}
+
+.polaroid-image {
+  width: 100%; /* Increased image width */
+  max-width: 500px; /* Optional: max width */
+  height: auto; /* Keep aspect ratio */
+  border-radius: 10px;
+}
+
+.polaroid-caption {
+  font-family: "Reenie Beanie";
+  margin-top: 10px;
+  color:#000;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .polaroid-item {
+    width: 100%; /* Full width on mobile */
+    max-width: 100%;
+  }
+
+  .polaroid-wrapper {
+    gap: 20px; /* Reduce gap for better mobile spacing */
+    flex-wrap: wrap; /* Prevent wrapping */
+
+  }
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  white-space: nowrap;
+}
+
+.carousel-image {
+  width: auto; /* Square size */
+  height: 30vh; /* Square size */
+  object-fit: cover; 
+  border-radius: 10px; /* Optional: Rounded corners */
+  margin-right: 30px; /* Space between images */
+}
+
+.about-heading {
+  font-size: 5rem; /* Adjust size as needed */
+  color: #ff4f4f;
+  font-weight: bold;
+  font-family: poppins;
+  text-align: center;
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.about {
+    background-color: #ffffff;
+    font-weight: 400;
+  }
+  
+  .about__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: auto;
+    z-index: 1;
+    width: 90%;
+    max-width: 1300px;
+    padding-top: 5rem;
+  }
+  
+  
+  .about__content h1 {
+    font-size: 3rem;
+    font-family: poppins;
+    background-color: #ff4f4f;
+    background-size: 100%;
+    font-weight: 600;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+  
+  /* Pink Link */
+.pink-link {
+  color: #ff4f4f; /* Black text color */
+  font-weight: 600;
+  text-decoration: none; /* Remove default underline */
+  position: relative; /* Position relative for pseudo-element */
+  transition: color 0.2s ease-in-out; /* Faster transition for text color */
+}
+
+.pink-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* Adjust space between text and underline */
+  width: 100%;
+  height: 1px;
+  background-color: #ff4f4f; /* Pink underline color */
+  transform: scaleX(1); /* Full width initially */
+  transform-origin: bottom right; /* Align underline to bottom right */
+  transition: transform 0.2s ease-in-out; /* Faster transition for underline */
+}
+
+.pink-link:hover {
+  color: #ff4f4f; /* Pink text color on hover */
+}
+  
+.about__content p {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #000;
+}
+
+
+.about__img--card img {
+  border-radius: 50px !important; /* or border-radius: 50% !important; */
+}
+
+
+.about__img--card {
+  height: 500px;
+  width: 500px;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+  /* Mobile Responsive */
+  /* Mobile Responsive */
+  @media screen and (max-width: 800px) {
+    .about__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      height: 90%;
+    }
+    .about__img--container {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Add this line to center vertically */
+    }
+  
+    .about__img--card {
+      width: 90%; /* More fluid size */
+      max-width: 300px; /* Prevent it from being too large */
+    }
+  
+    .about__content {
+      text-align: left;
+      width: 100%;
+    }
+  
+    .about__content h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+      
+    }
+  
+    .about__content h2 {
+      font-size: 3rem;
+    }
+  
+    .about__content p {
+      margin-top: 1rem;
+      width: 85%;
+      font-size: 1rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .about__img--card {
+      width: 90%; /* More flexible size */
+      max-width: 250px; /* Prevents being too small */
+      height: auto; /* Keeps aspect ratio */
+    }
+  
+    .about__content h1 {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+    .about__content h2 {
+      font-size: 2rem;
+    }
+  
+    .about__content p {
+      margin-top: 2rem;
+    }
+  
+  }
+  
