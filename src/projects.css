@@ -214,6 +214,9 @@
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
   .Projects__wrapper {
     grid-template-columns: 1fr; /* Stack cards in a single column */
     grid-template-rows: auto;
