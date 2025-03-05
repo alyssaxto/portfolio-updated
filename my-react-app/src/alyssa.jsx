@@ -16,10 +16,10 @@ const AboutAndGallery = () => {
             <TextFade direction="up">
               <h1>Hi, I'm Alyssa!</h1>
               <p>
-                Nice to meet you! I’m a recent graduate from <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="pink-link" target="_blank" rel="noopener noreferrer">the University of Texas @ Dallas</a> with a Bachelors of Arts, Technology, and Emerging Communications and a concentration on <a href="index.html#Projects" className="pink-link">UX Design.</a><br /><br />
+                Nice to meet you! I’m a recent graduate from <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="pink-link" target="_blank" rel="noopener noreferrer">the University of Texas @ Dallas</a> with a Bachelors of Arts, Technology, and Emerging Communications and a concentration on <a href="/#Projects" className="pink-link">UX Design.</a><br /><br />
               </p>
               <p>
-                I come from a background of fine art but fell in love with UI/UX after discovering it in college. Unlike traditional art, it was goal-driven and functional, which deeply resonated with me.
+                Ever since I was young, I knew I was meant to do something with art. I grew up drawing for fun and realized it was something you could actually do for a living after making youtube videos for fun. From there, I discovered UX design and fell in love with it!
               </p>
             </TextFade>
           </div>
@@ -39,13 +39,33 @@ const AboutAndGallery = () => {
       <h2 className="polaroid-caption">Building Computers</h2>
     </div>
     <div className="polaroid-item">
-      <img src="./src/assets/hack.png" alt="Attending hackathons" className="polaroid-image" />
-      <h2 className="polaroid-caption">Attending Hackathons</h2>
+      <img src="./src/assets/mousepad.jpg" alt="Attending hackathons" className="polaroid-image" />
+      <h2 className="polaroid-caption">Drawing physical products!</h2>
     </div>
   </div>
+  <br/>
+  <br/>
   </TextFade>
 </div>
-
+<div className="polaroid-container">
+        <TextFade direction="up">
+  <div className="polaroid-wrapper">
+    <div className="polaroid-item">
+      <img src="./src/assets/smiski.jpg" alt="Making YouTube videos" className="polaroid-image" />
+      <h2 className="polaroid-caption">Collecting Smiskis</h2>
+    </div>
+    <div className="polaroid-item">
+      <img src="./src/assets/hack.png" alt="Building computers" className="polaroid-image" />
+      <h2 className="polaroid-caption">Attending Hackathons</h2>
+    </div>
+    <div className="polaroid-item">
+      <img src="./src/assets/valorant.jpg" alt="Attending hackathons" className="polaroid-image" />
+      <h2 className="polaroid-caption">Deranking on Valorant</h2>
+    </div>
+  </div>
+  
+  </TextFade>
+</div>
       </div>
     </div>
   );
