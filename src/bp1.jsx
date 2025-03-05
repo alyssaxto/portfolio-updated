@@ -15,7 +15,7 @@ const Header = () => (
     <h2>bp Product Design Internship ✴ Summer 2024</h2>
     <div className="image-containy">
       <a href="https://www.bp.com/" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/bp/6.png" alt="Image 2" className="hover-image" />
+        <img src="/public/assets/bp/6.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -77,7 +77,7 @@ const ExecutiveSummary = () => (
       </div>
     </div>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/bp/10.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/bp/10.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -134,7 +134,7 @@ const Value = () => (
       </div>
     </div>
     <div className="summary-image">
-    <ExpandableImage src="./src/assets/bp/9.png" alt="User Journey" />
+    <ExpandableImage src="/assets/bp/9.png" alt="User Journey" />
      </div>
   </div>
   </TextFade>
@@ -205,7 +205,7 @@ const QualitativeData = () => (
       </div>
     </div>
     <div className="summary-image">
-      <ExpandableImage src="./src/assets/bp/1.png" alt="User Journey" />
+      <ExpandableImage src="/assets/bp/1.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -251,7 +251,7 @@ const AffinityMapping = () => (
     </div>
     <br />
     <div className="summary-image">
-      <ExpandableImage src="./src/assets/bp/2.png" alt="User Journey" />
+      <ExpandableImage src="/assets/bp/2.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -276,17 +276,17 @@ const Personas = () => (
           <h3>Regular bp employee</h3>
           <h2>(Non-designer)</h2>
           <div className="summary-image">
-            <ExpandableImage src="./src/assets/bp/Slide14.jpg" alt="User Journey" />
+            <ExpandableImage src="/assets/bp/Slide14.jpg" alt="User Journey" />
           </div>
           <br />
           <h3>Content designer</h3>
           <div className="summary-image">
-            <ExpandableImage src="./src/assets/bp/Slide12.jpg" alt="User Journey" />
+            <ExpandableImage src="/assets/bp/Slide12.jpg" alt="User Journey" />
           </div>
           <br />
           <h3>Service designer</h3>
           <div className="summary-image">
-            <ExpandableImage src="./src/assets/bp/Slide13.jpg" alt="User Journey" />
+            <ExpandableImage src="/assets/bp/Slide13.jpg" alt="User Journey" />
 
           </div>
           
@@ -311,7 +311,7 @@ const Personas = () => (
               </div>
             </div>
             <div className="summary-image">
-              <iExpandableImage src="./src/assets/bp/3.png" alt="Features" />
+              <iExpandableImage src="/assets/bp/3.png" alt="Features" />
             </div>
             <div className="section-divider"></div>
           </div>
@@ -329,7 +329,7 @@ const Personas = () => (
               </div>
             </div>
             <div className="summary-image">
-              <ExpandableImage src="./src/assets/bp/5.png" alt="User Journey" />
+              <ExpandableImage src="/assets/bp/5.png" alt="User Journey" />
             </div>
             <div className="section-divider"></div>
           </div>
@@ -347,7 +347,7 @@ const Personas = () => (
               </div>
             </div>
             <div className="summary-image">
-              <ExpandableImage src="./src/assets/bp/4.png" alt="User Journey" />
+              <ExpandableImage src="/assets/bp/4.png" alt="User Journey" />
             </div>
             <div className="section-divider"></div>
           </div>
@@ -407,17 +407,17 @@ const BPPortfolio = () => (
         </div>
         <div className="summary-image">
           <h3>Assisted image prompter</h3>
-          <div className="summary-image"><ExpandableImage src="./src/assets/bp/Slide22.jpg" alt="User Journey" /></div>
+          <div className="summary-image"><ExpandableImage src="/assets/bp/Slide22.jpg" alt="User Journey" /></div>
           <br />
           <h3>Side bar</h3>
-          <div className="summary-image"><ExpandableImage src="./src/assets/bp/Slide23.jpg" alt="User Journey" /></div>
+          <div className="summary-image"><ExpandableImage src="/assets/bp/Slide23.jpg" alt="User Journey" /></div>
           <br />
           <h3>Regenerator tool</h3>
-          <div className="summary-image"><ExpandableImage src="./src/assets/bp/Slide24.jpg" alt="User Journey" /></div>
+          <div className="summary-image"><ExpandableImage src="/assets/bp/Slide24.jpg" alt="User Journey" /></div>
         </div>
         <br />
         <h3>Download button</h3>
-        <div className="summary-image"><ExpandableImage src="./src/assets/bp/Slide26.jpg" alt="User Journey" /></div>
+        <div className="summary-image"><ExpandableImage src="/assets/bp/Slide26.jpg" alt="User Journey" /></div>
       </div>
       </TextFade>
       <div class="divider"></div>
@@ -470,18 +470,18 @@ const BPPortfolio = () => (
         <div className="BentoBox">
   <div className="BentoBox__wrapper">
     <div className="BentoBox__item">
-      <ExpandableImage src="./src/assets/bp/4.jpg" alt="Image 1" />
+      <ExpandableImage src="/assets/bp/4.jpg" alt="Image 1" />
     </div>
     <div className="BentoBox__item">
-      <ExpandableImage src="./src/assets/bp/2.jpg" alt="Image 2" />
+      <ExpandableImage src="/assets/bp/2.jpg" alt="Image 2" />
     </div>
   </div>
   <div className="BentoBox__wrapper">
     <div className="BentoBox__item">
-      <ExpandableImage src="./src/assets/bp/3.jpg" alt="Image 3" />
+      <ExpandableImage src="/assets/bp/3.jpg" alt="Image 3" />
     </div>
     <div className="BentoBox__item">
-      <ExpandableImage src="./src/assets/bp/1.jpg" alt="Image 4" />
+      <ExpandableImage src="/assets/bp/1.jpg" alt="Image 4" />
     </div>
   </div>
 </div>
@@ -492,12 +492,12 @@ const BPPortfolio = () => (
     <div className="Gallery__wrapper">
       <div className="Gallery__item">
         <Link to="/bpxGA">
-          <img src="./src/assets/GA/7.png" alt="Project 1" />
+          <img src="/assets/GA/7.png" alt="Project 1" />
         </Link>
       </div>
       <div className="Gallery__item">
         <Link to="/mvp">
-          <img src="./src/assets/mvp/5.png" alt="Project 2" />
+          <img src="/assets/mvp/5.png" alt="Project 2" />
         </Link>
       </div>
     </div>

@@ -12,7 +12,7 @@ const Header = () => (
     <h2>Stemuli Product Designer ✴ Jan - May 2024</h2>
     <div className="image-containy">
       <a href="https://stemuli.net/" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/stemuli/s17.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/stemuli/s17.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -112,10 +112,10 @@ const Summary = () => (
       </div>
     </div>
     <div className="yellow-summary-image">
-      <ExpandableImage src="./src/assets/stemuli/s8.png" alt="User Journey" />
+      <ExpandableImage src="/assets/stemuli/s8.png" alt="User Journey" />
     </div>
     <div className="yellow-summary-image">
-      <ExpandableImage src="./src/assets/stemuli/s7.png" alt="User Journey" />
+      <ExpandableImage src="/assets/stemuli/s7.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -138,7 +138,7 @@ const Assets = () => (
         </div>
         </div>
         <div className="yellow-summary-image">
-      <ExpandableImage src="./src/assets/stemuli/s15.png" alt="User Journey" />
+      <ExpandableImage src="/assets/stemuli/s15.png" alt="User Journey" />
     </div>
 </div>
 
@@ -161,7 +161,7 @@ const Soon = () => (
          </div>
          </div>
     <div className="yellow-summary-image">
-      <ExpandableImage src="./src/assets/stemuli/s2.png" alt="User Journey" />
+      <ExpandableImage src="/assets/stemuli/s2.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -182,7 +182,7 @@ const Hero = () => (
     <br/>
     </div>
     <div className="yellow-summary-image">
-      <ExpandableImage src="./src/assets/stemuli/s3.png" alt="User Journey" />
+      <ExpandableImage src="/assets/stemuli/s3.png" alt="User Journey" />
     </div>
 
           </div>
@@ -202,16 +202,16 @@ const User = () => (
       <p>By mapping out these user journeys, we were able to better visualize how users would interact with our app</p>
       </div>
       <div className="yellow-summary-image">
-        <ExpandableImage src="./src/assets/stemuli/s4.png" alt="User Journey" />
+        <ExpandableImage src="/assets/stemuli/s4.png" alt="User Journey" />
       </div>
       <div className="yellow-summary-image">
-        <ExpandableImage src="./src/assets/stemuli/s5.png" alt="User Journey" />
+        <ExpandableImage src="/assets/stemuli/s5.png" alt="User Journey" />
       </div>
       <div className="yellow-summary-image">
-        <ExpandableImage src="./src/assets/stemuli/s6.png" alt="User Journey" />
+        <ExpandableImage src="/assets/stemuli/s6.png" alt="User Journey" />
       </div>
       <div className="yellow-summary-image">
-        <ExpandableImage src="./src/assets/stemuli/s16.png" alt="User Journey" />
+        <ExpandableImage src="/assets/stemuli/s16.png" alt="User Journey" />
       </div>
             </div>
             </div>  
@@ -230,16 +230,16 @@ const Features = () => (
       </h1>
       </div>
       <div className="yellow-summary-image">
-        <ExpandableImage src="./src/assets/stemuli/s9.png" alt="User Journey" />
+        <ExpandableImage src="/assets/stemuli/s9.png" alt="User Journey" />
       </div>
       <div className="yellow-summary-image">
-        <ExpandableImage src="./src/assets/stemuli/s11.png" alt="User Journey" />
+        <ExpandableImage src="/assets/stemuli/s11.png" alt="User Journey" />
       </div>
       <div className="yellow-summary-image">
-        <ExpandableImage src="./src/assets/stemuli/s12.png" alt="User Journey" />
+        <ExpandableImage src="/assets/stemuli/s12.png" alt="User Journey" />
       </div>
       <div className="yellow-summary-image">
-        <ExpandableImage src="./src/assets/stemuli/s13.png" alt="User Journey" />
+        <ExpandableImage src="/assets/stemuli/s13.png" alt="User Journey" />
       </div>
             </div>
             </div>  
@@ -259,7 +259,7 @@ const Prototypes = () => (
         </ul>
       </div>
       <div className="yellow-summary-image">
-        <ExpandableImage src="./src/assets/stemuli/s14.png" alt="User Journey" />
+        <ExpandableImage src="/assets/stemuli/s14.png" alt="User Journey" />
       </div>
     </div>
   </div>
@@ -297,7 +297,7 @@ const BPPortfolio = () => (
     style={{
       border: "1px solid rgba(0, 0, 0, 0.1)",
       width: "800",  // Make iframe take full width of the container
-      height: "450px", // Set a default height
+      height: "600px", // Set a default height
     }}
     src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmRSgpoAHOn6Zj9JFmeDZ1C%2FStemuli-Mobile%3Fnode-id%3D393-359%26starting-point-node-id%3D393%253A359%26t%3D37uQshYzr7x0TUaP-1"
     allowFullScreen

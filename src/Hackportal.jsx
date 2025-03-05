@@ -12,7 +12,7 @@ const Header = () => (
     <h2>HackUTD Product Designer ✴ Spring - Fall 2024</h2>
     <div className="image-containy">
       <a href="https://hackportal.hackutd.co/" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/hackportal.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/hackportal.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -214,7 +214,7 @@ const New = () => (
       <h2>HackUTD Product Designer ✴ Spring - Fall 2024</h2>
       <div className="image-containy">
         <a href="https://hackportal.hackutd.co/" target="_blank" rel="noopener noreferrer">
-          <img src="./src/assets/hackportal.png" alt="Image 2" className="hover-image" />
+          <img src="/assets/hackportal.png" alt="Image 2" className="hover-image" />
         </a>
       </div>
     </header>

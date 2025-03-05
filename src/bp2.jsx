@@ -14,7 +14,7 @@ const Header = () => (
     <h2>bp Product Design Internship ✴ Summer 2024</h2>
     <div className="image-containy">
       <a href="https://www.bp.com/" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/GA/7.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/GA/7.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -86,7 +86,7 @@ const ExecutiveSummary = () => (
       </div>
     </div>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/GA/3.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/GA/3.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -109,7 +109,7 @@ const ProblemStatement = () => (
       </div>
     </div>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/GA/2.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/GA/2.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -132,12 +132,12 @@ const Value = () => (
       </div>
     </div>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/GA/4.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/GA/4.png" alt="User Journey" />
     </div>
     <br/>
     <h2>bp's Official Color Palette    </h2>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/GA/8.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/GA/8.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -155,12 +155,12 @@ const Empathize = () => (
       </div>
     </div>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/GA/5.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/GA/5.png" alt="User Journey" />
     </div>
     <br/>
     <h2>Final badge displayed on a UX grad’s LinkedIn profile </h2>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/GA/6.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/GA/6.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -174,12 +174,12 @@ const BPPortfolio = () => (
     <div className="Gallery__wrapper">
       <div className="Gallery__item">
         <Link to="/Password">
-          <img src="./src/assets/bp/6.png" alt="Project 1" />
+          <img src="/assets/bp/6.png" alt="Project 1" />
         </Link>
       </div>
       <div className="Gallery__item">
         <Link to="/mvp">
-          <img src="./src/assets/mvp/5.png" alt="Project 2" />
+          <img src="/assets/mvp/5.png" alt="Project 2" />
         </Link>
       </div>
     </div>

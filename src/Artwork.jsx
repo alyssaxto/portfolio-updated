@@ -4,18 +4,18 @@ import { motion } from 'framer-motion';
 import { LettersPullUp } from "./Components/letters-pull-up"; 
 
 const images = [
-  "../src/assets/gal/1.png",
-  "../src/assets/gal/12.png",
-  "../src/assets/gal/3.png",
-  "../src/assets/gal/5.png",
-  "../src/assets/gal/9.png",
-  "../src/assets/gal/8.png",
-  "../src/assets/gal/13.png",
-  "../src/assets/gal/6.png",
-  "../src/assets/gal/10.png",
-  "../src/assets/gal/7.png",
-  "../src/assets/gal/11.png",
-  "../src/assets/gal/2.png"
+  "/assets/gal/1.png",
+  "/assets/gal/12.png",
+  "/assets/gal/3.png",
+  "/assets/gal/5.png",
+  "/assets/gal/9.png",
+  "/assets/gal/8.png",
+  "/assets/gal/13.png",
+  "/assets/gal/6.png",
+  "/assets/gal/10.png",
+  "/assets/gal/7.png",
+  "/assets/gal/11.png",
+  "/assets/gal/2.png"
 ];
 
 const Carousel = () => {

@@ -1,10 +1,10 @@
 import React from "react";
-import Hackportal from "../src/assets/hackportal.png";
-import Gravebound from "../src/assets/gb/15.png";
-import BpxGA from "../src/assets/GA/7.png";
-import MVP from "../src/assets/mvp/5.png";
-import BB from "../src/assets/budgetbuddy.png";
-import pink from "../src/assets/thinkpink/tp10.png";
+import Hackportal from "/assets/hackportal.png";
+import Gravebound from "/assets/gb/15.png";
+import BpxGA from "/assets/GA/7.png";
+import MVP from "/assets/mvp/5.png";
+import BB from "/assets/budgetbuddy.png";
+import pink from "/assets/thinkpink/tp10.png";
 import "./Components/HorizontalScroll/horizontalScroll.css";
 import { LettersPullUp } from "./Components/letters-pull-up";
 import { Link } from "react-router-dom";

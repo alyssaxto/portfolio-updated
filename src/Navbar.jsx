@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css"; // Ensure your CSS file is correctly linked
-import Resume from "../src/assets/AlyssaTo_Resume.pdf";
+import Resume from "/assets/AlyssaTo_Resume.pdf";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

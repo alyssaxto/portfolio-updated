@@ -1,6 +1,6 @@
 import React from 'react';
 import "./About.css";
-import Profile from '../src/assets/imageofme.jpg';
+import Profile from '/assets/imageofme.jpg';
 import { StaggeredFade } from './Components/staggered-fade';
 import { TextFade } from "./Components/TextFade";
 
@@ -31,15 +31,15 @@ const AboutAndGallery = () => {
         <TextFade direction="up">
   <div className="polaroid-wrapper">
     <div className="polaroid-item">
-      <img src="./src/assets/me.png" alt="Making YouTube videos" className="polaroid-image" />
+      <img src="/assets/me.png" alt="Making YouTube videos" className="polaroid-image" />
       <h2 className="polaroid-caption">Making YouTube Videos</h2>
     </div>
     <div className="polaroid-item">
-      <img src="./src/assets/pc.png" alt="Building computers" className="polaroid-image" />
+      <img src="/assets/pc.png" alt="Building computers" className="polaroid-image" />
       <h2 className="polaroid-caption">Building Computers</h2>
     </div>
     <div className="polaroid-item">
-      <img src="./src/assets/mousepad.jpg" alt="Attending hackathons" className="polaroid-image" />
+      <img src="/assets/mousepad.jpg" alt="Attending hackathons" className="polaroid-image" />
       <h2 className="polaroid-caption">Drawing physical products!</h2>
     </div>
   </div>
@@ -51,15 +51,15 @@ const AboutAndGallery = () => {
         <TextFade direction="up">
   <div className="polaroid-wrapper">
     <div className="polaroid-item">
-      <img src="./src/assets/smiski.jpg" alt="Making YouTube videos" className="polaroid-image" />
+      <img src="/assets/smiski.jpg" alt="Making YouTube videos" className="polaroid-image" />
       <h2 className="polaroid-caption">Collecting Smiskis</h2>
     </div>
     <div className="polaroid-item">
-      <img src="./src/assets/hack.png" alt="Building computers" className="polaroid-image" />
+      <img src="/assets/hack.png" alt="Building computers" className="polaroid-image" />
       <h2 className="polaroid-caption">Attending Hackathons</h2>
     </div>
     <div className="polaroid-item">
-      <img src="./src/assets/valorant.jpg" alt="Attending hackathons" className="polaroid-image" />
+      <img src="/assets/valorant.jpg" alt="Attending hackathons" className="polaroid-image" />
       <h2 className="polaroid-caption">Deranking on Valorant</h2>
     </div>
   </div>

@@ -15,7 +15,7 @@ const Header = () => (
     <h2>bp Product Design Internship ✴ Summer 2024</h2>
     <div className="image-containy">
       <a href="https://www.bp.com/" target="_blank" rel="noopener noreferrer">
-        <img src="../src/assets/mvp/5.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/mvp/5.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -85,12 +85,12 @@ const ExecutiveSummary = () => (
     </div>
     <h2>Sketches    </h2>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/mvp/4.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/mvp/4.png" alt="User Journey" />
     </div>
     <br/>
     <h2>bp's Official Color Palette </h2>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/GA/8.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/GA/8.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -115,7 +115,7 @@ const ProblemStatement = () => (
       </div>
     </div>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/mvp/7.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/mvp/7.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -136,12 +136,12 @@ const Value = () => (
       </div>
     </div>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/GA/4.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/GA/4.png" alt="User Journey" />
     </div>
     <br/>
     <h2>bp's Official Color Palette    </h2>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/GA/8.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/GA/8.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -160,17 +160,17 @@ const Empathize = () => (
     </div>
     <h2>Badge option 1</h2>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/mvp/1.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/mvp/1.png" alt="User Journey" />
     </div>
     <br/>
     <h2>Badge option 2</h2>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/mvp/2.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/mvp/2.png" alt="User Journey" />
     </div>
     <br/>
     <h2>Badge option 3</h2>
     <div className="summary-image">
-      <ExpandableImage src= "./src/assets/mvp/8.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/mvp/8.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -192,12 +192,12 @@ const Last = () => (
         </div>
       </div>
       <div className="summary-image">
-        <ExpandableImage src= "./src/assets/mvp/3.png" alt="User Journey" />
+        <ExpandableImage src= "/assets/mvp/3.png" alt="User Journey" />
       </div>
       <br/>
       <h2>Female and male variations      </h2>
       <div className="summary-image">
-        <ExpandableImage src= "./src/assets/mvp/9.png" alt="User Journey" />
+        <ExpandableImage src= "/assets/mvp/9.png" alt="User Journey" />
       </div>
     </div>
     </TextFade>
@@ -211,12 +211,12 @@ const BPPortfolio = () => (
     <div className="Gallery__wrapper">
       <div className="Gallery__item">
         <Link to="/Password">
-          <img src="./src/assets/bp/6.png" alt="Project 1" />
+          <img src="/assets/bp/6.png" alt="Project 1" />
         </Link>
       </div>
       <div className="Gallery__item">
         <Link to="/bpxGA">
-          <img src="./src/assets/GA/7.png" alt="Project 2" />
+          <img src="/assets/GA/7.png" alt="Project 2" />
         </Link>
       </div>
     </div>

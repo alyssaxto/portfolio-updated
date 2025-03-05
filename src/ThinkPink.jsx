@@ -12,7 +12,7 @@ const Header = () => (
     <h2>Class Project ✴ Spring 2024</h2>
     <div className="image-containy">
       <a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FXz3gWChuvzFGEDTdJLklf3%2FUntitled%3Ftype%3Ddesign%26node-id%3D50-430%26t%3DLq5qWpLDcNo8pVK7-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D50%253A430%26mode%3Ddesign" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/thinkpink/tp10.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/thinkpink/tp10.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -111,7 +111,7 @@ const Summary = () => (
       </div>
     </div>
     <div className="pink-summary-image">
-      <ExpandableImage src="./src/assets/thinkpink/tp1.png" alt="User Journey" />
+      <ExpandableImage src="/assets/thinkpink/tp1.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -137,15 +137,15 @@ const Assets = () => (
       </div>
     </div>
     <div className="pink-summary-image">
-      <ExpandableImage src="./src/assets/thinkpink/tp3.png" alt="User Journey" />
+      <ExpandableImage src="/assets/thinkpink/tp3.png" alt="User Journey" />
     </div>
     <br/>
     <div className="pink-summary-image">
-      <ExpandableImage src="./src/assets/thinkpink/tp4.png" alt="User Journey" />
+      <ExpandableImage src="/assets/thinkpink/tp4.png" alt="User Journey" />
     </div>
     <br/>
     <div className="pink-summary-image">
-      <ExpandableImage src="./src/assets/thinkpink/tp5.png" alt="User Journey" />
+      <ExpandableImage src="/assets/thinkpink/tp5.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -162,7 +162,7 @@ const Journey = () => (
         </div>
       </div>
       <div className="pink-summary-image">
-        <ExpandableImage src="./src/assets/thinkpink/tp6.png" alt="User Journey" />
+        <ExpandableImage src="/assets/thinkpink/tp6.png" alt="User Journey" />
       </div>
     </div>
     </TextFade>
@@ -179,11 +179,11 @@ const Journey = () => (
         </div>
       </div>
       <div className="pink-summary-image">
-        <ExpandableImage src="./src/assets/thinkpink/tp7.png" alt="User Journey" />
+        <ExpandableImage src="/assets/thinkpink/tp7.png" alt="User Journey" />
       </div>
       <br/>
       <div className="pink-summary-image">
-        <ExpandableImage src="./src/assets/thinkpink/tp8.png" alt="User Journey" />
+        <ExpandableImage src="/assets/thinkpink/tp8.png" alt="User Journey" />
       </div>
     </div>
     </TextFade>
@@ -224,7 +224,7 @@ const Journey = () => (
         </div>
       </div>
       <div className="pink-summary-image">
-        <ExpandableImage src="./src/assets/thinkpink/tp9.png" alt="User Journey" />
+        <ExpandableImage src="/assets/thinkpink/tp9.png" alt="User Journey" />
       </div>
     </div>
     </TextFade>

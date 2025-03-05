@@ -12,7 +12,7 @@ const Header = () => (
     <h2>Ut Dallas UI Designer ✴ Fall 2024</h2>
     <div className="image-containy">
       <a href="https://www.atec-animgames.com/game-lab" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/gb/15.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/gb/15.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -111,26 +111,26 @@ const Summary = () => (
     <div className="BentoBox">
         <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/14.png" alt="Image 1" />
+        <ExpandableImage src="/assets/gb/14.png" alt="Image 1" />
         </div>
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/13.png" alt="Image 2" />
+        <ExpandableImage src="/assets/gb/13.png" alt="Image 2" />
         </div>
         </div>
         <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/3.png" alt="Image 3" />
+        <ExpandableImage src="/assets/gb/3.png" alt="Image 3" />
         </div>
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/4.png" alt="Image 4" />
+        <ExpandableImage src="/assets/gb/4.png" alt="Image 4" />
         </div>
         </div>
         <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/5.png" alt="Image 3" />
+        <ExpandableImage src="/assets/gb/5.png" alt="Image 3" />
         </div>
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/6.png" alt="Image 4" />
+        <ExpandableImage src="/assets/gb/6.png" alt="Image 4" />
         </div>
         </div>
         </div>
@@ -159,26 +159,26 @@ const Assets = () => (
     <div className="BentoBox">
         <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/7.png" alt="Image 1" />
+        <ExpandableImage src="/assets/gb/7.png" alt="Image 1" />
         </div>
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/8.png" alt="Image 2" />
+        <ExpandableImage src="/assets/gb/8.png" alt="Image 2" />
         </div>
         </div>
         <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/9.png" alt="Image 3" />
+        <ExpandableImage src="/assets/gb/9.png" alt="Image 3" />
         </div>
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/10.png" alt="Image 4" />
+        <ExpandableImage src="/assets/gb/10.png" alt="Image 4" />
         </div>
         </div>
         <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/11.png" alt="Image 3" />
+        <ExpandableImage src="/assets/gb/11.png" alt="Image 3" />
         </div>
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/gb/12.png" alt="Image 4" />
+        <ExpandableImage src="/assets/gb/12.png" alt="Image 4" />
         </div>
         </div>
         </div>
@@ -199,18 +199,18 @@ const Soon = () => (
     <div className="BentoBox">
       <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
-          <ExpandableImage src="./src/assets/gb/17.png" alt="Image 1" />
+          <ExpandableImage src="/assets/gb/17.png" alt="Image 1" />
         </div>
         <div className="BentoBox__item">
-          <ExpandableImage src="./src/assets/gb/20.png" alt="Image 2" />
+          <ExpandableImage src="/assets/gb/20.png" alt="Image 2" />
         </div>
       </div>
       <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
-          <ExpandableImage src="./src/assets/gb/19.png" alt="Image 3" />
+          <ExpandableImage src="/assets/gb/19.png" alt="Image 3" />
         </div>
         <div className="BentoBox__item">
-          <ExpandableImage src="./src/assets/gb/18.png" alt="Image 4" />
+          <ExpandableImage src="/assets/gb/18.png" alt="Image 4" />
         </div>
       </div>
     </div>

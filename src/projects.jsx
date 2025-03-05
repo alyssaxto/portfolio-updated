@@ -1,14 +1,14 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import bpImage from "../src/assets/bp/6.png";
-import rippleImage from "../src/assets/ripple.png";
-import manageImage from "../src/assets/icanmanage/c3.png";
-import stemuliImage from "../src/assets/stemuli/s17.png";
+import bpImage from "/assets/bp/6.png";
+import rippleImage from "/assets/ripple.png";
+import manageImage from "/assets/icanmanage/c3.png";
+import stemuliImage from "/assets/stemuli/s17.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ImageContainer from "./Components/ImageContainer/ImageContainer";
 import { LettersPullUp } from "./Components/letters-pull-up";
 import "./projects.css";
-import peekaboo from "../src/assets/peekaboo.png"
+import peekaboo from "/assets/peekaboo.png"
 
 const HorizontalScroll = () => {
   const targetRef = useRef(null);

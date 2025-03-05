@@ -41,7 +41,7 @@ const PasswordProtectedPage = () => {
         </div>
   
       {/* Image below the login container */}
-      <img src="../src/assets/4k.png" alt="Image" className="login-image" />
+      <img src="/assets/4k.png" alt="Image" className="login-image" />
   
     </div>
   );

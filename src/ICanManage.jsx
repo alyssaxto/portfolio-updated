@@ -12,7 +12,7 @@ const Header = () => (
     <h2>ArtSciLab Product Designer ✴ Spring 2024 - Summer 2025</h2>
     <div className="image-containy">
       <a href="https://www.utsouthwestern.edu/" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/icanmanage/c3.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/icanmanage/c3.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -116,7 +116,7 @@ const Summary = () => (
       </div>
     </div>
     <div className="blue-summary-image">
-      <ExpandableImage src="./src/assets/icanmanage/c1.png" alt="User Journey" />
+      <ExpandableImage src="/assets/icanmanage/c1.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -142,7 +142,7 @@ const Assets = () => (
       </div>
     </div>
     <div className="blue-summary-image">
-      <ExpandableImage src="./src/assets/icanmanage/c2.png" alt="User Journey" />
+      <ExpandableImage src="/assets/icanmanage/c2.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>

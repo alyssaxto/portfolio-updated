@@ -12,7 +12,7 @@ const Header = () => (
     <h2>Class Project ✴ Spring 2023</h2>
     <div className="image-containy">
       <a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fiafgf5x8oYTw2NxjMQiReb%2FUntitled%3Ftype%3Ddesign%26t%3DDLiub0o2a3aXTPnW-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26node-id%3D0-3%26starting-point-node-id%3D0%253A3%26mode%3Ddesign" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/budgetbuddy.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/budgetbuddy.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -111,7 +111,7 @@ const Summary = () => (
       </div>
     </div>
     <div className="summary-image">
-      <ExpandableImage src="./src/assets/bb1.png" alt="User Journey" />
+      <ExpandableImage src="/assets/bb1.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -136,7 +136,7 @@ const Assets = () => (
       </div>
     </div>
     <div className="summary-image">
-      <ExpandableImage src="./src/assets/bb2.png" alt="User Journey" />
+      <ExpandableImage src="/assets/bb2.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -178,7 +178,7 @@ const Journey = () => (
         </div>
       </div>
       <div className="summary-image">
-        <ExpandableImage src="./src/assets/bb4.png" alt="User Journey" />
+        <ExpandableImage src="/assets/bb4.png" alt="User Journey" />
       </div>
     </div>
     </TextFade>
@@ -200,7 +200,7 @@ const Journey = () => (
         </div>
       </div>
       <div className="summary-image">
-        <ExpandableImage src="./src/assets/bb5.jpg" alt="User Journey" />
+        <ExpandableImage src="/assets/bb5.jpg" alt="User Journey" />
       </div>
     </div>
     </TextFade>
@@ -239,17 +239,17 @@ const Journey = () => (
       <br/>
       <h3>Homepage and Credit Card Infographics     </h3>
       <div className="summary-image">
-        <ExpandableImage src="./src/assets/bb6.png" alt="User Journey" />
+        <ExpandableImage src="/assets/bb6.png" alt="User Journey" />
       </div>
       <br/>
       <h3>Making a Monthly Budget      </h3>
       <div className="summary-image">
-        <ExpandableImage src="./src/assets/bb7.png" alt="User Journey" />
+        <ExpandableImage src="/assets/bb7.png" alt="User Journey" />
       </div>
       <br/>
       <h3>Creating Savings Goals      </h3>
       <div className="summary-image">
-        <ExpandableImage src="./src/assets/bb8.png" alt="User Journey" />
+        <ExpandableImage src="/assets/bb8.png" alt="User Journey" />
       </div>
     </div>
     </TextFade>

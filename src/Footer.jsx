@@ -1,5 +1,5 @@
 import "./Footer.css";
-import Resume from "../src/assets/AlyssaTo_Resume.pdf";
+import Resume from "/assets/AlyssaTo_Resume.pdf";
 
 function Footer() {
     return (

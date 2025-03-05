@@ -12,7 +12,7 @@ const Header = () => (
     <h2>HackUTD Product Designer ✴ Spring - Fall 2024</h2>
     <div className="image-containy">
       <a href="https://ripple.hackutd.co/" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/ripple.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/ripple.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
@@ -97,18 +97,18 @@ const Top = () => (
         <h3>A few of my favorite photos</h3>
         <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/hp/10.jpg" alt="Image 1" />
+        <ExpandableImage src="/assets/hp/10.jpg" alt="Image 1" />
         </div>
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/hp/12.jpg" alt="Image 2" />
+        <ExpandableImage src="/assets/hp/12.jpg" alt="Image 2" />
         </div>
         </div>
         <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/hp/13.jpg" alt="Image 3" />
+        <ExpandableImage src="/assets/hp/13.jpg" alt="Image 3" />
         </div>
         <div className="BentoBox__item">
-        <ExpandableImage src="./src/assets/hp/11.png" alt="Image 4" />
+        <ExpandableImage src="/assets/hp/11.png" alt="Image 4" />
         </div>
         </div>
         </div>
@@ -130,7 +130,7 @@ const Summary = () => (
       </div>
     </div>
     <div className="hack-summary-image">
-      <ExpandableImage src="./src/assets/hp/5.png" alt="User Journey" />
+      <ExpandableImage src="/assets/hp/5.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -155,30 +155,30 @@ const Assets = () => (
         <div className="HackArt">
   <div className="HackArt__wrapper">
     <div className="HackArt__item">
-      <ExpandableImage src="./src/assets/hp/mascot.gif" alt="Image 1" />
+      <ExpandableImage src="/assets/hp/mascot.GIF" alt="Image 1" />
     </div>
     <div className="HackArt__item">
-      <ExpandableImage src="./src/assets/hp/duck.gif" alt="Image 2" />
-    </div>
-  </div>
-  <div className="HackArt__wrapper">
-    <div className="HackArt__item">
-      <ExpandableImage src="./src/assets/hp/frog.GIF" alt="Image 3" />
-    </div>
-    <div className="HackArt__item">
-      <ExpandableImage src="./src/assets/hp/8.png" alt="Image 4" />
+      <ExpandableImage src="/assets/hp/duck.GIF" alt="Image 2" />
     </div>
   </div>
   <div className="HackArt__wrapper">
     <div className="HackArt__item">
-      <ExpandableImage src="./src/assets/hp/ducks in a row.GIF" alt="Image 3" />
+      <ExpandableImage src="/assets/hp/frog.GIF" alt="Image 3" />
     </div>
     <div className="HackArt__item">
-      <ExpandableImage src="./src/assets/hp/95 koi.gif" alt="Image 4" />
+      <ExpandableImage src="/assets/hp/8.png" alt="Image 4" />
+    </div>
+  </div>
+  <div className="HackArt__wrapper">
+    <div className="HackArt__item">
+      <ExpandableImage src="/assets/hp/ducks in a row.GIF" alt="Image 3" />
+    </div>
+    <div className="HackArt__item">
+      <ExpandableImage src="/assets/hp/95 koi.gif" alt="Image 4" />
     </div>
   </div>
   <div className="hack-summary-image">
-      <ExpandableImage src="./src/assets/hp/9.png" alt="User Journey" />
+      <ExpandableImage src="/assets/hp/9.png" alt="User Journey" />
     </div>
 </div>
 
@@ -197,7 +197,7 @@ const Soon = () => (
          </div>
          </div>
     <div className="summary-image">
-      <ExpandableImage src="./src/assets/hp/4.png" alt="User Journey" />
+      <ExpandableImage src="/assets/hp/4.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
@@ -217,17 +217,17 @@ const Hero = () => (
     </div>
     <h3>Sketch</h3>
           <div className="summary-image">
-            <ExpandableImage src="./src/assets/hp/1.png" alt="User Journey" />
+            <ExpandableImage src="/assets/hp/1.png" alt="User Journey" />
           </div>
           <br />
           <h3>First Version</h3>
           <div className="summary-image">
-            <ExpandableImage src="./src/assets/hp/2.png" alt="User Journey" />
+            <ExpandableImage src="/assets/hp/2.png" alt="User Journey" />
           </div>
           <br />
           <h3>After Feedback</h3>
           <div className="summary-image">
-            <ExpandableImage src="./src/assets/hp/3.png" alt="User Journey" />
+            <ExpandableImage src="/assets/hp/3.png" alt="User Journey" />
 
           </div>
           </div>  
@@ -293,7 +293,7 @@ const HackUTD = () => (
     <h2>HackUTD Product Designer ✴ Spring - Fall 2024</h2>
     <div className="image-containy">
       <a href="https://ripple.hackutd.co/" target="_blank" rel="noopener noreferrer">
-        <img src="./src/assets/ripple.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/ripple.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>

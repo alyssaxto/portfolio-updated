@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./hero.css";
-import heroImage from "../src/assets/hero.png";
+import heroImage from "/assets/hero.png";
 import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
 
 const Hero = () => {
