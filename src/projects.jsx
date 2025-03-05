@@ -30,7 +30,7 @@ const HorizontalScroll = () => {
   }, []);
 
   // Adjust scroll range based on screen width
-  const x = useTransform(scrollYProgress, [0, 1], ["30%", isSmallScreen ? "-100%" : "-70%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["30%", isSmallScreen ? "-100%" : "-45%"]);
 
   // Toggle state for grid view
   const [isGridActive, setIsGridActive] = useState(false);
