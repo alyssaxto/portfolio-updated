@@ -5,12 +5,12 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="linedivider">
-                <span className="emoji">✨</span>
+                <span className="emoji">&#10024;</span>
             </div>
             <div className="footer__left">
                 <h22>Thanks for stopping by!</h22>
                 <p>&copy; Alyssa To {new Date().getFullYear()}</p>
-                <p>Made with <span className="emoji">♡</span> and <span className="emoji">🍵</span></p>
+                <p>Made with <span className="emoji">♡</span> and <span className="emoji">&#xe338</span></p>
             </div>
             <div className="footer__right">
                 <h3>Alternatively, here’s a fancy sheet of paper,</h3>
