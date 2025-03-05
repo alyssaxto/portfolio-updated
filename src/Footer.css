@@ -108,69 +108,72 @@ footer {
   text-decoration: underline; /* Underline on hover */
 }
 .resume-container {
-  align-self: flex-end; /* Forces alignment to the left */
   width: 100%;
   margin-bottom: 40px;
 }
-
-
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   footer {
+    display: flex;       
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
     align-items: center;
-    font-size: 1rem; /* Adjusts the base font size */
-    position: relative; /* Ensure footer positioning is contained */
-    padding-bottom: 50px; /* Adds space to prevent content overlap */
-  }
-
-  .footer__left, .footer__right {
-      flex: 1;
-      min-width: 100%;
-      text-align: center;
-      padding-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    padding: 0; /* Resets any padding */
+    margin: 0;  /* Resets any margin */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and borders don't affect layout */
   }
 
   .footer__links {
     display: flex;
-    justify-content: center; /* Centers the links horizontally */
-    align-items: center; /* Aligns them vertically */
-    gap: 20px; /* Adds spacing between links */
-    flex-wrap: nowrap; /* Prevents wrapping */
-    width: 100%; /* Ensures full width */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%); /* Centers the links */
-    padding: 10px 0; /* Adds padding */
-    background: white; /* Ensures visibility */
-      
+    transform: translateX(-50%);
+    padding: 10px 0;
+    background: white;
+    margin: 0; /* Resets any margin */
   }
 
-  .resume-container{
+  .resume-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0; /* Reset margin if needed */
+    padding: 0; /* Reset padding */
+    box-sizing: border-box; /* Ensures proper box model */
+  }
+  
+  .resumelink {
     text-align: center;
     line-height: 1.5;
-    font-size: 1rem; /* Adjusts heading size */
-}
+    font-size: 2rem;
+  }
 
-.resumelink{
-  text-align: center;
-  font-size: 1rem; /* Adjusts heading size */
-}
-  .footer__left h22 {
+  .footer__left h2 {
     text-align: center;
     line-height: 1.5;
-    font-size: 1.5rem; /* Adjusts heading size */
-}
-.footer__left p {
-  text-align: center;
-  line-height: 1;
-  font-size: .9rem; /* Adjusts heading size */
-}
+    font-size: 1.5rem;
+  }
+
+  .footer__left p {
+    text-align: center;
+    line-height: 1;
+    font-size: 1rem;
+  }
+
   .footer__right h3 {
-      text-align: center;
-      line-height: 1.5;
-      font-size: 1rem; /* Adjusts heading size */
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1rem;
   }
 }
