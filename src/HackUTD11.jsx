@@ -6,6 +6,7 @@ import ExpandableImage from './Components/ExpandImage.jsx';
 
 // Header Component
 const Header = () => (
+  
   <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Designing the website for North America's largest 24 hour hackathon!</h1>
