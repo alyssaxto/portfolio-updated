@@ -17,9 +17,14 @@ import ThinkPink from './ThinkPink.jsx';
 import Password from './PasswordProtected.jsx';
 import Password2 from './PasswordProtected2.jsx';
 import Footer from "./Footer.jsx";
-
-
 function App() {
+  // Emoji replacement logic with Twemoji
+  useEffect(() => {
+    if (window.twemoji) {
+      window.twemoji.parse(document.body); // This ensures emojis are replaced globally
+    }
+  }, []); // Empty dependency array ensures this runs once when the component mounts
+
   return (
     <>
       <Header />
@@ -39,7 +44,7 @@ function App() {
         <Route path="/ICanManage" element={<ICanManage />} />
         <Route path="/Stemuli" element={<Stemuli />} />
         <Route path="/Gravebound" element={<Gravebound />} />
-        <Route path="/bpProject" element={<BPIntern />} />  {/* Add the new route */}
+        <Route path="/bpProject" element={<BPIntern />} /> {/* Add the new route */}
       </Routes>
       <Footer />
     </>
