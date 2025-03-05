@@ -268,7 +268,7 @@ const BPPortfolio = () => (
     style={{
       border: "1px solid rgba(0, 0, 0, 0.1)",
       width: "100%",  // Make iframe take full width of the container
-      height: "450px", // Set a default height
+      height: "600px", // Set a default height
     }}
     src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F0a0ZHhOrI7UbzdZI91GGOh%2FUntitled%3Fnode-id%3D0-137%26t%3DZgyO0yoaySR58Zc3-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1"
     allowFullScreen
@@ -277,7 +277,7 @@ const BPPortfolio = () => (
 
       </div>
       </TextFade>
-
+<br/>
       <div className="container">
       <h3>If you'd like to sponsor the next HackUTD, feel free to contact the team at <a href="mailto:Hello@hackutd.co" class="blue-link" target="_blank">hello@hackutd.co</a></h3>
       </div>
@@ -331,7 +331,8 @@ const App = () => (
     <div className="section-divider"></div>
     <div class="divider"></div>
     <HackUTD/>
-    <div className="section-divider"></div>
+    <br/>
+    <br/>
     <div class="portfolio__btn-container">
   <button class="portfolio__btn"><a href="https://github.com/hackutd/hackutd-24-site" target="_blank">View source code</a></button>
 </div>
@@ -339,6 +340,8 @@ const App = () => (
 <div class="portfolio__btn-container">
 <button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
 </div>
+<br/>
+<br/>
   </div>
 );
 
