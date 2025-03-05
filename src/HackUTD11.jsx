@@ -10,7 +10,7 @@ const Header = () => (
   <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Designing the website for North America's largest 24 hour hackathon!</h1>
-    <h2>HackUTD Product Designer ✴ Spring - Fall 2024</h2>
+    <h2>HackUTD Product Designer ✷ Spring - Fall 2024</h2>
     <div className="image-containy">
       <a href="https://ripple.hackutd.co/" target="_blank" rel="noopener noreferrer">
         <img src="/assets/ripple.png" alt="Image 2" className="hover-image" />
