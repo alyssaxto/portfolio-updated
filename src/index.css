@@ -28,6 +28,7 @@
   list-style: none;
   font-size: 1.2rem;
   gap: 30px;
+  margin-right: 20px;
 }
 
 /* Navbar links styling */
@@ -49,7 +50,6 @@
 /* Navbar container (for layout) */
 .navbar__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
