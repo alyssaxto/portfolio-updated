@@ -69,7 +69,7 @@
   .icon-grid {
     width: 30px;
     height: 30px;
-    background-image: url('./assets/grid-icon.svg'); /* Replace with actual grid icon */
+    background-image: url('/assets/grid-icon.svg'); /* Replace with actual grid icon */
     background-size: cover;
   }
   
@@ -77,7 +77,7 @@
   .icon-scroll {
     width: 30px;
     height: 30px;
-    background-image: url('./assets/scroll-icon.png'); /* Replace with actual stacked boxes icon */
+    background-image: url('/assets/scroll-icon.png'); /* Replace with actual stacked boxes icon */
     background-size: cover;
   }
   
