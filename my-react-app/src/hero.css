@@ -26,6 +26,8 @@
   .hero__content {
     max-width: 600px;
     max-height: 100px;
+    z-index: 2; /* Ensures the text stays on top */
+
   }
   
   .hero__content h11 {
@@ -40,14 +42,48 @@
     font-family: poppins;
   }
   
-  .highlight {
-    color: #FF4F4F; 
-  }
 
+  .highlight {
+    color: #FF4F4F;
+    position: relative;
+    text-decoration: none; /* Remove default underline */
+}
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust distance from text */
+    width: 0;
+    height: 2px;
+    background-color: #FF4F4F; /* Match text color */
+    transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+.highlight:hover::after {
+    width: 100%;
+}
   .greenhighlight {
-    color: #64A14E; 
-  }
-  
+    color: #64A14E;
+    position: relative;
+    text-decoration: none; /* Remove default underline */
+}
+
+.greenhighlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust distance from text */
+    width: 0;
+    height: 2px;
+    background-color: #64A14E; /* Match text color */
+    transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+.greenhighlight:hover::after {
+    width: 100%;
+}
+
 /* Image styling */
 .hero__image {
     width: 100%;

@@ -15,6 +15,7 @@ import MVP from './MVP.jsx';
 import Budgetbuddy from './Budgetbuddy.jsx';
 import ThinkPink from './ThinkPink.jsx';
 import Password from './PasswordProtected.jsx';
+import Password2 from './PasswordProtected2.jsx';
 import Footer from "./Footer.jsx";
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/Playground" element={<Play />} />
         <Route path="/about" element={<About />} />
         <Route path="/Password" element={<Password />} />
+        <Route path="/Password2" element={<Password2 />} />
         <Route path="/HackUTD11" element={<HackUTD />} />
         <Route path="/Hackportal" element={<Hackportal />} />
         <Route path="/bpxGA" element={<Bp2 />} />

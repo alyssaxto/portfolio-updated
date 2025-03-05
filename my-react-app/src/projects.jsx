@@ -143,7 +143,7 @@ const HorizontalScroll = () => {
         <br/>
         <br/>
           <div className="Projects__wrapper index">
-            <a href="/bpProject" className="Projects__card">
+            <a href="/Password" className="Projects__card">
               <img src={bpImage} alt="AI Image Generator" />
               <h2>AI Image Generator 🔒</h2>
               <p>Designing an accessible way for bp employees to quickly create the images they need</p>

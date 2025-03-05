@@ -152,28 +152,28 @@ const Assets = () => (
         </div>
         </div>
 
-        <div className="BentoBox">
-  <div className="BentoBox__wrapper">
-    <div className="BentoBox__item">
+        <div className="HackArt">
+  <div className="HackArt__wrapper">
+    <div className="HackArt__item">
       <ExpandableImage src="./src/assets/hp/mascot.gif" alt="Image 1" />
     </div>
-    <div className="BentoBox__item">
+    <div className="HackArt__item">
       <ExpandableImage src="./src/assets/hp/duck.gif" alt="Image 2" />
     </div>
   </div>
-  <div className="BentoBox__wrapper">
-    <div className="BentoBox__item">
+  <div className="HackArt__wrapper">
+    <div className="HackArt__item">
       <ExpandableImage src="./src/assets/hp/frog.GIF" alt="Image 3" />
     </div>
-    <div className="BentoBox__item">
+    <div className="HackArt__item">
       <ExpandableImage src="./src/assets/hp/8.png" alt="Image 4" />
     </div>
   </div>
-  <div className="BentoBox__wrapper">
-    <div className="BentoBox__item">
+  <div className="HackArt__wrapper">
+    <div className="HackArt__item">
       <ExpandableImage src="./src/assets/hp/ducks in a row.GIF" alt="Image 3" />
     </div>
-    <div className="BentoBox__item">
+    <div className="HackArt__item">
       <ExpandableImage src="./src/assets/hp/95 koi.gif" alt="Image 4" />
     </div>
   </div>

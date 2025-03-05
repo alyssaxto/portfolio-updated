@@ -19,12 +19,12 @@ const Hero = () => {
       <TextFade direction="up" className="hero__content">
         <h11>Hey, I’m Alyssa!</h11>
         <p>
-          I’m a <span className="highlight">designer</span> and <span className="highlight">artist</span> making
+          I’m a <a href="#projects" className="highlight">designer</a> and <a href="/playground" span className="highlight">artist</a> making
           playful and purposeful products. After hours, I like to create
           <span className="highlight"> youtube </span> videos!
         </p>
-        <p>Previous ux designer @ <span className="greenhighlight">bp</span></p>
-      </TextFade>
+        <p>Previous ux design intern @ <a href="https://www.bp.com" className="greenhighlight" target="_blank" rel="noopener noreferrer">bp</a></p>
+        </TextFade>
 
       <img
         src={heroImage}

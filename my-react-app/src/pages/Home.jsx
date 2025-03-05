@@ -6,7 +6,9 @@ function Home() {
     return(
         <>
         <Hero/>
-        <Projects/>
+        <div id="projects">
+                <Projects />
+            </div>
         </>
     );
 }

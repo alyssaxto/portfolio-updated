@@ -156,6 +156,37 @@ h3 {
   }
 }
 
+.HackArt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between each box */
+  justify-content: center; /* Centers the items inside BentoBox */
+  max-width: 1000px; /* Ensure the BentoBox does not exceed 1000px width */
+  margin: 0 auto; /* Centers the BentoBox within the parent container */
+}
+
+.HackArt__wrapper {
+  display: flex;
+  width: 90%; /* Ensures two items per row */
+  gap: 20px; /* Space between items */
+}
+
+.HackArt__item {
+  border-radius: 8px;
+}
+
+.HackArt__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure images cover the box without distortion */
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .HackArt__wrapper {
+    width: 90%; /* Make each item take full width on smaller screens */
+  }
+}
 .container {
   font-family: Poppins;
   max-width: 1000px;
@@ -261,95 +292,112 @@ h3 {
   justify-content: center;
   align-items: center;
   padding: 10vh 5vw; /* Prevents the image from touching edges */
+  
+}
+/* Overlay: Covers the background */
+.expanded-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  padding: 5vh 5vw; /* Prevents touching screen edges */
+  border: none; /* Ensures no border around the image container */
 }
 
-/* Expanded Image */
-.expanded {
-  position: relative;
-  z-index: 1000;
-  cursor: zoom-out;
-  border-radius: 10px;
+/* Show expanded image when active */
+.expanded-image.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Expanded Image (Maintains Aspect Ratio) */
+.expanded-image img {
+  width: auto;  /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 80vw; /* Adjust based on screen size */
+  max-height: 80vh; /* Adjust based on screen size */
+  border-radius: 10px;  /* Rounded corners */
+  border: none; /* Ensure no border on the image */
   transition: transform 0.3s ease-in-out;
-  
-  /* Default: Scales up for large screens */
-  transform: scale(1.5);
-  max-width: 70vw;
-  max-height: 70vh;
-  object-fit: contain;
+  cursor: zoom-out;
+  object-fit: contain; /* Ensures no cropping */
 }
 
 /* Medium screens (tablets) */
-@media (max-width: 768px) {
-  .expanded {
-    transform: scale(1.2); /* Slightly smaller scaling */
+@media (max-width: 1024px) {
+  .expanded-image img {
     max-width: 85vw;
-    max-height: 65vh;
+    max-height: 75vh;
   }
 }
 
 /* Small screens (phones) */
-@media (max-width: 480px) {
-  .expanded {
-    transform: scale(1); /* No scaling, just larger size */
+@media (max-width: 768px) {
+  .expanded-image img {
     max-width: 90vw;
-    max-height: 60vh;
+    max-height: 70vh;
+    
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .expanded-image img {
+    max-width: 95vw;
+    max-height: 65vh;
   }
 }
 
 
-/* Regular Image Styling */
+/* Ensure borders apply only to images */
 .summary-image img, 
-.hack-summary-image img, .blue-summary-image img {
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-}
-.blue-summary-image img {
+.hack-summary-image img, 
+.blue-summary-image img, 
+.pink-summary-image img, 
+.yellow-summary-image img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
   border-radius: 10px;
+}
+
+/* Apply specific borders to images only */
+.blue-summary-image img {
   border: 3px solid #3FAEFC;
 }
 
 .pink-summary-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
   border: 3px solid #ff4f4f;
 }
 
 .yellow-summary-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
   border: 3px solid #FFAF48;
-}
-.summary-image {
-  border-radius: 20px;
-  margin-top: 20px;
-}
-.hack-summary-image {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically (if the container has a height) */
-  text-align: center; /* Ensures inline elements inside are centered */
 }
 
 .hack-summary-image img {
-  width: 80%;
   height: auto;
-  display: block;
   border-radius: 10px;
 }
+
 .summary-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
   border: 3px solid #9bd18a;
 }
+
+/* Remove border from the container itself */
+.summary-image {
+  border: none;
+  margin-top: 20px;
+}
+
 
 .summary-text-bullets {
   list-style-type: disc; /* Standard bullet points */
@@ -480,41 +528,7 @@ p {
   height: auto; /* Maintains the aspect ratio of the image */
 }
 
-.expanded-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.expanded-image img {
-  max-width: 100%;
-  max-height: 100%;
-}
-.expanded-image {
-  position: fixed;
-  top: 50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* Initially hide the expanded image */
-  visibility: hidden; /* Initially hide the expanded image */
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
-}
-
-.expanded-image.active {
-  opacity: 1; /* Show the expanded image */
-  visibility: visible; /* Show the expanded image */
-}
 
 /* WebKit (Safari, Chrome) */
 ::-webkit-scrollbar {

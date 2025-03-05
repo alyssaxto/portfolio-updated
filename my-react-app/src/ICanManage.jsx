@@ -53,7 +53,7 @@ const Grid = () => (
           </a>
         </div>
         <div>
-          <a href="https://www.acmutd.co/" className="blue-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://artscilab.utdallas.edu/" className="blue-link" target="_blank" rel="noopener noreferrer">
             ArtSciLab
           </a>
         </div>
@@ -171,9 +171,7 @@ const BPPortfolio = () => (
             style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
             width="800"
             height="450"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FFMrDVFG9rhMJTsJ4KbgzL1%2FUntitled%3Ftype%3Ddesign%26node-id%3D42-1809%26t%3Dt1NEIv4vhidXoBA9-1%26scaling%3Dcontain%26page-id%3D0%253A1%26starting-point-node-id%3D42%253A1809%26mode%3Ddesign"
-            allowFullScreen
-          ></iframe>
+            src="https://embed.figma.com/proto/N2jDaBYvciRI0MguwpbDO2/I-Can-Manage-Desktop?scaling=contain&content-scaling=fixed&page-id=0%3A1&node-id=0-22&starting-point-node-id=0%3A22&embed-host=share" allowfullscreen></iframe>
         </div>
       </div>
       </TextFade>
@@ -221,9 +219,6 @@ const App = () => (
     <div className="section-divider"></div>
     <div class="divider"></div>
     <Ending/>
-    <div class="portfolio__btn-container">
-  <button class="portfolio__btn"><a href="https://github.com/hackutd/hackutd-24-site" target="_blank">View source code</a></button>
-</div>
 <br/>
 <div class="portfolio__btn-container">
 <button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
