@@ -46,8 +46,6 @@ const AboutAndGallery = () => {
   <br/>
   <br/>
   </TextFade>
-</div>
-<div className="polaroid-container">
         <TextFade direction="up">
   <div className="polaroid-wrapper">
     <div className="polaroid-item">

@@ -591,9 +591,13 @@ iframe {
     width: 50%; /* Adjust width for smaller screens */
     height: 600px; /* Let the height adjust automatically to maintain aspect ratio */
   }
+  .figma-embed-container-desktop{
+    width: 70%; /* Adjust width for smaller screens */
+    height: 300px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+
 }
 @media screen and (max-width: 768px) {
-
   
   .header__image {
     max-width: 300px; /* Adjust the max-width to your desired size */
@@ -674,7 +678,7 @@ iframe {
   }
   .video-container {
     width: 90%; /* Adjust width for smaller screens */
-    height: 190px; /* Let the height adjust automatically to maintain aspect ratio */
+    height: 300px; /* Let the height adjust automatically to maintain aspect ratio */
   }
 
   .figma-embed-container{
@@ -688,8 +692,8 @@ iframe {
     gap: 20px;
   }
   .figma-embed-container-desktop{
-    width: 65%; /* Adjust width for smaller screens */
-    height: 250px; /* Let the height adjust automatically to maintain aspect ratio */
+    width: 90%; /* Adjust width for smaller screens */
+    height: 300px; /* Let the height adjust automatically to maintain aspect ratio */
   }
 
 }

@@ -259,6 +259,8 @@ const App = () => (
 <div class="portfolio__btn-container">
 <button class="portfolio__btn"><a href="/playground">Back to Playground</a></button>
 </div>
+<br/>
+<br/>
   </div>
 );
 

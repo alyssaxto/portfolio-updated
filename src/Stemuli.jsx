@@ -303,7 +303,7 @@ const BPPortfolio = () => (
     allowFullScreen
   ></iframe>
 </div>
-
+<div className="section-divider"></div>
       </div>
       </TextFade>
     </div>
@@ -349,6 +349,8 @@ const App = () => (
 <div class="portfolio__btn-container">
 <button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
 </div>
+<br/>
+<br/>
   </div>
 );
 

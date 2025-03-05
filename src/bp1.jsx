@@ -373,7 +373,7 @@ const BPPortfolio = () => (
           <iframe
             style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
             width="800"
-            height="450"
+            height="auto"
             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fmq1WIFQLOCskfwMsxBv9g8%2FAI-Image-Generator-Prototype%3Fnode-id%3D2-3%26t%3DkOCzTyuvzuhXOwfd-1%26scaling%3Dcontain%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D2%253A3"
             allowFullScreen
           ></iframe>
@@ -514,15 +514,12 @@ const App = () => (
     <Header />
     <Grid />
     <div class="divider"></div>
-
     <ExecutiveSummary />
-    
     <div className="section-divider"></div>
     <div class="divider"></div>
     <ProblemStatement />
     <div class="divider"></div>
     <Value />
-    
     <div className="section-divider"></div>
     <div class="divider"></div>
     <Empathize />
@@ -550,6 +547,8 @@ const App = () => (
     <div class="portfolio__btn-container">
 <button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
 </div>
+<br/>
+<br/>
   </div>
 );
 
