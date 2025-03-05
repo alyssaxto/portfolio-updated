@@ -1,36 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 /* Navbar Styling */
 
+/* Navbar Styling */
 .navbar {
   background: #fff;
   height: 60px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Vertically centers the content */
   position: fixed;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
   border-radius: 40px;
-  border: 1px solid #ccc; /* Grey outline */
+  border: 1px solid #ccc;
   box-shadow: none;
   padding: 0 20px;
   width: auto;
 }
 
-/* Navbar container (for layout) */
-.navbar__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-/* Navbar menu (on desktop) */
+/* Navbar menu */
 .navbar__menu {
   display: flex;
-  align-items: center;
+  align-items: center; /* Ensures the navbar items are centered vertically */
   justify-content: center;
   list-style: none;
   font-size: 1.2rem;
@@ -43,7 +36,7 @@
   font-weight: 400;
   color: #ff6b6b;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px;
   position: relative;
   transition: 
     color 0.3s ease, 
@@ -51,6 +44,15 @@
     padding 0.3s ease;
 }
 
+/* Hamburger menu and other adjustments remain unchanged */
+
+/* Navbar container (for layout) */
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 /* Hover effect on links */
 .navbar__links::after {
   content: "";
@@ -93,6 +95,7 @@
   background-color: #ff6b6b;  /* Ensure visibility */
   transition: all 0.3s ease;
 }
+
 
 /* Media query for mobile */
 @media (max-width: 1000px) {

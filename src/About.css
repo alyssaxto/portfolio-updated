@@ -80,6 +80,14 @@
   margin-bottom: 10px;
 }
 @media (max-width: 768px) {
+  .polaroid-container {
+    min-height: 100vh; /* Ensure the container is tall enough */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
   .polaroid-item {
     width: 100%; /* Full width on mobile */
     max-width: 100%;
@@ -134,7 +142,7 @@
     margin: 0 auto;
     height: auto;
     z-index: 1;
-    width: 90%;
+    width: 100%;
     max-width: 1300px;
     padding-top: 5rem;
   }
@@ -200,69 +208,123 @@
   flex-direction: column;
   justify-content: center;
 }
+@media screen and (max-width: 1050px) {
+  .about__container {
+    margin-top: 6rem;
+    padding: 0 20px; /* Adjust padding between image and content */
+    display: flex;
+    flex-direction: row; /* Keep them next to each other */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center content vertically if needed */
+  }
+
+  .about__img--card {
+    margin-right: 20px; /* Adjust margin between image and content */
+    width: 45%; /* Control image size */
+    max-width: 450px; /* Optional: limit max width */
+  }
+
+  .about__content {
+    width: 45%; /* Control content size */
+    padding-top: 0; /* Remove extra padding */
+    text-align: left; /* Align text properly */
+    word-wrap: break-word; /* Prevent words from overflowing */
+    overflow-wrap: break-word; /* Additional support for long words */
+  }
+}
 
 
+/* Mobile Responsive */
+@media screen and (max-width: 800px) {
+  
+  .about__container {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Ensures full width */
+    max-width: 100%;
+    height: auto; /* Adjust height automatically */
+    padding: 0 20px; /* Adds uniform padding on both sides */
+    box-sizing: border-box; /* Prevents padding from affecting width */
+  }
 
-  /* Mobile Responsive */
-  /* Mobile Responsive */
-  @media screen and (max-width: 800px) {
-    .about__container {
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center;
-      justify-content: center;
-      height: 90%;
-    }
-    .about__img--container {
+  .about__img--container {
       display: flex;
       justify-content: center;
-      align-items: center; /* Add this line to center vertically */
-    }
-  
-    .about__img--card {
+      align-items: center; /* Centers vertically */
+      padding-bottom: 10px; /* Adjust spacing */
+  }
+
+  .about__img--card {
       width: 90%; /* More fluid size */
       max-width: 300px; /* Prevent it from being too large */
-    }
-  
-    .about__content {
-      text-align: left;
+      height: auto; /* Maintain aspect ratio */
+  }
+
+  .about__content {
+      text-align: center; /* Centers text for better readability */
       width: 100%;
-    }
-  
-    .about__content h1 {
+      padding: 10px 20px; /* Ensures spacing doesn't feel tight */
+  }
+
+  .about__content h1 {
+      font-size: 2.2rem;
+      margin-top: 1.5rem;
+  }
+
+  .about__content h2 {
       font-size: 2.5rem;
-      margin-top: 2rem;
-      
-    }
-  
-    .about__content h2 {
-      font-size: 3rem;
-    }
-  
-    .about__content p {
       margin-top: 1rem;
-      width: 85%;
+  }
+
+  .about__content p {
+      margin-top: 1rem;
+      width: 90%;
       font-size: 1rem;
-    }
+      text-align: left;
+      padding: 0 10px; /* Prevents text from touching the edges */
   }
-  @media screen and (max-width: 480px) {
-    .about__img--card {
-      width: 90%; /* More flexible size */
-      max-width: 250px; /* Prevents being too small */
-      height: auto; /* Keeps aspect ratio */
-    }
+}
+
+/* Smaller screens - below 480px */
+@media screen and (max-width: 480px) {
+
+  .about-heading {
+    font-size: 3rem; /* Adjust size as needed */
+  }
+  .about__container {
+      padding: 15px; /* Slightly less padding for very small screens */
+  }
+
   
-    .about__content h1 {
-      font-size: 2rem;
-      margin-top: 3rem;
-    }
-    .about__content h2 {
-      font-size: 2rem;
-    }
-  
-    .about__content p {
+  .about__img--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensures full-width container */
+}
+
+  .about__content {
+    width: 100%; /* Makes it more responsive */
+    max-width: 400px; /* Increases max size */
+    height: auto; 
+  }
+
+  .about__content h1 {
+      font-size: 1.8rem;
       margin-top: 2rem;
-    }
-  
   }
-  
+
+  .about__content h2 {
+      font-size: 2rem;
+      margin-top: 1rem;
+  }
+
+  .about__content p {
+      margin-top: 1.5rem;
+      width: 90%;
+      padding: 0 5px;
+  }
+}

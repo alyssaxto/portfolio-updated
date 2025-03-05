@@ -116,29 +116,61 @@ footer {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
+  footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 1rem; /* Adjusts the base font size */
+    position: relative; /* Ensure footer positioning is contained */
+    padding-bottom: 50px; /* Adds space to prevent content overlap */
+  }
 
-    .footer__left, .footer__right {
-        flex: 1;
-        min-width: 100%;
-        text-align: center;
-        padding-top: 20px;
-    }
+  .footer__left, .footer__right {
+      flex: 1;
+      min-width: 100%;
+      text-align: center;
+      padding-top: 20px;
+  }
 
   .footer__links {
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    text-align: center; /* Ensures text is centered */
-    flex-wrap: wrap; /* Wraps links if they don’t fit */
-    width: 100%; /* Ensures it takes full width */
+    display: flex;
+    justify-content: center; /* Centers the links horizontally */
+    align-items: center; /* Aligns them vertically */
+    gap: 20px; /* Adds spacing between links */
+    flex-wrap: nowrap; /* Prevents wrapping */
+    width: 100%; /* Ensures full width */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the links */
+    padding: 10px 0; /* Adds padding */
+    background: white; /* Ensures visibility */
+      
+  }
+
+  .resume-container{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1rem; /* Adjusts heading size */
 }
 
-    .footer__right h3 {
-        text-align: center;
-        line-height: 1.5;
-    }
+.resumelink{
+  text-align: center;
+  font-size: 1rem; /* Adjusts heading size */
+}
+  .footer__left h22 {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.5rem; /* Adjusts heading size */
+}
+.footer__left p {
+  text-align: center;
+  line-height: 1;
+  font-size: .9rem; /* Adjusts heading size */
+}
+  .footer__right h3 {
+      text-align: center;
+      line-height: 1.5;
+      font-size: 1rem; /* Adjusts heading size */
+  }
 }

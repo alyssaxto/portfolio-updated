@@ -107,7 +107,7 @@ const HorizontalScroll = () => {
                 >
                   <ImageContainer
                     imageSource={manageImage}
-                    title={"I Can Manage Cancer 🔒"}
+                    title={"I Can Manage Cancer"}
                     description={"An educational platform designed to assist head and neck cancer patients through treatment."}
                   />
                 </motion.div>
@@ -155,7 +155,7 @@ const HorizontalScroll = () => {
             </a>
             <a href="/ICanManage" className="Projects__card">
               <img src={manageImage} alt="I Can Manage Cancer" />
-              <h2>I Can Manage Cancer🔒</h2>
+              <h2>I Can Manage Cancer</h2>
               <p>An educational platform designed to assist head and neck cancer patients through treatment.</p>
             </a>
             <a href="/Stemuli" className="Projects__card">
