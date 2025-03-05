@@ -9,7 +9,7 @@ const Header = () => (
   <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Helping college kids with their financial literacy</h1>
-    <h2>Class Project ✴ Spring 2023</h2>
+    <h2>Class Project ✷ Spring 2023</h2>
     <div className="image-containy">
       <a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fiafgf5x8oYTw2NxjMQiReb%2FUntitled%3Ftype%3Ddesign%26t%3DDLiub0o2a3aXTPnW-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26node-id%3D0-3%26starting-point-node-id%3D0%253A3%26mode%3Ddesign" target="_blank" rel="noopener noreferrer">
         <img src="/assets/budgetbuddy.png" alt="Image 2" className="hover-image" />

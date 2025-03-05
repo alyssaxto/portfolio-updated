@@ -12,7 +12,7 @@ const Header = () => (
   <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Designing an accessible way for bp employees to create the images they need</h1>
-    <h2>bp Product Design Internship ✴ Summer 2024</h2>
+    <h2>bp Product Design Internship ✷ Summer 2024</h2>
     <div className="image-containy">
       <a href="https://www.bp.com/" target="_blank" rel="noopener noreferrer">
         <img src="/public/assets/bp/6.png" alt="Image 2" className="hover-image" />

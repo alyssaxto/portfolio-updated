@@ -12,7 +12,7 @@ const Header = () => (
   <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Designing a badge to recognize designers    </h1>
-    <h2>bp Product Design Internship ✴ Summer 2024</h2>
+    <h2>bp Product Design Internship ✷ Summer 2024</h2>
     <div className="image-containy">
       <a href="https://www.bp.com/" target="_blank" rel="noopener noreferrer">
         <img src="/assets/mvp/5.png" alt="Image 2" className="hover-image" />

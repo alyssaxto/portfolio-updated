@@ -9,7 +9,7 @@ const Header = () => (
   <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Designing a way for students to gain work experience outside of school</h1>
-    <h2>Stemuli Product Designer ✴ Jan - May 2024</h2>
+    <h2>Stemuli Product Designer ✷ Jan - May 2024</h2>
     <div className="image-containy">
       <a href="https://stemuli.net/" target="_blank" rel="noopener noreferrer">
         <img src="/assets/stemuli/s17.png" alt="Image 2" className="hover-image" />

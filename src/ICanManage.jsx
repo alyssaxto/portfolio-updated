@@ -9,7 +9,7 @@ const Header = () => (
   <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Designing a solution to help cancer patients complete their treatment</h1>
-    <h2>ArtSciLab Product Designer ✴ Spring 2024 - Summer 2025</h2>
+    <h2>ArtSciLab Product Designer ✷ Spring 2024 - Summer 2025</h2>
     <div className="image-containy">
       <a href="https://www.utsouthwestern.edu/" target="_blank" rel="noopener noreferrer">
         <img src="/assets/icanmanage/c3.png" alt="Image 2" className="hover-image" />
