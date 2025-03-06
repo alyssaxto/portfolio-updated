@@ -300,7 +300,29 @@ const HackUTD = () => (
   </header>
   </TextFade>
 );
-
+const Bonus = () => (
+  <TextFade direction="up">
+  <div className="summary-container">
+    <div className="summary-header">
+    <h2>Bonus</h2>
+    <div className="summary-text">
+    <h1>Designing collectible pins</h1>
+    <p>I drew some pins myself using Clip Studio Paint. The animal is the mascot we created for this year's hackathon.​</p>
+    <br/>
+    </div>
+    </div>
+    <h3>My pins on the merch table!</h3>
+          <div className="summary-image">
+            <ExpandableImage src="/assets/hp/1.jpg" alt="User Journey" />
+          </div>
+          <br />
+          <div className="summary-image">
+            <ExpandableImage src="/assets/hp/2.jpg" alt="User Journey" />
+          </div>
+          <br />
+          </div>  
+    </TextFade>
+);
 // App Component to include all sections
 const App = () => (
   <div className="app">
@@ -331,6 +353,9 @@ const App = () => (
     <div className="section-divider"></div>
     <div class="divider"></div>
     <HackUTD/>
+    <div className="section-divider"></div>
+    <div class="divider"></div>
+    <Bonus />
     <br/>
     <br/>
     <div class="portfolio__btn-container">
