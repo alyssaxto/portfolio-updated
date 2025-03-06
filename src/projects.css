@@ -158,12 +158,12 @@
     padding-bottom: 40px; /* Ensure more space at the bottom */
     background-color: #fff; /* Background color of the card */
     border-radius: 10px; /* Match card's border radius */
-    transition: box-shadow 0.3s ease-in, transform 0.3s ease-in; /* Smooth transition for shadow and scaling */
+    transition: 0.3s ease-in, transform 0.3s ease-in; /* Smooth transition for shadow and scaling */
   }
   
   .Projects__card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow appears on hover */
     transform: scale(1.05); /* Slightly scale up the card on hover */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   }
   .Projects__card img {
     width: 100%;
@@ -196,10 +196,6 @@
     color: #ff8177; /* Change color on hover */
   }
   
-  .Projects__card:hover {
-    transform: scale(1.05); /* Slightly reduce scale on hover for better mobile interaction */
-    cursor: pointer;
-  }
   
   .Projects__card p {
     font-size: 1rem; /* Responsive font size */

@@ -10,6 +10,7 @@ footer {
     padding: 40px;
     background-color: #ffffff;
     color: #292929;
+    max-width: 3000px;
     flex-wrap: wrap; /* Ensures wrapping on smaller screens */
 }
 
