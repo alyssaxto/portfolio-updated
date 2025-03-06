@@ -15,7 +15,7 @@ const Header = () => (
     <h2>bp Product Design Internship ✷ Summer 2024</h2>
     <div className="image-containy">
       <a href="https://www.bp.com/" target="_blank" rel="noopener noreferrer">
-        <img src="/public/assets/bp/6.png" alt="Image 2" className="hover-image" />
+        <img src="/assets/bp/6.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
   </header>
