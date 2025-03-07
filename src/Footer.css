@@ -133,22 +133,24 @@ footer {
 
   .footer__links {
     display: flex;
+    padding-top: 10px;
     justify-content: center;
     align-items: center;
     gap: 20px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    position: relative; /* Change from absolute to relative */
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 0;
     background: white;
+    z-index: 1; /* Lower z-index than .resume-container */
     margin: 0; /* Resets any margin */
   }
 
   .resume-container {
     width: 100%;
     display: flex;
+    z-index: 10;
+    position: relative; /* Ensures it respects z-index */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -160,7 +162,7 @@ footer {
   .resumelink {
     text-align: center;
     line-height: 1.5;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .footer__left h2 {
