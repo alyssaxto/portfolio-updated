@@ -171,13 +171,12 @@ const BPPortfolio = () => (
             style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
             width="800"
             height="450"
-            src="https://embed.figma.com/proto/N2jDaBYvciRI0MguwpbDO2/I-Can-Manage-Desktop?scaling=contain&content-scaling=fixed&page-id=0%3A1&node-id=0-22&starting-point-node-id=0%3A22&embed-host=share" allowfullscreen></iframe>
+            src="https://embed.figma.com/proto/tApzi7pBq0KBLGsy3MTURT/I-Can-Manage-Desktop?node-id=0-22&p=f&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=0%3A22&embed-host=share" allowfullscreen></iframe>
         </div>
       </div>
       </TextFade>
     </div>
   );
-
   const Ending = () => (
     <TextFade direction="up">
     <div className="summary-container">
