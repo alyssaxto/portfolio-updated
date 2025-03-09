@@ -9,15 +9,11 @@ const PasswordProtectedPage = () => {
 
   const validatePassword = async (event) => {
     event.preventDefault();
-    console.log("Password entered:", password);
-    console.log("Page name being sent:", "bpProject"); //or whatever pagename you are using.
     try {
       const response = await axios.post(
         "http://127.0.0.1:5000/api/validate_password",
         { password: password, page_name: "bpProject" }
       );
-      console.log("API response:", response);
-
       if (response.data.valid) {
         window.location.href = "/bpProject";
       } else {
@@ -26,7 +22,6 @@ const PasswordProtectedPage = () => {
       }
     } catch (error) {
       setError("An error occurred. Please try again.");
-      console.error("Password validation error:", error);
       setPassword("");
     }
   };
