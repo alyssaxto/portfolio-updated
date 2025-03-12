@@ -93,7 +93,7 @@ const HorizontalScroll = () => {
                   <ImageContainer
                     imageSource={rippleImage}
                     title={"HackUTD Website"}
-                    description={"Developing and designing the website for the biggest 24-hour hackathon in Texas hosted by HackUTD."}
+                    description={"Developing and designing the website for the biggest 24-hour hackathon in North America hosted by HackUTD."}
                   />
                 </motion.div>
               </Link>
@@ -151,7 +151,7 @@ const HorizontalScroll = () => {
             <a href="/HackUTD11" className="Projects__card">
               <img src={rippleImage} alt="HackUTD Website" />
               <h2>HackUTD Website</h2>
-              <p>Developing and designing the website for the biggest 24-hour hackathon in Texas hosted by HackUTD</p>
+              <p>Developing and designing the website for the biggest 24-hour hackathon in North America hosted by HackUTD</p>
             </a>
             <a href="/ICanManage" className="Projects__card">
               <img src={manageImage} alt="I Can Manage Cancer" />
