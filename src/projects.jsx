@@ -9,6 +9,8 @@ import ImageContainer from "./Components/ImageContainer/ImageContainer";
 import { LettersPullUp } from "./Components/letters-pull-up";
 import "./projects.css";
 import peekaboo from "/assets/peekaboo.png"
+import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
+
 
 const HorizontalScroll = () => {
   const targetRef = useRef(null);
@@ -139,6 +141,7 @@ const HorizontalScroll = () => {
 
       {/* Grid View */}
       {(isGridActive || isSmallScreen) && (
+                    <TextFade direction="up">
         <div className="Projects">
         <br/>
         <br/>
@@ -165,6 +168,7 @@ const HorizontalScroll = () => {
             </a>
           </div>
         </div>
+        </TextFade>
       )}
     </div>
 

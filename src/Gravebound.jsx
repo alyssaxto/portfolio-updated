@@ -9,7 +9,7 @@ const Header = () => (
   <TextFade direction="up">
   <header className="header">
     <h1 className="header__title">Designing UI for a student-led game</h1>
-    <h2>Ut Dallas UI Designer ✷ Fall 2024</h2>
+    <h2>UT Dallas UI Designer ✷ Fall 2024</h2>
     <div className="image-containy">
       <a href="https://www.atec-animgames.com/game-lab" target="_blank" rel="noopener noreferrer">
         <img src="/assets/gb/15.png" alt="Image 2" className="hover-image" />
@@ -240,7 +240,7 @@ const App = () => (
     <Grid />
     <div class="divider"></div>
     <Top />
-    <div className="section-divider"></div>
+
     <div class="divider"></div>
     <Summary />
     

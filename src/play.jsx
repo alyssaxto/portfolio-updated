@@ -27,6 +27,16 @@ const HorizontalScroll = () => {
         <br />
         <br />
         <div className="Projects__wrapper index">
+        <a href="/bpxGA" className="Projects__card">
+            <img src={BpxGA} alt="bpxGA" />
+            <h2>bp x GA Bootcamp</h2>
+            <p>Designing badges for new grad designers to display on their profiles after completing a 12-week bootcamp.</p>
+          </a>
+          <a href="/MVP" className="Projects__card">
+            <img src={MVP} alt="MVP" />
+            <h2>MVP Badges</h2>
+            <p>Creating badges to recognize new grad designers for their efforts within a 12-week bootcamp.</p>
+          </a>
           <a href="/Hackportal" className="Projects__card">
             <img src={Hackportal} alt="Hackportal" />
             <h2>Hackportal</h2>
@@ -36,16 +46,6 @@ const HorizontalScroll = () => {
             <img src={Gravebound} alt="Gravebound" />
             <h2>Gravebound</h2>
             <p>Creating and developing UI for a first-person shooter developed entirely by students.</p>
-          </a>
-          <a href="/bpxGA" className="Projects__card">
-            <img src={BpxGA} alt="bpxGA" />
-            <h2>bp x GA Bootcamp</h2>
-            <p>Designing badges for new grad designers to display on their profiles after completing a 12-week bootcamp.</p>
-          </a>
-          <a href="/MVP" className="Projects__card">
-            <img src={MVP} alt="MVP" />
-            <h2>MVP Badges</h2>
-            <p>Creating badges to recognize new grad designers for their efforts within a 12-week bootcamp.</p>
           </a>
           <a href="/BudgetBuddy" className="Projects__card">
             <img src={BB} alt="BudgetBuddy" />
