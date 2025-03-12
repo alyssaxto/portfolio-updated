@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css"; // Ensure your CSS file is correctly linked
 import Resume from "/assets/AlyssaTo_Resume.pdf";
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,9 +27,10 @@ const Navbar = () => {
 
         {/* Menu items */}
         <ul className={`navbar__menu ${menuOpen ? "active" : ""}`}>
-          <li className="navbar__item">
-            <Link to="/" className="navbar__links" onClick={() => setMenuOpen(false)}>HOME</Link>
-          </li>
+        <li className="navbar__item">
+  <HashLink smooth to="/#home" className="navbar__links" onClick={() => setMenuOpen(false)}>HOME</HashLink>
+</li>
+
           <li className="navbar__item">
             <Link to="/playground" className="navbar__links" onClick={() => setMenuOpen(false)}>PLAY</Link>
           </li>
