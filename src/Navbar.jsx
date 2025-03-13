@@ -28,17 +28,17 @@ const Navbar = () => {
         {/* Menu items */}
         <ul className={`navbar__menu ${menuOpen ? "active" : ""}`}>
         <li className="navbar__item">
-  <HashLink smooth to="/#home" className="navbar__links" onClick={() => setMenuOpen(false)}>HOME</HashLink>
+  <HashLink smooth to="/#home" className="navbar__links" onClick={() => setMenuOpen(false)}>Home</HashLink>
 </li>
 
           <li className="navbar__item">
-            <Link to="/playground" className="navbar__links" onClick={() => setMenuOpen(false)}>PLAY</Link>
+            <Link to="/playground" className="navbar__links" onClick={() => setMenuOpen(false)}>Play</Link>
           </li>
           <li className="navbar__item">
-            <Link to="/about" className="navbar__links" onClick={() => setMenuOpen(false)}>ABOUT</Link>
+            <Link to="/about" className="navbar__links" onClick={() => setMenuOpen(false)}>About</Link>
           </li>
           <li className="navbar__item">
-            <a href={Resume} className="navbar__links" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>RESUME</a>
+            <a href={Resume} className="navbar__links" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a>
           </li>
         </ul>
       </div>
