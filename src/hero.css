@@ -11,7 +11,10 @@
     padding: 20px;
     text-align: center;        /* Center the text */
     height: 100vh;             /* Make sure it takes full viewport height */
+    
 }
+
+
 
 /* Image styling */
 .hero__image {
@@ -41,6 +44,7 @@
   .hero__content p {
     font-size: 1.25rem;
     font-family: poppins;
+    text-align: center;
   }
   
 
@@ -106,6 +110,7 @@
 
     }
     .hero__content h4 {
+      
       font-size: 3rem;
     }
     
@@ -123,5 +128,6 @@
 
     .hero__image {
         margin-top: 10rem;
+        
     }
   }

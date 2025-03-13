@@ -198,7 +198,7 @@
 
 
 .about__img--card img {
-  border-radius: 50px !important; /* or border-radius: 50% !important; */
+  border-radius: 50px;
 }
 
 
@@ -300,7 +300,11 @@
       padding: 15px; /* Slightly less padding for very small screens */
   }
 
-  
+  .about__img--card {
+    margin-right: 0px;
+    margin-left: 5%;
+    justify-content: center;
+}
   .about__img--container {
     display: flex;
     justify-content: center;
