@@ -96,9 +96,21 @@
   transition: all 0.3s ease;
 }
 
+/* Fixing underline hover effect for vertical monitors */
+@media (max-width: 1200px) {
+
+  .navbar__links:hover {
+    color: #fe4e4e;
+    font-weight: 600;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+}
+
 
 /* Media query for mobile */
-@media (max-width: 1000px) {
+@media (max-width: 1025px) {
 
   .navbar__menu {
     display: none; /* Hide the menu by default on mobile */
