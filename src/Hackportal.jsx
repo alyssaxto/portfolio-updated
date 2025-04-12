@@ -159,54 +159,53 @@ const OG = () => (
   );
 
   
-const New = () => (
+  const New = () => (
     <div>
-                <TextFade direction="up">
-      <div className="summary-container">
-      <div className="summary-header">
-        <h2>Second Version
-        </h2>
-        <div className="summary-text">
-        <h1>My redesign
-        </h1>
- <p>What I changed
- </p>
- <h3> Feedback I received</h3>
- <ul className="summary-text-bullets">
-    <li>Added blue with the purple</li>
-    <li>Changed the font to be more bubbly</li>
-    </ul>
-     </div>
+      <TextFade direction="up">
+        <div className="summary-container">
+          <div className="summary-header">
+            <h2>Second Version</h2>
+            <div className="summary-text">
+              <h1>My redesign</h1>
+              <p>What I changed</p>
+              <h3>Feedback I received</h3>
+              <ul className="summary-text-bullets">
+                <li>Added blue with the purple</li>
+                <li>Changed the font to be more bubbly</li>
+              </ul>
+            </div>
+          </div>
+  
+          <br />
+          <h3>Desktop Redesign</h3>
+          <div className="figma-embed-container-desktop">
+            <iframe
+              style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+              width="800"
+              height="450"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FkozwC837rWpcUMEpj7lgtW%2FUntitled%3Fnode-id%3D0-187%26t%3DvgnqwgcVMLwNiO72-1%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26page-id%3D0%253A1"
+              allowFullScreen
+            ></iframe>
+          </div>
+  
+          <br />
+          <h3>Mobile Redesign</h3>
+          <div className="figma-embed-container">
+            <iframe
+              style={{
+                border: "1px solid rgba(0, 0, 0, 0.1)",
+                width: "100%",
+                height: "600px",
+              }}
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F0yxImzqbLzxQUxkWCgpP3n%2FHackportal-Mobile%3Fnode-id%3D0-309%26t%3DzPL45OFmYlsadt7y-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
-        <br />
-        <h3>Desktop View</h3>
-        <div className="figma-embed-container-desktop">
-          <iframe
-            style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
-            width="800"
-            height="450"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FaigI82SImmCQhC2ZkJvJ6Y%2FOriginal-Hackportal%3Ft%3D6Md30TFEC7aCDgx5-1%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26page-id%3D0%253A1%26node-id%3D1-28"
-            allowFullScreen
-          ></iframe>
-        </div>
-<br/>
-<h3>Mobile View</h3>
-        <div className="figma-embed-container">
-  <iframe
-    style={{
-      border: "1px solid rgba(0, 0, 0, 0.1)",
-      width: "100%",  // Make iframe take full width of the container
-      height: "600px", // Set a default height
-    }}
-    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F50gK0wGY09O15oh6ype2QL%2FOriginal-Hackportal-Mobile%3Fnode-id%3D1-60%26t%3DZn8XlwWNzuA6ebRP-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1"
-    allowFullScreen
-  ></iframe>
-</div>
-
-      </div>
       </TextFade>
     </div>
   );
+  
   const HackPortal = () => (
     <TextFade direction="up">
     <header className="header">
