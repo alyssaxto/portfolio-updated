@@ -99,7 +99,7 @@ const HorizontalScroll = () => {
                   />
                 </motion.div>
               </Link>
-              <Link to="/ICanManage">
+              <Link to="/Password2">
                 <motion.div
                   className="ImageItem"
                   initial={{ opacity: 0, y: 150 }}
@@ -109,7 +109,7 @@ const HorizontalScroll = () => {
                 >
                   <ImageContainer
                     imageSource={manageImage}
-                    title={"I Can Manage Cancer"}
+                    title={"I Can Manage Cancer 🔒"}
                     description={"An educational platform designed to assist head and neck cancer patients through treatment."}
                   />
                 </motion.div>
@@ -156,9 +156,9 @@ const HorizontalScroll = () => {
               <h2>HackUTD Website</h2>
               <p>Developing and designing the website for the biggest 24-hour hackathon in North America hosted by HackUTD</p>
             </a>
-            <a href="/ICanManage" className="Projects__card">
+            <a href="/Password2" className="Projects__card">
               <img src={manageImage} alt="I Can Manage Cancer" />
-              <h2>I Can Manage Cancer</h2>
+              <h2>I Can Manage Cancer 🔒</h2>
               <p>An educational platform designed to assist head and neck cancer patients through treatment.</p>
             </a>
             <a href="/Stemuli" className="Projects__card">

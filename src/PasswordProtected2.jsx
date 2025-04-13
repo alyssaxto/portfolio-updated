@@ -5,7 +5,7 @@ import { TextFade } from "./Components/TextFade";
 const PasswordProtectedPage = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const correctPassword = "doctor";
+  const correctPassword = "ripple";
 
   const validatePassword = (event) => {
     event.preventDefault();
