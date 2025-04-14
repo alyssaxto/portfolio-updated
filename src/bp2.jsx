@@ -111,6 +111,8 @@ const ProblemStatement = () => (
     <div className="summary-image">
       <ExpandableImage src= "/assets/GA/2.png" alt="User Journey" />
     </div>
+    <div className="section-divider"></div>
+
   </div>
   </TextFade>
 );

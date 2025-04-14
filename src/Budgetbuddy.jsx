@@ -157,7 +157,7 @@ const Journey = () => (
         </div>
       </div>
       <div className="summary-image">
-        <ExpandableImage src="./src/assets/bb3.png" alt="User Journey" />
+        <ExpandableImage src="./assets/bb3.png" alt="User Journey" />
       </div>
     </div>
     </TextFade>
