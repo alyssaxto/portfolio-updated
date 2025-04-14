@@ -304,6 +304,7 @@ const Personas = () => (
                 <h1>Feature prioritization 2x2 matrix</h1>
                 <p>Recognizing that I can't tackle everything at once, I created this 2x2 matrix to help identify and prioritize the most important tasks.</p>
                 <h3>Based off of this, I didn't include:</h3>
+                
                 <ul className="summary-text-bullets">
                   <li>Light and dark mode</li>
                   <li>Randomize button for specific purposes</li>
@@ -311,7 +312,7 @@ const Personas = () => (
               </div>
             </div>
             <div className="summary-image">
-              <iExpandableImage src="/assets/bp/3.png" alt="Features" />
+              <ExpandableImage src="/assets/bp/3.png" alt="User Journey" />
             </div>
             <div className="section-divider"></div>
           </div>
