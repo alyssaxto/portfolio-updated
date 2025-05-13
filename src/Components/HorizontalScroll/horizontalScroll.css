@@ -8,9 +8,9 @@
   }
 
 .contentContainer{
-    height: 100vh;
+    height: 80vh;
     position: sticky;
-    top: 0;
+    top: 10vh; /* Reduced from 20vh to 10vh to bring it closer to the title */
     display: flex;
     align-items: center;
     justify-content: flex-start;
