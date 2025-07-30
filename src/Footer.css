@@ -4,14 +4,25 @@
 }
 
 footer {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #ffffff;
-    color: #292929;
-    max-width: 3000px;
-    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+  font-family: 'Poppins', sans-serif;
+  padding: 40px;
+  background-color: #ffffff;
+  color: #292929;
+  display: block;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Prevent early wrapping */
+  width: 100%;
+  max-width: 2400px;
+  margin: 0 auto;
+}
+.footer__left,
+.footer__right {
+  flex: 1;
+  min-width: 300px;
 }
 
 /* Left side styling */
@@ -20,7 +31,7 @@ footer {
     min-width: 60%; /* Ensures it doesn't get too small */
 }
 
-.footer__left h22 {
+.footer__left h9 {
     font-size: 3rem;
     font-weight: bold;
     color: #292929;
@@ -98,88 +109,88 @@ footer {
 }
 
 .resumelink {
-  color: #292929; /* Change to your preferred color */
-  align-self: flex-end;
-  text-align: right;
-  text-decoration: none; /* Removes underline */
-  font-weight: bold; /* Makes the text bold */
-  font-size: 1.9em; /* Adjust the size */
-  transition: color 0.3s ease-in-out; /* Smooth color change */
+  color: #FFB6C1;
+  text-align: left; /* match heading */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.9em;
+  transition: color 0.3s ease-in-out;
+  padding-left: 0; /* optional: remove any left shift */
+  margin: 0; /* ensure no extra margins */
 }
+
 
 .resumelink:hover {
   color: #FF4F4F; /* Darker shade on hover */
   text-decoration: underline; /* Underline on hover */
 }
 .resume-container {
-  width: 100%;
   margin-bottom: 40px;
 }
-/* Mobile responsiveness */
+
 @media (max-width: 1400px) {
-  footer {
-    display: flex;       
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1rem;
-    position: relative;
-    padding: 0; /* Resets any padding */
-    margin: 0;  /* Resets any margin */
-    width: 100%;
-    box-sizing: border-box; /* Ensure padding and borders don't affect layout */
+
+ .footer__left h9 {
+    font-size: 2rem;
+  }
+  .resumelink {
+    font-size: 1.4rem;
   }
 
+    .footer__right h3 {
+    font-size: 1.3rem;
+
+  }
+}
+
+@media (max-width: 770px) {
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__right {
+    align-items: flex-start;
+    margin-top: 20px;
+  }
   .footer__links {
-    display: flex;
-    padding-top: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    position: relative; /* Change from absolute to relative */
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    z-index: 1; /* Lower z-index than .resume-container */
-    margin: 0; /* Resets any margin */
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px;
+    padding: 10px 0;
   }
 
   .resume-container {
-    width: 100%;
-    display: flex;
-    z-index: 10;
-    position: relative; /* Ensures it respects z-index */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0; /* Reset margin if needed */
-    padding: 0; /* Reset padding */
-    box-sizing: border-box; /* Ensures proper box model */
-  }
-  
-  .resumelink {
-    text-align: center;
-    line-height: 1.5;
-    font-size: 1.6rem;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0px 0;
   }
 
-  .footer__left h2 {
-    text-align: center;
-    line-height: 1.5;
-    font-size: 1.5rem;
-  }
-
-  .footer__left p {
-    text-align: center;
-    line-height: 1;
-    font-size: 1rem;
-  }
-
+  .resumelink,
   .footer__right h3 {
-    text-align: center;
-    line-height: 1.5;
-    font-size: 1rem;
+    text-align: left;
+    padding: 4px 0;
+    width: 100%;
+  }
+
+  .resumelink {
+    font-size: 1.3rem;
+  }
+
+  .footer__left h9 {
+    font-size: 1.7rem;
+  }
+
+  .footer__left p,
+  .footer__right h3 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+
+ .footer__left h9 {
+    font-size: 1.3rem;
   }
 }
