@@ -6,7 +6,6 @@ body {
 }
 
 
-
 /* ---------------- Doodle Clicks ---------------- */
 #doodle-layer {
   position: fixed;
@@ -20,7 +19,7 @@ body {
 
 .click-doodle {
   position: fixed;
-  width: 150px;   /* adjust size */
+  width: 150px;   /* default size */
   height: 150px;
   pointer-events: none;
   animation: popFade 0.4s ease-out forwards;
@@ -42,6 +41,14 @@ body {
   100% {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .click-doodle {
+    width: 100px;
+    height: 100px;
   }
 }
 
