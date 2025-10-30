@@ -14,8 +14,9 @@ const AboutAndGallery = () => {
           </div>
           <div className="about__content">
             <TextFade direction="up">
-              <h1>Hi, I'm Alyssa!</h1>
-              <p>
+<h1>
+  Hi, I'm Alyssa! <span className="no-break">(｡˃ ᵕ ˂ )⸝♡</span>
+</h1>              <p>
                 Nice to meet you! I’m a recent graduate from <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="pink-link" target="_blank" rel="noopener noreferrer">the University of Texas @ Dallas</a> with a Bachelors of Arts, Technology, and Emerging Communications and a concentration on <a href="/#Projects" className="pink-link">UX Design.</a><br /><br />
               </p>
               <p>
@@ -61,7 +62,7 @@ const AboutAndGallery = () => {
     </div>
     <div className="polaroid-item">
       <img src="/assets/valorant.jpg" alt="Attending hackathons" className="polaroid-image" />
-      <h2 className="polaroid-caption">Exploring cafes</h2>
+      <h2 className="polaroid-caption">Fueling my caffeine addiction</h2>
     </div>
   </div>
   
