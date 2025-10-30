@@ -1,31 +1,32 @@
-import React, { useEffect, useState } from "react";
-import customCursor from "/assets/cursor.png";
+import { useEffect, useState } from "react";
 
 const CustomCursor = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const moveCursor = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+    // detect if device is touch-based
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(hover: none)").matches || window.innerWidth <= 768);
     };
-    window.addEventListener("mousemove", moveCursor);
-    return () => window.removeEventListener("mousemove", moveCursor);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  useEffect(() => {
+    if (isMobile) return; // don't track on mobile
+    const moveCursor = (e) => setPosition({ x: e.clientX, y: e.clientY });
+    window.addEventListener("mousemove", moveCursor);
+    return () => window.removeEventListener("mousemove", moveCursor);
+  }, [isMobile]);
+
+  if (isMobile) return null; // hide component entirely on mobile
+
   return (
-    <img
-      src={customCursor}
-      alt="cursor"
-      style={{
-        position: "fixed",
-        left: position.x,
-        top: position.y,
-        width: "48px",    // bigger size
-        height: "48px",   // bigger size
-        pointerEvents: "none",
-        transform: "translate(-50%, -50%)",
-        zIndex: 9999,
-      }}
+    <div
+      className="custom-cursor"
+      style={{ left: position.x, top: position.y }}
     />
   );
 };
