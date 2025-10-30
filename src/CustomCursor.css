@@ -1,0 +1,17 @@
+.custom-cursor {
+  position: fixed;
+  width: 32px; /* match your image size */
+  height: 32px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease-out;
+}
+
+.custom-cursor.hovered {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+body {
+  cursor: none; /* hide default system cursor */
+}

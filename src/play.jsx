@@ -27,7 +27,7 @@ const HorizontalScroll = () => {
       {/* Subtitle next to image with Fade */}
       <TextFade direction="up" className="playground-subtitle-container">
         <LettersPullUp
-          text="Explore some of my projects outside of UX design!"
+          text="Explore some more of my work! ↓"
           className="playground-subtitle"
         />
       </TextFade>

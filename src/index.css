@@ -1,29 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-/* Navbar Styling */
 
-/* Navbar Styling */
+
+
+/* ---------------- Doodle Clicks ---------------- */
+#doodle-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* never block interactions */
+  z-index: 500; /* below navbar and buttons */
+}
+
+.click-doodle {
+  position: fixed;
+  width: 80px;   /* adjust size */
+  height: 80px;
+  pointer-events: none;
+  animation: popFade 0.6s ease-out forwards;
+}
+
+@keyframes popFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+/* ---------------- Navbar ---------------- */
 .navbar {
   background: #fff;
   height: 60px;
   display: flex;
   justify-content: center;
-  align-items: center; /* Vertically centers the content */
+  align-items: center;
   position: fixed;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 999;
   border-radius: 40px;
   border: 1px solid #ccc;
-  box-shadow: none;
   padding: 0 20px;
   width: auto;
+  z-index: 10000; /* always above doodles */
 }
 
-/* Navbar menu */
 .navbar__menu {
   display: flex;
-  align-items: center; /* Ensures the navbar items are centered vertically */
+  align-items: center;
   justify-content: center;
   list-style: none;
   font-size: 1.2rem;
@@ -31,7 +68,6 @@
   margin-right: 20px;
 }
 
-/* Navbar links styling */
 .navbar__links {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -39,21 +75,11 @@
   text-decoration: none;
   padding: 10px;
   position: relative;
-  transition: 
-    color 0.3s ease, 
-    font-weight 0.3s ease, 
-    padding 0.3s ease;
+  transition: color 0.3s ease, font-weight 0.3s ease, padding 0.3s ease;
+  display: inline-block;
+  will-change: transform; /* fixes hover animation issues */
 }
 
-/* Hamburger menu and other adjustments remain unchanged */
-
-/* Navbar container (for layout) */
-.navbar__container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-/* Hover effect on links */
 .navbar__links::after {
   content: "";
   position: absolute;
@@ -75,25 +101,6 @@
 
 .navbar__links:hover::after {
   transform: scaleX(1);
-}
-
-/* Hamburger menu (mobile) */
-.navbar__hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;  /* Adjust height */
-  cursor: pointer;
-  position: absolute;
-  top: 15px;  /* Position it a little lower than the top */
-}
-
-.navbar__hamburger div {
-  width: 100%;
-  height: 4px;
-  background-color: #ff6b6b;  /* Ensure visibility */
-  transition: all 0.3s ease;
 }
 
 /* Fixing underline hover effect for vertical monitors */
