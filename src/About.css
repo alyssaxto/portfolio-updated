@@ -140,6 +140,10 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+.no-break {
+  white-space: nowrap;
+  display: inline-block; /* keeps it inline but allows transforms if needed */
+}
 
 .about {
     background-color: #ffffff;

@@ -47,7 +47,7 @@ const Hero = () => {
       />
 
       <TextFade direction="up" className="hero__content">
-        <p style={{ marginTop: "4rem" }}>P.S. Click around the screen (˶ᵔ ᵕ ᵔ˶)ᯓ★</p>
+        <p style={{ marginTop: "4rem" }}>P.S. Click around the screen <span className="no-break">(˶ᵔ ᵕ ᵔ˶)ᯓ★</span></p>
       </TextFade>
     </section>
   );

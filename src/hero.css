@@ -14,6 +14,10 @@
     
 }
 
+.no-break {
+  white-space: nowrap;
+  display: inline-block; /* keeps it inline but allows transforms if needed */
+}
 
 
 /* Image styling */
