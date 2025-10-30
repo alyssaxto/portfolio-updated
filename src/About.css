@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
 
 
 .playgroundTitleContainer {
@@ -36,7 +38,9 @@
     padding: 0 1rem; /* Reduce padding */
   }
 }
-
+.no-break {
+  white-space: nowrap;
+}
 .polaroid-container {
   max-width: 1200px; /* Increase width of the container */
   margin: auto;
@@ -78,6 +82,14 @@
   margin-top: 10px;
   color:#000;
   font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+
+.polaroid-subtitle {
+  font-family: "Schoolbell", cursive;
+  color:#000;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 @media (max-width: 768px) {
