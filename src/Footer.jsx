@@ -11,7 +11,7 @@ function Footer() {
     <div className="footer__wrapper">
         <div className="footer__left">
             <h9>Thanks for stopping by!</h9>
-            <p>&copy; Alyssa To {new Date().getFullYear()}</p>
+            <p>&copy; Alyssa To {new Date().getFullYear()} (๑˃ᴗ˂)ﻭ</p>
             <p>Made with ♡ and vietnamese coffee</p>
         </div>
 

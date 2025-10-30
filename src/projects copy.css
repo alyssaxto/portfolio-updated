@@ -1,8 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.playgroundTitleContainer {
+  display: flex;
+  flex-direction: column; /* stack title and subtitle */
+  align-items: center; /* center horizontally */
+  flex-wrap: nowrap;
+  font-size: clamp(2rem, 6vw, 3rem); /* desktop & tablet scaling */
+}
 
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .playgroundTitleContainer {
+    font-size: clamp(1.2rem, 4vw, 2rem); /* scales nicely on small screens */
+  }
+}
+
+@media (max-width: 390px) {
+  .playgroundTitleContainer {
+    font-size: clamp(1rem, 3.5vw, 1.5rem); /* extra small screens */
+  }
+}
+
+.Playground {
+font-size: 7rem;
+  margin: 0; /* remove default margins from the title */
+}
+
+.carousel-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #555;
+  margin-top: 0rem; /* spacing under title */
+}
+
+
+.carousel-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;      /* horizontal scroll */
+  overflow-y: hidden;    /* prevent vertical scroll */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  padding-bottom: 10px;
+  height: 450px;         /* lock height to image height */
+}
+
+
+.carousel-scroll.dragging {
+  cursor: grabbing;
+}
+
+.carousel-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: scale(1.1); /* scales the whole container */
+}
+
+.carousel-image {
+  width: 300px;
+  height: 450px; /* taller */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1); /* container scaling handles hover */
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .carousel-image {
+    width: 250px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-image {
+    width: 200px;
+    height: 300px;
+  }
+}
 /* --- GLOBAL --- */
 body {
   font-family: "Poppins", sans-serif;
+}
+/* Full viewport hero */
+.welcome-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  text-align: center;
+  height: 100vh;           /* full viewport height */
+  width: 100%;
+  padding: 0 1rem;         /* optional horizontal padding */
+  gap: 2rem;               /* space between title, image, subtitle */
+
+  /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  box-sizing: border-box;  /* include padding in width */
+}
+
+/* Optional adjustments for smaller screens */
+@media (max-width: 768px) {
+  .welcome-hero {
+    gap: 1.5rem;
+  }
+
+  .projects-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .playground-image img {
+    max-width: 80%;
+  }
+
+  .playground-subtitle-container {
+    font-size: 1rem;
+  }
 }
 
 /* --- PROJECTS TITLE --- */
@@ -19,6 +144,7 @@ body {
     font-size: 1.25rem;
     font-family: poppins;
     text-align: center;
+      color: #555;
   margin-bottom: 2rem; /* Less space from the image */
   text-align: center;
 }

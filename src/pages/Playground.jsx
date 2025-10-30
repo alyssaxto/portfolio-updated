@@ -7,7 +7,6 @@ function Playground() {
   return (
     <>
       <Play />
-      <Artwork />
     </>
   );
 }
