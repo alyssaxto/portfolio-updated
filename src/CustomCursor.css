@@ -1,6 +1,7 @@
+/* --- Desktop Custom Cursor --- */
 .custom-cursor {
   position: fixed;
-  width: 32px; /* match your image size */
+  width: 32px; /* match your cursor image size */
   height: 32px;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -13,11 +14,22 @@
 }
 
 body {
-  cursor: none; /* hide default system cursor */
+  cursor: none; /* hide default system cursor on desktop */
 }
-/* Remove custom cursor on smaller screens */
+
+/* --- Mobile / Touch Devices --- */
 @media (hover: none), (max-width: 768px) {
-  .carousel-scroll, .carousel-item {
-    cursor: default !important;
+  body {
+    cursor: auto; /* restore system cursor */
+  }
+
+  .custom-cursor {
+    display: none !important; /* hide custom cursor */
+  }
+
+  /* Optional: restore normal cursor for draggable elements */
+  .carousel-scroll,
+  .carousel-item {
+    cursor: grab; /* normal draggable hand icon */
   }
 }
