@@ -5,34 +5,18 @@ import BpxGA from "/assets/GA/7.png";
 import MVP from "/assets/mvp/5.png";
 import BB from "/assets/budgetbuddy.png";
 import pink from "/assets/thinkpink/tp10.png";
-import Playground from "/assets/playground.png";
 import { LettersPullUp } from "./Components/letters-pull-up";
-import { TextFade } from "./Components/TextFade";
-import "./Components/HorizontalScroll/horizontalScroll.css";
 import "./projects copy.css";
 
-const HorizontalScroll = () => {
+const ProjectsGrid = () => {
   return (
-    <>
-      {/* Main Title */}
-      <div className="welcome-container">
-        <LettersPullUp text="Welcome to my" className="projects-title" />
+    <section className="projects-section">
+
+      {/* Extra Title on Top */}
+      <div className="playgroundTitleContainer">
+        <LettersPullUp text="Extra" className="Playground" />
       </div>
 
-      {/* Playground Image with Fade */}
-      <TextFade direction="up" className="playground-image">
-        <img src={Playground} alt="Playground" />
-      </TextFade>
-
-      {/* Subtitle next to image with Fade */}
-      <TextFade direction="up" className="playground-subtitle-container">
-        <LettersPullUp
-          text="Explore some more of my work! ↓"
-          className="playground-subtitle"
-        />
-      </TextFade>
-
-      {/* Projects Grid */}
       <div className="Projects">
         <div className="Projects__wrapper index">
           <a href="/bpxGA" className="Projects__card">
@@ -69,8 +53,8 @@ const HorizontalScroll = () => {
           </a>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
-export default HorizontalScroll;
+export default ProjectsGrid;

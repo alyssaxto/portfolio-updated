@@ -13,12 +13,14 @@ body {
   white-space: nowrap;
   color: #555;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  
 
 }
 .playground-subtitle-container {
     font-size: 1.25rem;
     font-family: poppins;
     text-align: center;
+      color: #555;
   margin-bottom: 2rem; /* Less space from the image */
   text-align: center;
 }
