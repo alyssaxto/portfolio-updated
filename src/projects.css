@@ -1,29 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-.hero-section {
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertically center content */
-  align-items: center;     /* horizontally center content */
-  text-align: center;
-  padding: 0 1rem;         /* optional side padding */
-  box-sizing: border-box;
-}
-
-.playground-image img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 16px;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.welcome-container,
-.playground-subtitle-container {
-  margin: 0.5rem 0; /* reduces extra space */
-}
-
-
 
 /* Default styles (for larger screens) */
 .projects-title {
