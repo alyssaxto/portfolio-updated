@@ -15,6 +15,25 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 
 }
+.playground-subtitle-container {
+    font-size: 1.25rem;
+    font-family: poppins;
+    text-align: center;
+  margin-bottom: 2rem; /* Less space from the image */
+  text-align: center;
+}
+
+.playground-subtitle {
+  display: inline-flex !important;   /* override any flex-direction from LettersPullUp */
+  flex-direction: row !important;    /* force horizontal layout */
+  flex-wrap: wrap;                    /* wrap text if needed */
+  justify-content: center;            /* center text under image */
+}
+
+.playground-subtitle span {
+  display: inline-block; /* keeps letters horizontal */
+  margin: 0 0.05em;      /* optional spacing between letters */
+}
 
 /* --- TITLE CONTAINER --- */
 .title-container {

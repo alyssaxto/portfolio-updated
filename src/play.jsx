@@ -5,29 +5,42 @@ import BpxGA from "/assets/GA/7.png";
 import MVP from "/assets/mvp/5.png";
 import BB from "/assets/budgetbuddy.png";
 import pink from "/assets/thinkpink/tp10.png";
-import "./Components/HorizontalScroll/horizontalScroll.css";
-import { LettersPullUp } from "./Components/letters-pull-up";
-import { Link } from "react-router-dom";
-import "./projects copy.css";
 import Playground from "/assets/playground.png";
+import { LettersPullUp } from "./Components/letters-pull-up";
+import { TextFade } from "./Components/TextFade";
+import "./Components/HorizontalScroll/horizontalScroll.css";
+import "./projects copy.css";
 
 const HorizontalScroll = () => {
   return (
     <>
+      {/* Main Title */}
       <div className="welcome-container">
         <LettersPullUp text="Welcome to my" className="projects-title" />
       </div>
 
-      <div className="playground-image">
+      {/* Playground Image with Fade */}
+      <TextFade direction="up" className="playground-image">
         <img src={Playground} alt="Playground" />
-      </div>
+      </TextFade>
 
+      {/* Subtitle next to image with Fade */}
+      <TextFade direction="up" className="playground-subtitle-container">
+        <LettersPullUp
+          text="Explore some of my projects outside of UX design!"
+          className="playground-subtitle"
+        />
+      </TextFade>
+
+      {/* Projects Grid */}
       <div className="Projects">
         <div className="Projects__wrapper index">
           <a href="/bpxGA" className="Projects__card">
             <img src={BpxGA} alt="bpxGA" />
             <h2>bp x GA Bootcamp</h2>
-            <p>Designing badges for new grad designers to display on their profiles after completing a 12-week bootcamp.</p>
+            <p>
+              Designing badges for new grad designers to display on their profiles after completing a 12-week bootcamp.
+            </p>
           </a>
           <a href="/MVP" className="Projects__card">
             <img src={MVP} alt="MVP" />
@@ -61,4 +74,3 @@ const HorizontalScroll = () => {
 };
 
 export default HorizontalScroll;
-
