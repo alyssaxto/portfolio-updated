@@ -15,3 +15,9 @@
 body {
   cursor: none; /* hide default system cursor */
 }
+/* Remove custom cursor on smaller screens */
+@media (hover: none), (max-width: 768px) {
+  .carousel-scroll, .carousel-item {
+    cursor: default !important;
+  }
+}
