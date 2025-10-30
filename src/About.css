@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Reenie+Beanie&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
 .playgroundTitleContainer {
   display: flex;
@@ -78,7 +79,12 @@
   margin-top: 10px;
   color:#000;
   font-size: 2rem;
-  margin-bottom: 10px;
+}
+
+.polaroid-subtitle {
+  font-family: "Schoolbell", cursive;
+  color:#000;
+  font-size: 1rem;
 }
 @media (max-width: 768px) {
   .polaroid-container {

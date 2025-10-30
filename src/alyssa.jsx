@@ -30,10 +30,12 @@ const AboutAndGallery = () => {
         <div className="polaroid-container">
         <TextFade direction="up">
   <div className="polaroid-wrapper">
-    <div className="polaroid-item">
-      <img src="/assets/me.png" alt="Making YouTube videos" className="polaroid-image" />
-      <h2 className="polaroid-caption">Making YouTube Videos</h2>
-    </div>
+<div className="polaroid-item">
+  <img src="/assets/me.png" alt="Making YouTube videos" className="polaroid-image" />
+  <h2 className="polaroid-caption">Making YouTube Videos</h2>
+  <span className="polaroid-subtitle">(Rare photo of me at 15!)</span>
+</div>
+
     <div className="polaroid-item">
       <img src="/assets/pc.png" alt="Building computers" className="polaroid-image" />
       <h2 className="polaroid-caption">Building Computers</h2>
@@ -54,11 +56,12 @@ const AboutAndGallery = () => {
     </div>
     <div className="polaroid-item">
       <img src="/assets/hack.png" alt="Building computers" className="polaroid-image" />
-      <h2 className="polaroid-caption">Attending Hackathons</h2>
+      <h2 className="polaroid-caption">Traveling</h2>
+        <span className="polaroid-subtitle">(Me in Tokyo, Japan)</span>
     </div>
     <div className="polaroid-item">
       <img src="/assets/valorant.jpg" alt="Attending hackathons" className="polaroid-image" />
-      <h2 className="polaroid-caption">Deranking on Valorant</h2>
+      <h2 className="polaroid-caption">Exploring cafes</h2>
     </div>
   </div>
   
