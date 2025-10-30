@@ -15,8 +15,8 @@
 
 .click-doodle {
   position: fixed;
-  width: 80px;   /* adjust size */
-  height: 80px;
+  width: 150px;   /* adjust size */
+  height: 150px;
   pointer-events: none;
   animation: popFade 0.6s ease-out forwards;
 }
