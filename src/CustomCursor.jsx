@@ -1,38 +1,31 @@
 import React, { useEffect, useState } from "react";
-import "./CustomCursor.css";
-import cursorImg from "/assets/cursor.png"; // 👈 Import your image
+import customCursor from "/assets/cursor.png";
 
 const CustomCursor = () => {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-  const [hovered, setHovered] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const move = (e) => setPos({ x: e.clientX, y: e.clientY });
-    window.addEventListener("mousemove", move);
-
-    const add = () => setHovered(true);
-    const remove = () => setHovered(false);
-
-    document.querySelectorAll("a, button").forEach((el) => {
-      el.addEventListener("mouseenter", add);
-      el.addEventListener("mouseleave", remove);
-    });
-
-    return () => {
-      window.removeEventListener("mousemove", move);
-      document.querySelectorAll("a, button").forEach((el) => {
-        el.removeEventListener("mouseenter", add);
-        el.removeEventListener("mouseleave", remove);
-      });
+    const moveCursor = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
     };
+    window.addEventListener("mousemove", moveCursor);
+    return () => window.removeEventListener("mousemove", moveCursor);
   }, []);
 
   return (
     <img
-      src={cursorImg}
-      alt="custom cursor"
-      className={`custom-cursor ${hovered ? "hovered" : ""}`}
-      style={{ left: `${pos.x}px`, top: `${pos.y}px` }}
+      src={customCursor}
+      alt="cursor"
+      style={{
+        position: "fixed",
+        left: position.x,
+        top: position.y,
+        width: "48px",    // bigger size
+        height: "48px",   // bigger size
+        pointerEvents: "none",
+        transform: "translate(-50%, -50%)",
+        zIndex: 9999,
+      }}
     />
   );
 };

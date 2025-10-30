@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./hero.css";
 import heroImage from "/assets/hero.png";
-import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
+import { TextFade } from "./Components/TextFade";
 
 const Hero = () => {
   const [offset, setOffset] = useState(0);
@@ -15,27 +15,41 @@ const Hero = () => {
   }, []);
 
   return (
-<section className="hero" id="home">
-  <TextFade direction="up" className="hero__content">
-    <h4>Hey, I’m Alyssa!</h4>
-    <p>
-      I’m a <a href="#projects" className="highlight">designer</a> and <a href="/playground" span className="highlight">artist</a> making
-      playful and purposeful products. After hours, I like to create
-      <span className="highlight"> youtube </span> videos!
-    </p>
-    <p>UX Designer @ <a href="https://www.bp.com" className="greenhighlight" target="_blank" rel="noopener noreferrer">bp</a></p>
-  </TextFade>
+    <section className="hero" id="home">
+      <TextFade direction="up" className="hero__content">
+        <h4>Hey, I’m Alyssa!</h4>
+        <p>
+          I’m a <a href="#projects" className="highlight">designer</a> and{" "}
+          <a href="/playground" className="highlight">artist</a> making
+          playful and purposeful products. After hours, I like to create
+          <span className="highlight"> youtube </span> videos!
+        </p>
+        <p>
+          UX Designer @{" "}
+          <a
+            href="https://www.bp.com"
+            className="greenhighlight"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            bp
+          </a>
+        </p>
+      </TextFade>
 
-  <img
-    src={heroImage}
-    alt="Alyssa on a bike"
-    className="hero__image"
-    style={{
-      transform: `translateX(${Math.min(0, -offset * 0.1)}px)`, // Moves the image left as you scroll
-    }}
-  />
-</section>
+      <img
+        src={heroImage}
+        alt="Alyssa on a bike"
+        className="hero__image"
+        style={{
+          transform: `translateX(${Math.min(0, -offset * 0.1)}px)`,
+        }}
+      />
 
+      <TextFade direction="up" className="hero__content">
+        <p style={{ marginTop: "4rem" }}>P.S. Click around the screen (˶ᵔ ᵕ ᵔ˶)ᯓ★</p>
+      </TextFade>
+    </section>
   );
 };
 

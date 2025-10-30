@@ -19,7 +19,9 @@ import Password from "./PasswordProtected.jsx";
 import Password2 from "./PasswordProtected2.jsx";
 import Footer from "./Footer.jsx";
 
-// Import doodle images
+import CustomCursor from "./CustomCursor";
+
+// Doodle images
 import doodle1 from "/assets/doodle1.png";
 import doodle2 from "/assets/doodle2.png";
 import doodle3 from "/assets/doodle3.png";
@@ -28,14 +30,15 @@ const doodles = [doodle1, doodle2, doodle3];
 
 function App() {
   const [clicks, setClicks] = useState([]);
+  const [doodleIndex, setDoodleIndex] = useState(0); // Track next doodle in order
 
   useEffect(() => {
     const handleClick = (e) => {
-      // Ignore clicks inside navbar, login container, buttons, links, and inputs
+      // Ignore clicks inside navbar, login container, buttons, links, inputs
       if (e.target.closest(".navbar, .login-container, button, a, input, textarea"))
         return;
 
-      const doodle = doodles[Math.floor(Math.random() * doodles.length)];
+      const doodle = doodles[doodleIndex];
       const newClick = {
         id: Date.now(),
         x: e.clientX,
@@ -45,18 +48,24 @@ function App() {
 
       setClicks((prev) => [...prev, newClick]);
 
+      // Move to next doodle in order
+      setDoodleIndex((prev) => (prev + 1) % doodles.length);
+
       setTimeout(() => {
         setClicks((prev) => prev.filter((c) => c.id !== newClick.id));
-      }, 600); // snappy animation duration
+      }, 400); // match fast animation
     };
 
     window.addEventListener("click", handleClick);
     return () => window.removeEventListener("click", handleClick);
-  }, []);
+  }, [doodleIndex]);
 
   return (
     <>
-      {/* Doodle click layer (behind interactive elements) */}
+      {/* Floating custom cursor */}
+      <CustomCursor />
+
+      {/* Doodle click layer */}
       <div id="doodle-layer">
         {clicks.map((click) => (
           <img
