@@ -24,7 +24,7 @@ body, a, button, input, textarea, select, img {
   width: 100%;
   height: 100%;
   pointer-events: none; /* never block clicks */
-  z-index: 1000; /* behind navbar */
+  z-index: 10; /* behind navbar */
 }
 
 .click-doodle {
