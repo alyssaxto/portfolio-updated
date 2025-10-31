@@ -33,6 +33,9 @@ font-size: 7rem;
   margin-top: 0rem; /* spacing under title */
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .carousel-scroll {
   display: flex;
@@ -45,6 +48,56 @@ font-size: 7rem;
   padding-bottom: 10px;
   height: 450px;         /* lock height to image height */
 }
+
+/* Container for the link */
+.carousel-link-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+/* Link itself */
+.carousel-link-wrapper a {
+  color: #555;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem; /* adjust size for mobile */
+}
+
+/* Underline using pseudo-element */
+.carousel-link-wrapper a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* adjust for line placement */
+  width: 0;
+  height: 2px;
+  background: #ff4f4f;
+  transition: width 0.3s;
+}
+
+/* Hover effect for desktop */
+@media (hover: hover) {
+  .carousel-link-wrapper a:hover::after {
+    width: 100%;
+  }
+  .carousel-link-wrapper a:hover {
+    color: #ff4f4f;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-link-wrapper a::after {
+    width: 0; /* start hidden */
+  }
+
+  /* Show underline only while active (being tapped) */
+  .carousel-link-wrapper a:active::after {
+    width: 100%;
+  }
+}
+
+
 
 
 .carousel-scroll.dragging {
@@ -122,7 +175,7 @@ body {
   }
 
   .playground-image img {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .playground-subtitle-container {
@@ -330,15 +383,12 @@ h1 a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.25rem;
-  margin-bottom: 2rem;
 }
 
 .playground-image img {
   width: 100%;
-  max-width: 90vh; /* smaller image */
+  max-width: 95vh; /* smaller image */
   height: auto;
-  border-radius: 16px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
