@@ -14,33 +14,37 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none; /* never block clicks */
-  z-index: 500; /* behind navbar */
+  z-index: 1000; /* behind navbar */
 }
 
 .click-doodle {
   position: fixed;
-  width: 150px;   /* default size */
+  width: 150px;
   height: 150px;
   pointer-events: none;
-  animation: popFade 0.4s ease-out forwards;
+  animation: popFade 1.5s forwards;
 }
 
 @keyframes popFade {
   0% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.4);
+    transform: translate(-50%, -50%) scale(0.4); /* start tiny */
   }
   20% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.3); /* pop big */
   }
-  60% {
+  50% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1); /* settle */
+  }
+  80% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(0.3); /* shrink visibly */
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0); /* vanish completely */
   }
 }
 
@@ -68,7 +72,7 @@ body {
   border: 1px solid #ccc;
   padding: 0 20px;
   width: auto;
-  z-index: 10000; /* always above doodles */
+  z-index: 9000; /* always above doodles */
 }
 
 .navbar__menu {
