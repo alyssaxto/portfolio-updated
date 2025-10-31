@@ -48,10 +48,7 @@ body, a, button, input, textarea, select, img {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); /* settle */
   }
-  80% {
-    opacity: 0.7;
-    transform: translate(-50%, -50%) scale(0.3); /* shrink visibly */
-  }
+
   100% {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0); /* vanish completely */
