@@ -56,8 +56,8 @@ const CustomCursor = () => {
     >
       {hoverText && (
         <span className="cursor-text">
-          <span className="bracket">[</span>click me!
-          <span className="bracket">]</span>
+          <span className="bracket">[</span> click me!
+          <span className="bracket"> ]</span>
         </span>
       )}
     </div>

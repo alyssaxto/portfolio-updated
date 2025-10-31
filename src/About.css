@@ -37,6 +37,10 @@
     padding: 0 1rem; /* Reduce padding */
   }
 }
+.no-break {
+  white-space: nowrap;
+}
+
 
 .polaroid-container {
   max-width: 1200px; /* Increase width of the container */
@@ -44,10 +48,6 @@
   text-align: center;
   margin-bottom: 50px;
 }
-.no-break {
-  white-space: nowrap;
-}
-
 
 .polaroid-wrapper {
   display: flex;
@@ -92,25 +92,36 @@
 }
 @media (max-width: 768px) {
   .polaroid-container {
-    min-height: 100vh; /* Ensure the container is tall enough */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-bottom: 40px;
-  }
-  .polaroid-item {
-    width: 90%; /* Full width on mobile */
-    max-width: 100%;
-    
+    justify-content: flex-start; /* top-align */
+    padding: 20px 10px 40px;
+    overflow: visible; /* allow scaled items to overflow */
   }
 
   .polaroid-wrapper {
-    gap: 20px; /* Reduce gap for better mobile spacing */
-    flex-wrap: wrap; /* Prevent wrapping */
+    display: flex;
+    flex-direction: column; /* single column */
+    gap: 20px; /* spacing between items */
+    overflow: visible; /* important: allow scale outside */
+    align-items: center; /* center the items horizontally */
+    width: 100%;
+  }
 
+  .polaroid-item {
+    width: 90%; /* give room for scaling */
+    max-width: 350px; /* same as desktop max */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .polaroid-item:hover {
+    transform: scale(1.05); /* slightly smaller scale on mobile */
+    z-index: 10; /* bring hovered item above others */
   }
 }
+
 
 .carousel-container {
   width: 100%;

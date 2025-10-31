@@ -189,10 +189,13 @@ body {
   font-size: clamp(2rem, 2.5vw, 4rem);
   text-align: center;
   white-space: nowrap;
-  color: #555;
+  color: transparent; /* necessary for gradient text */
+  background: #FF4F4F;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* for Safari */
   transition: transform 0.3s ease, opacity 0.3s ease;
-
 }
+
 .playground-subtitle-container {
     font-size: 1.25rem;
     font-family: poppins;

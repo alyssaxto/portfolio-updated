@@ -25,6 +25,16 @@ const InfiniteCarousel = () => {
   const [velocity, setVelocity] = useState(0);
   const momentumRef = useRef(null);
 
+  // State to detect mobile
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  // Update mobile state on resize
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // triple the images for smooth infinite loop
   const loopImages = [...images, ...images, ...images];
 
@@ -100,12 +110,13 @@ const InfiniteCarousel = () => {
   return (
     <div className="carousel-container">
       <div className="playgroundTitleContainer">
-  <LettersPullUp text="Doodles" className="projects-title" />
-<p className="carousel-subtitle">
-  Use the left and right arrows! 
-  <span className="no-break text-emoji">(⊃｡•́‿•̀｡)⊃ ⟷</span>
-</p>
-
+        <LettersPullUp text="Doodles" className="projects-title" />
+        <p className="carousel-subtitle">
+          {isMobile
+            ? "Scroll left to right!"
+            : "Use the left and right arrows!"}{" "}
+          <span className="no-break text-emoji">(⊃｡•́‿•̀｡)⊃ ⟷</span>
+        </p>
       </div>
 
       <div
