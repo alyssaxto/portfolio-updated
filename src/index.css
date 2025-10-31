@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Hide the default cursor globally */
-body {
-  cursor: none;
+/* Hide default cursor everywhere */
+body, a, button, input, textarea, select, img {
+  cursor: none !important;
 }
+
+/* Optional: keep custom cursor functional on desktop */
+.custom-cursor {
+  display: block; /* make sure it's visible */
+}
+
 
 
 /* ---------------- Doodle Clicks ---------------- */
