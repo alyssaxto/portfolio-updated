@@ -5,7 +5,7 @@ function Footer() {
     return (
 <footer className="footer">
     <div className="linedivider">
-        <span className="emoji">✨</span>
+<span className="emoji text-emoji">✨</span>
     </div>
     
     <div className="footer__wrapper">
