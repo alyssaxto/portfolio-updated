@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Customcursor.css";
+import "./CustomCursor.css";
  
 const CustomCursor = () => {
   const [isMobile, setIsMobile] = useState(false);
