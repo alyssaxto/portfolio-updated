@@ -101,7 +101,7 @@ const InfiniteCarousel = () => {
     <div className="carousel-container">
       <div className="playgroundTitleContainer">
   <LettersPullUp text="Doodles" className="projects-title" />
-        <p className="carousel-subtitle">Use the left and right arrows! (⊃｡•́‿•̀｡)⊃ ↔</p>
+        <p className="carousel-subtitle">Use the left and right arrows! <span className="no-break">(⊃｡•́‿•̀｡)⊃ 🡨 🡪</span></p>
       </div>
 
       <div

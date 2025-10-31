@@ -18,12 +18,22 @@ const Hero = () => {
     <section className="hero" id="home">
       <TextFade direction="up" className="hero__content">
         <h4>Hey, I’m Alyssa!</h4>
-        <p>
-          I’m a <a href="#projects" className="highlight">designer</a> and{" "}
-          <a href="/playground" className="highlight">artist</a> making
-          playful and purposeful products. After hours, I like to create
-          <span className="highlight"> youtube </span> videos!
-        </p>
+<p>
+  I’m a <a href="#projects" className="highlight">designer</a> and{" "}
+  <a href="/playground" className="highlight">artist</a> making
+  playful and purposeful products. After hours, I like to create{" "}
+<a 
+  href="https://www.youtube.com/@seontbh" 
+  className="highlight" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  youtube&nbsp;
+</a>
+videos!
+
+</p>
+
         <p>
           UX Designer @{" "}
           <a

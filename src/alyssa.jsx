@@ -18,7 +18,7 @@ const AboutAndGallery = () => {
   Hi, I'm Alyssa! <span className="no-break">(｡˃ ᵕ ˂ )⸝♡</span>
 </h1>  
               <p>
-                Nice to meet you! I’m a recent graduate from <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="pink-link" target="_blank" rel="noopener noreferrer">the University of Texas @ Dallas</a> with a Bachelors of Arts, Technology, and Emerging Communications and a concentration on <a href="/#Projects" className="pink-link">UX Design.</a><br /><br />
+                Nice to meet you! I’m a recent graduate from <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="pink-link" target="_blank" rel="noopener noreferrer">UTD</a> with a Bachelors of Arts, Technology, and Emerging Communications and a concentration on <a href="/#Projects" className="pink-link">UX Design.</a><br /><br />
               </p>
               <p>
                 Ever since I was young, I knew I was meant to do something with art. I grew up drawing for fun and realized it was something you could actually do for a living after making youtube videos. From there, I discovered UX design and fell in love with it.

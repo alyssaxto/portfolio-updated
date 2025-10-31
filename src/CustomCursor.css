@@ -1,35 +1,56 @@
-/* --- Desktop Custom Cursor --- */
 .custom-cursor {
   position: fixed;
-  width: 32px; /* match your cursor image size */
-  height: 32px;
+  width: 40px;
+  height: 40px;
+  background-image: url("/assets/cursor.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
   transition: transform 0.15s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .custom-cursor.hovered {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-body {
-  cursor: none; /* hide default system cursor on desktop */
+.cursor-text {
+  position: absolute;
+  top: 45px;
+  background: #ff4f4f; /* 🔴 red background */
+  color: white; /* white text */
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
-/* --- Mobile / Touch Devices --- */
+.cursor-text .bracket {
+  color: white; /* 🩶 white brackets */
+  font-weight: 700;
+}
+
+/* Hide system cursor on desktop */
+body {
+  cursor: none;
+}
+
+/* Hide on mobile / touch */
 @media (hover: none), (max-width: 768px) {
   body {
-    cursor: auto; /* restore system cursor */
+    cursor: auto;
   }
 
   .custom-cursor {
-    display: none !important; /* hide custom cursor */
-  }
-
-  /* Optional: restore normal cursor for draggable elements */
-  .carousel-scroll,
-  .carousel-item {
-    cursor: grab; /* normal draggable hand icon */
+    display: none !important;
   }
 }
