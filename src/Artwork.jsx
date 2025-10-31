@@ -103,8 +103,9 @@ const InfiniteCarousel = () => {
   <LettersPullUp text="Doodles" className="projects-title" />
 <p className="carousel-subtitle">
   Use the left and right arrows! 
-<span className="no-break">(⊃｡•́‿•̀｡)⊃ &#8596;</span> 
+  <span className="no-break text-emoji">(⊃｡•́‿•̀｡)⊃ ⟷</span>
 </p>
+
       </div>
 
       <div
