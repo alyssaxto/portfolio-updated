@@ -25,38 +25,35 @@ const InfiniteCarousel = () => {
   const [currentDot, setCurrentDot] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Update mobile state on resize
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Triple images for infinite effect
   const loopImages = [...images, ...images, ...images];
 
   // Drag/Swipe handlers
-  const onMouseDown = (e) => {
+  const onDragStart = (x) => {
     setIsDragging(true);
-    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setStartX(x - scrollRef.current.offsetLeft);
     setScrollStart(scrollRef.current.scrollLeft);
   };
-  const onMouseLeave = () => onMouseUp();
-  const onMouseUp = () => setIsDragging(false);
-  const onMouseMove = (e) => {
+
+  const onDragMove = (x) => {
     if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - scrollRef.current.offsetLeft;
     const delta = (x - startX) * 2;
     scrollRef.current.scrollLeft = scrollStart - delta;
+    scrollRef.current.scrollTop = 0; // lock vertical scroll
   };
 
-  // Infinite loop logic
+  const onDragEnd = () => setIsDragging(false);
+
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
     const scrollWidth = container.scrollWidth / 3;
-    container.scrollLeft = scrollWidth; // start in the middle
+    container.scrollLeft = scrollWidth;
 
     const loop = () => {
       if (container.scrollLeft >= scrollWidth * 2) container.scrollLeft -= scrollWidth;
@@ -66,7 +63,6 @@ const InfiniteCarousel = () => {
     requestAnimationFrame(loop);
   }, []);
 
-  // Arrow button handlers (scroll one item at a time)
   const scrollByItem = (direction = "next") => {
     if (!scrollRef.current) return;
     const container = scrollRef.current;
@@ -81,7 +77,6 @@ const InfiniteCarousel = () => {
     container.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
-  // Keyboard navigation
   useEffect(() => {
     const handleArrowKeys = (e) => {
       if (!isMobile) {
@@ -93,7 +88,6 @@ const InfiniteCarousel = () => {
     return () => window.removeEventListener("keydown", handleArrowKeys);
   }, [isMobile]);
 
-  // Update current dot based on scroll
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
@@ -111,7 +105,6 @@ const InfiniteCarousel = () => {
     return () => container.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to a dot when clicked
   const scrollToDot = (index) => {
     if (!scrollRef.current) return;
     const container = scrollRef.current;
@@ -121,7 +114,7 @@ const InfiniteCarousel = () => {
     const itemWidth = item.offsetWidth + parseInt(style.marginRight);
 
     container.scrollTo({
-      left: container.scrollWidth / 3 + index * itemWidth, // offset middle copy
+      left: container.scrollWidth / 3 + index * itemWidth,
       behavior: "smooth"
     });
   };
@@ -131,35 +124,32 @@ const InfiniteCarousel = () => {
       <div className="playgroundTitleContainer">
         <LettersPullUp text="Doodles" className="projects-title" />
         <p className="carousel-subtitle">
-          {isMobile
-            ? "Swipe left or right!"
-            : "Use the arrows below!"}{" "}
+          {isMobile ? "Swipe left or right!" : "Use the arrows below!"}{" "}
           <span className="no-break text-emoji">(⊃｡•́‿•̀｡)⊃ ⟷</span>
         </p>
       </div>
 
-<div
-  className={`carousel-scroll`}
-  ref={scrollRef}
-  {...(isMobile
-    ? {
-        onMouseDown: (e) => onMouseDown(e),
-        onMouseUp: onMouseUp,
-        onMouseLeave: onMouseLeave,
-        onMouseMove: (e) => onMouseMove(e),
-        onTouchStart: (e) => onMouseDown(e.touches[0]),
-        onTouchMove: (e) => onMouseMove(e.touches[0]),
-        onTouchEnd: onMouseUp,
-      }
-    : {})}
->
-  {loopImages.map((src, index) => (
-    <div className="carousel-item" key={index}>
-      <img src={src} alt={`carousel-${index}`} className="carousel-image" />
-    </div>
-  ))}
-</div>
-
+      <div
+        className={`carousel-scroll ${isDragging ? "dragging" : ""}`}
+        ref={scrollRef}
+        {...(isMobile
+          ? {
+              onMouseDown: (e) => onDragStart(e.pageX),
+              onMouseMove: (e) => onDragMove(e.pageX),
+              onMouseUp: onDragEnd,
+              onMouseLeave: onDragEnd,
+              onTouchStart: (e) => onDragStart(e.touches[0].pageX),
+              onTouchMove: (e) => onDragMove(e.touches[0].pageX),
+              onTouchEnd: onDragEnd,
+            }
+          : {})}
+      >
+        {loopImages.map((src, index) => (
+          <div className="carousel-item" key={index}>
+            <img src={src} alt={`carousel-${index}`} className="carousel-image" />
+          </div>
+        ))}
+      </div>
 
       {/* Dots */}
       <div className="carousel-dots">
@@ -176,12 +166,24 @@ const InfiniteCarousel = () => {
       <div className="carousel-controls">
         <button className="carousel-arrow" onClick={() => scrollByItem("prev")}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18l-6-6 6-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path
+              d="M15 18l-6-6 6-6"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
         <button className="carousel-arrow" onClick={() => scrollByItem("next")}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M9 6l6 6-6 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path
+              d="M9 6l6 6-6 6"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
       </div>

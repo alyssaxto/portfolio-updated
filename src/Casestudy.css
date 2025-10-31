@@ -129,35 +129,46 @@ h3 {
   margin: 0;
 }
 
+/* BentoBox Fix */
 .BentoBox {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between each box */
-  justify-content: center; /* Centers the items inside BentoBox */
-  max-width: 1000px; /* Ensure the BentoBox does not exceed 1000px width */
-  margin: 0 auto; /* Centers the BentoBox within the parent container */
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .BentoBox__wrapper {
   display: flex;
-  width: 90%; /* Ensures two items per row */
-  gap: 20px; /* Space between items */
+  flex: 1 1 100%;
+  gap: 20px;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  justify-content: center;
 }
 
 .BentoBox__item {
   border-radius: 8px;
+  flex: 1 1 45%; /* two items per row by default, shrinks on smaller screens */
+  max-width: 400px; /* optional max width */
 }
 
 .BentoBox__item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure images cover the box without distortion */
+  height: auto; /* maintain aspect ratio */
+  object-fit: contain; /* prevents cropping */
   border-radius: 8px;
+  display: block;
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
+  .BentoBox__item {
+    flex: 1 1 90%; /* one item per row on mobile */
+  }
+
   .BentoBox__wrapper {
-    width: 90%; /* Make each item take full width on smaller screens */
+    gap: 15px;
   }
 }
 

@@ -94,9 +94,13 @@ html {
 
 .carousel-scroll {
   display: flex;
-  overflow-x: auto; /* must be scrollable */
-  scroll-behavior: smooth;       /* lock height to image height */
+    touch-action: pan-x; /* allow horizontal pan only */
+  overflow-x: auto; /* horizontal scroll */
+  overflow-y: hidden; /* prevent vertical scroll */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* smooth momentum on iOS */
 }
+
 
 /* Container for the link */
 .carousel-link-wrapper {

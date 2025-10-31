@@ -89,8 +89,7 @@ const Top = () => (
         <div className="summary-text">
           <h1>Why HackUTD?</h1>
           <p>
-          In my first year of college, I really didn't find the community I was looking for. I learnt of HackUTD from a member of UX club and never looked back!
-          </p>
+I’ve always loved building and creating, and I wanted to share that passion with others. Organizing HackUTD gave me the chance not only to inspire fellow students to bring their projects to life, but also to connect with other like-minded peers.</p>
         </div>
       </div>
     </div>
