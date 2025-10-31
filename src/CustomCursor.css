@@ -21,8 +21,8 @@
 .cursor-text {
   position: absolute;
   top: 45px;
-  background: #ff4f4f; /* 🔴 red background */
-  color: white; /* white text */
+  background: #ff4f4f;
+  color: white;
   font-size: 12px;
   padding: 4px 8px;
   border-radius: 6px;
@@ -30,27 +30,31 @@
   font-weight: 500;
   pointer-events: none;
   white-space: nowrap;
-  user-select: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
-.cursor-text .bracket {
-  color: white; /* 🩶 white brackets */
-  font-weight: 700;
-}
-
-/* Hide system cursor on desktop */
 body {
   cursor: none;
 }
 
-/* Hide on mobile / touch */
 @media (hover: none), (max-width: 768px) {
-  body {
-    cursor: auto;
-  }
+  body { cursor: auto; }
+  .custom-cursor { display: none !important; }
+}
 
-  .custom-cursor {
-    display: none !important;
-  }
+/* Sparkles */
+.sparkle {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  animation: sparkle-fade 0.8s forwards;
+  z-index: 9998;
+}
+
+@keyframes sparkle-fade {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  100% { opacity: 0; transform: translate(var(--x), var(--y)) scale(0.5) rotate(45deg); }
 }
