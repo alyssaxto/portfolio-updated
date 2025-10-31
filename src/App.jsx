@@ -32,33 +32,39 @@ function App() {
   const [clicks, setClicks] = useState([]);
   const [doodleIndex, setDoodleIndex] = useState(0); // Track next doodle in order
 
-  useEffect(() => {
-    const handleClick = (e) => {
-      // Ignore clicks inside navbar, login container, buttons, links, inputs
-      if (e.target.closest(".navbar, .login-container, button, a, input, textarea"))
-        return;
+ useEffect(() => {
+  const handleClick = (e) => {
+    // Ignore clicks inside interactive UI elements
+    if (
+      e.target.closest(
+        ".navbar, .login-container, button, a, input, textarea, select, .toggle-button"
+      )
+    ) {
+      return;
+    }
 
-      const doodle = doodles[doodleIndex];
-      const newClick = {
-        id: Date.now(),
-        x: e.clientX,
-        y: e.clientY,
-        image: doodle,
-      };
-
-      setClicks((prev) => [...prev, newClick]);
-
-      // Move to next doodle in order
-      setDoodleIndex((prev) => (prev + 1) % doodles.length);
-
-      setTimeout(() => {
-        setClicks((prev) => prev.filter((c) => c.id !== newClick.id));
-      }, 400); // match fast animation
+    const doodle = doodles[doodleIndex];
+    const newClick = {
+      id: Date.now(),
+      x: e.clientX,
+      y: e.clientY,
+      image: doodle,
     };
 
-    window.addEventListener("click", handleClick);
-    return () => window.removeEventListener("click", handleClick);
-  }, [doodleIndex]);
+    setClicks((prev) => [...prev, newClick]);
+
+    // Move to next doodle in order
+    setDoodleIndex((prev) => (prev + 1) % doodles.length);
+
+    setTimeout(() => {
+      setClicks((prev) => prev.filter((c) => c.id !== newClick.id));
+    }, 1500); // match animation
+  };
+
+  window.addEventListener("click", handleClick);
+  return () => window.removeEventListener("click", handleClick);
+}, [doodleIndex]);
+
 
   return (
     <>

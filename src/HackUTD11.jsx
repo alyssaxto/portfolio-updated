@@ -137,54 +137,39 @@ const Summary = () => (
   </TextFade>
 );
 
-
-
 const Assets = () => (
   <TextFade direction="up">
-      <div className="summary-container">
+    <div className="summary-container">
       <div className="summary-header">
         <h2>Assets</h2>
         <div className="summary-text">
-        <h1>Drawing different assets</h1>
-        <p>
-        I drew the assets using clip studio paint. The corgi, duck, and frog are some of the mascots we created for this year's hackathon.
-        </p>
+          <h1>Drawing different assets</h1>
+          <p>
+            I drew the assets using clip studio paint. The corgi, duck, and frog are some of the mascots we created for this year's hackathon.
+          </p>
         </div>
-        </div>
+      </div>
+
+      <div className="bento-assets">
+        {/* Left full image */}
+        <div className="bento-left">
+          <ExpandableImage src="/assets/hp/9.png" alt="User Journey" />
         </div>
 
-        <div className="HackArt">
-  <div className="HackArt__wrapper">
-    <div className="HackArt__item">
-      <ExpandableImage src="/assets/hp/mascot.GIF" alt="Image 1" />
+        {/* Right 2-column, 3-row grid */}
+        <div className="bento-right">
+          <ExpandableImage src="/assets/hp/mascot.GIF" alt="Image 1" />
+          <ExpandableImage src="/assets/hp/duck.GIF" alt="Image 2" />
+          <ExpandableImage src="/assets/hp/frog.GIF" alt="Image 3" />
+          <ExpandableImage src="/assets/hp/8.png" alt="Image 4" />
+          <ExpandableImage src="/assets/hp/ducks in a row.GIF" alt="Image 5" />
+          <ExpandableImage src="/assets/hp/95 koi.gif" alt="Image 6" />
+        </div>
+      </div>
     </div>
-    <div className="HackArt__item">
-      <ExpandableImage src="/assets/hp/duck.GIF" alt="Image 2" />
-    </div>
-  </div>
-  <div className="HackArt__wrapper">
-    <div className="HackArt__item">
-      <ExpandableImage src="/assets/hp/frog.GIF" alt="Image 3" />
-    </div>
-    <div className="HackArt__item">
-      <ExpandableImage src="/assets/hp/8.png" alt="Image 4" />
-    </div>
-  </div>
-  <div className="HackArt__wrapper">
-    <div className="HackArt__item">
-      <ExpandableImage src="/assets/hp/ducks in a row.GIF" alt="Image 3" />
-    </div>
-    <div className="HackArt__item">
-      <ExpandableImage src="/assets/hp/95 koi.gif" alt="Image 4" />
-    </div>
-  </div>
-  <div className="hack-summary-image">
-      <ExpandableImage src="/assets/hp/9.png" alt="User Journey" />
-    </div>
-</div>
-
   </TextFade>
 );
+
 
 const Soon = () => (
   <TextFade direction="up">
@@ -320,6 +305,10 @@ const Bonus = () => (
             <ExpandableImage src="/assets/hp/2.jpg" alt="User Journey" />
           </div>
           <br />
+              <h3>Some of the other ideas I sketched</h3>
+          <div className="summary-image">
+            <ExpandableImage src="/assets/hp/12.png" alt="User Journey" />
+          </div>
           </div>  
     </TextFade>
 );
