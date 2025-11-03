@@ -5,11 +5,11 @@ function Footer() {
     return (
 <footer className="footer">
     <div className="linedivider">
-<span className="sparkle">✦</span>    </div>
+✦    </div>
     
     <div className="footer__wrapper">
         <div className="footer__left">
-            <h9>Thanks for stopping by!</h9>
+<h2 className="footer-heading">Thanks for stopping by!</h2>
             <p>&copy; Alyssa To {new Date().getFullYear()} (๑˃ᴗ˂)ﻭ</p>
             <p>Made with ♡ and vietnamese coffee</p>
         </div>

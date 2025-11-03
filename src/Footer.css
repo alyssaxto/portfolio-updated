@@ -195,3 +195,21 @@ footer {
     font-size: 1.3rem;
   }
 }
+
+.footer__wrapper {
+  align-items: flex-start; /* make sure flex aligns to top */
+}
+
+.footer__left {
+  padding-top: 4px; /* or tweak to taste — try 4–8px */
+}
+.footer-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #292929;
+  margin-bottom: 20px;
+  margin-top: 0; /* prevent default top margin */
+}
+.footer__right {
+  margin-top: 4px;
+}
