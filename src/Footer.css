@@ -129,6 +129,14 @@ footer {
   margin-bottom: 40px;
 }
 
+/* iPad Pro size range (landscape & portrait) */
+@media (max-width: 1366px) {
+  .footer__left h2.footer-heading {
+    font-size: 2rem;
+  }
+}
+
+
 @media (max-width: 1400px) {
 
  .footer__left h9 {
@@ -179,8 +187,8 @@ footer {
     font-size: 1.3rem;
   }
 
-  .footer__left h9 {
-    font-size: 1.7rem;
+  .footer__left h2 {
+    font-size: 1.5rem;
   }
 
   .footer__left p,
