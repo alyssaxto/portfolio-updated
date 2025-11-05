@@ -144,8 +144,12 @@ const Assets = () => (
         <div className="summary-text">
           <h1>Drawing different assets</h1>
           <p>
-            I drew the assets using clip studio paint. The corgi, duck, and frog are some of the mascots we created for this year's hackathon.
+            I drew the assets using clip studio paint.
           </p>
+                  <ul className="summary-text-bullets">
+          <li> The corgi, duck, and frog are some of the mascots we created for this year's hackathon.</li>
+<li>Other items were prizes for specific tracks, which I illustrated myself to maintain a consistent visual style.</li>
+          </ul>
         </div>
       </div>
 
@@ -163,6 +167,10 @@ const Assets = () => (
           <ExpandableImage src="/assets/hp/8.png" alt="Image 4" />
           <ExpandableImage src="/assets/hp/ducks in a row.GIF" alt="Image 5" />
           <ExpandableImage src="/assets/hp/95 koi.gif" alt="Image 6" />
+              <ExpandableImage src="/assets/hp/14.png" alt="Image 3" />
+          <ExpandableImage src="/assets/hp/15.png" alt="Image 4" />
+          <ExpandableImage src="/assets/hp/16.png" alt="Image 5" />
+          <ExpandableImage src="/assets/hp/17.png" alt="Image 6" />
         </div>
       </div>
     </div>
@@ -308,6 +316,7 @@ const Bonus = () => (
           <div className="summary-image">
             <ExpandableImage src="/assets/hp/12.png" alt="User Journey" />
           </div>
+          
           </div>  
     </TextFade>
 );

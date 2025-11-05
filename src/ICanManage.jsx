@@ -159,8 +159,8 @@ const BPPortfolio = () => (
         <div className="summary-text">
         <h1>I spent 5 months redesigning the entire program
         </h1>
- <h3>This is only the first interation of redesigns</h3>
- <p>After seeing these designs, our team was awarded over $8,000 in grants to continue research and developing the program</p>
+
+ <p>After seeing these designs, our team was awarded over $8,000 in grants to continue research and developing the program by UT Dallas</p>
         </div>
         </div>
         <br />
@@ -188,15 +188,95 @@ const BPPortfolio = () => (
           <ul className="summary-text-bullets">
               <li><a href="https://www.utsouthwestern.edu/" class="blue-link" target="_blank">UT Southwestern</a> will use my prototype and conduct testing on cancer patients during the summer of 2024</li>
             <li>I'll come back to work at the research lab for fall 2024 and continue to reinterate my designs.</li>
-            <li>I will also start developing the mobile app meant to pair with this program!.</li>
+            <li>I will also start developing the mobile app meant to pair with this program!</li>
             </ul>
         </div>
       </div>
     </div>
     </TextFade>
   );
-  
 
+const Mobile = () => (
+  <TextFade direction="up">
+      <div className="summary-container">
+      <div className="summary-header">
+        <h2>Mobile App
+        </h2>
+        <div className="summary-text">
+        <h1>Designing the mobile app after user testing
+        </h1>
+        <p>
+  During the summer, five medical students at {" "}
+  <a href="https://www.utsouthwestern.edu/" className="blue-link" target="_blank" rel="noopener noreferrer">
+    UT&nbsp;Southwestern
+  </a>  
+   {" "}conducted testing with cancer patients, comparing the original {" "}
+  <a href="https://icanmanage.ca/login/index.php" className="blue-link" target="_blank" rel="noopener noreferrer">
+    ICanManage.ca
+  </a> 
+  {" "}to my updated, standardized designs.</p>
+            <ul className="summary-text-bullets">
+                        <li>The original bulky chapters made it hard to find the exact issue a patient might be facing</li>
+
+              <li>Every single chapter was catergorized a learning lesson and activity</li>
+                            <li>Although I designed over 100 screens for all chapters, here is a short preview of what the app looks like</li>
+
+            </ul>        </div>
+        </div>
+        <br />
+    <div className="mobile-section">
+      <h3>Mobile View</h3>
+      <div className="figma-embed-container">
+        <iframe
+          style={{
+            border: "1px solid rgba(0, 0, 0, 0.1)",
+            width: "100%",   // Full width of container
+            height: "600px", // Default height
+          }}
+          src="https://embed.figma.com/proto/P5TbdsLmtgeNA3GqpcQXqw/I-Can-Manage-Cancer-Mobile-App?scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-1056&starting-point-node-id=1%3A1056&embed-host=share"
+          allowFullScreen
+        ></iframe>
+      </div>
+              </div>
+
+    </div>
+  </TextFade>
+);
+
+const Standard = () => (
+    <div>
+                <TextFade direction="up">
+      <div className="summary-container">
+      <div className="summary-header">
+        <h2>Design System
+        </h2>
+        <div className="summary-text">
+        <h1>I wanted to ensure the project could continue smoothly.
+
+        </h1>
+ <p>Before leaving the role, I built a standardized Google Slides template to help the medical students easily create new chapters while maintaining design consistency.</p>
+          <ul className="summary-text-bullets">
+                        <li>The medical students had rich, valuable content but limited design experience.</li>
+              <li>I developed a unified design system and template that allowed them to quickly add new lessons while maintaining visual consistency.</li>
+                                      <li>This system established scalable layout rules, typography, and component standards that kept future content aligned with the app’s overall design direction.</li>
+
+            </ul>   
+        </div>
+        </div>
+        <br />
+        <h3>Google Slide Template</h3>
+        <br />
+        <div className="figma-embed-container-desktop">
+          <iframe
+            style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+            width="800"
+            height="450"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vRbNu3Lo9kqaxMFgAa0MqfVAr3lOL3kzsFsvSsH4Ex0NFbKjkfo_zcaNUtV1aQN0qJoUbJLYoqfYMqu/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+      </div>
+      </TextFade>
+    </div>
+  );
 // App Component to include all sections
 const App = () => (
   <div className="app">
@@ -218,6 +298,12 @@ const App = () => (
     <div className="section-divider"></div>
     <div class="divider"></div>
     <Ending/>
+        <div className="section-divider"></div>
+    <div class="divider"></div>
+    <Mobile/>
+            <div className="section-divider"></div>
+    <div class="divider"></div>
+    <Standard/>
 <br/>
 <div class="portfolio__btn-container">
 <button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>

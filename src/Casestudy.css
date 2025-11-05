@@ -303,7 +303,7 @@ h3 {
 
 /* Left column: long image */
 .bento-left {
-  flex: 0 0 150px; /* shrink more */
+  flex: 0 0 190px; /* shrink more */
 }
 
 .bento-left img {
@@ -320,6 +320,8 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(120px, auto);
   gap: 1rem; /* bigger gaps between images */
+    max-width: 600px; /* match left column width */
+
 }
 
 .bento-right img {
@@ -327,7 +329,6 @@ h3 {
   height: auto;
   object-fit: contain;
   border-radius: 12px;
-  background-color: white;
 }
 
 /* Responsive: mobile/smaller screens */
@@ -346,7 +347,7 @@ h3 {
   .bento-right {
     grid-template-columns: 1fr 1fr; /* keep 2 columns for smaller screens */
     gap: 0.5rem; /* smaller gap */
-  }
+    justify-content: center; /* centers grid horizontally */  }
 }
 
 /* Overlay: Covers everything EXCEPT the original image */
