@@ -138,38 +138,40 @@ const HorizontalScroll = () => {
           </div>
         </div>
       )}
+{/* Grid View */}
+{(isGridActive || isSmallScreen) && (
+  <TextFade direction="up">
+    <div className="Projects">
+      <br />
+      <br />
+      <div className="Projects__wrapper index">
+        <a href="/Password" className="Projects__card">
+          <img src={bpImage} alt="AI Image Generator" />
+          <h2 className="grid-project-title">AI Image Generator 🔒</h2>
+          <p>Designing an accessible way for bp employees to quickly create the images they need</p>
+        </a>
 
-      {/* Grid View */}
-      {(isGridActive || isSmallScreen) && (
-                    <TextFade direction="up">
-        <div className="Projects">
-        <br/>
-        <br/>
-          <div className="Projects__wrapper index">
-            <a href="/Password" className="Projects__card">
-              <img src={bpImage} alt="AI Image Generator" />
-              <h2>AI Image Generator 🔒</h2>
-              <p>Designing an accessible way for bp employees to quickly create the images they need</p>
-            </a>
-            <a href="/HackUTD11" className="Projects__card">
-              <img src={rippleImage} alt="HackUTD Website" />
-              <h2>HackUTD Website</h2>
-              <p>Developing and designing the website for the biggest 24-hour hackathon in North America hosted by HackUTD</p>
-            </a>
-            <a href="/Password2" className="Projects__card">
-              <img src={manageImage} alt="I Can Manage Cancer" />
-              <h2>I Can Manage Cancer 🔒</h2>
-              <p>An educational platform designed to assist head and neck cancer patients through treatment.</p>
-            </a>
-            <a href="/Stemuli" className="Projects__card">
-              <img src={stemuliImage} alt="Stemuli" />
-              <h2>Stemuli</h2>
-              <p>A desktop and mobile app for students interested in product design to explore more about the career through VR.</p>
-            </a>
-          </div>
-        </div>
-        </TextFade>
-      )}
+        <a href="/HackUTD11" className="Projects__card">
+          <img src={rippleImage} alt="HackUTD Website" />
+          <h2 className="grid-project-title">HackUTD Website</h2>
+          <p>Developing and designing the website for the biggest 24-hour hackathon in North America hosted by HackUTD</p>
+        </a>
+
+        <a href="/Password2" className="Projects__card">
+          <img src={manageImage} alt="I Can Manage Cancer" />
+          <h2 className="grid-project-title">I Can Manage Cancer 🔒</h2>
+          <p>An educational platform designed to assist head and neck cancer patients through treatment.</p>
+        </a>
+
+        <a href="/Stemuli" className="Projects__card">
+          <img src={stemuliImage} alt="Stemuli" />
+          <h2 className="grid-project-title">Stemuli</h2>
+          <p>A desktop and mobile app for students interested in product design to explore more about the career through VR.</p>
+        </a>
+      </div>
+    </div>
+  </TextFade>
+)}
     </div>
 
     

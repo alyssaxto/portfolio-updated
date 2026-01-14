@@ -7,12 +7,12 @@ function Footer() {
     <div className="linedivider">
 ✦    </div>
     
-    <div className="footer__wrapper">
-        <div className="footer__left">
-<h2 className="footer-heading">Thanks for stopping by!</h2>
-            <p>&copy; Alyssa To {new Date().getFullYear()} (๑˃ᴗ˂)ﻭ</p>
-            <p>Made with ♡ and vietnamese coffee</p>
-        </div>
+<div className="footer__wrapper">
+  <div className="footer__left">
+    <h2 className="footer-heading">Thanks for stopping by!</h2>
+    <p>&copy; Alyssa To {new Date().getFullYear()}</p>
+<p>Designed and Developed with <span className="heart-subtitle">♡</span></p>
+  </div>
 
         <div className="footer__right">
             <h3>Alternatively, here’s a fancy sheet of paper,</h3>

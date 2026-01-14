@@ -17,21 +17,9 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <TextFade direction="up" className="hero__content">
-        <h4>Hey, I’m Alyssa!</h4>
+        <h4>Hey, I’m Alyssa</h4>
 <p>
-  I’m a <a href="#projects" className="highlight">designer</a> and{" "}
-  <a href="/playground" className="highlight">artist</a> making
-  playful and purposeful products. After hours, I like to create{" "}
-<a 
-  href="https://www.youtube.com/@seontbh" 
-  className="highlight" 
-  target="_blank" 
-  rel="noopener noreferrer"
->
-  youtube&nbsp;
-</a>
-videos!
-
+  I’m <a href="#projects" className="highlight">designing</a> for, building towards, and dreaming of a world that’s (a little more) <a href="/playground" className="highlight">playful</a>
 </p>
 
         <p>

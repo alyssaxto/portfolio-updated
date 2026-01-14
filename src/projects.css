@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
 
 
 /* Default styles (for larger screens) */
 .projects-title {
   font-family: poppins;
   font-size: 5vw;
-  font-weight: bold;
+  font-weight: 500;
   color: #333;
   text-align: center;
   opacity: 1;
@@ -152,6 +153,7 @@
   }
   
   .Projects__card {
+    color: #333;
     position: relative; /* Ensure the card is positioned correctly */
     overflow: hidden; /* Ensure content stays within the card */
     padding: 10px; /* Add padding inside the card */
@@ -160,9 +162,19 @@
     border-radius: 10px; /* Match card's border radius */
     transition: 0.3s ease-in, transform 0.3s ease-in; /* Smooth transition for shadow and scaling */
   }
-  
+
+.Projects__card .grid-project-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500; /* Desktop default weight */
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 15px 0 5px;
+  transition: font-weight 0.3s ease, font-size 0.3s ease;
+  color: #333;
+}
+
   .Projects__card:hover {
-    transform: scale(1.05); /* Slightly scale up the card on hover */
+    transform: scale(2); /* Slightly scale up the card on hover */
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   }
   .Projects__card img {
@@ -173,40 +185,43 @@
     border-top-right-radius: 10px;
   }
   
-  .Projects__card h2 {
-    font-size: 1.5rem; /* Responsive font size */
-    font-weight: 550;
-    margin: 15px 0 5px 0; /* Margin above and below the heading */
-    text-align: center;
-    color: #000;
-    transition: color 0.3s ease;
-  }
+.ImageItem h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.ImageItem p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
   
   .Projects__card p {
     font-size: 1rem; /* Responsive font size */
-    font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
     margin: 0 10px 15px 10px; /* Margin below the paragraph and padding on the sides */
     text-align: center;
-    color: #000;
     transition: color 0.3s ease;
   }
   
-  .Projects__card:hover h2,
-  .Projects__card:hover p {
-    color: #ff8177; /* Change color on hover */
+.grid-project-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500; /* Default weight on desktop */
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 15px 0 5px;
+  transition: font-weight 0.3s ease, font-size 0.3s ease;
+}
+
+/* Mobile / small screens */
+@media (max-width: 768px) {
+  .grid-project-title {
+    font-weight: 300; /* Thinner on mobile */
+    font-size: 1.25rem; /* Smaller on mobile */
   }
-  
-  
-  .Projects__card p {
-    font-size: 1rem; /* Responsive font size */
-    font-weight: 400;
-    font-family: poppins;
-    margin: 0 10px 15px 10px; /* Margin below the paragraph and padding on the sides */
-    text-align: center;
-    color: #000;
-    transition: color 0.3s ease;
-  }
-  
+}
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
@@ -228,21 +243,9 @@
   h1 {
     font-size: 1.5rem; /* Smaller font size for mobile */
   }
-
-  .Projects__card h2 {
-    font-size: 1.25rem; /* Smaller font size for mobile */
-  }
-
-  .Projects__card p {
-    font-size: 0.875rem; /* Smaller font size for mobile */
+  .ImageItem h2 {
+    font-weight: 300; /* thinner on mobile */
+    font-size: 1.25rem; /* smaller font on mobile */
   }
 }
 
-/* Media Queries for Mobile */
-@media (max-width: 768px) {
-  .Projects2__wrapper {
-    grid-template-columns: 1fr; /* Stack cards in a single column */
-    grid-template-rows: auto;
-    gap: 20px; /* Reduced gap for smaller screens */
-  }
-}
