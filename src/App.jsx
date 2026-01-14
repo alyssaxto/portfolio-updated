@@ -17,6 +17,7 @@ import Budgetbuddy from "./Budgetbuddy.jsx";
 import ThinkPink from "./ThinkPink.jsx";
 import Password from "./PasswordProtected.jsx";
 import Password2 from "./PasswordProtected2.jsx";
+import Bp3 from "./bp3.jsx";
 import Footer from "./Footer.jsx";
 
 import CustomCursor from "./CustomCursor";
@@ -105,6 +106,7 @@ function App() {
         <Route path="/Stemuli" element={<Stemuli />} />
         <Route path="/Gravebound" element={<Gravebound />} />
         <Route path="/bpProject" element={<BPIntern />} />
+        <Route path="/bp3" element={<Bp3 />} />
       </Routes>
       <Footer />
     </>
