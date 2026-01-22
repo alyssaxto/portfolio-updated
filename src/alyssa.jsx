@@ -43,7 +43,7 @@ const AboutAndGallery = () => {
     </div>
     <div className="polaroid-item">
       <img src="/assets/mousepad.jpg" alt="Attending hackathons" className="polaroid-image" />
-      <h2 className="polaroid-caption">Riding my bike</h2>
+      <h2 className="polaroid-caption">Hiking</h2>
     </div>
   </div>
   <br/>
