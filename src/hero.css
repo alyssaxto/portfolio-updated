@@ -1,5 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.hero__text-wrapper {
+  position: relative;
+}
+
+.hero__magic-left,
+.hero__magic-right {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  height: auto;
+}
+
+/* --- Desktop: your original spacing --- */
+@media (min-width: 1201px) {
+  .hero__magic-left {
+    left: 40%;
+    transform: translateX(-100%) scale(1); 
+    top: -10rem;
+    width: 700px;
+  }
+
+  .hero__magic-right {
+    left: 70%;
+    transform: translateX(0%) scale(1); 
+    top: -10rem;
+    width: 700px;
+  }
+}
+
+/* --- Tablet: keep on sides of text, not center --- */
+@media (max-width: 1200px) {
+  .hero__magic-left {
+    left: 25%;                 /* more to left side of text */
+    transform: translateX(-100%) scale(1.3);
+    width: 500px;
+    max-width: 45vw;           /* prevent overflow */
+    top: -2rem;
+  }
+
+  .hero__magic-right {
+    left: 85%;                 /* more to right side of text */
+    transform: translateX(0%) scale(1.3);
+    width: 500px;
+    max-width: 45vw;           /* prevent overflow */
+    top: -2rem;
+  }
+
+  .hero {
+    overflow-x: hidden;         /* prevent scroll */
+  }
+}
+
+/* --- Small tablets / large phones --- */
+@media (max-width: 768px) {
+  .hero__magic-left {
+    left: 20%;                  /* slight side offset */
+    transform: translateX(-100%) scale(1.1);
+    width: 400px;
+    max-width: 90vw;
+    top: 0;
+  }
+
+  .hero__magic-right {
+    left: 80%;                  /* slight side offset */
+    transform: translateX(0%) scale(1.1);
+    width: 400px;
+    max-width: 90vw;
+    top: 0;
+  }
+}
+
+/* --- Phones: hide completely --- */
+@media (max-width: 680px) {
+  .hero__magic-left,
+  .hero__magic-right {
+    display: none;
+  }
+}
 
 /* Section container */
 .hero {
@@ -32,7 +110,7 @@
   .hero__content {
     max-width: 600px;
     max-height: 100px;
-    z-index: 2; /* Ensures the text stays on top */
+    z-index: 1; /* Ensures the text stays on top */
 
   }
   
