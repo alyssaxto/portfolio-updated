@@ -44,6 +44,8 @@ const AboutAndGallery = () => {
     <div className="polaroid-item">
       <img src="/assets/mousepad.jpg" alt="Attending hackathons" className="polaroid-image" />
       <h2 className="polaroid-caption">Hiking</h2>
+              <span className="polaroid-subtitle">The Santa Ana Volcano ᕙ(  •̀ ᗜ •́  )ᕗ</span>
+
     </div>
   </div>
   <br/>
