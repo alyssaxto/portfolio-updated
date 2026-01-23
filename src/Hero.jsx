@@ -8,40 +8,38 @@ const Hero = () => {
 
   return (
     <section className="hero" id="home">
-      <TextFade direction="up" className="hero__content hero__text-wrapper">
-        <h4>Hey, I’m Alyssa</h4>
-<p>
-  I’m <a href="#projects" className="highlight">designing</a> for and dreaming <br/>
-  of a world that’s a little more <a href="/playground" className="highlight">playful</a>.
-</p>
+<TextFade direction="up" className="hero__content hero__text-wrapper">
+  <h4>Hey, I’m Alyssa</h4>
+  <p>
+    I’m <a href="#projects" className="highlight">designing</a> for and dreaming <br/>
+    of a world that’s a little more <a href="/playground" className="highlight">playful</a>.
+  </p>
 
-<p className="hero__subtitle">
-  UX Designer @{" "}
+<p className="hero__subtitle hero__small-text">
+  Product Designer @{" "}
   <a
     href="https://www.bp.com"
-    className="greenhighlight"
+    className="greenhighlight"   // removed hero__small-text
     target="_blank"
     rel="noopener noreferrer"
   >
     bp
   </a>
 </p>
-      </TextFade>
 
-      <img
-        src={heroImage}
-        alt="Alyssa on a bike"
-        className="hero__image"
-        style={{
-          transform: `translateX(${Math.min(0, -offset * 0.1)}px)`,
-        }}
-      />
+</TextFade>
 
-      <TextFade direction="up" className="hero__content">
-        <p>
-          P.S. Click around the screen <span className="no-break">(˶ᵔ ᵕ ᵔ˶)ᯓ★</span>
-        </p>
-      </TextFade>
+<img
+  src={heroImage}
+  alt="Alyssa on a bike"
+  className="hero__image"
+  style={{
+    transform: `translateX(${Math.min(0, -offset * 0.1)}px)`,
+  }}
+/>
+
+<TextFade direction="up" className="hero__content"> <p> P.S. Click around the screen <span className="no-break">(˶ᵔ ᵕ ᵔ˶)ᯓ★</span> </p> </TextFade>
+
     </section>
   );
 };
