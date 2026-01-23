@@ -16,9 +16,9 @@
     align-items: center;       /* Center elements vertically */
     padding: 20px;
     text-align: center;        /* Center the text */
-min-height: 100svh; /* iOS-safe viewport height */
-    overflow-x: hidden;
-  position: relative;
+    height: 100vh;  
+    padding-top: 10px;
+  min-height: calc(100vh - 80px); /* subtract navbar height */
     
 }
 
@@ -30,7 +30,7 @@ min-height: 100svh; /* iOS-safe viewport height */
 
 /* Image styling */
 .hero__image {
-    width: 100%;
+     width: 100%;
     height: auto;
     max-width: 100vh;
 }
@@ -40,7 +40,7 @@ min-height: 100svh; /* iOS-safe viewport height */
   .hero__content {
     max-width: 600px;
     max-height: 100px;
-    z-index: 1; /* Ensures the text stays on top */
+    z-index: 2; /* Ensures the text stays on top */
 
   }
   
@@ -145,6 +145,8 @@ min-height: 100svh; /* iOS-safe viewport height */
   .hero__image {
     width: 180%;       /* even bigger on tiny phones */
     max-width: none;
+      margin-top: 10rem;
+
   }
   }
 
