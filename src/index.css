@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Emoji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 /* Hide default cursor everywhere */
 body, a, button, input, textarea, select, img {
@@ -93,7 +94,7 @@ body, a, button, input, textarea, select, img {
 }
 
 .navbar__links {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   color: #ff6b6b;
   text-decoration: none;

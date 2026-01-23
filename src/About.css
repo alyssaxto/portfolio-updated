@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Reenie+Beanie&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
 .playgroundTitleContainer {
@@ -14,7 +14,7 @@
 
 .Playground {
   font-size: 8vw; /* Use viewport width (vw) for responsive font sizing */
-  font-family: Poppins;
+  font-family: "Manrope", sans-serif;
   font-weight: bold;
   margin-top: 10rem;
   color: #333;
@@ -46,7 +46,7 @@
   max-width: 1200px; /* Increase width of the container */
   margin: auto;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .polaroid-wrapper {
@@ -81,8 +81,10 @@
 .polaroid-caption {
   font-family: "Reenie Beanie";
   margin-top: 10px;
+  font-weight: 400;
   color:#000;
   font-size: 2rem;
+    margin-bottom: 0px;
 }
 
 .polaroid-subtitle {
@@ -145,7 +147,7 @@
   font-size: 4rem; /* Adjust size as needed */
   color: #ff4f4f;
   font-weight: 400;
-  font-family: poppins;
+  font-family: "Manrope", sans-serif;
   text-align: center;
   width: 100%;
   margin-top: 3rem;
@@ -177,7 +179,7 @@
   
   .about__content h1 {
     font-size: 3rem;
-    font-family: poppins;
+  font-family: "Manrope", sans-serif;
     background-color: #ff4f4f;
     background-size: 100%;
     font-weight: 400;
@@ -193,7 +195,7 @@
   text-decoration: none;
   position: relative; /* For pseudo-element underline */
   font-weight: 400 !important; /* Force normal weight */
-  font-family: "Poppins", sans-serif !important; /* Ensure same font */
+  font-family: "Manrope", sans-serif;
   transition: color 0.2s ease-in-out;
 }
 
@@ -217,7 +219,7 @@
   
 .about__content p {
   margin-top: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 1.3rem;
   font-weight: 300;
   color: #000;

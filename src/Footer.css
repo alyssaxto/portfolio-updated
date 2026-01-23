@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 .heart-subtitle {
   font-family: "Gamja Flower", sans-serif;
@@ -13,7 +14,7 @@
 }
 
 footer {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Manrope", sans-serif;
   padding: 40px;
   background-color: #ffffff;
   color: #292929;
@@ -136,6 +137,15 @@ footer {
 }
 .resume-container {
   margin-bottom: 40px;
+}
+.emoji {
+  display: inline-block;       /* Needed so transform works */
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.resumelink:hover .emoji,
+.footer__links a:hover .emoji {
+  transform: rotate(45deg) translateX(2px);;    /* Rotate 90 degrees on hover */
 }
 
 /* iPad Pro size range (landscape & portrait) */

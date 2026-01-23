@@ -70,7 +70,7 @@ const ExecutiveSummary = () => (
         <h1>How are refinery employees currently making their rounds?</h1>
         <p>
          For my first rotation as a new grad designer, I was placed in the Refining, Bioenergy, Hydrogen, and Renewables team. My project was to design an application
-         that would streamline the process of completing rounds at the refinery. The current process was bulky since it included multiple applications such as merdiaim, sharepoint, and 
+         that would streamline the process of completing rounds at the refinery.
         </p>
       </div>
     </div>
@@ -89,11 +89,14 @@ const ProblemStatement = () => (
     <div className="summary-header">
       <h2>Problem Statement</h2>
       <div className="summary-text">
-        <h1>How might we enable bp employees to create generative AI images?</h1>
+        <h1>How might we enable field operators, board operators, and shift team leads to seamlessly access, capture, and share real‑time operational information across the refinery?</h1>
         <ul className="summary-text-bullets">
-          <li>Designers and bp employees alike all use images every day.</li>
-          <li>However, finding these images can be difficult and time-consuming.</li>
-          <li>How can we make it easier for these employees to access images that suit their needs?</li>
+          <li>Shift handovers rely heavily on memory and disparate notes.</li>
+          <li>Operators lack visibility into permit readiness.</li>
+          <li>Notifications and maintenance escalation are not seamless.</li>
+          <li>Shift leads manually aggregate multiple operator updates.</li>
+          <li>These pain points directly contribute to inefficiencies, miscommunication, and operational risk.</li>
+
         </ul>
       </div>
     </div>
