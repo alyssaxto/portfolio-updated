@@ -27,7 +27,7 @@ font-size: 7rem;
 }
 
 .carousel-subtitle {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 1.2rem;
   text-align: center;
   color: #555;
@@ -255,7 +255,7 @@ body {
 
 .playground-subtitle-container {
     font-size: 1.25rem;
-    font-family: poppins;
+  font-family: "Manrope", sans-serif;
     text-align: center;
       color: #555;
   margin-top: 2rem; /* Less space from the image */
