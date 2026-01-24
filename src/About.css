@@ -264,6 +264,18 @@
   }
 }
 
+@media (max-width: 900px) {
+  .polaroid-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .polaroid-item {
+    width: 90%;
+    max-width: 350px;
+  }
+}
 
 /* Mobile Responsive */
 @media screen and (max-width: 800px) {
