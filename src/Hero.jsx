@@ -10,22 +10,23 @@ const Hero = () => {
     <section className="hero" id="home">
 <TextFade direction="up" className="hero__content hero__text-wrapper">
   <h4>Hey, I’m Alyssa</h4>
-  <p>
-    I’m <a href="#projects" className="highlight">designing</a> for and dreaming <br/>
-    of a world that’s a little more <a href="/playground" className="highlight">playful</a>.
-  </p>
+<p>
+  I’m <a href="#projects" className="highlight">designing</a> for and dreaming <br/>
+  of a world that’s a little more <a href="/playground" className="highlight">playful</a>.
 
-<p className="hero__subtitle hero__small-text">
-  Product Designer @{" "}
-  <a
-    href="https://www.bp.com"
-    className="greenhighlight"   // removed hero__small-text
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    bp
-  </a>
+  <span style={{ display: "block", marginTop: "0.5rem" }}>
+    Product Designer @{" "}
+    <a
+      href="https://www.bp.com"
+      className="greenhighlight"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      bp
+    </a>
+  </span>
 </p>
+
 
 </TextFade>
 

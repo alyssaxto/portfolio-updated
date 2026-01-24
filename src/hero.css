@@ -109,11 +109,7 @@
     width: 100%;
 }
 
-.hero__subtitle {
-  margin-top: 1rem;   /* space from line above */
-  font-size: 0.8rem;    /* smaller */
 
-}
 
 @media (max-width: 900px) {
   .hero__image {
@@ -122,20 +118,13 @@
 }
 
   @media (max-width: 768px) {
-    .hero {
-      padding-top: 0; /* Remove any extra padding on top */
-      text-align: center; /* Adjust text alignment for better readability */
-      padding: 10px;
 
-    }
     .hero__content h4 {
       
       font-size: 3rem;
     }
     
-    .hero__content {
-      margin-bottom: 20px; /* Add some space below the text on mobile */
-    }
+
   .hero__image {
     width: 120%;        /* make it larger than container */
     max-width: none;   /* remove the vh cap */
@@ -151,7 +140,6 @@
   .hero__image {
     width: 180%;       /* even bigger on tiny phones */
     max-width: none;
-      margin-top: 10rem;
 
   }
   }
@@ -160,10 +148,7 @@
   .hero__content p {
   font-size: 1rem;
   }
-    .hero {
-      padding-top: 40px; /* Remove any extra padding on top */
-
-    }
+ 
     .hero__content h4 {
     font-size: 2rem;
   
