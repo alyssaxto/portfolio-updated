@@ -4,6 +4,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
+
+/* Reset default body spacing */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Swing Animation for ID Lanyard */
+@keyframes swing {
+  0% { transform: rotate(20deg); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-5deg); }
+  80% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Image wrapper sits at top of viewport */
+.about__image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* center image horizontally */
+  position: relative;
+  top: 0;
+}
+
+.about__img--card.swing {
+  animation: swing 2s ease-out forwards;
+  transform-origin: top center;
+  width: 600px;
+  max-height: 90vh;
+  height: auto;
+  border-radius: 50px;
+  margin-top: -7rem; /* move it higher so swing has room above */
+}
+
+
 .playgroundTitleContainer {
   display: flex;
   justify-content: center;
@@ -163,21 +201,20 @@
     font-weight: 400;
   }
   
-  .about__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    height: auto;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    padding-top: 5rem;
-  }
-  
-  
+.about__container {
+  padding-top: 5rem; /* still gives spacing for text/content */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start; /* align items at top */
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+  height: auto;
+}
+
   .about__content h1 {
+      padding-top: 7rem; /* push text down so it’s not too high */
     font-size: 3rem;
   font-family: "Manrope", sans-serif;
     background-color: #ff4f4f;
@@ -226,158 +263,133 @@
 }
 
 
-.about__img--card img {
-  border-radius: 50px;
-}
-
-
 .about__img--card {
-  height: 500px;
-  width: 500px;
-  border-radius: 100px;
+  width: 600px; /* bigger image */
+  height: auto;
+  max-height: 90vh; /* won't overflow the viewport */
+  border-radius: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* align image top */
+  margin-top: -5rem; /* negative margin to "escape" section padding */
 }
+
+
+
+/* About Section - Desktop Large Screens (1200px and below) */
+@media screen and (max-width: 1200px) {
+  .about__container {
+    padding: 0 40px; /* Add horizontal padding to prevent bleeding */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem; /* spacing between image and text */
+  }
+
+  .about__content {
+    padding-right: 20px; /* extra space on the right */
+    text-align: left;
+  }
+
+  .about__img--card {
+    width: 550px; /* slightly larger image */
+    max-width: 100%;
+        margin-top: -1rem; /* touch top of screen for swing */
+
+  }
+}
+
+/* Tablet / mid-size screens (1050px and below) */
 @media screen and (max-width: 1050px) {
   .about__container {
-    margin-top: 6rem;
-    padding: 0 20px; /* Adjust padding between image and content */
+    flex-direction: column; /* image on top, text below */
     display: flex;
-    flex-direction: row; /* Keep them next to each other */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center content vertically if needed */
+    align-items: center; /* center container horizontally */
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 20px;
+    gap: 2rem;
   }
 
-  .about__img--card {
-    margin-right: 20px; /* Adjust margin between image and content */
-    width: 45%; /* Control image size */
-    max-width: 450px; /* Optional: limit max width */
+  .about__img--card.swing {
+    width: 130%; /* make image bigger when stacked */
+    max-width: 600px;
+    margin-top: -1rem; /* touch top of screen for swing */
+    
   }
 
   .about__content {
-    width: 45%; /* Control content size */
-    padding-top: 0; /* Remove extra padding */
-    text-align: left; /* Align text properly */
-    word-wrap: break-word; /* Prevent words from overflowing */
-    overflow-wrap: break-word; /* Additional support for long words */
+    padding-top: 0rem; /* space below image */
+    width: 100%;
+    max-width: 800px; /* container width */
+    text-align: left; /* text inside left-aligned */
+    margin: 0 auto; /* center the container horizontally */
+  }
+
+  .about__content h1 {
+    padding-top: 0;
+    font-size: 3rem;
+  }
+
+  .about__content p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0 10px;
   }
 }
 
-@media (max-width: 900px) {
-  .polaroid-wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
 
-  .polaroid-item {
-    width: 90%;
-    max-width: 350px;
-  }
-}
-
-/* Mobile Responsive */
+/* Mobile screens (800px and below) */
 @media screen and (max-width: 800px) {
-    .about-heading {
-    font-size: 3rem; /* Adjust size as needed */
-  }
-  .about__container {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-content: center;
-    width: 100vw; /* Ensures full width */
-    max-width: 100%;
-    height: auto; /* Adjust height automatically */
-    padding: 0 20px; /* Adds uniform padding on both sides */
-    box-sizing: border-box; /* Prevents padding from affecting width */
-  }
-
-  .about__img--container {
-      display: flex;
-      justify-content: center;
-      align-items: center; /* Centers vertically */
-      padding-bottom: 10px; /* Adjust spacing */
-  }
-
-  .about__img--card {
-      width: 90%; /* More fluid size */
-      max-width: 300px; /* Prevent it from being too large */
-      height: auto; /* Maintain aspect ratio */
+  .about__img--card.swing {
+    width: 100%;
+    max-width: 600px;
+    margin-top: -1rem; /* touch top of screen for swing */
   }
 
   .about__content {
-      text-align: center; /* Centers text for better readability */
-      width: 100%;
-      padding: 10px 20px; /* Ensures spacing doesn't feel tight */
+    width: 100%;
+    max-width: 90%; /* limit container width */
+    text-align: left; /* text inside left-aligned */
+    margin: 0 auto; /* center container horizontally */
   }
 
   .about__content h1 {
-      font-size: 3rem;
-      margin-top: 1.5rem;
-  }
-
-  .about__content h2 {
-      font-size: 2.5rem;
-      margin-top: 1rem;
+    font-size: 3rem;
   }
 
   .about__content p {
-      margin-top: 1rem;
-      width: 90%;
-      font-size: 1rem;
-      text-align: left;
-      padding: 0 10px; /* Prevents text from touching the edges */
+    font-size: 1.3rem;
+    width: 100%;
+        padding: 0 10px;
   }
 }
-@media screen and (max-width: 600px) {
-    .about__content h1 {
-      font-size: 2rem;
-  }
-}
-/* Smaller screens - below 480px */
+
+
+/* Smaller mobile screens (480px and below) */
 @media screen and (max-width: 480px) {
-
-  .about-heading {
-    font-size: 2rem; /* Adjust size as needed */
+  .about__img--card.swing {
+    width: 100%;
+    margin-top: -1rem; /* touch top of screen for swing */
   }
-  .about__container {
-      padding: 15px; /* Slightly less padding for very small screens */
-  }
-
-  .about__img--card {
-    margin-right: 0px;
-    margin-left: 5%;
-    justify-content: center;
-}
-  .about__img--container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Ensures full-width container */
-}
 
   .about__content {
-    width: 100%; /* Makes it more responsive */
-    max-width: 400px; /* Increases max size */
-    height: auto; 
+    width: 100%;
+    max-width: 90%; /* limit container width */
+    text-align: left;
   }
 
   .about__content h1 {
-      font-size: 1.5rem;
-      margin-top: 2rem;
-  }
-
-  .about__content h2 {
-      font-size: 2rem;
-      margin-top: 1rem;
+    font-size: 1.5rem;
   }
 
   .about__content p {
-      margin-top: 1.5rem;
-      width: 90%;
-      padding: 0 5px;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0 5px;
   }
 }

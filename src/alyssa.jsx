@@ -1,6 +1,6 @@
 import React from 'react';
 import "./About.css";
-import Profile from '/assets/imageofme.jpg';
+import Profile from '/assets/newpfp.png';
 import { StaggeredFade } from './Components/staggered-fade';
 import { TextFade } from "./Components/TextFade";
 
@@ -9,9 +9,10 @@ const AboutAndGallery = () => {
     <div>
       <div className="about" id="about">
         <div className="about__container">
-          <div className="about__img--card">
-            <img src={Profile} alt="Image of Alyssa" />
-          </div>
+<div className="about__img--card swing">
+  <img src={Profile} alt="Image of Alyssa" />
+</div>
+
           <div className="about__content">
             <TextFade direction="up">
 <h1>
