@@ -130,7 +130,7 @@ body, html {
   color:#000;
   font-size: 1rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .polaroid-container {
     min-height: 100vh;
     display: flex;
@@ -138,7 +138,7 @@ body, html {
     align-items: center;
     justify-content: flex-start; /* top-align */
     padding: 20px 10px 40px;
-    overflow: visible; /* allow scaled items to overflow */
+  overflow-x: hidden;
   }
 
   .polaroid-wrapper {
@@ -320,7 +320,7 @@ body, html {
   .about__content {
     padding-top: 0rem; /* space below image */
     width: 100%;
-    max-width: 800px; /* container width */
+    max-width: 900px; /* container width */
     text-align: left; /* text inside left-aligned */
     margin: 0 auto; /* center the container horizontally */
   }
@@ -373,7 +373,8 @@ body, html {
     max-width: 500px;       /* limit container width */
     box-sizing: border-box; /* include padding in width */
     text-align: left;
-    margin: 0 auto;    
+    margin: 0;    
+    
   }
 
   .about__content h1 {

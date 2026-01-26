@@ -126,8 +126,8 @@
     padding-top: calc(60px + 15px + 3rem); /* slightly more for smaller screens */
   }
   .hero__image {
-    width: 140%;        /* slightly smaller on tablets */
-    max-width: 800px;  /* limit width */
+    width: 100%;        /* slightly smaller on tablets */
+    max-width: 900px;  /* limit width */
     margin-top: 5rem;
   }
   }
@@ -138,8 +138,8 @@
   font-size: 1.2rem;
   }
   .hero__image {
-    width: 130%;        /* shrink more on small phones */
-    max-width: 600px;  /* avoid cropping */
+    width: 100%;        /* shrink more on small phones */
+    max-width: 700px;  /* avoid cropping */
     margin-top: 5rem;
   }
   }
