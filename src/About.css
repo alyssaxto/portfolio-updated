@@ -267,7 +267,6 @@ body, html {
   width: 600px; /* bigger image */
   height: auto;
   max-height: 90vh; /* won't overflow the viewport */
-  border-radius: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* align image top */
@@ -279,25 +278,22 @@ body, html {
 /* About Section - Desktop Large Screens (1200px and below) */
 @media screen and (max-width: 1200px) {
   .about__container {
-    padding: 0 40px; /* Add horizontal padding to prevent bleeding */
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 2rem; /* spacing between image and text */
   }
 
   .about__content {
-    padding-right: 20px; /* extra space on the right */
     text-align: left;
   }
 
   .about__img--card {
     width: 550px; /* slightly larger image */
     max-width: 100%;
-        margin-top: -1rem; /* touch top of screen for swing */
+    margin-top: -1rem; /* touch top of screen for swing */
 
   }
 }
@@ -338,24 +334,22 @@ body, html {
     font-size: 1.3rem;
     margin-top: 1rem;
     width: 100%;
-    padding: 0 10px;
   }
 }
-
 
 /* Mobile screens (800px and below) */
 @media screen and (max-width: 800px) {
   .about__img--card.swing {
     width: 100%;
     max-width: 600px;
-    margin-top: -1rem; /* touch top of screen for swing */
+    margin-top: -1rem; /* swing space */
   }
 
   .about__content {
-    width: 100%;
-    max-width: 90%; /* limit container width */
-    text-align: left; /* text inside left-aligned */
-    margin: 0 auto; /* center container horizontally */
+    width: 80%;
+    box-sizing: border-box; /* include padding in width */
+    text-align: left;
+    margin: 0 auto;         /* center content horizontally */
   }
 
   .about__content h1 {
@@ -364,32 +358,29 @@ body, html {
 
   .about__content p {
     font-size: 1.3rem;
-    width: 100%;
-        padding: 0 10px;
   }
 }
-
 
 /* Smaller mobile screens (480px and below) */
 @media screen and (max-width: 480px) {
   .about__img--card.swing {
     width: 100%;
-    margin-top: -1rem; /* touch top of screen for swing */
+    margin-top: -1rem;
   }
 
   .about__content {
-    width: 100%;
-    max-width: 90%; /* limit container width */
+      width: 80%;
+    max-width: 500px;       /* limit container width */
+    box-sizing: border-box; /* include padding in width */
     text-align: left;
+    margin: 0 auto;    
   }
 
   .about__content h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .about__content p {
     font-size: 1rem;
-    width: 100%;
-    padding: 0 5px;
   }
 }

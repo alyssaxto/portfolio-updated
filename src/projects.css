@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200..800;1,200..800&display=swap');
 
 /* Default styles (for larger screens) */
 .projects-title {
-  font-family: "Manrope", sans-serif;
-  font-size: 5vw;
+  font-family: "Newsreader", serif;
+  font-size: 7vw;
   font-weight: 500;
   color: #333;
   text-align: center;
@@ -19,13 +20,16 @@
   white-space: nowrap; /* Prevent the text from wrapping */
 
 }
-
+.projects-title span {
+  font-family: "Newsreader", serif !important;
+}
 /* Default styles (for larger screens) */
 .title-container {
   display: flex;
   align-items: center;
   justify-content: center; /* Centers horizontally */
   width: 100%; /* Ensures it takes the full width */
+  
 
 }
 
@@ -62,27 +66,30 @@
   padding: 10px;
   border: 2px solid #ccc; /* Grey outline */
 }
+/* Grid Icon */
+.icon-grid {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(155, 155, 155);; /* default color */
+  -webkit-mask: url('/assets/grid-icon.svg') no-repeat center / contain;
+  mask: url('/assets/grid-icon.svg') no-repeat center / contain;
+}
 
-  .toggle-button:hover {
-    background-color: #e0e0e0;
-  }
-  
-  /* Grid Icon */
-  .icon-grid {
-    width: 30px;
-    height: 30px;
-    background-image: url('/assets/grid-icon.svg'); /* Replace with actual grid icon */
-    background-size: cover;
-  }
-  
-  /* Scroll Icon */
-  .icon-scroll {
-    width: 30px;
-    height: 30px;
-    background-image: url('/assets/scroll-icon.png'); /* Replace with actual stacked boxes icon */
-    background-size: cover;
-  }
-  
+/* Scroll Icon */
+.icon-scroll {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(155, 155, 155);; /* default color */
+  -webkit-mask: url('/assets/scroll-icon.png') no-repeat center / contain;
+  mask: url('/assets/scroll-icon.png') no-repeat center / contain;
+}
+
+/* Active state = white icon */
+.icon-grid.active,
+.icon-scroll.active {
+  background-color: #333;
+}
+
 .Projects {
     background: #ffffff;
     display: flex;

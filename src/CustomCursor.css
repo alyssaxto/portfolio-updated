@@ -1,11 +1,11 @@
+/* Keep the normal system cursor */
+body {
+  cursor: auto; /* Show the default cursor */
+}
+
+/* Remove the dot entirely */
 .custom-cursor {
   position: fixed;
-  width: 40px;
-  height: 40px;
-  background-image: url("/assets/cursor.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
   transition: transform 0.15s ease-out;
@@ -14,13 +14,14 @@
   justify-content: center;
 }
 
+/* Hover scaling for effects */
 .custom-cursor.hovered {
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: scale(1.2);
 }
 
+/* Remove fixed top */
 .cursor-text {
-  position: absolute;
-  top: 45px;
+  position: fixed; /* fixed relative to viewport */
   background: #ff4f4f;
   color: white;
   font-size: 12px;
@@ -31,14 +32,13 @@
   pointer-events: none;
   white-space: nowrap;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, 20px); /* position slightly below cursor */
+  z-index: 10000;
 }
 
-body {
-  cursor: none;
-}
 
+/* Disable custom cursor on mobile */
 @media (hover: none), (max-width: 768px) {
-  body { cursor: auto; }
   .custom-cursor { display: none !important; }
 }
 

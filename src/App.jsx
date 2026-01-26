@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "./Navbar.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -22,71 +22,11 @@ import Footer from "./Footer.jsx";
 
 import CustomCursor from "./CustomCursor";
 
-// Doodle images
-import doodle1 from "/assets/doodle1.png";
-import doodle2 from "/assets/doodle2.png";
-import doodle3 from "/assets/doodle3.png";
-
-const doodles = [doodle1, doodle2, doodle3];
-
 function App() {
-  const [clicks, setClicks] = useState([]);
-  const [doodleIndex, setDoodleIndex] = useState(0); // Track next doodle in order
-
- useEffect(() => {
-  const handleClick = (e) => {
-    // Ignore clicks inside interactive UI elements
-    if (
-      e.target.closest(
-        ".navbar, .login-container, button, a, input, textarea, select, .toggle-button"
-      )
-    ) {
-      return;
-    }
-
-    const doodle = doodles[doodleIndex];
-    const newClick = {
-      id: Date.now(),
-      x: e.clientX,
-      y: e.clientY,
-      image: doodle,
-    };
-
-    setClicks((prev) => [...prev, newClick]);
-
-    // Move to next doodle in order
-    setDoodleIndex((prev) => (prev + 1) % doodles.length);
-
-    setTimeout(() => {
-      setClicks((prev) => prev.filter((c) => c.id !== newClick.id));
-    }, 1500); // match animation
-  };
-
-  window.addEventListener("click", handleClick);
-  return () => window.removeEventListener("click", handleClick);
-}, [doodleIndex]);
-
-
   return (
     <>
       {/* Floating custom cursor */}
       <CustomCursor />
-
-      {/* Doodle click layer */}
-      <div id="doodle-layer">
-        {clicks.map((click) => (
-          <img
-            key={click.id}
-            src={click.image}
-            alt="doodle"
-            className="click-doodle"
-            style={{
-              left: click.x,
-              top: click.y,
-            }}
-          />
-        ))}
-      </div>
 
       <Header />
       <ScrollToTop />

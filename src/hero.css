@@ -8,20 +8,15 @@
   position: relative;
 }
 
-
-/* Section container */
 .hero {
-    display: flex;             /* Use flexbox for layout */
-    flex-direction: column;    /* Stack children vertically */
-    justify-content: center;   /* Center elements horizontally */
-    align-items: center;       /* Center elements vertically */
-    padding: 20px;
-    text-align: center;        /* Center the text */
-    height: 100vh;  
-  padding: 40px 20px 20px; /* increased top padding for iPad/tablets */
-  min-height: calc(100vh - 80px); /* subtract navbar height */
-
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;  /* 60% of viewport height */
+  padding: 20px;
+  padding-top: calc(60px + 15px + 6rem); /* navbar height + navbar top offset + extra spacing */
 }
 
 .no-break {
@@ -40,6 +35,8 @@
      width: 100%;
     height: auto;
     max-width: 100vh;
+        margin-top: 5rem;
+
 }
 
   
@@ -65,6 +62,7 @@
   font-family: "Manrope", sans-serif;
   font-weight: 300;
   font-style: normal;
+  color: #666
   }
   
 
@@ -124,11 +122,13 @@
       font-size: 3rem;
     }
     
-
+  .hero {
+    padding-top: calc(60px + 15px + 3rem); /* slightly more for smaller screens */
+  }
   .hero__image {
-    width: 120%;        /* make it larger than container */
-    max-width: none;   /* remove the vh cap */
-    margin-top: 0rem;
+    width: 140%;        /* slightly smaller on tablets */
+    max-width: 800px;  /* limit width */
+    margin-top: 5rem;
   }
   }
 
@@ -138,9 +138,9 @@
   font-size: 1.2rem;
   }
   .hero__image {
-    width: 180%;       /* even bigger on tiny phones */
-    max-width: none;
-
+    width: 130%;        /* shrink more on small phones */
+    max-width: 600px;  /* avoid cropping */
+    margin-top: 5rem;
   }
   }
 
@@ -153,5 +153,6 @@
     font-size: 2rem;
   
   }
+
   
   }

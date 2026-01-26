@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./hero.css";
-import heroImage from "/assets/magic.gif";
+import heroImage from "/assets/magic.png";
 import { TextFade } from "./Components/TextFade";
 import HeroStars from "./HeroStars"; // <- import the star component
 
@@ -10,24 +10,14 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       {/* Floating 4-point stars in the background */}
-      <HeroStars />
+
 
       <TextFade direction="up" className="hero__content hero__text-wrapper">
-        <h4>Hey, I’m Alyssa</h4>
+        <h4>Hi, I’m Alyssa</h4>
         <p>
           I’m <a href="#projects" className="highlight">designing</a> for and dreaming <br/>
           of a world that’s a little more <a href="/playground" className="highlight">playful</a>.
-          <span style={{ display: "block", marginTop: "0.5rem" }}>
-            Product Designer @{" "}
-            <a
-              href="https://www.bp.com"
-              className="greenhighlight"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              bp
-            </a>
-          </span>
+
         </p>
       </TextFade>
 
@@ -39,10 +29,6 @@ const Hero = () => {
           transform: `translateX(${Math.min(0, -offset * 0.1)}px)`,
         }}
       />
-
-      <TextFade direction="up" className="hero__content">
-        <p> P.S. Click around the screen <span className="no-break">(˶ᵔ ᵕ ᵔ˶)ᯓ★</span> </p>
-      </TextFade>
     </section>
   );
 };
