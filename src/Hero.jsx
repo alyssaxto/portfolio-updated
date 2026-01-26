@@ -19,17 +19,20 @@ const Hero = () => {
           of a world that’s a little more <a href="/playground" className="highlight">playful</a>.
 
         </p>
-      </TextFade>
 
-      <img
-        src={heroImage}
-        alt="Alyssa on a bike"
-        className="hero__image"
-        style={{
-          transform: `translateX(${Math.min(0, -offset * 0.1)}px)`,
-        }}
-      />
+      </TextFade>
+      <TextFade direction="up" className="hero__image-wrapper">
+        <img
+          src={heroImage}
+          alt="Alyssa on a bike"
+          className="hero__image"
+          style={{
+            transform: `translateX(${Math.min(0, -offset * 0.1)}px)`,
+          }}
+        />
+      </TextFade>
     </section>
+    
   );
 };
 
