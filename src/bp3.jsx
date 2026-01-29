@@ -489,7 +489,9 @@ const BPPortfolio = () => (
 </div>
 
 <div className="container">
-    <h2>Despite only having 12 weeks, I also created other products!</h2>
+      <div className="summary-header">
+      <h2>Despite only having 12 weeks, I also created other products! </h2>
+      </div>
     <h1>Check out the other projects I worked on at bp</h1>
     <div className="Gallery__wrapper">
       <div className="Gallery__item">

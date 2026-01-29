@@ -49,8 +49,9 @@ const HorizontalScroll = () => {
     <div>
       {/* Title with Toggle Button */}
       <div className="title-container">
-        <LettersPullUp text="Projects  " className="projects-title" />
-        {!isSmallScreen && (  // Only render the toggle button on screens larger than 1000px
+  <a href="#projects" style={{ textDecoration: "none", color: "inherit" }}>
+    <LettersPullUp text="Projects  " className="projects-title" />
+  </a>        {!isSmallScreen && (  // Only render the toggle button on screens larger than 1000px
           <div className="toggle-button">
             <span
               className={`icon-grid ${isGridActive ? "active" : ""}`}

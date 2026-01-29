@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+
+/* Bento 2x2 preview */
+.bento-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* smaller width for easier scroll */
+  margin: 0 auto;
+}
+
+.bento-carousel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-auto-rows: auto;
+  gap: 15px;
+  overflow: hidden;
+  max-height: calc(2 * 180px + 15px); /* show 2 rows only */
+  position: relative;
+}
+
+/* Each item */
+.bento-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.bento-item img {
+  width: 100%;
+  height: auto; /* maintain natural aspect ratio */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.bento-item:hover img {
+  transform: scale(1.05);
+}
+
+/* White gradient overlay at bottom */
+.bento-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to top, white, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.bento-overlay a {
+  font-family: "Newsreader", serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Optional arrow styling */
+.bento-overlay a .arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bento-carousel {
+    grid-template-columns: 1fr; /* stack on mobile */
+    max-height: calc(2 * 150px + 15px);
+  }
+}
+
+
+/* Rotate arrow on expanded */
+.bento-carousel.expanded + .bento-overlay .arrow {
+  transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bento-carousel {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .bento-carousel {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* Lightbox overlay */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.carousel-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #555;
+  margin-top: 0rem;
+}
+.AllDrawingsPage {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+
+/* fade-slide animation */
+.fade-slide-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.fade-slide-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-slide-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-slide-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.AllDrawings__grid {
+  max-height: calc(2 * 300px + 20px);
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.AllDrawings__grid.expanded {
+  max-height: 2000px; /* or any large enough value */
+}
+
+.AllDrawings__grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns, 4), 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.77, 0, 0.175, 1); /* smooth expand/collapse */
+}
+
+/* Limit height for first 2 rows */
+.AllDrawings__grid:not(.expanded) {
+  max-height: calc(2 * 300px + 20px);
+}
+.AllDrawings__grid.collapsed {
+  max-height: calc(2 * 300px + 20px); /* first 2 rows */
+}
+
+/* Each item transition */
+.AllDrawings__item {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Hidden items in collapsed state */
+.AllDrawings__grid.collapsed .AllDrawings__item.hidden {
+  opacity: 0;
+  transform: translateY(20px); /* slide down slightly */
+  pointer-events: none; /* prevent clicks on hidden items */
+}
+/* Hover effect */
+.AllDrawings__item:hover {
+  transform: scale(1.05);
+}
+
+/* When expanded or visible, animate in */
+.AllDrawings__grid.expanded .AllDrawings__item,
+.AllDrawings__grid:not(:not(.expanded)) .AllDrawings__item {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.AllDrawings__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.AllDrawings__item:hover img {
+  transform: scale(1.05);
+}
+
+.AllDrawings__fadeOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* increase height to cover more of the bottom */
+  background: linear-gradient(to top, white 25%, transparent 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  z-index: 5;
+}
+
+
+.AllDrawings__fadeOverlay .overlay-text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Lightbox remains the same */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+
+.overlay-text {
+  font-family: "Newsreader", serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #333;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow {
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+/* Wrapper for the toggle buttons */
+.AllDrawings__toggle-btn-wrapper {
+  display: inline-block;
+  position: relative;
+  margin-top: 20px; /* spacing above */
+}
+
+/* Toggle link itself */
+.AllDrawings__toggle-btn {
+  font-size: 1.3rem;
+  font-family: "Manrope", sans-serif;
+  color: #333; /* main text color */
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background: none; /* remove previous background */
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+/* Underline effect using pseudo-element */
+.AllDrawings__toggle-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* adjust line placement */
+  width: 0;
+  height: 2px;
+  background: #FF4F4F; /* underline color */
+  transition: width 0.3s ease;
+}
+
+/* Hover effect for desktop */
+@media (hover: hover) {
+  .AllDrawings__toggle-btn:hover::after {
+    width: 100%;
+  }
+  .AllDrawings__toggle-btn:hover {
+    color: #FF4F4F; /* change text color on hover */
+  }
+}
+
+/* Mobile tap effect */
+@media (max-width: 768px) {
+  .AllDrawings__toggle-btn::after {
+    width: 0; /* initially hidden */
+  }
+  .AllDrawings__toggle-btn:active::after {
+    width: 100%;
+  }
+}
+
+/* Responsive grid for smaller screens */
+@media (max-width: 768px) {
+  .AllDrawings__grid {
+    padding-top: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    gap: 15px; /* slightly smaller gap for mobile */
+  }
+
+  .AllDrawings__item {
+    height: 40vw; /* make items square-ish relative to viewport */
+  }
+}
+

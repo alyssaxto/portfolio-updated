@@ -126,9 +126,9 @@
     padding-top: calc(60px + 15px + 3rem); /* slightly more for smaller screens */
   }
   .hero__image {
-    width: 100%;        /* slightly smaller on tablets */
-    max-width: 900px;  /* limit width */
-    margin-top: 5rem;
+    width: 95%;        /* almost full width */
+    max-width: none;   /* allow it to grow */
+    margin-top: 4rem;
   }
   }
 
@@ -138,9 +138,9 @@
   font-size: 1.2rem;
   }
   .hero__image {
-    width: 100%;        /* shrink more on small phones */
-    max-width: 700px;  /* avoid cropping */
-    margin-top: 5rem;
+    width: 100%;       /* full width */
+    max-width: none;   /* no cap */
+    margin-top: 3rem;
   }
   }
 
@@ -153,6 +153,10 @@
     font-size: 2rem;
   
   }
-
+  .hero__image {
+    width: 100%;
+    max-width: none;
+    margin-top: 2rem;
+  }
   
   }

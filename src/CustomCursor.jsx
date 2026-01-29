@@ -47,19 +47,25 @@ const moveCursor = (e) => {
     };
   }, [isMobile]);
 
-  useEffect(() => {
-  if (isMobile) return;
-
+useEffect(() => {
   const handleClick = (e) => {
-    createBurst(e.clientX, e.clientY);
+    const x = e.clientX ?? (e.touches && e.touches[0].clientX);
+    const y = e.clientY ?? (e.touches && e.touches[0].clientY);
+
+    if (x && y) createBurst(x, y);
   };
 
   window.addEventListener("click", handleClick);
-  return () => window.removeEventListener("click", handleClick);
-}, [isMobile]);
+  window.addEventListener("touchstart", handleClick);
+
+  return () => {
+    window.removeEventListener("click", handleClick);
+    window.removeEventListener("touchstart", handleClick);
+  };
+}, []);
 
 const createBurst = (x, y) => {
-  const lines = 7;
+  const lines = 8;
   const length = 12;
 
   for (let i = 0; i < lines; i++) {

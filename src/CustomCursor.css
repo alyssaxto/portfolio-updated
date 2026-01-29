@@ -60,7 +60,7 @@ body {
 }
 .burst-line {
   position: fixed;
-  width: 3px;
+  width: 1.5px;
   height: var(--length);
   background: #FF4F4F;
   transform-origin: center center;
