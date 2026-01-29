@@ -218,7 +218,7 @@ const Mobile = () => (
             <ul className="summary-text-bullets">
                         <li>The original bulky chapters made it hard to find the exact issue a patient might be facing</li>
 
-              <li>Every single chapter was catergorized a learning lesson and activity</li>
+              <li>Every single chapter was either catergorized a learning lesson and activity</li>
                             <li>Although I designed over 100 screens for all chapters, here is a short preview of what the app looks like</li>
 
             </ul>        </div>

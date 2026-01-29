@@ -107,8 +107,11 @@ const Summary = () => (
         <h1>We found out how financially literate UTD students are</h1>
         <p>Our team conducted interviews on a design professor at UTD and 5 college students
         </p>
-        <p>The majority of these students were concerned about gaining work experience while in college</p>
-                    <p>We discovered students at UTD thought current school curriculums didn't teach students enough skills they'd use in their actual careers</p>
+                          <ul className="summary-text-bullets">
+
+        <li>The majority of these students were concerned about gaining work experience while in college</li>
+                    <li>We discovered students at UTD thought current school curriculums didn't teach students enough skills they'd use in their actual careers</li>
+      </ul>
       </div>
     </div>
     <div className="yellow-summary-image">
@@ -122,28 +125,29 @@ const Summary = () => (
 );
 
 
-
 const Assets = () => (
   <TextFade direction="up">
-      <div className="summary-container">
+    <div className="summary-container">
       <div className="summary-header">
-        <h2>Competitive Analysis
-        </h2>
+        <h2>Competitive Analysis</h2>
         <div className="summary-text">
-        <h1>We looked at other educational VR programs to gain a better understanding</h1>
-        <p>
-        Each of our group members picked a competitor to analyze what they were doing right</p>
-        <p>The companies we looked at were Axon Park, ClassVR, Wisepath SkillQuest, Inspirit, and Filament Games</p>
-                    <p>We discovered that a lot of these educational games tended to use a reward system to encourage users to learn more</p>
+          <h1>We looked at other educational VR programs to gain a better understanding</h1>
+          <ul className="summary-text-bullets">
+            <li>Each of our group members picked a competitor to analyze what they were doing right</li>
+            <li>The companies we looked at were Axon Park, ClassVR, Wisepath SkillQuest, Inspirit, and Filament Games</li>
+            <li>We discovered that a lot of these educational games tended to use a reward system to encourage users to learn more</li>
+          </ul>
+          <br/>
         </div>
-        </div>
-        <div className="yellow-summary-image">
-      <ExpandableImage src="/assets/stemuli/s15.png" alt="User Journey" />
-    </div>
-</div>
+      </div>
 
+      <div className="yellow-summary-image">
+        <ExpandableImage src="/assets/stemuli/s15.png" alt="User Journey" />
+      </div>
+    </div>
   </TextFade>
 );
+
 
 const Soon = () => (
   <TextFade direction="up">
@@ -176,9 +180,13 @@ const Hero = () => (
     </h2>
     <div className="summary-text">
     <h1>Then designed a typical user for our app    </h1>
-    <p>A lot of the students our group conducted interviews on were computer science majors</p>
-            <p>A very big concern was securing internships with the current job market</p>
-            <p>Throughout the case study, this personas served as a compass, guiding our research, design choices, and usability testing scenarios, ensuring that our solutions were user-centric and aligned with the app's goals.</p>
+            <ul className="summary-text-bullets">
+
+    <li>A lot of the students our group conducted interviews on were computer science majors</li>
+            <li>A very big concern was securing internships with the current job market</li>
+            <li>Throughout the case study, this personas served as a compass, guiding our research, design choices, and usability testing scenarios, ensuring that our solutions were user-centric and aligned with the app's goals.</li>
+            </ul>
+
     <br/>
     </div>
     <div className="yellow-summary-image">
