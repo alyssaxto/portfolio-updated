@@ -42,22 +42,7 @@ body {
   .custom-cursor { display: none !important; }
 }
 
-/* Sparkles */
-.sparkle {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  pointer-events: none;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  animation: sparkle-fade 0.8s forwards;
-  z-index: 9998;
-}
 
-@keyframes sparkle-fade {
-  0% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
-  100% { opacity: 0; transform: translate(var(--x), var(--y)) scale(0.5) rotate(45deg); }
-}
 .burst-line {
   position: fixed;
   width: 1.5px;
