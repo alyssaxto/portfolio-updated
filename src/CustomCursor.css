@@ -58,3 +58,40 @@ body {
   0% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
   100% { opacity: 0; transform: translate(var(--x), var(--y)) scale(0.5) rotate(45deg); }
 }
+.burst-line {
+  position: fixed;
+  width: 3px;
+  height: var(--length);
+  background: #FF4F4F;
+  transform-origin: center center;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 2px;
+  animation: burst 0.4s cubic-bezier(.3,.8,.4,1) forwards; /* shorter overall */
+}
+
+@keyframes burst {
+  0% {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--angle))
+      translateY(0)
+      scaleY(0.2);
+  }
+
+  40% {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--angle))
+      translateY(-14px)
+      scaleY(1);
+  }
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--angle))
+      translateY(-18px)
+      scaleY(0.01); /* collapses almost instantly */
+  }
+}

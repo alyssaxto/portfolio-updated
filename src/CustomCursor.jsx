@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import "./CustomCursor.css";
 
-const colors = ["#82EEEC", "#F7BB3B", "#FD9CA7"];
 
 const CustomCursor = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -21,10 +20,9 @@ const CustomCursor = () => {
   useEffect(() => {
     if (isMobile) return;
 
-    const moveCursor = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      createSparkle(e.clientX, e.clientY);
-    };
+const moveCursor = (e) => {
+  setPosition({ x: e.clientX, y: e.clientY });
+};
 
     window.addEventListener("mousemove", moveCursor);
     return () => window.removeEventListener("mousemove", moveCursor);
@@ -49,33 +47,39 @@ const CustomCursor = () => {
     };
   }, [isMobile]);
 
-  const generateStarClip = (points) => {
-    let path = "";
-    const angle = (2 * Math.PI) / points;
-    for (let i = 0; i < points; i++) {
-      const outer = { x: 50 + 50 * Math.cos(i * angle), y: 50 + 50 * Math.sin(i * angle) };
-      const inner = { x: 50 + 25 * Math.cos(i * angle + angle / 2), y: 50 + 25 * Math.sin(i * angle + angle / 2) };
-      path += `${outer.x}% ${outer.y}%, ${inner.x}% ${inner.y}%, `;
-    }
-    return `polygon(${path.slice(0, -2)})`;
+  useEffect(() => {
+  if (isMobile) return;
+
+  const handleClick = (e) => {
+    createBurst(e.clientX, e.clientY);
   };
 
-  const createSparkle = (x, y) => {
-    const sparkle = document.createElement("div");
-    sparkle.className = "sparkle";
-    const size = Math.random() * 8 + 6;
-    sparkle.style.width = `${size}px`;
-    sparkle.style.height = `${size}px`;
-    sparkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    sparkle.style.left = `${x}px`;
-    sparkle.style.top = `${y}px`;
-    const points = Math.floor(Math.random() * 3) + 4;
-    sparkle.style.clipPath = generateStarClip(points);
-    sparkle.style.setProperty("--x", (Math.random() - 0.5) * 40 + "px");
-    sparkle.style.setProperty("--y", (Math.random() - 1) * 40 + "px");
-    document.body.appendChild(sparkle);
-    setTimeout(() => sparkle.remove(), 800);
-  };
+  window.addEventListener("click", handleClick);
+  return () => window.removeEventListener("click", handleClick);
+}, [isMobile]);
+
+const createBurst = (x, y) => {
+  const lines = 7;
+  const length = 12;
+
+  for (let i = 0; i < lines; i++) {
+    const line = document.createElement("div");
+    line.className = "burst-line";
+
+    const angle = (360 / lines) * i;
+
+    line.style.left = `${x}px`;
+    line.style.top = `${y}px`;
+    line.style.setProperty("--angle", `${angle}deg`);
+    line.style.setProperty("--length", `${length}px`);
+
+    document.body.appendChild(line);
+    setTimeout(() => line.remove(), 600);
+  }
+};
+
+
+
 
   if (isMobile) return null;
 
