@@ -92,9 +92,8 @@ const Top = () => (
 I’ve always loved building and creating, and I wanted to share that passion with others. Organizing HackUTD gave me the chance not only to inspire fellow students to bring their projects to life, but also to connect with other like-minded peers.</p>
         </div>
       </div>
-    </div>
+        <h2 className="img-subtitle">A few of my favorite photos</h2>
         <div className="BentoBox">
-        <h3>A few of my favorite photos</h3>
         <div className="BentoBox__wrapper">
         <div className="BentoBox__item">
         <ExpandableImage src="/assets/hp/10.jpg" alt="Image 1" />
@@ -112,6 +111,7 @@ I’ve always loved building and creating, and I wanted to share that passion wi
         </div>
         </div>
         </div>
+            </div>
         </TextFade>
 );
 
@@ -269,10 +269,6 @@ const BPPortfolio = () => (
 
       </div>
       </TextFade>
-<br/>
-      <div className="container">
-      <h3>If you'd like to sponsor the next HackUTD, feel free to contact the team at <a href="mailto:Hello@hackutd.co" class="blue-link" target="_blank">hello@hackutd.co</a></h3>
-      </div>
     </div>
   );
 
@@ -289,6 +285,9 @@ const HackUTD = () => (
         <img src="/assets/ripple.png" alt="Image 2" className="hover-image" />
       </a>
     </div>
+          <div className="summary-container">
+      <h4 className="img-subtitle">If you'd like to sponsor the next HackUTD, feel free to contact the team at <a href="mailto:Hello@hackutd.co" class="blue-link" target="_blank">hello@hackutd.co</a></h4>
+      </div>
   </header>
   </TextFade>
 );
@@ -355,13 +354,18 @@ const App = () => (
     <Bonus />
     <br/>
     <br/>
-    <div class="portfolio__btn-container">
-  <button class="portfolio__btn"><a href="https://github.com/hackutd/hackutd-24-site" target="_blank">View source code</a></button>
+<div class="portfolio__btn-container">
+  <a href="https://github.com/hackutd/hackutd-24-site" target="_blank" class="portfolio__btn">
+    View source code
+  </a>
 </div>
+
 <br/>
 <div class="portfolio__btn-container">
-<button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
+  <a href="/" class="portfolio__btn">Back to Portfolio</a>
 </div>
+
+
 <br/>
 <br/>
   </div>

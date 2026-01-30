@@ -2,7 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
-
+@font-face{
+  font-family: "apercu";
+  src: url(./apercu.otf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Twemoji", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
 }
@@ -73,24 +78,13 @@ body {
 
 /* Green Link */
 .green-link {
-  color: #000; /* Black text color */
+  color: rgb(45, 26, 10); /* Black text color */
   text-decoration: none; /* Remove default underline */
   position: relative; /* Position relative for pseudo-element */
   transition: color 0.2s ease-in-out; /* Faster transition for text color */
 }
 
-.green-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1px; /* Adjust space between text and underline */
-  width: 100%;
-  height: 1px;
-  background-color: #0bc20b; /* Green underline color */
-  transform: scaleX(1); /* Full width initially */
-  transform-origin: bottom right; /* Align underline to bottom right */
-  transition: transform 0.2s ease-in-out; /* Faster transition for underline */
-}
+
 
 .green-link:hover {
   color: #0bc20b; /* Green text color on hover */
@@ -108,43 +102,44 @@ body {
 
 h3 {
   font-weight: 300; /* Adjust font weight if necessary */
-  color: #787878;
-  font-family: "Manrope", sans-serif;
+  color: rgba(45, 26, 10, 0.5);
+  font-family: "apercu", sans-serif;
   font-size: 2em; /* Adjust the font size as needed */
   margin: 0;
 }
 
-/* BentoBox Fix */
+/* BentoBox as a proper grid */
 .BentoBox {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px; /* small consistent gaps */
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-}
-
-.BentoBox__wrapper {
-  display: flex;
-  flex: 1 1 100%;
-  gap: 20px;
-  flex-wrap: wrap; /* allow wrapping on small screens */
-  justify-content: center;
+  padding: 0 20px;
 }
 
 .BentoBox__item {
   border-radius: 8px;
-  flex: 1 1 45%; /* two items per row by default, shrinks on smaller screens */
-  max-width: 400px; /* optional max width */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .BentoBox__item img {
   width: 100%;
-  height: auto; /* maintain aspect ratio */
-  object-fit: contain; /* prevents cropping */
-  border-radius: 8px;
+  height: auto;
+  object-fit: cover; /* fills the box more tightly */
   display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
+
+.BentoBox__item:hover img {
+  transform: scale(1.05); /* subtle zoom on hover */
+}
+
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
@@ -196,7 +191,7 @@ h3 {
 }
 
 .summary-container {
-  font-family: "Manrope", sans-serif;
+  font-family: "apercu", sans-serif;
   max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
@@ -209,42 +204,55 @@ h3 {
   gap: 1rem;
 }
 
-/* Default styles for larger screens */
-.summary-header h4 {
-  flex-shrink: 0;
-  padding-top: 10px;
-  color: #000000;
-  font-size: 1.7em;
-}
-
 .summary-header h3 {
   flex-shrink: 0;
   font-weight: 400;
-  color: #8b8b8b;
-  font-size: 1.5em;
+  color: rgba(45, 26, 10, 0.5);  font-size: 1.5em;
   white-space: normal;
   padding-top: 10px;
 
 }
 
+  h4 {
+    font-size: 2em;
+  color: rgba(45, 26, 10, 0.5);
+      font-weight: 450; 
+      text-align: center;
+  }
+  
+
 .summary-header h2 {
   flex-shrink: 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "apercu", sans-serif;
   padding-top: 0px;
   font-weight: 400;
-  color: #8b8b8b;
+  color: #2d1a0acc;
   font-size: 1.3em;
   white-space: normal;
   text-transform: uppercase;
   margin: 0;
   
 }
+.img-subtitle {
+  flex-shrink: 0;
+  font-family: "apercu", sans-serif;
+  padding-top: 0px;
+  font-weight: 400;
+  color: #2d1a0acc;
+  font-size: 1.3em;
+  white-space: normal;
+  margin: 0;
+  
+}
 
-.summary-text {
+
+.summary-text p{
   flex: 1;
   min-width: 0;
   max-width: 100%;
+  font-family: "apercu", sans-serif;
   word-wrap: break-word;
+  color: rgba(45, 26, 10, 0.5);
 }
 
 /* Mobile styles */
@@ -432,27 +440,6 @@ h3 {
   border-radius: 10px;
 }
 
-/* Apply specific borders to images only */
-.blue-summary-image img {
-  border: 3px solid #3FAEFC;
-}
-
-.pink-summary-image img {
-  border: 3px solid #ff4f4f;
-}
-
-.yellow-summary-image img {
-  border: 3px solid #FFAF48;
-}
-
-.hack-summary-image img {
-  height: auto;
-  border-radius: 10px;
-}
-
-.summary-image img {
-  border: 3px solid #9bd18a;
-}
 
 /* Remove border from the container itself */
 .summary-image {
@@ -471,7 +458,7 @@ h3 {
 .summary-text-bullets li {
   margin-bottom: 20px; /* Space between bullet points */
   font-size: 1em;
-  color: #4a4a4a;
+  color: rgba(45, 26, 10, 0.5);
   line-height: 1.5;
 }
 
@@ -481,7 +468,7 @@ h1 {
   font-weight: 600;
   font-size: 2em;
   margin-bottom: 1rem;
-  color: #000;
+  color: #2d1a0a;
   margin: 0;
   padding: 0;
 }
@@ -759,53 +746,71 @@ iframe {
 
 }
 
-
 /* Portfolio Button */
 .portfolio__btn-container {
-    display: flex;
-    justify-content: center;
-  }
-  
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio__btn {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-family: "apercu", sans-serif;
+  color: rgb(61, 61, 61);
+  text-decoration: none;
+  background: rgba(94, 79, 67, 0.089);
+  padding: 20px 150px; /* default for desktop */
+  border-radius: 5px;
+  position: relative; /* needed for :after */
+  transition: all 0.35s;
+  max-width: 90%; 
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center; /* center the text */
+  z-index: 1; /* ensure text is above pseudo-element */
+}
+
+.portfolio__btn:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #d1d1d1;
+  transition: width 0.35s ease;
+  border-radius: 5px;
+  z-index: -1; /* behind the text */
+}
+
+
+
+.portfolio__btn:hover:after {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
   .portfolio__btn {
-    font-size: 1.3rem;
-    font-family: "Manrope", sans-serif;;
-    background: #FFB6C1;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.35s;
-    outline: none;
+    padding: 15px 100px;
+    font-size: 1.2rem;
   }
-  
-  .portfolio__btn a {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .portfolio__btn {
+    padding: 12px 50px;
+    font-size: 1.1rem;
   }
-  
-  .portfolio__btn:after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #ff4f4f;
-    transition: all 0.35s;
-    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .portfolio__btn {
+    padding: 10px 20px;
+    font-size: 1rem;
   }
-  
-  .portfolio__btn:hover {
-    color: #fff;
-  }
-  
-  .portfolio__btn:hover:after {
-    width: 100%;
-  }
-  
+}
+
   .logo-text {
     font-family: 'Silkscreen', sans-serif;
     font-weight: 400; /* Adjust font weight as needed */
@@ -854,23 +859,10 @@ iframe {
   
   /* Yellow Link */
   .yellow-link {
-    color: #000; /* Black text color */
+  color: #2d1a0acc;
     text-decoration: none; /* Remove default underline */
     position: relative; /* Position relative for pseudo-element */
     transition: color 0.2s ease-in-out; /* Faster transition for text color */
-  }
-  
-  .yellow-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px; /* Adjust space between text and underline */
-    width: 100%;
-    height: 1px;
-    background-color: #FFAF48; /* Yellow underline color */
-    transform: scaleX(1); /* Full width initially */
-    transform-origin: bottom right; /* Align underline to bottom right */
-    transition: transform 0.2s ease-in-out; /* Faster transition for underline */
   }
   
   .yellow-link:hover {
@@ -879,24 +871,12 @@ iframe {
   
   /* Blue Link */
   .blue-link {
-    color: #000; /* Black text color */
+  color: #2d1a0acc;
     text-decoration: none; /* Remove default underline */
     position: relative; /* Position relative for pseudo-element */
     transition: color 0.2s ease-in-out; /* Faster transition for text color */
   }
   
-  .blue-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px; /* Adjust space between text and underline */
-    width: 100%;
-    height: 1px;
-    background-color: #3FAEFC; /* Blue underline color */
-    transform: scaleX(1); /* Full width initially */
-    transform-origin: bottom right; /* Align underline to bottom right */
-    transition: transform 0.2s ease-in-out; /* Faster transition for underline */
-  }
   
   .blue-link:hover {
     color: #3FAEFC; /* Blue text color on hover */
@@ -904,28 +884,13 @@ iframe {
   
 /* Navbar links styling */
 .pink-link {
-  font-family: '"Manrope", sans-serif;', sans-serif;
   font-weight: 400;
-  color: #000000;
+  color: #2d1a0acc;
   text-decoration: none;
   position: relative;
   display: inline-block;  /* Ensure the link is inline-block for width control */
   transition: 
     color 0.3s ease;
-}
-
-/* Underline effect using pseudo-element */
-.pink-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px; /* Adjust space between the text and the underline */
-  width: 100%; /* Make the underline full width of the link */
-  height: 2px;
-  background-color: #ff6b6b;
-  transition: transform 0.3s ease-in-out;
-  z-index: 1; /* Ensure the pseudo-element is above other content */
-  visibility: visible; /* Ensure the underline is not hidden */
 }
 
 /* Hover effect on links */
@@ -942,59 +907,18 @@ iframe {
   
   /* Purple Link */
   .purple-link {
-    color: #000; /* Black text color */
+  color: #2d1a0acc;
     text-decoration: none; /* Remove default underline */
     position: relative; /* Position relative for pseudo-element */
     transition: color 0.2s ease-in-out; /* Faster transition for text color */
   }
-  
-  .purple-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px; /* Adjust space between text and underline */
-    width: 100%;
-    height: 1px;
-    background-color: #742CFF; /* Purple underline color */
-    transform: scaleX(1); /* Full width initially */
-    transform-origin: bottom right; /* Align underline to bottom right */
-    transition: transform 0.2s ease-in-out; /* Faster transition for underline */
-  }
+
   
   .purple-link:hover {
     color: #742CFF; /* Purple text color on hover */
   }
 
 
-
-  /* CSS for Large Green Numbers with Text */
-  
-  .number-box {
-    display: flex;
-    flex-direction: column; /* Stack items vertically on mobile */
-    align-items: center;
-    background-color: #9bd18a; /* Green background */
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    width: 100%; /* Take up full width within max-width */
-  }
-  
-  .number {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-right: 0; /* Remove margin on mobile */
-    margin-bottom: 10px; /* Add margin bottom for spacing */
-  }
-  
-  .text {
-    font-size: 1.8rem;
-    font-weight: 500;
-    text-align: center; /* Center align text on mobile */
-    margin-bottom: 0; /* Remove margin bottom on mobile */
-  }
-  
   /* Media query for smaller screens */
   @media (max-width: 768px) {
     .number-box {
@@ -1011,51 +935,102 @@ iframe {
   }
   
   .lime-highlight {
-    color: #68b94f;
+    color: rgb(45, 26, 10);
     font-weight: 700;
     /* Additional styling */
   }
   .grey-highlight {
-    color: #787878;
+    color: rgb(45, 26, 10);
     font-weight: 400;
     font-size: 1.7rem;
     /* Additional styling */
   }
-  h4 {
-    font-size: 2em;
-    text-align: center;
-    color: #000;
-    font-weight: 450; 
-    margin: 0;
-    padding: 0;
+/* TOP GRID — always 3 columns */
+.quote-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: stretch;
+}
+.quote-grid-3 {
+  margin-bottom: 40px;
+}/* Force lowercase for the bottom grid h2s */
+.quote-grid-2 h2 {
+  text-transform: none;
+}
+
+/* BOTTOM GRID — exactly 2 centered columns */
+.quote-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  /* centers the 2 columns inside the container */
+  justify-content: center;
+  justify-items: stretch;
+
+  /* optionally limit width so they don't stretch too wide */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* MOBILE BREAKPOINT (optional) */
+@media (max-width: 700px) {
+  .quote-grid-3 {
+    grid-template-columns: 1fr;
   }
-  
-  .quote-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 20px;
+
+  .quote-grid-2 {
+    grid-template-columns: 1fr;
   }
+}
+
+.quote-cell {
+  background-color: #faf8f4;
+  padding: 20px;
+  text-align: center;
+}
+
+.quote-cell h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(45, 26, 10);
+  margin-bottom: 10px;
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  font-weight: 350;
+  color: rgba(45, 26, 10, 0.5);
+}
+
+
+  /* CSS for Large Green Numbers with Text */
   
-  .quote-cell {
-    background-color: #9bd18a;
+  .number-box {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+    background-color: #faf8f4; 
     padding: 20px;
-    text-align: center;
-    color: white;
-    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%; /* Take up full width within max-width */
   }
   
-  .quote-cell h2 {
-    font-size: 1.5rem;
-    font-weight: 600; 
-    color: rgb(255, 255, 255);
-    margin-bottom: 10px;
+  .number {
+    font-size: 4rem;
+        color: rgb(45, 26, 10);
+    font-weight: bold;
+    margin-right: 0; /* Remove margin on mobile */
+    margin-bottom: 10px; /* Add margin bottom for spacing */
   }
   
-  .quote-text {
-    font-size: 1.2rem;
-    font-weight: 350; 
-    color: white;
-    font-style: italic;
+  .text {
+        color: rgba(45, 26, 10, 0.5);
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center; /* Center align text on mobile */
+    margin-bottom: 0; /* Remove margin bottom on mobile */
   }
   
   /* Media query for smaller screens */

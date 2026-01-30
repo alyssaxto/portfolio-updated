@@ -3,10 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200..800;1,200..800&display=swap');
-
+@font-face{
+  font-family: "apercu";
+  src: url(./apercu.otf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Default styles (for larger screens) */
 .projects-title {
-  font-family: "Newsreader", serif;
+  font-family: "apercu", sans-serif;
   font-size: 7vw;
   font-weight: 500;
   color: #333;
@@ -194,13 +199,15 @@
   }
   
 .ImageItem h2 {
+    color: #2d1a0acc;
   font-family: "Manrope", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 .ImageItem p {
-  font-family: "Manrope", sans-serif;
+  font-family: "apercu", sans-serif;
   font-weight: 400;
+    color: rgba(45, 26, 10, 0.5);
   font-style: normal;
 }
   

@@ -137,7 +137,7 @@ const Value = () => (
       <ExpandableImage src= "/assets/GA/4.png" alt="User Journey" />
     </div>
     <br/>
-    <h2>bp's Official Color Palette    </h2>
+<h2 className="img-subtitle">bp's Official Color Palette</h2>
     <div className="summary-image">
       <ExpandableImage src= "/assets/GA/8.png" alt="User Journey" />
     </div>
@@ -160,7 +160,9 @@ const Empathize = () => (
       <ExpandableImage src= "/assets/GA/5.png" alt="User Journey" />
     </div>
     <br/>
-    <h2>Final badge displayed on a UX grad’s LinkedIn profile </h2>
+
+    <h2 className="img-subtitle">Final badge displayed on a UX grad’s LinkedIn profile</h2>
+
     <div className="summary-image">
       <ExpandableImage src= "/assets/GA/6.png" alt="User Journey" />
     </div>
@@ -171,9 +173,7 @@ const Empathize = () => (
 const BPPortfolio = () => (
 <TextFade direction="up">
 <div className="container">
-      <div className="summary-header">
-      <h2>Despite only having 12 weeks, I also created other products! </h2>
-      </div>
+  <h2 className="img-subtitle">Despite only having 12 weeks, I also created other products! </h2>
     <h1>Check out the other projects I worked on at bp</h1>
     <div className="Gallery__wrapper">
       <div className="Gallery__item">
@@ -216,9 +216,12 @@ const App = () => (
     <div class="divider"></div>
  
     <BPPortfolio/>
-    <div class="portfolio__btn-container">
-<button class="portfolio__btn"><a href="/playground">Back to Playground</a></button>
+<div class="portfolio__btn-container">
+  <a href="/playground" class="portfolio__btn">
+    Back to Playground
+  </a>
 </div>
+
 <br/>
 <br/>
   </div>

@@ -26,9 +26,6 @@ const Hero = () => {
           src={heroImage}
           alt="Alyssa on a bike"
           className="hero__image"
-          style={{
-            transform: `translateX(${Math.min(0, -offset * 0.1)}px)`,
-          }}
         />
       </TextFade>
     </section>

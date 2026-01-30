@@ -244,8 +244,11 @@ const App = () => (
 </div>
 <br/>
 <div class="portfolio__btn-container">
-<button class="portfolio__btn"><a href="/playground">Back to Playground</a></button>
+  <a href="/playground" class="portfolio__btn">
+    Back to Playground
+  </a>
 </div>
+
 <br/>
 <br/>
   </div>

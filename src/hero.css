@@ -43,13 +43,14 @@
   /* Content section */
   .hero__content {
     max-width: 600px;
-    max-height: 100px;
     z-index: 2; /* Ensures the text stays on top */
 
   }
   
   .hero__content h4 {
     font-size: 4rem;
+      margin-bottom: 1rem; /* adds space below heading */
+
   font-family: "Newsreader", serif;
   font-weight: 500;
     color: #FF4F4F; 

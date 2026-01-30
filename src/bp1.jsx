@@ -105,38 +105,59 @@ const ProblemStatement = () => (
 
 const Value = () => (
   <TextFade direction="up">
-  <div className="summary-container">
-    <div className="summary-header">
-    <h2>Value</h2>
-    <div className="summary-text">
-    <h1>Why bp needs generative image AI</h1>
-    <h3>
-      How does this product align with&nbsp;
-      <a href="https://www.bp.com/en/global/corporate/who-we-are/our-beliefs-and-code-of-conduct.html" className="green-link" target="_blank" rel="noopener noreferrer">
-         bp's code of conduct?
-      </a>
-    </h3>
-         </div>
-         </div>
-    <br />
-    <div className="quote-grid">
-      <div className="quote-cell">
-        <h2>Live our purpose​</h2>
-        <p className="quote-text">By having an approved image generator, it improves safety by protecting bp's data​</p>
+    <div className="summary-container value-section">
+      <div className="summary-header">
+        <h2>Value</h2>
+
+        <div className="summary-text">
+          <h1>Why bp needs generative image AI</h1>
+
+          <h3>
+            How does this product align with&nbsp;
+            <a
+              href="https://www.bp.com/en/global/corporate/who-we-are/our-beliefs-and-code-of-conduct.html"
+              className="green-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              bp's code of conduct?
+            </a>
+          </h3>
+        </div>
       </div>
-      <div className="quote-cell">
-        <h2>Care for others​</h2>
-        <p className="quote-text">This use case for this tool is an endless ocean of opportunity</p>
+
+      <br />
+
+      {/* 3-column grid (same as the top grid in QuantitativeData) */}
+      <div className="quote-grid-3">
+        <div className="quote-cell">
+          <h2>Live our purpose​</h2>
+          <p className="quote-text">
+            By having an approved image generator, it improves safety by
+            protecting bp's data​
+          </p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>Care for others​</h2>
+          <p className="quote-text">
+            This use case for this tool is an endless ocean of opportunity
+          </p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>Play to win​</h2>
+          <p className="quote-text">
+            AI image generators will enhance bp's efficiency and improve the
+            company's leadership within the energy sector
+          </p>
+        </div>
       </div>
-      <div className="quote-cell">
-        <h2>Play to win​</h2>
-        <p className="quote-text">AI image generators will enhance bp's efficiency and improve the company's leadership within the energy sector</p>
+
+      <div className="summary-image">
+        <ExpandableImage src="/assets/bp/9.png" alt="User Journey" />
       </div>
     </div>
-    <div className="summary-image">
-    <ExpandableImage src="/assets/bp/9.png" alt="User Journey" />
-     </div>
-  </div>
   </TextFade>
 );
 
@@ -173,23 +194,61 @@ const Empathize = () => (
 // Quantitative Data Component
 const QuantitativeData = () => (
   <TextFade direction="up">
-  <div className="summary-container">
-    <div className="summary-header">
-      <h2>Quantitative data</h2>
-      <div className="summary-text">
-        <h1>Sending out a survey to bphxd</h1>
-        <h3>After 2 weeks, here are the key findings of my survey</h3>
-        <h4><span className="lime-highlight">19</span> participants</h4>
-        <ul className="summary-text-bullets">
-          <li><span className="lime-highlight">42% </span>of participants have no experience with AI image generators</li>
-          <li><span className="lime-highlight">100% </span>of participants use images within their work</li>
-          <li><span className="lime-highlight">36% </span> of participants already integrate AI image generators into their work at bp</li>
-          <li>The <span className="lime-highlight">top 3 purposes of images </span> are for presentations, infographics, and design</li>
-          <li>The <span className="lime-highlight">top 2 styles of images </span> are stock images (primarily photography) and illustrations</li>
-        </ul>
+    <div className="summary-container">
+      <div className="summary-header">
+        <h2>Quantitative data</h2>
+
+        <div className="summary-text">
+          <h1>Sending out a survey to bphxd</h1>
+          <p>After 2 weeks, here are the key findings of my survey</p>
+          <h4>
+            <span className="lime-highlight">19</span> participants
+          </h4>
+
+          {/* TOP GRID — ALWAYS 3 per row */}
+          <div className="quote-grid-3">
+            <div className="quote-cell">
+              <h2>42%​</h2>
+              <p className="quote-text">
+                of participants have no experience with AI image generators​
+              </p>
+            </div>
+
+            <div className="quote-cell">
+              <h2>100%​</h2>
+              <p className="quote-text">
+                of participants use images within their work
+              </p>
+            </div>
+
+            <div className="quote-cell">
+              <h2>36%</h2>
+              <p className="quote-text">
+                of participants already integrate AI image generators into their work at bp
+              </p>
+            </div>
+          </div>
+
+          {/* BOTTOM GRID — ALWAYS 2 centered */}
+          <div className="quote-grid-2">
+            <div className="quote-cell">
+              <h2>Top 3 purposes of images​</h2>
+              <p className="quote-text">
+                are for presentations, infographics, and design​
+              </p>
+            </div>
+
+            <div className="quote-cell">
+              <h2>Top 2 styles of images</h2>
+              <p className="quote-text">
+                are stock images (primarily photography) and illustrations
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
   </TextFade>
 );
 
@@ -210,50 +269,57 @@ const QualitativeData = () => (
   </div>
   </TextFade>
 );
-
 // Affinity Mapping Section
 const AffinityMapping = () => (
   <TextFade direction="up">
-  <div className="summary-container">
-    <div className="summary-header">
-    <h2>Affinity Mapping</h2>
-    <div className="summary-text">
-    <h1>Using these interviews, I was able to start affinity mapping</h1>
-    <h3>These are the 6 most important themes I gathered from my user interviews</h3>
-    <br />
+    <div className="summary-container affinity-section">
+      <div className="summary-header">
+        <h2>Affinity Mapping</h2>
+        <div className="summary-text">
+          <h1>Using these interviews, I was able to start affinity mapping</h1>
+          <h3>These are the 6 most important themes I gathered from my user interviews</h3>
+          <br />
+        </div>
+      </div>
+
+      {/* 3-column grid */}
+      <div className="quote-grid-3">
+        <div className="quote-cell">
+          <h2>Current resources are lacking</h2>
+          <p className="quote-text">"BP's Image library is incredibly corporate and focused on more of our facilities."</p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>Various designers gain value</h2>
+          <p className="quote-text">"We need imagery to tell our stories and show that people are at the heart of our business."</p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>Increasing speed</h2>
+          <p className="quote-text">"It would save me from that three-week waiting time from the photography teams to capture those images."</p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>Generating concepts</h2>
+          <p className="quote-text">"In enterprise environments, we often lack the creativity to explain an idea without absolutely delivering the definition of it."</p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>Current experiences</h2>
+          <p className="quote-text">"You have to massage it about 50 times to get what you need."</p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>Concerns</h2>
+          <p className="quote-text">"We should have a note to let people know that this is not realistic."</p>
+        </div>
+      </div>
+
+      {/* Spacing automatically handled by CSS */}
+      <div className="summary-image">
+        <ExpandableImage src="/assets/bp/2.png" alt="User Journey" />
+      </div>
     </div>
-    </div>
-    <div className="quote-grid">
-      <div className="quote-cell">
-        <h2>Current resources are lacking</h2>
-        <p className="quote-text">"BP's Image library is incredibly corporate and focused on more of our facilities."</p>
-      </div>
-      <div className="quote-cell">
-        <h2>Various designers gain value</h2>
-        <p className="quote-text">"We need imagery to tell our stories and show that people are at the heart of our business."</p>
-      </div>
-      <div className="quote-cell">
-        <h2>Increasing speed</h2>
-        <p className="quote-text">"It would save me from that three-week waiting time from the photography teams to capture those images."</p>
-      </div>
-      <div className="quote-cell">
-        <h2>Generating concepts</h2>
-        <p className="quote-text">"In enterprise environments, we often lack the creativity to explain an idea without absolutely delivering the definition of it."</p>
-      </div>
-      <div className="quote-cell">
-        <h2>Current experiences</h2>
-        <p className="quote-text">"You have to massage it about 50 times to get what you need."</p>
-      </div>
-      <div className="quote-cell">
-        <h2>Concerns</h2>
-        <p className="quote-text">"We should have a note to let people know that this is not realistic."</p>
-      </div>
-    </div>
-    <br />
-    <div className="summary-image">
-      <ExpandableImage src="/assets/bp/2.png" alt="User Journey" />
-    </div>
-  </div>
   </TextFade>
 );
 
@@ -274,7 +340,7 @@ const Personas = () => (
         </div>
         <br />
           <h3>Regular bp employee</h3>
-          <h2>(Non-designer)</h2>
+<h2 className="img-subtitle">(Non-designer)</h2>
           <div className="summary-image">
             <ExpandableImage src="/assets/bp/Slide14.jpg" alt="User Journey" />
           </div>
@@ -407,17 +473,17 @@ const BPPortfolio = () => (
         </div>
         </div>
         <div className="summary-image">
-          <h3>Assisted image prompter</h3>
+<h2 className="img-subtitle">Assisted image prompter</h2>
           <div className="summary-image"><ExpandableImage src="/assets/bp/Slide22.jpg" alt="User Journey" /></div>
           <br />
-          <h3>Side bar</h3>
+<h2 className="img-subtitle">Side bar</h2>
           <div className="summary-image"><ExpandableImage src="/assets/bp/Slide23.jpg" alt="User Journey" /></div>
           <br />
-          <h3>Regenerator tool</h3>
+<h2 className="img-subtitle">Regenerator tool</h2>
           <div className="summary-image"><ExpandableImage src="/assets/bp/Slide24.jpg" alt="User Journey" /></div>
         </div>
         <br />
-        <h3>Download button</h3>
+<h2 className="img-subtitle">Download button</h2>
         <div className="summary-image"><ExpandableImage src="/assets/bp/Slide26.jpg" alt="User Journey" /></div>
       </div>
       </TextFade>
@@ -463,12 +529,7 @@ const BPPortfolio = () => (
         <p>
           I am grateful to have had the opportunity to intern at such an incredible company! I want to extend my heartfelt thanks to the entire design and change management team for their mentorship and warm welcome. Everyone's support and guidance have been invaluable.
         </p>
-        </div>
-        </div>
-        </div>
-        <br />
-
-        <div className="BentoBox">
+                <div className="BentoBox">
   <div className="BentoBox__wrapper">
     <div className="BentoBox__item">
       <ExpandableImage src="/assets/bp/4.jpg" alt="Image 1" />
@@ -485,12 +546,15 @@ const BPPortfolio = () => (
       <ExpandableImage src="/assets/bp/1.jpg" alt="Image 4" />
     </div>
   </div>
-</div>
+          </div>
+        </div>
+        </div>
+        </div>
 
 <div className="container">
   <div className="summary-header">
-    <h2>Despite only having 12 weeks, I also created other products!
-  </h2>
+  <h2 className="img-subtitle">Despite only having 12 weeks, I also created other products! </h2>
+
   <h1>Check out the other projects I worked on at bp</h1>
   <div className="Gallery__wrapper">
     <div className="Gallery__item">
@@ -548,8 +612,8 @@ const App = () => (
     <div class="divider"></div>
     <div className="section-divider"></div>
     <BPPortfolio/>
-    <div class="portfolio__btn-container">
-<button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
+<div class="portfolio__btn-container">
+  <a href="/" class="portfolio__btn">Back to Portfolio</a>
 </div>
 <br/>
 <br/>

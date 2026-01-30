@@ -69,9 +69,9 @@ const ExecutiveSummary = () => (
       <div className="summary-text">
         <h1>How are refinery employees currently making their rounds?</h1>
         <p>
-         For my first rotation as a new grad designer, I was placed in the Refining, Bioenergy, Hydrogen, and Renewables team. My project was to design an application
-         that would streamline the process of completing rounds at the refinery.
-        </p>
+The Operator Journey is a core component of bp’s Refining Transformation program, designed to simplify and modernize how frontline teams work each day. We observed Field Operators, Board Operators, and Shift Team Leads across full shift cycles to understand how they captured information, communicated with peers, and handed over responsibilities. 
+Our goal was to design an integrated operational experience that brings all essential information into a single application that works seamlessly in the field and in the control room.
+ </p>
       </div>
     </div>
     <div className="summary-image">
@@ -81,6 +81,26 @@ const ExecutiveSummary = () => (
   </TextFade>
 );
 
+
+const Observations = () => (
+  <TextFade direction="up">
+  <div className="summary-container">
+    <div className="summary-header">
+      <h2>Executive Summary</h2>
+      <div className="summary-text">
+        <h1>Full disclosure... I was completely clueless about refining</h1>
+        <p>
+The Operator Journey is a core component of bp’s Refining Transformation program, designed to simplify and modernize how frontline teams work each day. We observed Field Operators, Board Operators, and Shift Team Leads across full shift cycles to understand how they captured information, communicated with peers, and handed over responsibilities. 
+Our goal was to design an integrated operational experience that brings all essential information into a single application that works seamlessly in the field and in the control room.
+ </p>
+      </div>
+    </div>
+    <div className="summary-image">
+      <ExpandableImage src= "/assets/bp/10.png" alt="User Journey" />
+    </div>
+  </div>
+  </TextFade>
+);
 
 
 const ProblemStatement = () => (
@@ -548,8 +568,8 @@ const App = () => (
     <div class="divider"></div>
     <div className="section-divider"></div>
     <BPPortfolio/>
-    <div class="portfolio__btn-container">
-<button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
+<div class="portfolio__btn-container">
+  <a href="/" class="portfolio__btn">Back to Portfolio</a>
 </div>
 <br/>
 <br/>

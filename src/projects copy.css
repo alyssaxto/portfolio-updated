@@ -7,7 +7,12 @@
   flex-wrap: nowrap;
   font-size: clamp(2rem, 6vw, 3rem); /* desktop & tablet scaling */
 }
-
+@font-face{
+  font-family: "apercu";
+  src: url(./apercu.otf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .playgroundTitleContainer {
@@ -134,10 +139,7 @@ html {
     transform: none; /* ✅ no scaling */
   }
 }
-/* --- GLOBAL --- */
-body {
-  font-family: "Manrope", sans-serif;
-}
+
 /* Full viewport hero */
 /* --- Full viewport hero --- */
 .welcome-hero {
@@ -190,7 +192,7 @@ body {
 
 .playground-subtitle-container {
     font-size: 1.25rem;
-  font-family: "Manrope", sans-serif;
+  font-family: "apercu", sans-serif;
     text-align: center;
       color: #555;
   margin-top: 2rem; /* Less space from the image */
@@ -340,16 +342,17 @@ h1 a {
   text-align: center;
   margin: 15px 0 5px;
   transition: font-weight 0.3s ease, font-size 0.3s ease;
-  color: #333;
+  color: #2d1a0acc;
 }
 
 .Projects__card p {
    font-size: 1rem; /* Responsive font size */
-  font-family: "Manrope", sans-serif;
+  font-family: "apercu", sans-serif;
   font-weight: 400;
   font-style: normal;
     margin: 0 10px 15px 10px; /* Margin below the paragraph and padding on the sides */
     text-align: center;
+        color: rgba(45, 26, 10, 0.5);
     transition: color 0.3s ease;
 }
 

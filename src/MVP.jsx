@@ -83,12 +83,12 @@ const ExecutiveSummary = () => (
         </ul>
       </div>
     </div>
-    <h2>Sketches    </h2>
+<h2 className="img-subtitle">Sketches    </h2>
     <div className="summary-image">
       <ExpandableImage src= "/assets/mvp/4.png" alt="User Journey" />
     </div>
     <br/>
-    <h2>bp's Official Color Palette </h2>
+<h2 className="img-subtitle">bp's Official Color Palette </h2>
     <div className="summary-image">
       <ExpandableImage src= "/assets/GA/8.png" alt="User Journey" />
     </div>
@@ -106,7 +106,7 @@ const ProblemStatement = () => (
       <div className="summary-text">
         <h1>Building upon my sketches        </h1>
         <p>Since I was asked for 2-3 badges to show the stakeholders, I created three prototypes with different color palettes        </p>
-        <h2>Feedback I received        </h2>
+<h5 className="img-subtitle">Feedback I received</h5>
         <ul className="summary-text-bullets">
           <li>Remove the medal next to MVP on each design</li>
           <li>Make the flag bigger to make bp's logo more visible</li>
@@ -139,7 +139,7 @@ const Value = () => (
       <ExpandableImage src= "/assets/GA/4.png" alt="User Journey" />
     </div>
     <br/>
-    <h2>bp's Official Color Palette    </h2>
+<h2 className="img-subtitle">bp's Official Color Palette    </h2>
     <div className="summary-image">
       <ExpandableImage src= "/assets/GA/8.png" alt="User Journey" />
     </div>
@@ -158,17 +158,17 @@ const Empathize = () => (
         <p>After presenting the badges to stakeholders from both bp and General Assembly, this is what was approved        </p>
       </div>
     </div>
-    <h2>Badge option 1</h2>
+<h2 className="img-subtitle">Badge option 1</h2>
     <div className="summary-image">
       <ExpandableImage src= "/assets/mvp/1.png" alt="User Journey" />
     </div>
     <br/>
-    <h2>Badge option 2</h2>
+<h2 className="img-subtitle">Badge option 2</h2>
     <div className="summary-image">
       <ExpandableImage src= "/assets/mvp/2.png" alt="User Journey" />
     </div>
     <br/>
-    <h2>Badge option 3</h2>
+<h2 className="img-subtitle">Badge option 3</h2>
     <div className="summary-image">
       <ExpandableImage src= "/assets/mvp/8.png" alt="User Journey" />
     </div>
@@ -184,7 +184,7 @@ const Last = () => (
         <div className="summary-text">
           <h1>Final Version </h1>
           <p>After presenting the idea to stakeholders from bp, the 3rd badge designs were approved          </p>
-          <h3>Final feedback I received          </h3>
+          <h2>Final feedback I received        </h2>
           <ul className="summary-text-bullets">
             <li>Make all the titles lowercase and the same size</li>
             <li>Change some of the characters to be male to represent the male designers</li>
@@ -195,7 +195,7 @@ const Last = () => (
         <ExpandableImage src= "/assets/mvp/3.png" alt="User Journey" />
       </div>
       <br/>
-      <h2>Female and male variations      </h2>
+<h2 className="img-subtitle">Female and male variations      </h2>
       <div className="summary-image">
         <ExpandableImage src= "/assets/mvp/9.png" alt="User Journey" />
       </div>
@@ -206,9 +206,8 @@ const Last = () => (
 const BPPortfolio = () => (
 <TextFade direction="up">
 <div className="container">
-      <div className="summary-header">
-      <h2>Despite only having 12 weeks, I also created other products! </h2>
-      </div>
+  <h2 className="img-subtitle">Despite only having 12 weeks, I also created other products! </h2>
+
     <h1>Check out the other projects I worked on at bp</h1>
     <div className="Gallery__wrapper">
       <div className="Gallery__item">

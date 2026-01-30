@@ -3,8 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Reenie+Beanie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
-
-
+@font-face{
+  font-family: "apercu";
+  src: url(./apercu.otf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Reset default body spacing */
 body, html {
   margin: 0;
@@ -50,19 +54,6 @@ body, html {
   padding: 0 2rem; /* Add padding to avoid text touching the edges on small screens */
 }
 
-.Playground {
-  font-size: 8vw; /* Use viewport width (vw) for responsive font sizing */
-  font-family: "Manrope", sans-serif;
-  font-weight: bold;
-  margin-top: 10rem;
-  color: #333;
-  text-align: center;
-  
-  /* Ensure the text stays on one line */
-  white-space: nowrap; /* Prevent the text from wrapping */
-  display: inline-block;
-}
-
 /* Optional: Media query for smaller screens to fine-tune */
 @media (max-width: 768px) {
   .Playground {
@@ -79,89 +70,96 @@ body, html {
   white-space: nowrap;
 }
 
-
 .polaroid-container {
-  max-width: 1200px; /* Increase width of the container */
-  margin: auto;
+  width: 100%;
+  max-width: 1200px;       /* optional: prevent it from being too wide */
+  margin: 0 auto;           /* center container */
+  padding: 0 40px;          /* <-- this adds space on left and right */
   text-align: center;
   margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: nowrap;        /* keep row on desktop */
+  gap: 40px;                /* space between polaroids */
 }
 
 .polaroid-wrapper {
   display: flex;
+  flex-wrap: wrap;       /* allow multiple rows */
   gap: 40px;
   justify-content: center;
-  flex-wrap: nowrap; /* Prevent wrapping */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .polaroid-item {
   background: rgb(238, 238, 238);
-  padding: 20px; /* Increased padding */
+  padding: 20px;
   border-radius: 9px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
   text-align: center;
   transition: transform 0.3s ease-in-out;
-  min-width: 280px; /* Set a minimum width for better responsiveness */
-  max-width: 350px; /* Keep a reasonable max width */
+
+  flex: 0 1 300px;   /* natural width, can shrink if needed */
+  min-width: 250px;  /* don’t get too small */
+  max-width: 350px;  /* don’t grow too big */
 }
 
 .polaroid-item:hover {
   transform: scale(1.1);
+  z-index: 10;
 }
 
+/* Polaroid image */
 .polaroid-image {
-  width: 100%; /* Increased image width */
-  max-width: 500px; /* Optional: max width */
-  height: auto; /* Keep aspect ratio */
+  width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
+/* Captions */
 .polaroid-caption {
-  font-family: "Reenie Beanie";
+  font-family: "Reenie Beanie", cursive;
   margin-top: 10px;
   font-weight: 400;
-  color:#000;
+  color: #000;
   font-size: 2rem;
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .polaroid-subtitle {
   font-family: "Schoolbell", cursive;
-  color:#000;
+  color: #000;
   font-size: 1rem;
 }
-@media (max-width: 1000px) {
-  .polaroid-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* top-align */
-    padding: 20px 10px 40px;
-  overflow-x: hidden;
-  }
 
+/* Responsive adjustments */
+
+/* Desktop: default layout is 2×3 if space allows */
+@media (max-width: 1200px) {
   .polaroid-wrapper {
-    display: flex;
-    flex-direction: column; /* single column */
-    gap: 20px; /* spacing between items */
-    overflow: visible; /* important: allow scale outside */
-    align-items: center; /* center the items horizontally */
-    width: 100%;
-  }
-
-  .polaroid-item {
-    width: 90%; /* give room for scaling */
-    max-width: 350px; /* same as desktop max */
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .polaroid-item:hover {
-    transform: scale(1.05); /* slightly smaller scale on mobile */
-    z-index: 10; /* bring hovered item above others */
+    gap: 30px;
   }
 }
 
+/* Tablet / mid-size screens */
+@media (max-width: 1000px) {
+  .polaroid-item {
+    flex: 1 1 45%; /* two items per row */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 700px) {
+  .polaroid-item {
+    flex: 1 1 90%; /* stack in single column */
+  }
+  .polaroid-wrapper {
+    gap: 20px;
+  }
+}
 
 .carousel-container {
   width: 100%;
@@ -182,7 +180,7 @@ body, html {
 }
 
 .about-heading {
-  font-size: 4rem; /* Adjust size as needed */
+  font-size: 3rem; /* Adjust size as needed */
   color: #ff4f4f;
   font-weight: 400;
   font-family: "Manrope", sans-serif;
@@ -227,39 +225,26 @@ body, html {
   }
   
   /* Pink Link */
-.pink-link {
-  color: #ff4f4f; /* Pink text color */
+.about-link {
+  color: #2d1a0acc;
   text-decoration: none;
   position: relative; /* For pseudo-element underline */
-  font-weight: 400 !important; /* Force normal weight */
-  font-family: "Manrope", sans-serif;
   transition: color 0.2s ease-in-out;
 }
 
-.pink-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 1px;
-  background-color: #ff4f4f;
-  transform: scaleX(1);
-  transform-origin: bottom right;
-  transition: transform 0.2s ease-in-out;
-}
 
-.pink-link:hover {
+
+.about-link:hover {
   color: #ff4f4f;
 }
 
   
 .about__content p {
   margin-top: 1rem;
-  font-family: "Manrope", sans-serif;
+  font-family: "apercu", sans-serif;
   font-size: 1.3rem;
-  font-weight: 300;
-  color: #000;
+  font-weight: 200;
+  color: rgba(45, 26, 10, 0.5);
 }
 
 
@@ -274,7 +259,6 @@ body, html {
 }
 
 
-
 /* About Section - Desktop Large Screens (1200px and below) */
 @media screen and (max-width: 1200px) {
   .about__container {
@@ -282,18 +266,20 @@ body, html {
     grid-template-columns: 1fr 1fr;
     align-items: start;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 95%;
     margin: 0 auto;
+    padding: 0;
+
   }
 
   .about__content {
     text-align: left;
   }
 
-  .about__img--card {
+.about__img--card.swing{
     width: 550px; /* slightly larger image */
     max-width: 100%;
-    margin-top: -1rem; /* touch top of screen for swing */
+    margin-top: -1rem; /* negative margin to "escape" section padding */
 
   }
 }
@@ -307,7 +293,7 @@ body, html {
     justify-content: flex-start;
     width: 100%;
     padding: 0 20px;
-    gap: 2rem;
+    gap: 5rem;
   }
 
   .about__img--card.swing {
@@ -344,7 +330,10 @@ body, html {
     max-width: 600px;
     margin-top: -1rem; /* swing space */
   }
-
+  .about__container {
+    padding: 0;
+    gap: 2rem;
+  }
   .about__content {
     width: 80%;
     box-sizing: border-box; /* include padding in width */

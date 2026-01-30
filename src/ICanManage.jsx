@@ -306,7 +306,7 @@ const App = () => (
     <Standard/>
 <br/>
 <div class="portfolio__btn-container">
-<button class="portfolio__btn"><a href="/">Back to Portfolio</a></button>
+  <a href="/" class="portfolio__btn">Back to Portfolio</a>
 </div>
 <br/>
 <br/>
