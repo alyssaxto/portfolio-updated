@@ -96,7 +96,7 @@ const HorizontalScroll = () => {
                   <ImageContainer
                     imageSource={rippleImage}
                     title={"Bringing North America’s largest 24-hour hackathon to life"}
-                    description={"hackUTD product design role spring-fall 2024"}
+                    description={"hackUTD product design role spring - fall 2024"}
                   />
                 </motion.div>
               </Link>
@@ -111,7 +111,7 @@ const HorizontalScroll = () => {
                   <ImageContainer
                     imageSource={manageImage}
                     title={"Empowering cancer patients to complete their treatment journey"}
-                    description={"artscilab design internship spring 2024-summer 2025"}
+                    description={"artscilab design internship spring 2024 - summer 2025"}
                   />
                 </motion.div>
               </Link>
@@ -149,25 +149,25 @@ const HorizontalScroll = () => {
         <a href="/Password" className="Projects__card">
           <img src={bpImage} alt="AI Image Generator" />
           <h2 className="grid-project-title">Making Image Creation Faster, Safer, & Smarter</h2>
-          <p>Designing an accessible way for bp employees to quickly create the images they need</p>
+          <p>bp product design internship summer 2024</p>
         </a>
 
         <a href="/HackUTD11" className="Projects__card">
           <img src={rippleImage} alt="HackUTD Website" />
           <h2 className="grid-project-title">Bringing North America’s largest 24-hour hackathon to life</h2>
-          <p>Developing and designing the website for the biggest 24-hour hackathon in North America hosted by HackUTD</p>
+          <p>hackUTD product design role spring - fall 2024</p>
         </a>
 
         <a href="/Password2" className="Projects__card">
           <img src={manageImage} alt="I Can Manage Cancer" />
           <h2 className="grid-project-title">Empowering cancer patients to complete their treatment journey</h2>
-          <p>An educational platform designed to assist head and neck cancer patients through treatment.</p>
+          <p>artscilab design internship spring 2024 - summer 2025</p>
         </a>
 
         <a href="/Stemuli" className="Projects__card">
           <img src={stemuliImage} alt="Stemuli" />
           <h2 className="grid-project-title">Making Work Experience Accessible for College Students</h2>
-          <p>A desktop and mobile app for students interested in product design to explore more about the career through VR.</p>
+          <p>stemuli product design class spring 2024</p>
         </a>
       </div>
     </div>
