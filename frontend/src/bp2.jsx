@@ -227,16 +227,11 @@ const App = () => (
     <div class="divider"></div>
 
     <ExecutiveSummary />
-    
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <ProblemStatement />
     <div class="divider"></div>
     <Value />
-    
-    <div className="section-divider"></div>
-    <div class="divider"></div>
-    <div className="section-divider"></div>
+        <div class="divider"></div>
     <Empathize />
     <div class="divider"></div>
  

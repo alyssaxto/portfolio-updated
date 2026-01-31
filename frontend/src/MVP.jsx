@@ -97,15 +97,41 @@ const ExecutiveSummary = () => (
         </p>
         <p>Create 6 badge executions using the 2024 UX Design Bootcamp look and feel. Each badge should be the same with only the badge name varied. These badges will be awarded to the grads to use in their bp online profiles and email signatures. Please provide concepts for both a round badge and a more traditional badge.</p>
         <h2>The 6 badge titles        </h2>
-        <ul className="summary-text-bullets">
-          <li>MVP: Best Collaboration</li>
-          <li>MVP: Knowledge Guru</li>
-          <li>MVP: Most Original Project</li>
-          <li>MVP: Best Business Case</li>
-          <li>MVP: Most All In</li>
-          <li>MVP: Best All-Around</li>
-        </ul>
+              <div className="quote-grid-3">
+        <div className="quote-cell">
+          <h2>1</h2>
+          <p className="quote-text">MVP: Best Collaboration</p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>2</h2>
+          <p className="quote-text">MVP: Knowledge Guru</p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>3</h2>
+          <p className="quote-text">MVP: Most Original Project</p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>4</h2>
+          <p className="quote-text">MVP: Best Business Case</p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>5</h2>
+          <p className="quote-text">MVP: Most All In</p>
+        </div>
+
+        <div className="quote-cell">
+          <h2>6</h2>
+          <p className="quote-text">MVP: Best All-Around
+</p>
+        </div>
       </div>
+            {/* 3-column grid */}
+      </div>
+
     </div>
 <h2 className="img-subtitle">Sketches    </h2>
     <div className="summary-image">
@@ -261,23 +287,21 @@ const App = () => (
 
     <ExecutiveSummary />
     
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <ProblemStatement />
     <div class="divider"></div>
     <Value />
-    
-    <div className="section-divider"></div>
-    <div class="divider"></div>
-    <div className="section-divider"></div>
+        <div class="divider"></div>
     <Empathize />
     <div class="divider"></div>
     <Last />
     <div class="divider"></div>
 
     <BPPortfolio/>
-    <div class="portfolio__btn-container">
-<button class="portfolio__btn"><a href="/playground">Back to Playground</a></button>
+<div class="portfolio__btn-container">
+  <a href="/playground" class="portfolio__btn">
+    Back to Playground
+  </a>
 </div>
 <br/>
 <br/>
