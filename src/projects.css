@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200..800;1,200..800&display=swap');
 @font-face{
   font-family: "apercu";
-  src: url(./apercu.otf) format("truetype");
+  src: url(/apercu.otf) format("opentype");
   font-weight: normal;
   font-style: normal;
 }
