@@ -1,4 +1,4 @@
-import Casestudy from '../bp1.jsx';
+import Casestudy from '../bp1.tsx';
 function Home() {
 
     return(

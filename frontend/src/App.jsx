@@ -5,8 +5,8 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Play from "./pages/Playground.jsx";
 import BPIntern from "./pages/bpIntern.jsx";
-import HackUTD from "../src/HackUTD11.jsx";
-import ScrollToTop from "./ScrollToTop";
+import HackUTD from "./HackUTD11.jsx";
+import ScrollToTop from "./ScrollToTop.jsx";
 import ICanManage from "./ICanManage.jsx";
 import Stemuli from "./Stemuli.jsx";
 import Hackportal from "./Hackportal.jsx";
@@ -20,7 +20,7 @@ import Password2 from "./PasswordProtected2.jsx";
 import Bp3 from "./bp3.jsx";
 import Footer from "./Footer.jsx";
 
-import CustomCursor from "./CustomCursor";
+import CustomCursor from "./CustomCursor.jsx";
 
 function App() {
   return (
