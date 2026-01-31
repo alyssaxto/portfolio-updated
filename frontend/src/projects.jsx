@@ -100,7 +100,7 @@ const HorizontalScroll = () => {
                   />
                 </motion.div>
               </Link>
-              <Link to="/Password2">
+              <Link to="/ICanManage">
                 <motion.div
                   className="ImageItem"
                   initial={{ opacity: 0, y: 150 }}

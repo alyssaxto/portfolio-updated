@@ -7,7 +7,7 @@ import Play from "./pages/Playground.jsx";
 import BPIntern from "./pages/bpIntern.jsx";
 import HackUTD from "./HackUTD11.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
-import ICanManage from "./ICanManage.jsx";
+import ICanManage from "./ICanManage.tsx";
 import Stemuli from "./Stemuli.jsx";
 import Hackportal from "./Hackportal.jsx";
 import Gravebound from "./Gravebound.jsx";
