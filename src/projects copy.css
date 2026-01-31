@@ -358,7 +358,8 @@ h1 a {
 
 .Projects__card:hover h2,
 .Projects__card:hover p {
-  color: #ff8177;
+  color: #292929;
+
 }
 
 /* --- PLAYGROUND INTRO SECTION --- */

@@ -207,7 +207,8 @@ h3 {
 .summary-header h3 {
   flex-shrink: 0;
   font-weight: 400;
-  color: rgba(45, 26, 10, 0.5);  font-size: 1.5em;
+  color: rgba(45, 26, 10, 0.5);
+  font-size: 1.5em;
   white-space: normal;
   padding-top: 10px;
 

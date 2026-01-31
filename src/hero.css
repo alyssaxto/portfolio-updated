@@ -157,7 +157,7 @@
   }
  
     .hero__content h4 {
-    font-size: 2rem;
+    font-size: 3rem;
   
   }
   .hero__image {
@@ -165,5 +165,6 @@
     max-width: none;
     margin-top: 2rem;
   }
-  
+
+
   }

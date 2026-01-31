@@ -55,9 +55,10 @@ footer {
 }
 
 .footer__left p {
+  font-family: "apercu", sans-serif;
     font-size: 1.25rem;
     font-weight: 300;
-    color: #616161;
+  color: #2d1a0acc;
     line-height: 15px;
 }
 
@@ -72,7 +73,7 @@ footer {
 .footer__right h3 {
     font-size: 1.5rem;
     font-weight: 300;
-    color: #333;
+  color: #2d1a0acc;
 }
 
 
@@ -89,8 +90,7 @@ footer {
 
 /* Individual Link Styles */
 .footer__links a {
-  color: #292929;
-    font-family: "apercu", sans-serif;
+  color: #2d1a0acc;
   text-decoration: none;
   justify-content: flex-start; /* Aligns left */
   font-size: 1.25rem;
@@ -128,7 +128,8 @@ footer {
 }
 
 .resumelink {
-  color: #FFB6C1;
+    font-family: "apercu", sans-serif;
+  color: #292929;
   text-align: left; /* match heading */
   text-decoration: none;
   font-weight: 400;
