@@ -2,7 +2,7 @@ name: Azure Frontend Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ]
   workflow_dispatch:
 
 permissions:
