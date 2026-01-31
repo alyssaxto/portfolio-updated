@@ -142,36 +142,46 @@ const HorizontalScroll = () => {
 {/* Grid View */}
 {(isGridActive || isSmallScreen) && (
   <TextFade direction="up">
-    <div className="Projects">
-      <br />
-      <br />
-      <div className="Projects__wrapper index">
-        <a href="/Password" className="Projects__card">
-          <img src={bpImage} alt="AI Image Generator" />
-          <h2 className="grid-project-title">Making Image Creation Faster, Safer, & Smarter</h2>
-          <p>bp product design internship summer 2024</p>
-        </a>
+  <div className="Projects">
+    <br />
+    <br />
+    <div className="Projects__wrapper index">
 
-        <a href="/HackUTD11" className="Projects__card">
-          <img src={rippleImage} alt="HackUTD Website" />
-          <h2 className="grid-project-title">Bringing North America’s largest 24-hour hackathon to life</h2>
-          <p>hackUTD product design role spring - fall 2024</p>
-        </a>
+      <Link to="/bpProject" className="Projects__card">
+        <img src={bpImage} alt="AI Image Generator" />
+        <h2 className="grid-project-title">
+          Making Image Creation Faster, Safer, & Smarter
+        </h2>
+        <p>bp product design internship summer 2024</p>
+      </Link>
 
-        <a href="/Password2" className="Projects__card">
-          <img src={manageImage} alt="I Can Manage Cancer" />
-          <h2 className="grid-project-title">Empowering cancer patients to complete their treatment journey</h2>
-          <p>artscilab design internship spring 2024 - summer 2025</p>
-        </a>
+      <Link to="/HackUTD11" className="Projects__card">
+        <img src={rippleImage} alt="HackUTD Website" />
+        <h2 className="grid-project-title">
+          Bringing North America’s largest 24-hour hackathon to life
+        </h2>
+        <p>hackUTD product design role spring - fall 2024</p>
+      </Link>
 
-        <a href="/Stemuli" className="Projects__card">
-          <img src={stemuliImage} alt="Stemuli" />
-          <h2 className="grid-project-title">Making Work Experience Accessible for College Students</h2>
-          <p>stemuli product design class spring 2024</p>
-        </a>
-      </div>
+      <Link to="/ICanManage" className="Projects__card">
+        <img src={manageImage} alt="I Can Manage Cancer" />
+        <h2 className="grid-project-title">
+          Empowering cancer patients to complete their treatment journey
+        </h2>
+        <p>artscilab design internship spring 2024 - summer 2025</p>
+      </Link>
+
+      <Link to="/Stemuli" className="Projects__card">
+        <img src={stemuliImage} alt="Stemuli" />
+        <h2 className="grid-project-title">
+          Making Work Experience Accessible for College Students
+        </h2>
+        <p>stemuli product design class spring 2024</p>
+      </Link>
+
     </div>
-  </TextFade>
+  </div>
+</TextFade>
 )}
     </div>
 
