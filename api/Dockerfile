@@ -4,7 +4,7 @@ WORKDIR /home/site/wwwroot
 
 # Install the Functions Core Tools inside the container
 RUN apt-get update && apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - && apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - && apt-get install -y nodejs
 RUN npm install -g azure-functions-core-tools@4 --unsafe-perm true
 
 COPY requirements.txt .
