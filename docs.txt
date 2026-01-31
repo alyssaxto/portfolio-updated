@@ -12,3 +12,4 @@ do this from the main folder, dont cd into backend or frontend or anywhere
 it should take a while the first time, then it will be faster after
 visit https://localhost:4280
 once the server is running! this way u dont have to have multiple terminals open and its easier for u i hope
+test
