@@ -1,0 +1,14 @@
+hey
+i did the stuff with docker - docker helps because it maskes it where we work on the same version of python, node etc
+also installs all dependencies you need automatically 
+
+you might need to install docker desktop 
+https://docs.docker.com/desktop/setup/install/windows-install/
+
+to get the server running, do
+docker-compose up --build
+do this from the main folder, dont cd into backend or frontend or anywhere
+
+it should take a while the first time, then it will be faster after
+visit https://localhost:4280
+once the server is running! this way u dont have to have multiple terminals open and its easier for u i hope
