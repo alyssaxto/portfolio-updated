@@ -1,6 +1,6 @@
 
 import "./Casestudy.css";
-import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
+import { TextFade } from "./Components/TextFade.tsx"; // Ensure this import is correct
 import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 import ExpandableImage from './Components/ExpandImage.jsx';
 

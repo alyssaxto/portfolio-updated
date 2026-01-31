@@ -70,7 +70,7 @@ const HorizontalScroll = () => {
         <div className="carousel" ref={carouselRef}>
           <div className="contentContainer">
             <motion.div className="images" style={{ x }}>
-              <Link to="/Password">
+              <Link to="/bpProject">
                 <motion.div
                   className="ImageItem"
                   initial={{ opacity: 0, y: 150 }}
@@ -81,7 +81,7 @@ const HorizontalScroll = () => {
                   <ImageContainer
                     imageSource={bpImage}
                     title={"Making Image Creation Faster, Safer, & Smarter"}
-                    description={"Designing an accessible way for bp employees to quickly create the images they need."}
+                    description={"bp product design internship summer 2024"}
                   />
                 </motion.div>
               </Link>
@@ -96,11 +96,11 @@ const HorizontalScroll = () => {
                   <ImageContainer
                     imageSource={rippleImage}
                     title={"Bringing North America’s largest 24-hour hackathon to life"}
-                    description={"Developing and designing the website for the biggest 24-hour hackathon in North America hosted by HackUTD."}
+                    description={"hackUTD product design role spring-fall 2024"}
                   />
                 </motion.div>
               </Link>
-              <Link to="/Password2">
+              <Link to="/ICanManage">
                 <motion.div
                   className="ImageItem"
                   initial={{ opacity: 0, y: 150 }}
@@ -111,7 +111,7 @@ const HorizontalScroll = () => {
                   <ImageContainer
                     imageSource={manageImage}
                     title={"Empowering cancer patients to complete their treatment journey"}
-                    description={"An educational platform designed to assist head and neck cancer patients through treatment."}
+                    description={"artscilab design internship spring 2024-summer 2025"}
                   />
                 </motion.div>
               </Link>
@@ -126,7 +126,7 @@ const HorizontalScroll = () => {
                   <ImageContainer
                     imageSource={stemuliImage}
                     title={"Making Work Experience Accessible for College Students"}
-                    description={"A desktop and mobile app for students interested in product design to explore more about the career through VR."}
+                    description={"stemuli product design class spring 2024"}
                   />
                 </motion.div>
               </Link>

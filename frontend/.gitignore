@@ -7,23 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-.env
-api/local.settings.json
 node_modules
 dist
 dist-ssr
 *.local
-
-api/__pycache__
-
-terraform/.terraform
-terraform/.terraform.lock.hcl
-terraform/terraform.tfstate
-terraform/terraform.tfvars
-terraform/.terraform.tfstate.lock.info
-
-
-terraform/*
 
 # Editor directories and files
 .vscode/*
