@@ -4,21 +4,42 @@ import { TextFade } from "./Components/TextFade"; // Ensure this import is corre
 import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 import ExpandableImage from './Components/ExpandImage.jsx';
 
+import { useState } from "react";
+
 // Header Component
-const Header = () => (
+const Header = ({ bgColor = "#FFDBB1" }) => (
   <TextFade direction="up">
-  <header className="header">
-    <h1 className="header__title">Designing a way for students to gain work experience outside of school</h1>
-    <h2>Stemuli Product Designer ✷ Jan - May 2024</h2>
-    <div className="image-containy">
-      <a href="https://stemuli.net/" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/stemuli/s17.png" alt="Image 2" className="hover-image" />
-      </a>
-    </div>
-  </header>
+    <header className="header">
+      <div
+        className="image-containy"
+        style={{ backgroundColor: bgColor }}
+      >
+        <div className="image-wrapper">
+          <a
+            href="https://stemuli.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/stemuli/s20.png"
+              alt="Stemuli Project"
+              className="hover-image"
+            />
+          </a>
+        </div>
+      </div>
+
+      <h1 className="header__title">
+        Designing a way for students to gain work experience outside of school
+      </h1>
+      <h2 className="header__subtitle">
+        Stemuli Product Designer ✷ Jan - May 2024
+      </h2>
+    </header>
   </TextFade>
 );
 
+// ImageBox Component (unchanged)
 const ImageBox = ({ src, alt }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,43 +62,46 @@ const ImageBox = ({ src, alt }) => {
   );
 };
 
-// Grid Component for Company, Skills, Timeline, and Tools
+// Grid Component
 const Grid = () => (
   <TextFade direction="up">
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid">
       <div className="grid__item">
-        <h2>Company —</h2>
-        <div>
-          <a href="https://stemuli.net/" className="yellow-link" target="_blank" rel="noopener noreferrer">
+        <h2 className="grid__heading">Company —</h2>
+        <div className="grid__content">
+          <a
+            href="https://stemuli.net/"
+            className="yellow-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Stemuli
           </a>
         </div>
       </div>
 
       <div className="grid__item">
-        <h2>Skills —</h2>
-        <div>Design Engineering</div>
-        <div>Prototyping</div>
-        <div>Figma</div>
-        <div>Prototyping</div>
-        <div>UI/UX Design</div>
-        <div>Illustration</div>
+        <h2 className="grid__heading">Skills —</h2>
+        <div className="grid__content">Design Engineering</div>
+        <div className="grid__content">Prototyping</div>
+        <div className="grid__content">Figma</div>
+        <div className="grid__content">UI/UX Design</div>
+        <div className="grid__content">Illustration</div>
       </div>
 
       <div className="grid__item">
-        <h2>Timeline —</h2>
-        <div>June - Nov 2024</div>
+        <h2 className="grid__heading">Timeline —</h2>
+        <div className="grid__content">Jan - May 2024</div>
       </div>
 
       <div className="grid__item">
-        <h2>Tools —</h2>
-        <div>Figma</div>
-        <div>Clip Studio Paint</div>
+        <h2 className="grid__heading">Tools —</h2>
+        <div className="grid__content">Figma</div>
+        <div className="grid__content">Clip Studio Paint</div>
       </div>
     </div>
   </TextFade>
 );
-
 
 const Top = () => (
     <TextFade direction="up">

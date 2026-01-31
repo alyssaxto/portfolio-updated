@@ -3,22 +3,6 @@ import "./Casestudy.css";
 import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
 import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 import ExpandableImage from './Components/ExpandImage.jsx';
-
-// Header Component
-const Header = () => (
-  <TextFade direction="up">
-  <header className="header">
-    <h1 className="header__title">Designing a solution to help cancer patients complete their treatment</h1>
-    <h2>ArtSciLab Product Designer ✷ Spring 2024 - Summer 2025</h2>
-    <div className="image-containy">
-      <a href="https://www.utsouthwestern.edu/" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/icanmanage/c3.png" alt="Image 2" className="hover-image" />
-      </a>
-    </div>
-  </header>
-  </TextFade>
-);
-
 const ImageBox = ({ src, alt }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -40,41 +24,82 @@ const ImageBox = ({ src, alt }) => {
     </>
   );
 };
+const Header = ({ bgColor = "#BBE3FF" }) => (
+  <TextFade direction="up">
+    <header className="header">
+      <div
+        className="image-containy"
+        style={{ backgroundColor: bgColor }}
+      >
+        <div className="image-wrapper">
+          <a
+            href="https://www.utsouthwestern.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/icanmanage/transparent.png"
+              alt="ArtSciLab Project"
+              className="hover-image"
+            />
+          </a>
+        </div>
+      </div>
 
-// Grid Component for Company, Skills, Timeline, and Tools
+      <h1 className="header__title">
+        Designing a solution to help cancer patients complete their treatment
+      </h1>
+      <h2 className="header__subtitle">
+        ArtSciLab Product Designer ✷ Spring 2024 - Summer 2025
+      </h2>
+    </header>
+  </TextFade>
+);
+
+// Grid Component
 const Grid = () => (
   <TextFade direction="up">
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid">
       <div className="grid__item">
-        <h2>Company —</h2>
-        <div>
-          <a href="https://www.utsouthwestern.edu/" className="blue-link" target="_blank" rel="noopener noreferrer">
+        <h2 className="grid__heading">Company —</h2>
+        <div className="grid__content">
+          <a
+            href="https://www.utsouthwestern.edu/"
+            className="blue-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             UTSouthWestern
           </a>
         </div>
-        <div>
-          <a href="https://artscilab.utdallas.edu/" className="blue-link" target="_blank" rel="noopener noreferrer">
+        <div className="grid__content">
+          <a
+            href="https://artscilab.utdallas.edu/"
+            className="blue-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             ArtSciLab
           </a>
         </div>
       </div>
 
       <div className="grid__item">
-        <h2>Skills —</h2>
-        <div>Figma</div>
-        <div>Prototyping</div>
-        <div>UI/UX Design</div>
-        <div>Visual Design</div>
+        <h2 className="grid__heading">Skills —</h2>
+        <div className="grid__content">Figma</div>
+        <div className="grid__content">Prototyping</div>
+        <div className="grid__content">UI/UX Design</div>
+        <div className="grid__content">Visual Design</div>
       </div>
 
       <div className="grid__item">
-        <h2>Timeline —</h2>
-        <div>Jan 2024 - June 2025</div>
+        <h2 className="grid__heading">Timeline —</h2>
+        <div className="grid__content">Jan 2024 - June 2025</div>
       </div>
 
       <div className="grid__item">
-        <h2>Tools —</h2>
-        <div>Figma</div>
+        <h2 className="grid__heading">Tools —</h2>
+        <div className="grid__content">Figma</div>
       </div>
     </div>
   </TextFade>

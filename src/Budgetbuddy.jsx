@@ -3,22 +3,6 @@ import "./Casestudy.css";
 import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
 import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 import ExpandableImage from './Components/ExpandImage.jsx';
-
-// Header Component
-const Header = () => (
-  <TextFade direction="up">
-  <header className="header">
-    <h1 className="header__title">Helping college kids with their financial literacy</h1>
-    <h2>Class Project ✷ Spring 2023</h2>
-    <div className="image-containy">
-      <a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fiafgf5x8oYTw2NxjMQiReb%2FUntitled%3Ftype%3Ddesign%26t%3DDLiub0o2a3aXTPnW-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26node-id%3D0-3%26starting-point-node-id%3D0%253A3%26mode%3Ddesign" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/budgetbuddy.png" alt="Image 2" className="hover-image" />
-      </a>
-    </div>
-  </header>
-  </TextFade>
-);
-
 const ImageBox = ({ src, alt }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,39 +25,70 @@ const ImageBox = ({ src, alt }) => {
   );
 };
 
-// Grid Component for Company, Skills, Timeline, and Tools
+
+
+// Header Component
+const Header = ({ bgColor = "#E0FFF0" }) => (
+  <TextFade direction="up">
+    <header className="header">
+      <div className="image-containy" style={{ backgroundColor: bgColor }}>
+        <div className="image-wrapper">
+          <a
+            href="https://www.figma.com/file/iafgf5x8oYTw2NxjMQiReb/Untitled?type=design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/budgetbuddy.png"
+              alt="BudgetBuddy Logo"
+              className="hover-image"
+            />
+          </a>
+        </div>
+      </div>
+
+      <h1 className="header__title">
+        Helping college students improve their financial literacy
+      </h1>
+      <h2>Class Project ✷ Spring 2023</h2>
+    </header>
+  </TextFade>
+);
+
+// Grid Component for Class, Skills, Timeline, and Tools
 const Grid = () => (
   <TextFade direction="up">
     <div className="grid grid-cols-2 gap-4">
+      
       <div className="grid__item">
-        <h2>Class Name —</h2>
-        <div>
-            Design Research Methods
+        <h2 className="grid__heading">Class —</h2>
+        <div className="grid__content">
+          Design Research Methods
         </div>
       </div>
 
       <div className="grid__item">
-        <h2>Skills —</h2>
-        <div>Research</div>
-        <div>User Personas</div>
-        <div>Usability Testing</div>
-        <div>Prototyping</div>
-        <div>UI/UX Design</div>
+        <h2 className="grid__heading">Skills —</h2>
+        <div className="grid__content">Research</div>
+        <div className="grid__content">User Personas</div>
+        <div className="grid__content">Usability Testing</div>
+        <div className="grid__content">Prototyping</div>
+        <div className="grid__content">UI/UX Design</div>
       </div>
 
       <div className="grid__item">
-        <h2>Timeline —</h2>
-        <div>Jan 2023 - May 2023</div>
+        <h2 className="grid__heading">Timeline —</h2>
+        <div className="grid__content">Jan 2023 - May 2023</div>
       </div>
 
       <div className="grid__item">
-        <h2>Tools —</h2>
-        <div>Figma</div>
+        <h2 className="grid__heading">Tools —</h2>
+        <div className="grid__content">Figma</div>
       </div>
+
     </div>
   </TextFade>
 );
-
 
 
 const Top = () => (

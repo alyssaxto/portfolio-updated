@@ -6,19 +6,34 @@ import ExpandableImage from './Components/ExpandImage.jsx';
 import { Link } from "react-router-dom";
 
 
-
 // Header Component
-const Header = () => (
+const Header = ({ bgColor = "#D5F3CC" }) => (
   <TextFade direction="up">
-  <header className="header">
-    <h1 className="header__title">Designing an accessible way for bp employees to create the images they need</h1>
-    <h2>bp Product Design Internship ✷ Summer 2024</h2>
-    <div className="image-containy">
-      <a href="https://www.bp.com/" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/bp/6.png" alt="Image 2" className="hover-image" />
-      </a>
-    </div>
-  </header>
+    <header className="header">
+      <div
+        className="image-containy"
+        style={{ backgroundColor: bgColor }}
+      >
+        <div className="image-wrapper">
+          <a
+            href="https://www.bp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/bp/11.png"
+              alt="BP Logo"
+              className="hover-image"
+            />
+          </a>
+        </div>
+      </div>
+
+      <h1 className="header__title">
+        Designing an accessible way for bp employees to create the images they need
+      </h1>
+      <h2>bp Product Design Internship ✷ Summer 2024</h2>
+    </header>
   </TextFade>
 );
 
@@ -26,36 +41,43 @@ const Header = () => (
 const Grid = () => (
   <TextFade direction="up">
     <div className="grid grid-cols-2 gap-4">
+      
       <div className="grid__item">
-        <h2>Company —</h2>
-        <div>
-          <a href="https://www.bp.com/" className="green-link" target="_blank" rel="noopener noreferrer">
+        <h2 className="grid__heading">Company —</h2>
+        <div className="grid__content">
+          <a
+            href="https://www.bp.com/"
+            className="green-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             bp
           </a>
         </div>
       </div>
 
       <div className="grid__item">
-        <h2>Skills —</h2>
-        <div>User Research</div>
-        <div>User Personas</div>
-        <div>Usability Testing</div>
-        <div>Prototyping</div>
-        <div>UI/UX Design</div>
-        <div>Design Thinking</div>
-        <div>AI Tool Usage</div>
+        <h2 className="grid__heading">Skills —</h2>
+        <div className="grid__content">User Research</div>
+        <div className="grid__content">User Personas</div>
+        <div className="grid__content">Usability Testing</div>
+        <div className="grid__content">Prototyping</div>
+        <div className="grid__content">UI/UX Design</div>
+        <div className="grid__content">Design Thinking</div>
+        <div className="grid__content">AI Tool Usage</div>
       </div>
 
       <div className="grid__item">
-        <h2>Timeline —</h2>
-        <div>May - August 2024</div>
+        <h2 className="grid__heading">Timeline —</h2>
+        <div className="grid__content">May - August 2024</div>
       </div>
 
       <div className="grid__item">
-        <h2>Tools —</h2>
-        <div>Sketch</div>
-        <div>Mural</div>
+        <h2 className="grid__heading">Tools —</h2>
+        <div className="grid__content">Sketch</div>
+        <div className="grid__content">Mural</div>
       </div>
+
     </div>
   </TextFade>
 );

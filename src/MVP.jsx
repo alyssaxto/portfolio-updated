@@ -8,56 +8,80 @@ import { Link } from "react-router-dom";
 
 
 // Header Component
-const Header = () => (
+const Header = ({ bgColor = "#FFE0B1" }) => (
   <TextFade direction="up">
-  <header className="header">
-    <h1 className="header__title">Designing a badge to recognize designers    </h1>
-    <h2>bp Product Design Internship ✷ Summer 2024</h2>
-    <div className="image-containy">
-      <a href="https://www.bp.com/" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/mvp/5.png" alt="Image 2" className="hover-image" />
-      </a>
-    </div>
-  </header>
+    <header className="header">
+
+      <div
+        className="image-containy"
+        style={{ backgroundColor: bgColor }}
+      >
+        <div className="image-wrapper">
+          <a
+            href="https://www.bp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/mvp/10.png"
+              alt="BP Designer Badge"
+              className="hover-image"
+            />
+          </a>
+        </div>
+      </div>
+
+      <h1 className="header__title">
+        Designing a badge to recognize designers
+      </h1>
+
+      <h2 className="header__subtitle">
+        bp Product Design Internship ✷ Summer 2024
+      </h2>
+    </header>
   </TextFade>
 );
 
+// Grid Component
 const Grid = () => (
-  
   <TextFade direction="up">
-    
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid">
+
       <div className="grid__item">
-        <h2>Company —</h2>
-        <div>
-          <a href="https://www.bp.com/" className="green-link" target="_blank" rel="noopener noreferrer">
+        <h2 className="grid__heading">Company —</h2>
+        <div className="grid__content">
+          <a
+            href="https://www.bp.com/"
+            className="green-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             bp
           </a>
         </div>
       </div>
 
       <div className="grid__item">
-        <h2>Skills —</h2>
-        <div>Sketching</div>
-        <div>Illustration</div>
-        <div>Graphic Design</div>
+        <h2 className="grid__heading">Skills —</h2>
+        <div className="grid__content">Sketching</div>
+        <div className="grid__content">Illustration</div>
+        <div className="grid__content">Graphic Design</div>
       </div>
 
       <div className="grid__item">
-        <h2>Timeline —</h2>
-        <div>1 week</div>
+        <h2 className="grid__heading">Timeline —</h2>
+        <div className="grid__content">1 week</div>
       </div>
 
       <div className="grid__item">
-        <h2>Tools —</h2>
-
-          <div>Adobe Illustrator</div>
-
+        <h2 className="grid__heading">Tools —</h2>
+        <div className="grid__content">Adobe Illustrator</div>
       </div>
+
     </div>
-    
   </TextFade>
 );
+
 
 
 

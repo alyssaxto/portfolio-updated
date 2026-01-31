@@ -80,7 +80,7 @@ const HorizontalScroll = () => {
                 >
                   <ImageContainer
                     imageSource={bpImage}
-                    title={"AI Image Generator 🔒"}
+                    title={"Making Image Creation Faster, Safer, & Smarter"}
                     description={"Designing an accessible way for bp employees to quickly create the images they need."}
                   />
                 </motion.div>
@@ -95,7 +95,7 @@ const HorizontalScroll = () => {
                 >
                   <ImageContainer
                     imageSource={rippleImage}
-                    title={"HackUTD Website"}
+                    title={"Bringing North America’s largest 24-hour hackathon to life"}
                     description={"Developing and designing the website for the biggest 24-hour hackathon in North America hosted by HackUTD."}
                   />
                 </motion.div>
@@ -110,7 +110,7 @@ const HorizontalScroll = () => {
                 >
                   <ImageContainer
                     imageSource={manageImage}
-                    title={"I Can Manage Cancer 🔒"}
+                    title={"Empowering cancer patients to complete their treatment journey"}
                     description={"An educational platform designed to assist head and neck cancer patients through treatment."}
                   />
                 </motion.div>
@@ -125,7 +125,7 @@ const HorizontalScroll = () => {
                 >
                   <ImageContainer
                     imageSource={stemuliImage}
-                    title={"Stemuli"}
+                    title={"Making Work Experience Accessible for College Students"}
                     description={"A desktop and mobile app for students interested in product design to explore more about the career through VR."}
                   />
                 </motion.div>
@@ -148,25 +148,25 @@ const HorizontalScroll = () => {
       <div className="Projects__wrapper index">
         <a href="/Password" className="Projects__card">
           <img src={bpImage} alt="AI Image Generator" />
-          <h2 className="grid-project-title">AI Image Generator 🔒</h2>
+          <h2 className="grid-project-title">Making Image Creation Faster, Safer, & Smarter</h2>
           <p>Designing an accessible way for bp employees to quickly create the images they need</p>
         </a>
 
         <a href="/HackUTD11" className="Projects__card">
           <img src={rippleImage} alt="HackUTD Website" />
-          <h2 className="grid-project-title">HackUTD Website</h2>
+          <h2 className="grid-project-title">Bringing North America’s largest 24-hour hackathon to life</h2>
           <p>Developing and designing the website for the biggest 24-hour hackathon in North America hosted by HackUTD</p>
         </a>
 
         <a href="/Password2" className="Projects__card">
           <img src={manageImage} alt="I Can Manage Cancer" />
-          <h2 className="grid-project-title">I Can Manage Cancer 🔒</h2>
+          <h2 className="grid-project-title">Empowering cancer patients to complete their treatment journey</h2>
           <p>An educational platform designed to assist head and neck cancer patients through treatment.</p>
         </a>
 
         <a href="/Stemuli" className="Projects__card">
           <img src={stemuliImage} alt="Stemuli" />
-          <h2 className="grid-project-title">Stemuli</h2>
+          <h2 className="grid-project-title">Making Work Experience Accessible for College Students</h2>
           <p>A desktop and mobile app for students interested in product design to explore more about the career through VR.</p>
         </a>
       </div>

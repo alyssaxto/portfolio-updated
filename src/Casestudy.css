@@ -120,7 +120,6 @@ h3 {
 }
 
 .BentoBox__item {
-  border-radius: 8px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -132,13 +131,10 @@ h3 {
   height: auto;
   object-fit: cover; /* fills the box more tightly */
   display: block;
-  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
-.BentoBox__item:hover img {
-  transform: scale(1.05); /* subtle zoom on hover */
-}
+
 
 
 /* Mobile adjustments */
@@ -167,15 +163,12 @@ h3 {
   gap: 20px; /* Space between items */
 }
 
-.HackArt__item {
-  border-radius: 8px;
-}
+
 
 .HackArt__item img {
   width: 100%;
   height: 100%;
   object-fit: contain; /* Ensure images cover the box without distortion */
-  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -307,7 +300,6 @@ h3 {
 .bento-left img {
   width: 100%;
   height: auto; /* show full image */
-  border-radius: 12px;
   background-color: white; /* optional white padding */
 }
 
@@ -482,44 +474,111 @@ p {
 }
 
 .grid {
-  padding-top: 3rem;
+  padding-top: 1.5rem;
   display: grid;
-  font-family: "Manrope",sans-serif;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 1000px; /* Adjust the max-width as needed */
-  width: 100%;  /* Full width of the parent container */
-  margin: 0 auto;  /* Centers the grid horizontally */
+  font-family: "Manrope", sans-serif;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive columns */
+  gap: 1rem; /* spacing between items */
+  max-width: 1000px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .grid__item {
   text-align: left;
 }
 
-.grid__item h2{
-font-family: "Space Grotesk", sans-serif;
-font-weight: 200;
+.grid__heading {
+  color: #2d1a0acc;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
+
+.grid__content {
+  font-size: 1rem;
+  font-family: "Apercu", sans-serif;
+  font-weight: 200;
+  color: rgba(45, 26, 10, 0.5);
+  margin-bottom: 0.25rem;
+}
+
+/* Small tablets */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    max-width: 90%;
+  }
+
+  .grid__heading {
+    font-size: 1rem;
+  }
+
+  .grid__content {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr; /* stack items vertically */
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .grid__heading {
+    font-size: 0.95rem;
+  }
+
+  .grid__content {
+    font-size: 0.9rem;
+  }
+}
+
 
 .header__title {
   font-family: "Newsreader", serif;
-  padding-top: 8rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
   max-width: 1000px;
-  margin: 50px auto 0px;
+  margin: 0px auto 0px;
   font-size: 3em;
   text-align: center;
-  color: #000;
+  color: #2d1a0a;
   font-weight: 500; 
 }
-.header h2{
-  font-weight: 400; /* Adjust font weight if necessary */
-  color: #787878;
-  font-family: "Manrope", sans-serif;;
+.header h2 {
+  font-weight: 400;
+  color: rgba(45, 26, 10, 0.5);
+  font-family: "Apercu", sans-serif;
   text-align: center;
-  font-size: 1.4em; /* Adjust the font size as needed */
-  margin: 0;
-  padding-bottom: 2rem;
+  font-size: 1.4rem;        /* use rem for consistency across devices */
+  margin: 0 auto;            /* auto horizontal margin centers element */
+  max-width: 95%;
+  line-height: 1.4;          /* improves readability */
+  display: block;            /* ensures margin auto works */
+     padding-bottom: 20px;
+  word-break: break-word;    /* prevents long words from breaking layout */
 }
+
+/* Smaller screens */
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 1.1rem;       /* smaller text on mobile */
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 360px) {
+  .header h2 {
+    font-size: 1rem;
+    max-width: 85%;
+  }
+}
+
 
 .summary{
   font-size: 1.2em;
@@ -528,15 +587,6 @@ font-weight: 200;
   
 }
 
-.header__image {
-  max-width: 580px; /* Adjust the max-width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-top: -60px;
-  margin-bottom: -60px; /* Adjust the margin-bottom as needed */
-  position: relative; /* or absolute, depending on your layout */
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 .bullets p {
   max-width: 1000px;
@@ -627,11 +677,7 @@ iframe {
 }
 
 @media screen and (max-width: 1100px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
+
   .video-container {
     width: 70%; /* Adjust width for smaller screens */
     height: 300px; /* Let the height adjust automatically to maintain aspect ratio */
@@ -659,12 +705,8 @@ iframe {
     transform: translateX(-50%);
   }
   .header__title {
-    max-width: 1000px;
-    padding: 20px 20px 30px;
-    font-size: 2.3em;
-    text-align: left;
-    color: #000;
-    font-weight: 600; 
+    font-size: 2em;
+    max-width: 90%;
   }
   .summary {
     margin-top: 30px;
@@ -683,7 +725,7 @@ iframe {
     font-size: 1.7em;
     text-align: left;
     margin-bottom: 10px;
-    color: #000;
+  color: #2d1a0a;
     margin: 0;
     padding: 0;
   }
@@ -1062,35 +1104,52 @@ iframe {
     }
   }
   
-  /* Flexbox to center the image horizontally */
+.image-containy {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;       /* vertical centering */
+  padding-top: 6rem;         /* extra space for desktop navbar */
+  padding-bottom: 2rem;      /* optional spacing below */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.image-containy img {
+  width: 90%;                /* scale based on container width */
+  max-width: 1000px;         /* optional max size */
+  height: auto;              /* preserve aspect ratio */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
   .image-containy {
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Vertically center if needed */
+    padding-top: 5;          /* remove padding for smaller navbar */
   }
-  
-  /* Styling for the image */
-  .hover-image {
-    max-width: 800px; /* Max width for the image */
-    border-radius: 10px; /* Rounded corners */
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 20px; /* Space between text and image */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .image-containy img {
+    width: 85%;
+    max-width: 700px;
   }
-  
-  /* Hover effect */
-  .hover-image:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
-  }
+}
 
-
-  .image-box {
-    max-width: 1000px;
-    height: auto; /* Maintain aspect ratio */
+@media (max-width: 480px) {
+  .image-containy img {
+    width: 90%;
+    max-width: 400px;
   }
-  
+}
+
+@media (max-width: 380px) {
+  .image-containy img {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
 
   .section-divider {
     height: 1px; /* Gives the divider a height */

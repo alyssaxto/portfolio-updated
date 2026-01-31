@@ -5,74 +5,68 @@ import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 import ExpandableImage from './Components/ExpandImage.jsx';
 
 // Header Component
-const Header = () => (
+const Header = ({ bgColor = "#FFD3DA" }) => (
   <TextFade direction="up">
-  <header className="header">
-    <h1 className="header__title">Designing a solution to help women improve menstrual literacy</h1>
-    <h2>Class Project ✷ Spring 2024</h2>
-    <div className="image-containy">
-      <a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FXz3gWChuvzFGEDTdJLklf3%2FUntitled%3Ftype%3Ddesign%26node-id%3D50-430%26t%3DLq5qWpLDcNo8pVK7-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D50%253A430%26mode%3Ddesign" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/thinkpink/tp10.png" alt="Image 2" className="hover-image" />
-      </a>
-    </div>
-  </header>
+    <header className="header">
+      <div className="image-containy" style={{ backgroundColor: bgColor }}>
+        <div className="image-wrapper">
+          <a
+            href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FXz3gWChuvzFGEDTdJLklf3%2FUntitled%3Ftype%3Ddesign%26node-id%3D50-430%26t%3DLq5qWpLDcNo8pVK7-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D50%253A430%26mode%3Ddesign"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/thinkpink/tp12.png"
+              alt="ThinkPink Logo"
+              className="hover-image"
+            />
+          </a>
+        </div>
+      </div>
+
+      <h1 className="header__title">
+        Designing a solution to help women improve menstrual literacy
+      </h1>
+      <h2 className="header__subtitle">
+        Class Project ✷ Spring 2024
+      </h2>
+    </header>
   </TextFade>
 );
 
-const ImageBox = ({ src, alt }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
-
-  return (
-    <>
-      <div className="image-box" onClick={openModal}>
-        <img src={src} alt={alt} className="image-box" />
-      </div>
-
-      {isOpen && (
-        <div className="modal" onClick={closeModal}>
-          <button className="close-btn" onClick={closeModal}>X</button>
-          <img src={src} alt={alt} className="modal-content" />
-        </div>
-      )}
-    </>
-  );
-};
-
-// Grid Component for Company, Skills, Timeline, and Tools
+// Grid Component for Class, Skills, Timeline, and Tools
 const Grid = () => (
   <TextFade direction="up">
     <div className="grid grid-cols-2 gap-4">
+      
       <div className="grid__item">
-        <h2>Class Name —</h2>
-        <div>
-        Interaction Design 2
-        </div>
+        <h2 className="grid__heading">Class —</h2>
+        <div className="grid__content">Interaction Design 2</div>
       </div>
 
       <div className="grid__item">
-        <h2>Skills —</h2>
-        <div>Research</div>
-        <div>User Personas</div>
-        <div>Usability Testing</div>
-        <div>Prototyping</div>
-        <div>UI/UX Design</div>
+        <h2 className="grid__heading">Skills —</h2>
+        <div className="grid__content">Research</div>
+        <div className="grid__content">User Personas</div>
+        <div className="grid__content">Usability Testing</div>
+        <div className="grid__content">Prototyping</div>
+        <div className="grid__content">UI/UX Design</div>
       </div>
 
       <div className="grid__item">
-        <h2>Timeline —</h2>
-        <div>Jan 2024 - May 2024</div>
+        <h2 className="grid__heading">Timeline —</h2>
+        <div className="grid__content">Jan 2024 - May 2024</div>
       </div>
 
       <div className="grid__item">
-        <h2>Tools —</h2>
-        <div>Figma</div>
+        <h2 className="grid__heading">Tools —</h2>
+        <div className="grid__content">Figma</div>
       </div>
+
     </div>
   </TextFade>
 );
+
 
 
 

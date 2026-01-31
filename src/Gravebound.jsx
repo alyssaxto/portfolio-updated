@@ -3,22 +3,6 @@ import "./Casestudy.css";
 import { TextFade } from "./Components/TextFade"; // Ensure this import is correct
 import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 import ExpandableImage from './Components/ExpandImage.jsx';
-
-// Header Component
-const Header = () => (
-  <TextFade direction="up">
-  <header className="header">
-    <h1 className="header__title">Designing UI for a student-led game</h1>
-    <h2>UT Dallas UI Designer ✷ Fall 2024</h2>
-    <div className="image-containy">
-      <a href="https://www.atec-animgames.com/game-lab" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/gb/15.png" alt="Image 2" className="hover-image" />
-      </a>
-    </div>
-  </header>
-  </TextFade>
-);
-
 const ImageBox = ({ src, alt }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -40,47 +24,100 @@ const ImageBox = ({ src, alt }) => {
     </>
   );
 };
+// Header Component
+const Header = ({ bgColor = "#CDEBFF" }) => (
+  <TextFade direction="up">
+    <header className="header">
 
-// Grid Component for Company, Skills, Timeline, and Tools
+      <div
+        className="image-containy"
+        style={{ backgroundColor: bgColor }}
+      >
+        <div className="image-wrapper">
+          <a
+            href="https://www.atec-animgames.com/game-lab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/gb/21.png"
+              alt="Game UI"
+              className="hover-image"
+            />
+          </a>
+        </div>
+      </div>
+
+      <h1 className="header__title">
+        Designing UI for a student-led game
+      </h1>
+
+      <h2 className="header__subtitle">
+        UT Dallas UI Designer ✷ Fall 2024
+      </h2>
+    </header>
+  </TextFade>
+);
+
+
+// Grid Component
 const Grid = () => (
   <TextFade direction="up">
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid">
+
       <div className="grid__item">
-        <h2>Company —</h2>
-        <div>
-          <a href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/" className="blue-link" target="_blank" rel="noopener noreferrer">
+        <h2 className="grid__heading">Company —</h2>
+
+        <div className="grid__content">
+          <a
+            href="https://bass.utdallas.edu/degrees/undergraduate-degrees/arts-technology-and-emerging-communication/"
+            className="blue-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             UT Dallas
           </a>
         </div>
-        <div>
-          <a href="https://www.atec-animgames.com/game-lab" className="blue-link" target="_blank" rel="noopener noreferrer">
+
+        <div className="grid__content">
+          <a
+            href="https://www.atec-animgames.com/game-lab"
+            className="blue-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Game Production Lab
           </a>
         </div>
       </div>
 
-      <div className="grid__item">
-        <h2>Skills —</h2>
-        <div>UI Design</div>
-        <div>Sketching</div>
-        <div>Illustration</div>
-      </div>
 
       <div className="grid__item">
-        <h2>Timeline —</h2>
-        <div>Aug - Dec 2024</div>
+        <h2 className="grid__heading">Skills —</h2>
+        <div className="grid__content">UI Design</div>
+        <div className="grid__content">Sketching</div>
+        <div className="grid__content">Illustration</div>
       </div>
 
+
       <div className="grid__item">
-        <h2>Tools —</h2>
-        <div>Unreal Engine</div>
-        <div>Perforce</div>
-        <div>Adobe Illustrator</div>
-        <div>Figma</div>
+        <h2 className="grid__heading">Timeline —</h2>
+        <div className="grid__content">Aug – Dec 2024</div>
       </div>
+
+
+      <div className="grid__item">
+        <h2 className="grid__heading">Tools —</h2>
+        <div className="grid__content">Unreal Engine</div>
+        <div className="grid__content">Perforce</div>
+        <div className="grid__content">Adobe Illustrator</div>
+        <div className="grid__content">Figma</div>
+      </div>
+
     </div>
   </TextFade>
 );
+
 
 
 const Top = () => (

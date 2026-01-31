@@ -4,20 +4,6 @@ import { TextFade } from "./Components/TextFade"; // Ensure this import is corre
 import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 import ExpandableImage from './Components/ExpandImage.jsx';
 
-// Header Component
-const Header = () => (
-  <TextFade direction="up">
-  <header className="header">
-    <h1 className="header__title">Empowering other hackathons to streamline their event management</h1>
-    <h2>HackUTD Product Designer ✷ Spring - Fall 2024</h2>
-    <div className="image-containy">
-      <a href="https://hackportal.hackutd.co/" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/hackportal.png" alt="Image 2" className="hover-image" />
-      </a>
-    </div>
-  </header>
-  </TextFade>
-);
 
 const ImageBox = ({ src, alt }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,48 +26,103 @@ const ImageBox = ({ src, alt }) => {
     </>
   );
 };
+// Header Component
+const Header = ({ bgColor = "#F1EAFF" }) => (
+  <TextFade direction="up">
+    <header className="header">
 
-// Grid Component for Company, Skills, Timeline, and Tools
+      <div
+        className="image-containy"
+        style={{ backgroundColor: bgColor }}
+      >
+        <div className="image-wrapper">
+          <a
+            href="https://hackportal.hackutd.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/hacky.png"
+              alt="Hackportal"
+              className="hover-image"
+            />
+          </a>
+        </div>
+      </div>
+
+      <h1 className="header__title">
+        Empowering other hackathons to streamline their event management
+      </h1>
+
+      <h2 className="header__subtitle">
+        HackUTD Product Designer ✷ Spring – Fall 2024
+      </h2>
+    </header>
+  </TextFade>
+);
+
+// Grid Component
 const Grid = () => (
   <TextFade direction="up">
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid">
+
       <div className="grid__item">
-        <h2>Company —</h2>
-        <a href="https://hackportal.hackutd.co/" className="purple-link" target="_blank" rel="noopener noreferrer">
-          Hackportal
-        </a>
-        <div>
-          <a href="https://hackutd.co/" className="purple-link" target="_blank" rel="noopener noreferrer">
+        <h2 className="grid__heading">Company —</h2>
+
+        <div className="grid__content">
+          <a
+            href="https://hackportal.hackutd.co/"
+            className="purple-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hackportal
+          </a>
+        </div>
+
+        <div className="grid__content">
+          <a
+            href="https://hackutd.co/"
+            className="purple-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             HackUTD
           </a>
         </div>
-        <div>
-          <a href="https://www.acmutd.co/" className="purple-link" target="_blank" rel="noopener noreferrer">
+
+        <div className="grid__content">
+          <a
+            href="https://www.acmutd.co/"
+            className="purple-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             ACM at UTD
           </a>
         </div>
       </div>
 
       <div className="grid__item">
-        <h2>Skills —</h2>
-        <div>Design Engineering</div>
-        <div>Prototyping</div>
-        <div>Figma</div>
-        <div>Prototyping</div>
-        <div>UI/UX Design</div>
-        <div>Illustration</div>
+        <h2 className="grid__heading">Skills —</h2>
+        <div className="grid__content">Design Engineering</div>
+        <div className="grid__content">Prototyping</div>
+        <div className="grid__content">Figma</div>
+        <div className="grid__content">UI/UX Design</div>
+        <div className="grid__content">Illustration</div>
       </div>
 
       <div className="grid__item">
-        <h2>Timeline —</h2>
-        <div>June - Nov 2024</div>
+        <h2 className="grid__heading">Timeline —</h2>
+        <div className="grid__content">June – Nov 2024</div>
       </div>
 
       <div className="grid__item">
-        <h2>Tools —</h2>
-        <div>Figma</div>
-        <div>Clip Studio Paint</div>
+        <h2 className="grid__heading">Tools —</h2>
+        <div className="grid__content">Figma</div>
+        <div className="grid__content">Clip Studio Paint</div>
       </div>
+
     </div>
   </TextFade>
 );

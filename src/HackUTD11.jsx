@@ -4,82 +4,88 @@ import { TextFade } from "./Components/TextFade"; // Ensure this import is corre
 import ProgressBar from "./Components/ProgressBar/ProgressBar.jsx";
 import ExpandableImage from './Components/ExpandImage.jsx';
 
-// Header Component
-const Header = () => (
-  
+const Header = ({ bgColor = "#DCFDFF" }) => (
   <TextFade direction="up">
-  <header className="header">
-    <h1 className="header__title">Designing the website for North America's largest 24 hour hackathon!</h1>
-    <h2>HackUTD Product Designer ✷ Spring - Fall 2024</h2>
-    <div className="image-containy">
-      <a href="https://ripple.hackutd.co/" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/ripple.png" alt="Image 2" className="hover-image" />
-      </a>
-    </div>
-  </header>
+    <header className="header">
+      <div
+        className="image-containy"
+        style={{ backgroundColor: bgColor }}
+      >
+        <div className="image-wrapper">
+          <a
+            href="https://ripple.hackutd.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/ripv2.png"
+              alt="HackUTD Logo"
+              className="hover-image"
+            />
+          </a>
+        </div>
+      </div>
+
+      <h1 className="header__title">
+        Designing the website for North America's largest 24 hour hackathon!
+      </h1>
+      <h2 className="header__subtitle">
+        HackUTD Product Designer ✷ Spring - Fall 2024
+      </h2>
+    </header>
   </TextFade>
 );
 
-const ImageBox = ({ src, alt }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
-
-  return (
-    <>
-      <div className="image-box" onClick={openModal}>
-        <img src={src} alt={alt} className="image-box" />
-      </div>
-
-      {isOpen && (
-        <div className="modal" onClick={closeModal}>
-          <button className="close-btn" onClick={closeModal}>X</button>
-          <img src={src} alt={alt} className="modal-content" />
-        </div>
-      )}
-    </>
-  );
-};
-
+// Grid Component
 const Grid = () => (
   <TextFade direction="up">
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid">
       <div className="grid__item">
-        <h2>Company —</h2>
-          <div>
-            <a href="https://hackutd.co/" className="blue-link" target="_blank" rel="noopener noreferrer">
-              HackUTD
-            </a>
-          </div>
-          <div>
-            <a href="https://www.acmutd.co/" className="blue-link" target="_blank" rel="noopener noreferrer">
-              ACM at UTD
-            </a>
-          </div>
+        <h2 className="grid__heading">Company —</h2>
+        <div className="grid__content">
+          <a
+            href="https://hackutd.co/"
+            className="blue-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            HackUTD
+          </a>
+        </div>
+        <div className="grid__content">
+          <a
+            href="https://www.acmutd.co/"
+            className="blue-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ACM at UTD
+          </a>
+        </div>
       </div>
+
       <div className="grid__item">
-        <h2>Skills —</h2>
-        <div>Design Engineering</div>
-        <div>Prototyping</div>
-        <div>Figma</div>
-        <div>Prototyping</div>
-        <div>UI/UX Design</div>
-        <div>Illustration</div>
+        <h2 className="grid__heading">Skills —</h2>
+        <div className="grid__content">Design Engineering</div>
+        <div className="grid__content">Prototyping</div>
+        <div className="grid__content">Figma</div>
+        <div className="grid__content">UI/UX Design</div>
+        <div className="grid__content">Illustration</div>
       </div>
+
       <div className="grid__item">
-        <h2>Timeline —</h2>
-        <div>June - Nov 2024</div>
+        <h2 className="grid__heading">Timeline —</h2>
+        <div className="grid__content">June - Nov 2024</div>
       </div>
+
       <div className="grid__item">
-        <h2>Tools —</h2>
-        <div>Figma</div>
-        <div>Clip Studio Paint</div>
+        <h2 className="grid__heading">Tools —</h2>
+        <div className="grid__content">Figma</div>
+        <div className="grid__content">Clip Studio Paint</div>
       </div>
     </div>
   </TextFade>
 );
-
 
 const Top = () => (
     <TextFade direction="up">
