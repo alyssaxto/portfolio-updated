@@ -15,7 +15,7 @@ dist-ssr
 *.local
 
 api/__pycache__
-
+api/.venv
 terraform/.terraform
 terraform/.terraform.lock.hcl
 terraform/terraform.tfstate
