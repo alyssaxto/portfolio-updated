@@ -202,7 +202,7 @@ const BPPortfolio = () => (
     <h1>Check out the other projects I worked on at bp</h1>
     <div className="Gallery__wrapper">
       <div className="Gallery__item">
-        <Link to="/Password">
+        <Link to="/bpProject">
           <img src="/assets/bp/6.png" alt="Project 1" />
         </Link>
       </div>

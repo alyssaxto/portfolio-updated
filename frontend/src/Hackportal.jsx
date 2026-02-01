@@ -270,13 +270,10 @@ const App = () => (
     <Grid />
     <div class="divider"></div>
     <Top />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <OG/>
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <New/>
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <HackPortal />
         <div className="section-divider"></div>

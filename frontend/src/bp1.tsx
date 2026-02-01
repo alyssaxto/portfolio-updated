@@ -415,28 +415,173 @@ const Flow: React.FC = () => (
   </TextFade>
 );
 
-const BPPortfolio: React.FC = () => (
+export const BPPortfolio: React.FC = () => (
   <div>
+    {/* Prototype Section */}
     <TextFade direction="up">
       <div className="summary-container">
         <div className="summary-header">
           <h2>Prototype</h2>
           <div className="summary-text">
             <h1>First iteration of high fidelity wireframes</h1>
-            <h3>While the original prototypes were designed in Sketch, I converted them into a clickable Figma file...</h3>
+            <h3>
+              While the original prototypes were designed in Sketch, I converted
+              them into a clickable Figma file to embed in this portfolio
+            </h3>
           </div>
         </div>
+        <br />
         <div className="figma-embed-container-desktop">
           <iframe
             style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
             width="800"
-            height="500"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fmq1WIFQLOCskfwMsxBv9g8%2FAI-Image-Generator-Prototype%3Fnode-id%3D2-3"
+            height="auto"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fmq1WIFQLOCskfwMsxBv9g8%2FAI-Image-Generator-Prototype%3Fnode-id%3D2-3%26t%3DkOCzTyuvzuhXOwfd-1%26scaling%3Dcontain%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D2%253A3"
             allowFullScreen
-          ></iframe>
+          />
+        </div>
+        <div className="section-divider"></div>
+        <div className="video-container">
+          <iframe
+            width="1000"
+            height="auto"
+            src="https://www.youtube.com/embed/WFFLXDZYfOo"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
       </div>
     </TextFade>
+
+    <div className="divider"></div>
+
+    {/* Usability Testing Section */}
+    <TextFade direction="up">
+      <div className="summary-container">
+        <div className="summary-header">
+          <h2>Usability testing</h2>
+          <div className="summary-text">
+            <h1>I conducted usability testing with 5 participants</h1>
+            <h3>I interviewed both designers and non-design employees</h3>
+            <br />
+            <br />
+          </div>
+        </div>
+        <div className="summary-image">
+          <h2 className="img-subtitle">Assisted image prompter</h2>
+          <ExpandableImage src="/assets/bp/Slide22.jpg" alt="User Journey" />
+          <br />
+          <h2 className="img-subtitle">Side bar</h2>
+          <ExpandableImage src="/assets/bp/Slide23.jpg" alt="User Journey" />
+          <br />
+          <h2 className="img-subtitle">Regenerator tool</h2>
+          <ExpandableImage src="/assets/bp/Slide24.jpg" alt="User Journey" />
+          <br />
+          <h2 className="img-subtitle">Download button</h2>
+          <ExpandableImage src="/assets/bp/Slide26.jpg" alt="User Journey" />
+        </div>
+      </div>
+    </TextFade>
+
+    <div className="divider"></div>
+
+    {/* Conclusion Section */}
+    <TextFade direction="up">
+      <div className="summary-container">
+        <div className="summary-header">
+          <h2>Conclusion</h2>
+          <div className="summary-text">
+            <h1>Final Prototype</h1>
+            <h3>The final prototype was created using Sketch</h3>
+            <br />
+          </div>
+        </div>
+        <div className="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/IvIMcV9LiLA?si=lazEPzXBTWd9M0GA"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+        <br />
+<div className="portfolio__btn-container">
+  <a
+    href="https://www.sketch.com/s/c9b990dc-07b7-475c-bc85-7f25983cddba/prototype/0BA96799-2455-47F0-B616-F78B30FCBFCE/a/0BA96799-2455-47F0-B616-F78B30FCBFCE"
+    className="portfolio__btn"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Clickable Sketch Prototype
+  </a>
+</div>
+
+      </div>
+    </TextFade>
+
+    <div className="divider"></div>
+
+    {/* Summary Section */}
+    <TextFade direction="up">
+      <div className="summary-container">
+        <div className="summary-header">
+          <h2>Summary</h2>
+          <div className="summary-text">
+            <h1>A summer at bp</h1>
+            <p>
+              I am grateful to have had the opportunity to intern at such an
+              incredible company! I want to extend my heartfelt thanks to the
+              entire design and change management team for their mentorship and
+              warm welcome. Everyone's support and guidance have been invaluable.
+            </p>
+            <div className="BentoBox">
+              <div className="BentoBox__wrapper">
+                <div className="BentoBox__item">
+                  <ExpandableImage src="/assets/bp/4.jpg" alt="Image 1" />
+                </div>
+                <div className="BentoBox__item">
+                  <ExpandableImage src="/assets/bp/2.jpg" alt="Image 2" />
+                </div>
+              </div>
+              <div className="BentoBox__wrapper">
+                <div className="BentoBox__item">
+                  <ExpandableImage src="/assets/bp/3.jpg" alt="Image 3" />
+                </div>
+                <div className="BentoBox__item">
+                  <ExpandableImage src="/assets/bp/1.jpg" alt="Image 4" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </TextFade>
+
+    {/* Other Projects Gallery */}
+    <div className="container">
+         <h2 className="img-subtitle">Despite only having 12 weeks, I also created other products! </h2>
+      <div className="summary-header">
+        <h1>Check out the other projects I worked on at bp</h1>
+        <div className="Gallery__wrapper">
+          <div className="Gallery__item">
+            <Link to="/bpxGA">
+              <img src="/assets/GA/7.png" alt="Project 1" />
+            </Link>
+          </div>
+          <div className="Gallery__item">
+            <Link to="/mvp">
+              <img src="/assets/mvp/5.png" alt="Project 2" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 );
 

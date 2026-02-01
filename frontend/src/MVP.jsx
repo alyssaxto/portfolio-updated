@@ -170,8 +170,7 @@ const ProblemStatement = () => (
   </div>
   </TextFade>
 );
-
-const Value = () => (
+const SecondVer = () => (
   <TextFade direction="up">
   <div className="summary-container">
     <div className="summary-header">
@@ -185,18 +184,22 @@ const Value = () => (
          </ul>
       </div>
     </div>
+    <h5 className="img-subtitle">Badge Option 1</h5>
     <div className="summary-image">
-      <ExpandableImage src= "/assets/GA/4.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/mvp/1.png" alt="User Journey" />
     </div>
     <br/>
-<h2 className="img-subtitle">bp's Official Color Palette    </h2>
+    <h5 className="img-subtitle">Badge Option 2</h5>
     <div className="summary-image">
-      <ExpandableImage src= "/assets/GA/8.png" alt="User Journey" />
+      <ExpandableImage src= "/assets/mvp/2.png" alt="User Journey" />
+    </div>
+        <h5 className="img-subtitle">Badge Option 3</h5>
+    <div className="summary-image">
+      <ExpandableImage src= "/assets/mvp/3.png" alt="User Journey" />
     </div>
   </div>
   </TextFade>
 );
-
 // New Section for Empathize
 const Empathize = () => (
   <TextFade direction="up">
@@ -206,8 +209,13 @@ const Empathize = () => (
       <div className="summary-text">
         <h1>Final Version        </h1>
         <p>After presenting the badges to stakeholders from both bp and General Assembly, this is what was approved        </p>
+<h5 className="img-subtitle">Final feedback I received</h5>
+        <ul className="summary-text-bullets">
+          <li>Make all the titles lowercase and the same size</li>
+          <li>Change some of the characters to be male to represent the male designers</li>
+        </ul>
       </div>
-    </div>
+            </div>
 <h2 className="img-subtitle">Badge option 1</h2>
     <div className="summary-image">
       <ExpandableImage src= "/assets/mvp/1.png" alt="User Journey" />
@@ -222,46 +230,24 @@ const Empathize = () => (
     <div className="summary-image">
       <ExpandableImage src= "/assets/mvp/8.png" alt="User Journey" />
     </div>
+    <h2 className="img-subtitle">Female and male variations</h2>
+    <div className="summary-image">
+      <ExpandableImage src= "/assets/mvp/9.png" alt="User Journey" />
+    </div>
   </div>
   </TextFade>
 );
 
-const Last = () => (
-    <TextFade direction="up">
-    <div className="summary-container">
-      <div className="summary-header">
-        <h2>Third Variations      </h2>
-        <div className="summary-text">
-          <h1>Final Version </h1>
-          <p>After presenting the idea to stakeholders from bp, the 3rd badge designs were approved          </p>
-          <h2>Final feedback I received        </h2>
-          <ul className="summary-text-bullets">
-            <li>Make all the titles lowercase and the same size</li>
-            <li>Change some of the characters to be male to represent the male designers</li>
-           </ul>
-        </div>
-      </div>
-      <div className="summary-image">
-        <ExpandableImage src= "/assets/mvp/3.png" alt="User Journey" />
-      </div>
-      <br/>
-<h2 className="img-subtitle">Female and male variations      </h2>
-      <div className="summary-image">
-        <ExpandableImage src= "/assets/mvp/9.png" alt="User Journey" />
-      </div>
-    </div>
-    </TextFade>
-  );
+
 
 const BPPortfolio = () => (
 <TextFade direction="up">
 <div className="container">
   <h2 className="img-subtitle">Despite only having 12 weeks, I also created other products! </h2>
-
     <h1>Check out the other projects I worked on at bp</h1>
     <div className="Gallery__wrapper">
       <div className="Gallery__item">
-        <Link to="/Password">
+        <Link to="/bpProject">
           <img src="/assets/bp/6.png" alt="Project 1" />
         </Link>
       </div>
@@ -290,11 +276,9 @@ const App = () => (
     <div class="divider"></div>
     <ProblemStatement />
     <div class="divider"></div>
-    <Value />
+    <SecondVer />
         <div class="divider"></div>
     <Empathize />
-    <div class="divider"></div>
-    <Last />
     <div class="divider"></div>
 
     <BPPortfolio/>
