@@ -267,22 +267,16 @@ const App = () => (
     <div class="divider"></div>
     <Summary />
     
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Assets />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Journey />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Features />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Low />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Test />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <BPPortfolio/>
     <br/>

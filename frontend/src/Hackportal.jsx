@@ -280,9 +280,12 @@ const App = () => (
     <div class="divider"></div>
     <HackPortal />
         <div className="section-divider"></div>
-    <div class="portfolio__btn-container">
-  <button class="portfolio__btn"><a href="https://github.com/acmutd/hackportal" target="_blank">View source code</a></button>
+<div class="portfolio__btn-container">
+  <a href="https://github.com/acmutd/hackportal" target="_blank" class="portfolio__btn">
+    View source code
+  </a>
 </div>
+
 <br/>
 <div class="portfolio__btn-container">
   <a href="/playground" class="portfolio__btn">

@@ -333,29 +333,19 @@ const App = () => (
     <Grid />
     <div class="divider"></div>
     <Top />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Summary />
     
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Assets />
-    <div className="section-divider"></div>
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Hero />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Soon />
-    <div className="section-divider"></div>
     <div class="divider"></div>
-    <div className="section-divider"></div>
-    <div className="section-divider"></div>
     <BPPortfolio/>
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <HackUTD/>
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Bonus />
     <br/>

@@ -351,29 +351,20 @@ const App = () => (
     <Grid />
     <div class="divider"></div>
     <Top />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Summary />
-    
-    <div className="section-divider"></div>
-    <div class="divider"></div>
+        <div class="divider"></div>
     <Assets />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Soon />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Hero />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <User />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Features />
-    <div className="section-divider"></div>
     <div class="divider"></div>
     <Prototypes />
-    <div className="section-divider"></div>
     <div class="divider"></div>
 
     <BPPortfolio/>
@@ -381,7 +372,7 @@ const App = () => (
   <a href="/" class="portfolio__btn">Back to Portfolio</a>
 </div>
 <br/>
-<br/>
+
   </div>
 );
 
